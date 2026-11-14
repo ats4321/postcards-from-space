@@ -1,0 +1,79 @@
+[
+  {
+    "id": "phoenix",
+    "name": "Phoenix Mars Lander",
+    "place": "Mars",
+    "locationName": "Vastitas Borealis, the arctic plains of Mars",
+    "launchDate": "2007-08-04",
+    "arrivalDate": "2008-05-25",
+    "lastContact": "2008-11-02",
+    "status": "resting",
+    "distanceKm": 225000000,
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
+    "illustration": "lander",
+    "imageId": "phoenix",
+    "arizona": true,
+    "nssdcId": "2007-034A",
+    "officialUrl": "https://science.nasa.gov/mission/phoenix/",
+    "editorNote": "Two different 'end' dates appear in NASA sources and both are used on purpose. NSSDCA and the science.nasa.gov quick facts give Nov. 2, 2008 (last signal received), which is lastContact. The JPL release of May 24, 2010 is when NASA said operations had ended after Mars Odyssey heard nothing; the letter calls that 'ended my mission'. Landing time also differs (23:53:44 UT at NSSDCA, 23:38:38 UT at science.nasa.gov); we only state the date, which both agree on.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-034A",
+        "title": "NSSDCA Master Catalog: Phoenix Mars Lander",
+        "supports": "NSSDCA ID 2007-034A; launch August 4, 2007; landing May 25, 2008; Peter H. Smith of the University of Arizona as mission principal investigator; last signal received November 2, 2008."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/phoenix/",
+        "title": "NASA Science: Phoenix",
+        "supports": "Landing May 25, 2008 on Vastitas Borealis, the arctic plains of Mars; dug into an ice-rich layer near the surface; bright clumps in a trench were water ice that vaporized after about four days; HiRISE photographed Phoenix under its parachute, the first time one spacecraft photographed another during a planetary landing."
+      },
+      {
+        "url": "https://www.jpl.nasa.gov/news/phoenix-mars-lander-is-silent-new-image-shows-damage/",
+        "title": "NASA JPL news, May 24, 2010: Phoenix Mars Lander is Silent, New Image Shows Damage",
+        "supports": "Mars Odyssey flew over the landing site 61 times in a final attempt to hear from Phoenix; NASA said operations ended in May 2010; ice damage to the solar panels; Peter Smith, principal investigator, at the University of Arizona in Tucson."
+      },
+      {
+        "url": "https://www.uahirise.org/ESP_017716_2485",
+        "title": "HiRISE (University of Arizona): Phoenix Lander after One Mars Year",
+        "supports": "HiRISE image taken May 7, 2010 shows the lander covered in dust with a solar panel that appears to have collapsed; winter carbon dioxide frost weighed the panels down; HiRISE is operated at the University of Arizona."
+      },
+      {
+        "url": "https://www.nasa.gov/hrp/hazard-distance-from-earth/",
+        "title": "NASA Human Research Program: Hazard: Distance From Earth",
+        "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
+      }
+    ]
+  },
+  {
+    "id": "voyager-1",
+    "name": "Voyager 1",
+    "place": "Deep space",
+    "locationName": "Interstellar space",
+    "launchDate": "1977-09-05",
+    "status": "working",
+    "distanceKm": 25902068371,
+    "distanceNote": "One light-day, the distance light travels in 24 hours (299,792.458 km per second for 86,400 seconds). NASA rounds it to 16.094 billion miles (25.902 billion km). Voyager 1 reaches it on Nov. 18, 2026.",
+    "illustration": "probe",
+    "imageId": "voyager-1",
+    "arizona": false,
+    "nssdcId": "1977-084A",
+    "officialUrl": "https://science.nasa.gov/mission/voyager/voyager-1/",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A",
+        "title": "NSSDCA Master Catalog: Voyager 1",
+        "supports": "NSSDCA ID 1977-084A; launch September 5, 1977."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+        "title": "NASA Science: Where Are Voyager 1 and Voyager 2 Now? (page updated Nov. 12, 2026)",
+        "supports": "Voyager 1 reaches one light-day, 16.094 billion miles (25.902 billion km), on Nov. 18, 2026 at 2:16:07 a.m. PST and is the first human-made object to reach that distance; a light-day is the distance light travels in 24 hours; the magnetometer and plasma wave subsystem are on and the other instruments are off; it flew past Jupiter and Saturn."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/voyager/voyager-1/",
+        "title": "NASA Science: Voyager 1 (page updated Nov. 12, 2026)",
+        "supports": "Launch September 5, 1977; entered interstellar space in August 2012; first human-made object to venture into interstellar space; listed as an active mission."
+      }
+    ]
+  }
+]

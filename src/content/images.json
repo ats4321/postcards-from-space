@@ -1,0 +1,16 @@
+[
+  {
+    "id": "phoenix",
+    "file": "/img/illustrations/lander.svg",
+    "alt": "Simple line drawing of a lander with three legs and two round solar panels.",
+    "credit": "Illustration: Postcards from Space team",
+    "license": "Placeholder drawing made for this project. The Imagery agent will replace it with a credited NASA photo."
+  },
+  {
+    "id": "voyager-1",
+    "file": "/img/illustrations/probe.svg",
+    "alt": "Simple line drawing of a space probe with a large dish antenna and a long boom.",
+    "credit": "Illustration: Postcards from Space team",
+    "license": "Placeholder drawing made for this project. The Imagery agent will replace it with a credited NASA photo."
+  }
+]
