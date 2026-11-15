@@ -1,5 +1,7 @@
 # Postcards from Space
 
+**Live site:** <https://lilongwe-tau.vercel.app/>
+
 ## Project summary
 
 NASA hardware left on the Moon, Mars and beyond can feel like a list of old
@@ -39,6 +41,11 @@ Lighthouse, Node.js scripts, Vercel and self-hosted WebP/PNG assets.
 | 10–16 s | Answer Phoenix quiz | Select the right answer; show the Passport stamp appearing. “Every answer earns a stamp.” |
 | 16–21 s | Switch language | Switch to Spanish. “The full experience is available in Spanish, too.” |
 | 21–30 s | Distance ladder | Move from the Moon and Mars outward to Voyager 1. “Follow the ladder all the way to Voyager 1—nearly a light-day from Earth.” |
+
+## Performance (Lighthouse mobile, deployed URL, 15 Nov 2026)
+
+Performance 100, Accessibility 100 (three runs). First-load transfer 390 KiB,
+LCP 0.8 s, CLS 0, TBT 0 ms.
 
 ## Known limitations
 
