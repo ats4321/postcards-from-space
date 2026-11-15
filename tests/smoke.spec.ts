@@ -1,7 +1,7 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, test } from '@playwright/test';
 
-for (const width of [360, 1280]) {
+for (const width of [360, 768, 1280]) {
   test(`deep link, quiz stamp, axe and no h-scroll at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto('/#phoenix');
@@ -27,3 +27,30 @@ for (const width of [360, 1280]) {
     await page.screenshot({ path: `.context/smoke-${width}.png`, fullPage: true });
   });
 }
+
+test('Spanish, keyboard navigation and reduced motion work at mobile width', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.setViewportSize({ width: 360, height: 900 });
+  await page.goto('/');
+
+  // Keyboard-only: tab to the language control, select Spanish, then open Phoenix.
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'es');
+
+  for (let index = 0; index < 20; index += 1) {
+    if ((await page.evaluate(() => document.activeElement?.getAttribute('href'))) === '#phoenix') break;
+    await page.keyboard.press('Tab');
+  }
+  await expect(page.locator(':focus')).toHaveAttribute('href', '#phoenix');
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/#phoenix$/);
+  await expect(page.locator('#quiz-heading')).toBeVisible();
+
+  const motion = await page.locator('.stamp-paper').first().evaluate((element) =>
+    getComputedStyle(element).animationDuration,
+  );
+  expect(motion).toBe('1e-05s');
+});

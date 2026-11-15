@@ -1,6 +1,8 @@
 /**
  * Requests every URL in items.json (officialUrl, sources) and images.json
- * (sourceUrl) and reports the ones that do not answer 200.
+ * (sourceUrl) and reports the ones that do not answer 200. An Amazon WAF
+ * challenge (HTTP 202 with x-amzn-waf-action: challenge) is reachable, so it
+ * is reported separately instead of failing the release check.
  *
  *   npm run check-links
  *
@@ -22,7 +24,9 @@ const HEADERS = {
   'accept-language': 'en-US,en;q=0.9',
 };
 
-type Result = { url: string; usedBy: string[]; status: number | string };
+type ReachableStatus = 200 | '202 (bot challenge)';
+type Status = ReachableStatus | number | string;
+type Result = { url: string; usedBy: string[]; status: Status };
 
 function collectUrls(): Map<string, string[]> {
   const urls = new Map<string, string[]>();
@@ -45,7 +49,7 @@ function collectUrls(): Map<string, string[]> {
   return urls;
 }
 
-async function request(url: string, method: 'HEAD' | 'GET'): Promise<number | string> {
+async function request(url: string, method: 'HEAD' | 'GET'): Promise<Status> {
   try {
     const response = await fetch(url, {
       method,
@@ -53,17 +57,19 @@ async function request(url: string, method: 'HEAD' | 'GET'): Promise<number | st
       redirect: 'follow',
       signal: AbortSignal.timeout(TIMEOUT_MS),
     });
+    const challenged =
+      response.status === 202 && response.headers.get('x-amzn-waf-action')?.toLowerCase() === 'challenge';
     await response.body?.cancel();
-    return response.status;
+    return challenged ? '202 (bot challenge)' : response.status;
   } catch (error) {
     const cause = (error as { cause?: { code?: string } }).cause?.code;
     return cause ?? (error as Error).name;
   }
 }
 
-async function check(url: string): Promise<number | string> {
+async function check(url: string): Promise<Status> {
   const head = await request(url, 'HEAD');
-  return head === 200 ? head : request(url, 'GET');
+  return head === 200 || head === '202 (bot challenge)' ? head : request(url, 'GET');
 }
 
 async function main(): Promise<void> {
@@ -74,15 +80,17 @@ async function main(): Promise<void> {
     for (let next = queue.shift(); next; next = queue.shift()) {
       const [url, usedBy] = next;
       const status = await check(url);
-      console.log(`${status === 200 ? 'ok  ' : 'FAIL'} ${status} ${url}`);
+      console.log(`${status === 200 || status === '202 (bot challenge)' ? 'ok  ' : 'FAIL'} ${status} ${url}`);
       results.push({ url, usedBy, status });
     }
   };
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 
-  const failures = results.filter((result) => result.status !== 200);
+  const failures = results.filter(
+    (result) => result.status !== 200 && result.status !== '202 (bot challenge)',
+  );
   if (failures.length === 0) {
-    console.log(`\nAll ${results.length} links answered 200.`);
+    console.log(`\nAll ${results.length} links are reachable.`);
     return;
   }
 

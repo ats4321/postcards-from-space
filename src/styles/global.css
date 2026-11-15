@@ -2,6 +2,34 @@
 @import './postcard.css';
 @import './widgets.css';
 
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('/fonts/inter-tight-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('/fonts/inter-tight-600.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  src: url('/fonts/inter-tight-700.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/fonts/ibm-plex-mono-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
 /* Base, page layout, header and footer. */
 *,
 *::before,
