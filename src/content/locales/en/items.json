@@ -31,11 +31,132 @@
       "My plasma wave instrument and my magnetometer are still switched on, out here between the stars.",
       "On November 18, 2026, I become the first human-made object to be one light-day from Earth."
     ],
-    "today": "I am in interstellar space, about 16.1 billion miles (25.9 billion km) from Earth, and I am still going. NASA lists my mission as active. Most of my instruments are now off, but my plasma wave instrument and my magnetometer are still on.",
+    "today": "I am in interstellar space, about 16.1 billion miles (25.9 billion km) from Earth, and I am still going. NASA calls this my extended mission, and I still collect science data. Most of my instruments are now off, but my plasma wave instrument and my magnetometer are still on.",
     "quiz": {
       "question": "How long does light take to travel one light-day?",
       "options": ["24 minutes", "24 hours", "24 days"],
       "answerIndex": 1
+    }
+  },
+  "apollo-11-eagle": {
+    "letter": [
+      "Hello from the Sea of Tranquility! I am the bottom half of Eagle, the Apollo 11 lunar module. On July 20, 1969, I carried Neil Armstrong and Buzz Aldrin down to the Moon. I was the first vehicle with a crew ever to land here.",
+      "I stood on four legs with round footpads. The astronauts climbed down my ladder and became the first people to walk on the Moon. They set up experiments and collected 21.55 kg (about 47.5 pounds) of Moon rock and soil to take home.",
+      "After 21 hours and 36 minutes, the top half of Eagle used me as a launch pad and flew the astronauts away. I stayed behind. A plaque behind my ladder says, \"We came in peace for all mankind.\" I am resting right where I landed."
+    ],
+    "signOff": "Still standing at Tranquility Base, Eagle",
+    "science": [
+      "I was the first crewed vehicle to land on the Moon.",
+      "The rocks my astronauts collected showed that lava once flowed across the Sea of Tranquility.",
+      "I carried a seismometer that sent back the first measurements of shaking inside the Moon."
+    ],
+    "today": "I am still at Tranquility Base, where the astronauts left me. NASA's Lunar Reconnaissance Orbiter has photographed me from just 24 km (15 miles) above the surface. The picture shows me and the dark paths made by the astronauts' boots.",
+    "arizonaNote": "Every astronaut who walked on the Moon trained with U.S. Geological Survey scientists in Flagstaff, Arizona. The camera that photographs me from orbit, LROC, has its science operations center at Arizona State University in Tempe.",
+    "quiz": {
+      "question": "What did the top half of Eagle use the bottom half for when it left the Moon?",
+      "options": ["A launch pad", "A parachute", "A sail"],
+      "answerIndex": 0
+    }
+  },
+  "apollo-11-reflector": {
+    "letter": [
+      "Hi from the Moon! I am a laser reflector. I am made of 100 small glass prisms called corner cubes. In July 1969, Apollo 11 astronaut Buzz Aldrin carried me out onto the Sea of Tranquility and set me down facing Earth.",
+      "I need no power at all. Scientists on Earth fire laser beams at me. My prisms bounce the light straight back to where it came from. By timing the trip there and back, scientists can measure the distance to the Moon to within a few millimeters.",
+      "Reflectors like me helped scientists learn that the Moon moves away from Earth by 3.8 cm (1.5 inches) every year. They also showed that the Moon has a liquid core. More than 50 years after Apollo 11, I am still at work."
+    ],
+    "signOff": "Shining your light right back, the Apollo 11 reflector",
+    "science": [
+      "Timing laser beams that bounce off reflectors like me gives the distance to the Moon to within a few millimeters.",
+      "Laser measurements show that the Moon moves away from Earth by 3.8 cm (1.5 inches) each year.",
+      "Laser measurements show that the Moon has a liquid core."
+    ],
+    "today": "I am still on the Sea of Tranquility, and I still work. In a 2026 science report, NASA scientists described bouncing laser pulses off me from the Lunar Reconnaissance Orbiter, a spacecraft circling the Moon.",
+    "arizonaNote": "A sharp picture of my landing site shows me and even the cover that the astronauts took off me. It was taken by LROC, a Moon camera with its science operations center at Arizona State University in Tempe.",
+    "worldNote": "Observatories in New Mexico, France, Italy and Germany have fired lasers at the Apollo reflectors to measure the distance to the Moon.",
+    "quiz": {
+      "question": "What do scientists on Earth bounce off the reflector?",
+      "options": ["Laser beams", "Sound waves", "Jets of water"],
+      "answerIndex": 0
+    }
+  },
+  "opportunity": {
+    "letter": [
+      "Hello from Meridiani Planum on Mars! I am Opportunity, a rover about the size of a golf cart. I landed in January 2004, wrapped in airbags. I bounced at least 26 times and rolled to a stop inside a small crater called Eagle.",
+      "My team built me to last 90 Martian days. I kept exploring for more than 14 years! I studied rocks with the tools on my arm and found that water once flowed here. In 2015, I became the first to finish a marathon on another world: 26.219 miles (42.195 km).",
+      "In 2018, a dust storm covered all of Mars and dimmed the sunlight my solar panels needed. My last signal reached Earth on June 10, 2018. By then I had driven 28.06 miles (45.16 km). No one drove farther until Perseverance passed me on October 11, 2026."
+    ],
+    "signOff": "Your marathon rover, Opportunity",
+    "science": [
+      "I found strong evidence that liquid water once flowed through the rocks of Meridiani Planum.",
+      "Near my heat shield, I found a rock the size of a basketball. It turned out to be an iron-nickel meteorite.",
+      "I was the first to travel farther than a marathon on another world."
+    ],
+    "today": "I am resting in Perseverance Valley, on the rim of Endeavour Crater. NASA declared my mission complete on February 13, 2019. My driving record of 28.06 miles (45.16 km) stood until NASA's Perseverance rover passed it on October 11, 2026.",
+    "arizonaNote": "HiRISE, a camera operated by the University of Arizona, photographed me and my wheel tracks from orbit. My team used HiRISE pictures to plan my drives.",
+    "quiz": {
+      "question": "How many Martian days was Opportunity built to last?",
+      "options": ["9", "90", "900"],
+      "answerIndex": 1
+    }
+  },
+  "spirit": {
+    "letter": [
+      "Hello from Gusev Crater on Mars! I am Spirit, a rover with six wheels. I landed in January 2004, 20 days before my twin, Opportunity. My team built me to last 90 Martian days. I kept working for more than six years.",
+      "I climbed to the top of Husband Hill and took pictures all the way around. Later, one of my front wheels stopped turning. As I dragged it, it scraped the ground and uncovered bright soil. The soil was almost pure silica, a clue that hot springs or steam vents were once here.",
+      "In 2009, I got stuck in soft soil beside a low plateau called Home Plate. My team tried for months to free me. My last message reached Earth on March 22, 2010. In all, I drove 4.8 miles (7.73 km). I am resting here now."
+    ],
+    "signOff": "Your friend in the Columbia Hills, Spirit",
+    "science": [
+      "My stuck wheel dug up a patch of nearly pure silica. It is strong evidence that ancient Mars was much wetter than it is now.",
+      "I was the first to grind into a rock on Mars, so scientists could study the inside of it.",
+      "Wind and dust devils swept dust off my solar panels. That gave me more power and more time to explore."
+    ],
+    "today": "I am resting near Home Plate in the Columbia Hills, inside Gusev Crater. NASA ended its efforts to contact me on May 25, 2011. A camera in orbit can still see me here, but the wind has erased my wheel tracks.",
+    "arizonaNote": "The camera that can still see me from orbit is HiRISE. It is operated by the University of Arizona.",
+    "quiz": {
+      "question": "What did Spirit's stuck wheel uncover?",
+      "options": ["Bright soil made of silica", "A frozen lake", "A buried spacecraft"],
+      "answerIndex": 0
+    }
+  },
+  "ingenuity": {
+    "letter": [
+      "Hello from Mars! I am Ingenuity, a small helicopter. I weigh about 4 pounds (1.8 kg). I rode to Mars tucked under the belly of the Perseverance rover. We landed in Jezero Crater on February 18, 2021.",
+      "The air on Mars is very thin, so flying here is hard. My two rotors spin in opposite directions, almost 3,000 times a minute. On April 19, 2021, I rose 3 meters (10 feet), hovered, and landed. It was the first powered, controlled flight on another planet!",
+      "My team planned no more than five test flights. I made 72! I became a scout, looking ahead for Perseverance. On my last flight, on January 18, 2024, a rotor blade was damaged as I landed. I cannot fly anymore, so I am resting now."
+    ],
+    "signOff": "Your high-flying friend, Ingenuity",
+    "science": [
+      "I was the first aircraft to make a powered, controlled flight on another planet.",
+      "In 72 flights, I flew for 128.8 minutes, covered 10.5 miles (17.0 km), and climbed as high as 78.7 feet (24.0 meters).",
+      "I scouted places on Mars that the Perseverance rover might explore."
+    ],
+    "today": "I am resting among sand ripples at a spot my team calls Valinor Hills. NASA announced the end of my mission on January 25, 2024, after 72 flights in almost three years.",
+    "arizonaNote": "Mastcam-Z, a camera on the Perseverance rover, photographed me at my final resting place. Its pictures are credited to Arizona State University along with NASA and other partners, and the Mastcam-Z team shares them from an ASU website.",
+    "quiz": {
+      "question": "How many flights did Ingenuity make on Mars?",
+      "options": ["5", "30", "72"],
+      "answerIndex": 2
+    }
+  },
+  "apollo-17-lrv": {
+    "letter": [
+      "Hello from the Taurus-Littrow Valley on the Moon! I am a Lunar Roving Vehicle, an electric car built for astronauts. I flew here folded up inside the Apollo 17 lunar module. We landed on December 11, 1972.",
+      "Gene Cernan and Harrison Schmitt unfolded me and sat in my two seats. Each of my four wheels has its own electric motor, and my tires are woven from steel wire. I took them on three drives, as far as 7.6 km (4.7 miles) from their lander, to collect rocks.",
+      "Altogether I drove about 36 km (22 miles). At the end, Gene parked me where my TV camera could watch the astronauts lift off for home. I have been resting in that parking spot ever since."
+    ],
+    "signOff": "Parked with a view, the Apollo 17 Moon rover",
+    "science": [
+      "I helped two astronauts collect 110.52 kg (about 244 pounds) of Moon rock and soil.",
+      "On our second day of driving, Harrison Schmitt discovered a patch of orange soil.",
+      "Harrison Schmitt said the major discoveries of Apollo 15, 16 and 17 would not have been possible without rovers like me."
+    ],
+    "today": "I am still parked in the Taurus-Littrow Valley. For more than 40 years, no NASA vehicle drove farther on another world than I did. NASA announced in 2013 that the Opportunity rover on Mars had passed my distance.",
+    "arizonaNote": "Every astronaut who walked on the Moon trained with U.S. Geological Survey scientists in Flagstaff, Arizona. LROC, a Moon camera with its science operations center at Arizona State University in Tempe, keeps taking pictures of the Apollo landing sites.",
+    "quiz": {
+      "question": "What powers each of the Moon rover's wheels?",
+      "options": ["Its own electric motor", "A jet engine", "Foot pedals"],
+      "answerIndex": 0
     }
   }
 }
