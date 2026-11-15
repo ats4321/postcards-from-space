@@ -609,5 +609,39 @@
         "supports": "distanceKm: the Moon is an average of 238,855 miles (384,400 kilometers) away."
       }
     ]
+  },
+  {
+    "id": "pioneer-10",
+    "name": "Pioneer 10",
+    "place": "Deep space",
+    "locationName": "Leaving the solar system, heading toward the star Aldebaran",
+    "launchDate": "1972-03-03",
+    "lastContact": "2003-01-23",
+    "status": "drifting",
+    "distanceKm": 21147000000,
+    "distanceNote": "Distance from Earth on Nov. 15, 2026: 141.36 AU (about 21.15 billion km, 13.14 billion miles), from NASA JPL's Horizons system. No one has heard from Pioneer 10 since 2003, so this is where JPL calculates it should be. It moves a little farther away every second.",
+    "illustration": "probe",
+    "imageId": "pioneer-10",
+    "arizona": false,
+    "nssdcId": "1972-012A",
+    "officialUrl": "https://science.nasa.gov/mission/pioneer-10/",
+    "editorNote": "Launch date conflict: NSSDCA gives 1972-03-03 (and calls 03 March 2002 'the 30th anniversary of Pioneer 10's launch date'); science.nasa.gov gives 'March 2, 1972 / 01:49:04 UT'. launchDate follows NSSDCA; the letter only says 'March 1972'. Power source conflict: NSSDCA says four SNAP-19 RTGs, science.nasa.gov says two; no number is used, only 'nuclear power'. Jupiter closest approach distance differs (NSSDCA about 200,000 km, science.nasa.gov 130,354 km); no distance is used, only the date (both say December 4, 1973). lastContact is the last signal detected, Jan. 23, 2003 (both sources); the last telemetry data came on April 27, 2002. distanceKm comes from a JPL Horizons query for Nov. 15, 2026 (delta = 141.358656970320 AU, 1 AU = 149,597,870.7 km, trajectory 'pioneer_10_merged'); because the spacecraft is no longer tracked, this is a calculated position, which distanceNote says.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-012A",
+        "title": "NSSDCA Master Catalog: Pioneer 10",
+        "supports": "NSSDCA ID 1972-012A; launch date 1972-03-03; first mission to the outer solar system and first to investigate Jupiter; closest approach to Jupiter on 04 December 1973; heading generally towards the red star Aldebaran, a journey of about two million years; signal last detected on 23 January 2003; plaque with drawings of a man, a woman and the location of the Sun and Earth in our galaxy."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/pioneer-10/",
+        "title": "NASA Science: Pioneer 10",
+        "supports": "NASA's first mission to the outer planets; entered the asteroid belt July 15, 1972, first spacecraft to fly through it, with fewer asteroid hits than expected; first to fly past Jupiter, closest approach Dec. 4, 1973; about 500 pictures of Jupiter's atmosphere showing the Great Red Spot; first close-up images of Ganymede; Jupiter's magnetic tail, almost 800 million km long, covers the distance between Jupiter and Saturn; crossed Neptune's orbit June 13, 1983, the first human-made object to go beyond the farthest planet; designed for 21 months, lasted more than 30 years; last signal Jan. 23, 2003, which took 11 hours and 20 minutes to reach Earth; first spacecraft to use all-nuclear electrical power; aluminum plaque with a man, a woman, the solar system and its location relative to 14 pulsars; expected to pass by Aldebaran in about two million years."
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='-23'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
+        "title": "NASA JPL Horizons: Pioneer 10 (-23) range from Earth, Nov. 15, 2026",
+        "supports": "distanceKm and today: on Nov. 15, 2026 Pioneer 10's calculated position was 141.36 AU from Earth (about 21.15 billion km, 13.14 billion miles)."
+      }
+    ]
   }
 ]

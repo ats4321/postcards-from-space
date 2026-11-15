@@ -247,3 +247,23 @@ Same method: every page opened and read in full from a saved copy (`curl`, then 
 | Arizona: Flagstaff training; LROC SOC at ASU | USGS; ASU-LROC; LROC image 1135 | "Every astronaut who ever set foot on the Moon trained with the USGS in Flagstaff, Arizona"; "[NASA/GSFC/Arizona State University]" |
 
 Conflicts (also in editorNote): touchdown time 00:04:17 vs 00:04:53 UT; Apollo 12 landing Nov. 19 (NSSDCA, LROC) vs Nov. 18 (science.nasa.gov) and visit Nov. 20 vs Nov. 19, so no Apollo 12 dates are used; last data May 4 (NSSDCA, used) vs "operated … to 3 May" (LROC). Cut: the camera's current display location (no 2026 source) and the disputed bacteria story.
+
+## pioneer-10
+| Claim | Source | Quote |
+|---|---|---|
+| Left Earth in March 1972 | NSSDCA-1972-012A; SN-pioneer-10 | "Launch Date: 1972-03-03"; "March 2, 1972 / 01:49:04 UT" |
+| NASA's first mission to the outer planets | SN-pioneer-10 | "Pioneer 10 was NASA's first mission to the outer planets" |
+| Entered the asteroid belt July 1972; first through it; fewer hits than expected | SN-pioneer-10 | "On July 15, 1972, the spacecraft entered the asteroid belt"; "First spacecraft to fly through the main asteroid belt"; "some asteroid hits, although fewer than expected" |
+| December 1973, first to fly past Jupiter | SN-pioneer-10; NSSDCA | "Dec. 4, 1973: Pioneer 10's closest approach to Jupiter"; "First spacecraft to fly past Jupiter"; "the first to investigate the planet Jupiter" |
+| About 500 pictures, including the Great Red Spot | SN-pioneer-10 | "took about 500 pictures of Jupiter's atmosphere … clearly showing such landmarks as the Great Red Spot" |
+| First close-up pictures of Ganymede | SN-pioneer-10 | "It was the first spacecraft to obtain close-up images of Ganymede" |
+| 1983, crossed Neptune's orbit; first beyond the farthest planet | SN-pioneer-10 | "crossed the orbit of Neptune (then the outermost planet) on June 13, 1983, thus becoming the first human-made object to go beyond the furthest planet" |
+| Planned 21 months; more than 30 years | SN-pioneer-10 | "Originally designed for a 21-month mission to fly by Jupiter, Pioneer 10 lasted more than 30 years" |
+| Last signal Jan. 23, 2003; took 11 h 20 min | SN-pioneer-10; NSSDCA | "on Jan. 23, 2003, it sent its last signal"; "That signal took 11 hours and 20 minutes to reach Earth"; "signal was last detected on 23 January 2003" |
+| Jupiter's magnetic tail almost 800 million km, reaching Saturn's orbit | SN-pioneer-10 | "Jupiter's enormous magnetic tail, almost 800 million kilometers long, covered the whole distance between the two planets" |
+| First to run on nuclear power alone | SN-pioneer-10 | "First spacecraft to use all-nuclear electrical power" |
+| Heading toward red star Aldebaran; about two million years | NSSDCA; SN-pioneer-10 | "heading generally towards the red star Aldebaran"; "expected to pass by Aldebaran in about two million years" |
+| Plaque: man, woman, where the Sun is | SN-pioneer-10; NSSDCA | "an aluminum plaque with diagrams of a man and a woman, the solar system, and its location relative to 14 pulsars"; "determine the position of the Sun" |
+| About 13.1 billion miles (21.1 billion km), calculated | JPL Horizons, target -23, observer Earth, 2026-11-15 | "Target body name: Pioneer 10 (spacecraft) (-23) {source: pioneer_10_merged}"; "2026-Nov-15 00:00 141.358656970320" (AU) |
+
+Conflicts (also in editorNote): launch 1972-03-03 (NSSDCA, used) vs March 2, 1972 01:49 UT (science.nasa.gov), so the letter says "March 1972"; four RTGs (NSSDCA) vs two (science.nasa.gov), so no number; Jupiter closest-approach distance 200,000 km vs 130,354 km, not used.

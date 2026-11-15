@@ -257,5 +257,24 @@
       "options": ["It never bounced", "Twice", "Ten times"],
       "answerIndex": 1
     }
+  },
+  "pioneer-10": {
+    "letter": [
+      "Greetings from far, far away! I am Pioneer 10. I left Earth in March 1972. NASA calls me its first mission to the outer planets. That July, I entered the asteroid belt. I was the first spacecraft to fly through it. A few tiny space rocks hit me, but fewer than scientists expected.",
+      "In December 1973, I became the first spacecraft to fly past Jupiter. I took about 500 pictures of its clouds, including the Great Red Spot. I also took the first close-up pictures of Ganymede, one of Jupiter's moons.",
+      "In 1983, I crossed the orbit of Neptune. I was the first human-made object to go beyond the farthest planet. My team planned a 21-month trip, but I kept going for more than 30 years. My last signal reached Earth on January 23, 2003. It took 11 hours and 20 minutes to get there!"
+    ],
+    "signOff": "Drifting toward the stars, Pioneer 10",
+    "science": [
+      "I was the first spacecraft to fly through the asteroid belt and the first to fly past Jupiter.",
+      "I found that Jupiter's giant magnetic tail is almost 800 million km (about 500 million miles) long. It stretches all the way out to Saturn's orbit.",
+      "I was the first spacecraft to run on nuclear power alone."
+    ],
+    "today": "I am drifting out of the solar system, heading toward a red star called Aldebaran. I will need about two million years to pass by it. I carry a metal plaque with drawings of a man and a woman and a map of where the Sun is, in case anyone ever finds me. NASA JPL calculates that I am now about 13.1 billion miles (21.1 billion km) from Earth.",
+    "quiz": {
+      "question": "Which planet was Pioneer 10 the first spacecraft to fly past?",
+      "options": ["Jupiter", "Mars", "Venus"],
+      "answerIndex": 0
+    }
   }
 }
