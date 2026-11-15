@@ -164,3 +164,22 @@ Same method: every page opened and read in full from a saved copy (`curl`, then 
 | About 13.5 billion miles (21.7 billion km) from Earth | JPL Horizons, target -32, observer Earth, 2026-11-15 | "delta 144.876864912917" (AU); 1 AU = 149,597,870.7 km |
 
 Conflicts (also in editorNote): interstellar entry Nov. 25 vs Dec. 10, 2018 on the same NASA page; Saturn flyby Aug. 25 vs 26, 1981; Neptune "five moons" vs "six new moons" on the same page, so no Neptune moon count is used.
+
+## insight
+| Claim | Source | Quote |
+|---|---|---|
+| Landed November 26, 2018 in Elysium Planitia, a flat, smooth plain near the equator | NSSDCA-2018-042A; SN-insight | "landed in the western Elysium Planitia region on 26 November 2018"; "landed near Mars' equator on the western side of a flat, smooth plain called Elysium Planitia" |
+| Came to study the inside of Mars, not the surface; "like a doctor checking a heartbeat" | SN-insight | "InSight's purpose was to study the interior of Mars, not the surface"; "take the planet's vital signs: its pulse, temperature, and reflexes" |
+| Robotic arm set the seismometer on the ground | SN-insight; NSSDCA | "It lifted a seismometer and heat flow probe from the deck and placed them on the surface" |
+| First to detect marsquakes; more than 1,300 | SN-insight highlights; JPL Dec. 21, 2022 | "InSight made the first-ever detection of quakes on the Red Planet"; "over 1,300 seismic events"; "detected 1,319 marsquakes" |
+| Some quakes caused by space rocks (meteoroid impacts) | JPL Dec. 21, 2022 | "including quakes caused by meteoroid impacts" |
+| Dust on two round solar panels cut its power; arm sprinkled dirt on windy days | JPL Dec. 21, 2022; NSSDCA | "dust accumulating on the lander's solar panels gradually reduced its energy"; "sprinkle dirt from the scoop onto the panels during windy days"; "two disc-shaped solar panel arrays" |
+| Last message December 15, 2022 | NSSDCA; SN-insight; JPL | "The last transmission from InSight was received on 15 December 2022" |
+| Core is molten and bigger than expected | SN-insight highlights | "Mars' core is molten and considerably larger than expected" |
+| Most weather data of any surface mission; thousands of dust devils | SN-insight highlights | "the most comprehensive weather data of any mission sent to the surface of Mars"; "detected thousands of passing dust devils" |
+| Retired December 2022 after running out of power | NASA Dec. 16, 2024; JPL | "NASA retired InSight in December 2022, after the lander ran out of power" |
+| Photographed from orbit October 23, 2024; panels now reddish-brown | NASA Dec. 16, 2024 | "on Oct. 23, 2024"; "acquired the same reddish-brown hue as the rest of the planet" |
+| NASA said in December 2024 it would stop listening at the end of that year | NASA Dec. 16, 2024 | "NASA will stop listening for InSight at the end of this year" |
+| HiRISE operated by the University of Arizona in Tucson | NASA Dec. 16, 2024; HiRISE ESP_061684_1845 | "The University of Arizona, in Tucson, operates HiRISE" |
+
+Conflicts (also in editorNote): last signal Dec. 15 vs mission declared over Dec. 21, 2022; 1,319 marsquakes (JPL) vs "over 1,300 seismic events" (highlights).

@@ -177,5 +177,25 @@
       "options": ["Uranus and Neptune", "Mercury and Venus", "Earth and Mars"],
       "answerIndex": 0
     }
+  },
+  "insight": {
+    "letter": [
+      "Hello from Elysium Planitia, a flat, smooth plain near the middle of Mars! I am InSight, a lander. I landed on November 26, 2018. I did not come to look at the surface. I came to listen to the inside of Mars, like a doctor checking a heartbeat.",
+      "My robotic arm lifted a very sensitive seismometer off my deck and set it on the ground. It felt Mars shake. I was the first to detect marsquakes! I counted more than 1,300 of them. Some were caused by space rocks crashing into the ground.",
+      "Dust slowly covered my two round solar panels, so I had less and less power. My team even had my arm sprinkle dirt on the panels on windy days to sweep dust away. My last message reached Earth on December 15, 2022. I am resting here now."
+    ],
+    "signOff": "Listening for you from Elysium Planitia, InSight",
+    "science": [
+      "I was the first to detect quakes on Mars. My seismometer measured more than 1,300 of them.",
+      "Quake waves showed that the core of Mars is molten and bigger than scientists expected.",
+      "I collected more weather data than any other mission on the surface of Mars, and I felt thousands of dust devils pass by."
+    ],
+    "today": "I am still sitting on Elysium Planitia. NASA retired me in December 2022 after I ran out of power. A camera in orbit photographed me on October 23, 2024. My solar panels are now the same reddish-brown color as the ground around me. In December 2024, NASA said it would stop listening for me at the end of that year.",
+    "arizonaNote": "The camera that photographs me from orbit is HiRISE. It is operated by the University of Arizona in Tucson.",
+    "quiz": {
+      "question": "What did InSight's seismometer detect for the first time on Mars?",
+      "options": ["Rainstorms", "Marsquakes", "Rivers of water"],
+      "answerIndex": 1
+    }
   }
 }

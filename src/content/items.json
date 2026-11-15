@@ -424,5 +424,60 @@
         "supports": "distanceKm and today: on Nov. 15, 2026 Voyager 2 was 144.88 AU from Earth (about 21.67 billion km, 13.47 billion miles)."
       }
     ]
+  },
+  {
+    "id": "insight",
+    "name": "InSight Mars Lander",
+    "place": "Mars",
+    "locationName": "Elysium Planitia, a flat, smooth plain near the Martian equator",
+    "launchDate": "2018-05-05",
+    "arrivalDate": "2018-11-26",
+    "lastContact": "2022-12-15",
+    "status": "resting",
+    "distanceKm": 225000000,
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
+    "illustration": "lander",
+    "imageId": "insight",
+    "arizona": true,
+    "nssdcId": "2018-042A",
+    "officialUrl": "https://science.nasa.gov/mission/insight/",
+    "editorNote": "Two end dates are used on purpose: the last signal was Dec. 15, 2022 (NSSDCA, JPL, science.nasa.gov 'End of Mission: Dec. 15, 2022'), which is lastContact; NASA declared the mission over on Dec. 21, 2022 (NSSDCA, JPL release). Marsquake count: the JPL release says 1,319 marsquakes; the science highlights page says 'over 1,300 seismic events'. The text uses 'more than 1,300', which both support. The Arizona connection is limited to HiRISE (operated by the University of Arizona), which photographed the lander from orbit, most recently in the Oct. 23, 2024 image NASA described.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-042A",
+        "title": "NSSDCA Master Catalog: InSight",
+        "supports": "NSSDCA ID 2018-042A; launch 5 May 2018; landed in western Elysium Planitia on 26 November 2018; two disc-shaped solar panels and three legs; robotic arm placed the seismometer and heat flow probe on the ground; the mole only reached about 40 cm deep; last transmission 15 December 2022; mission declared over on 21 December 2022."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/insight/",
+        "title": "NASA Science: InSight Lander (page modified June 23, 2026)",
+        "supports": "Launched May 5, 2018; landed Nov. 26, 2018 in Elysium Planitia, a flat, smooth plain near Mars' equator; end of mission Dec. 15, 2022; studied the deep interior of Mars and took its 'vital signs'; built on the design of the Phoenix lander; robotic arm over 5 feet 9 inches (1.8 meters) long."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/insight/science-highlights/",
+        "title": "NASA Science: InSight Science Highlights (page modified June 23, 2026)",
+        "supports": "First-ever detection of quakes on Mars; over 1,300 seismic events; Mars' core is molten and larger than expected, about 1,800 km in radius; crust about 25 to 40 km thick under InSight; most comprehensive weather data of any Mars surface mission; detected thousands of passing dust devils with its pressure sensor."
+      },
+      {
+        "url": "https://www.jpl.nasa.gov/news/nasa-retires-insight-mars-lander-mission-after-years-of-science/",
+        "title": "NASA JPL news, Dec. 21, 2022: NASA Retires InSight Mars Lander Mission After Years of Science",
+        "supports": "The lander ran out of energy after more than four years on Mars; last contact Dec. 15; detected 1,319 marsquakes, including quakes caused by meteoroid impacts; dust on the solar panels reduced its power; the arm's scoop sprinkled dirt on the panels on windy days to sweep dust off; the mole could not dig deep in the clumpy soil."
+      },
+      {
+        "url": "https://www.nasa.gov/missions/insight/nasa-mars-orbiter-spots-retired-insight-lander-to-study-dust-movement/",
+        "title": "NASA, Dec. 16, 2024: NASA Mars Orbiter Spots Retired InSight Lander to Study Dust Movement",
+        "supports": "today and arizonaNote: HiRISE photographed the retired lander on Oct. 23, 2024; its solar panels have the same reddish-brown hue as the ground; NASA will stop listening for InSight at the end of 2024; InSight was the first to detect marsquakes, revealing details of the crust, mantle and core; the University of Arizona in Tucson operates HiRISE."
+      },
+      {
+        "url": "https://www.uahirise.org/ESP_061684_1845",
+        "title": "HiRISE (University of Arizona): The Best HiRISE Image of the InSight Lander",
+        "supports": "arizonaNote: HiRISE image of Sept. 23, 2019 clearly shows the two circular solar panels and the bright seismometer cover."
+      },
+      {
+        "url": "https://www.nasa.gov/hrp/hazard-distance-from-earth/",
+        "title": "NASA Human Research Program: Hazard: Distance From Earth",
+        "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
+      }
+    ]
   }
 ]
