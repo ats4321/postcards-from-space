@@ -288,3 +288,24 @@ Conflicts (also in editorNote): launch 1972-03-03 (NSSDCA, used) vs March 2, 197
 | Ceres about 301.7 million km (distanceNote) | JPL Horizons, target 1 Ceres, observer Earth, 2026-11-15 | "2026-Nov-15 00:00 2.01671571762595" (AU) |
 
 Conflicts (also in editorNote): no source gives the time of the last signal received (NSSDCA "communications ended on 31 October 2018"; JPL: missed sessions Oct. 31 and Nov. 1), so lastContact is left out; NSSDCA mass 725 kg vs 747.1 kg dry; ion thrust 92 mN (NSSDCA) vs 91 mN (science.nasa.gov); neither number used.
+
+## near-shoemaker
+| Claim | Source | Quote |
+|---|---|---|
+| Left Earth February 17, 1996 | NSSDCA-1996-008A; SN-near-shoemaker | "Launch Date: 1996-02-17"; "Feb. 17, 1996: Launch" |
+| Flew past Mathilde; covered with craters, less dense than thought | SN-near-shoemaker; NSSDCA | "the 4.5 billion-year-old asteroid is covered with craters and is less dense than previously believed"; "flyby of the 61 km diameter asteroid 253 Mathilde on June 27, 1997" |
+| Feb. 14, 2000 orbit around Eros; first to orbit an asteroid | SN-near-shoemaker; NSSDCA | "Feb. 14, 2000: NEAR entered orbit around Eros becoming the first human-made object to orbit an asteroid"; "The mission was the first-ever to orbit an asteroid" |
+| A month later renamed for geologist Eugene Shoemaker | SN-near-shoemaker | "on March 14, 2000, a month after entering asteroid orbit, NASA renamed the NEAR spacecraft NEAR Shoemaker in honor of Eugene M. Shoemaker (1928–1997), the renowned geologist" |
+| Circled Eros for a year | NSSDCA | "designed to study the near Earth asteroid Eros from close orbit over a period of a year" |
+| 160,000 pictures | SN-near-shoemaker | "The spacecraft returned about 10 times more data than originally planned, including 160,000 images" |
+| Not built to land; slow descent; touched down Feb. 12, 2001 at 6.4 km/h (4 mph) | SN-near-shoemaker | "which was not designed as a lander"; "Following a slow, controlled descent"; "touched down on Eros at a gentle 4 miles per hour (6.4 kilometers per hour)" |
+| First to land on an asteroid | SN-near-shoemaker; NSSDCA | "First spacecraft to land on an asteroid"; "This was the first spacecraft touchdown on an asteroid" |
+| Data for about two more weeks; succumbed to the cold | SN-near-shoemaker | "returned valuable data, especially from its gamma-ray spectrometer, for about two weeks"; "the spacecraft having succumbed to the extreme cold" |
+| Eros has no magnetic field | SN-near-shoemaker | "NEAR data showed that Eros had no magnetic field" |
+| Eros smaller than expected; about 33 km (21 miles) long | SN-near-shoemaker; NSSDCA | "discovered that the minor planet was smaller than expected"; "the 21-mile long asteroid Eros"; "approximately 13 x 13 x 33 km in size" |
+| South of a saddle-shaped area called Himeros | SN-near-shoemaker | "just south of a saddle-shaped feature named Himeros" |
+| Last contact Feb. 28, 2001; Dec. 10, 2002 attempt failed | SN-near-shoemaker; NSSDCA | "The last contact with NEAR was Feb. 28, 2001"; "NASA's attempt to contact the probe nearly two years later on Dec. 10, 2002, was unsuccessful" |
+| Arizona: Gene Shoemaker, USGS; founded Astrogeology Science Center in Flagstaff; led much Apollo training | USGS | "Much of the Apollo astronaut training was led by USGS scientist, Dr. Gene Shoemaker"; "founder of the USGS Astrogeology Science Center"; "the USGS Astrogeology Science Center is located in Flagstaff, Arizona" |
+| Eros about 371.8 million km (distanceNote) | JPL Horizons, target 433 Eros, observer Earth, 2026-11-15 | "2026-Nov-15 00:00 2.48512906451361" (AU) |
+
+Conflicts (also in editorNote): touchdown 19:44 UT (science.nasa.gov) vs 20:01:52 UT (NSSDCA), only the date is used; mass 805 kg vs 487 kg, not used; undated "355 million kilometers from Earth" (science.nasa.gov) not used, Horizons used instead.

@@ -295,5 +295,25 @@
       "options": ["Vesta and Ceres", "Mars and Venus", "The Moon and the Sun"],
       "answerIndex": 0
     }
+  },
+  "near-shoemaker": {
+    "letter": [
+      "Hello from asteroid Eros! I am NEAR Shoemaker. I left Earth on February 17, 1996. On my way, I flew past another asteroid called Mathilde. I found that it is covered with craters and is less dense than scientists thought.",
+      "On February 14, 2000, I went into orbit around Eros. I was the first spacecraft ever to orbit an asteroid! A month later, NASA renamed me to honor Eugene Shoemaker, a famous geologist. I circled Eros for a year. In all, I sent home 160,000 pictures.",
+      "I was not built to land. But on February 12, 2001, my team slowly lowered me onto Eros. I touched down at just 6.4 km (4 miles) per hour. I was the first spacecraft to land on an asteroid! I sent data for about two more weeks, until the cold was too much for me."
+    ],
+    "signOff": "Your friend on Eros, NEAR Shoemaker",
+    "science": [
+      "I was the first spacecraft to orbit an asteroid and the first to land on one.",
+      "I found that Eros has no magnetic field.",
+      "I found that Eros is smaller than scientists expected. It is about 33 km (21 miles) long."
+    ],
+    "today": "I am still sitting on Eros, just south of a saddle-shaped area called Himeros. My last contact with Earth was on February 28, 2001. NASA tried to call me again on December 10, 2002, but I did not answer. I am resting here now.",
+    "arizonaNote": "I am named after Gene Shoemaker, a U.S. Geological Survey scientist. He founded the USGS Astrogeology Science Center in Flagstaff, Arizona, and led much of the training for the Apollo astronauts.",
+    "quiz": {
+      "question": "What was NEAR Shoemaker the first spacecraft to do?",
+      "options": ["Land on an asteroid", "Land on Mars", "Visit Pluto"],
+      "answerIndex": 0
+    }
   }
 }

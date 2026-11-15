@@ -702,5 +702,45 @@
         "supports": "distanceKm: on Nov. 15, 2026 Ceres was 2.02 AU from Earth (about 301.7 million km, 187.5 million miles)."
       }
     ]
+  },
+  {
+    "id": "near-shoemaker",
+    "name": "NEAR Shoemaker",
+    "place": "Asteroids",
+    "locationName": "Asteroid 433 Eros, just south of a saddle-shaped area called Himeros",
+    "launchDate": "1996-02-17",
+    "arrivalDate": "2001-02-12",
+    "lastContact": "2001-02-28",
+    "status": "resting",
+    "distanceKm": 371800000,
+    "distanceNote": "Distance from Earth to Eros on Nov. 15, 2026: 2.49 AU (about 371.8 million km, 231 million miles), from NASA JPL's Horizons system. Eros orbits the Sun on a different path than Earth, so this distance changes a lot.",
+    "illustration": "orbiter",
+    "imageId": "near-shoemaker",
+    "arizona": true,
+    "nssdcId": "1996-008A",
+    "officialUrl": "https://science.nasa.gov/mission/near-shoemaker/",
+    "editorNote": "arrivalDate is the landing on Eros (Feb. 12, 2001, both sources), where NEAR rests today; orbit around Eros began Feb. 14, 2000. Touchdown time conflict: science.nasa.gov 19:44 UT, NSSDCA 20:01:52 UT; only the date is used. Mass conflict: science.nasa.gov 805 kg, NSSDCA facts box 487 kg; no mass is used. Eros size: NSSDCA 'approximately 13 x 13 x 33 km', science.nasa.gov '21-mile long asteroid'; the text uses 33 km (21 miles). science.nasa.gov gives Eros as 'approximately 221 million miles (355 million kilometers) from Earth' with no date; distanceKm instead comes from a JPL Horizons query for Nov. 15, 2026 (delta = 2.48512906451361 AU, 1 AU = 149,597,870.7 km). The 160,000 images are for the whole mission (science.nasa.gov). Arizona: the USGS page calls him 'Dr. Gene Shoemaker'; NSSDCA says the spacecraft was 'renamed in honor of Gene Shoemaker' and science.nasa.gov 'Eugene M. Shoemaker (1928–1997)'.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-008A",
+        "title": "NSSDCA Master Catalog: NEAR Shoemaker",
+        "supports": "NSSDCA ID 1996-008A; launch 1996-02-17; renamed in honor of Gene Shoemaker; first-ever to orbit an asteroid and to touch down on one; flew within 1,200 km of asteroid 253 Mathilde on June 27, 1997; orbit insertion at Eros 14 February 2000; Eros about 13 x 13 x 33 km; touchdown in the saddle region of Eros on 12 February 2001; final contact 28 February 2001; later contact attempt on 10 December 2002 unsuccessful."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/near-shoemaker/",
+        "title": "NASA Science: NEAR Shoemaker",
+        "supports": "Launch Feb. 17, 1996; Mathilde flyby June 27, 1997 showed it covered with craters and less dense than previously believed; entered orbit around Eros Feb. 14, 2000, the first human-made object to orbit an asteroid; renamed March 14, 2000 in honor of geologist Eugene M. Shoemaker; not designed as a lander, touched down Feb. 12, 2001 at 4 miles per hour (6.4 km/h) just south of a saddle-shaped feature named Himeros; first spacecraft to land on an asteroid; returned data for about two weeks; last contact Feb. 28, 2001 after succumbing to the extreme cold; contact attempt Dec. 10, 2002 failed; Eros has no magnetic field; 21-mile long asteroid; returned 160,000 images."
+      },
+      {
+        "url": "https://www.usgs.gov/science/science-explorer/planetary-science/usgs-in-space",
+        "title": "U.S. Geological Survey: The USGS in Space Exploration, Mission Operations, and Training",
+        "supports": "arizonaNote: the USGS Astrogeology Science Center is in Flagstaff, Arizona; much of the Apollo astronaut training was led by USGS scientist Dr. Gene Shoemaker, founder of the USGS Astrogeology Science Center."
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='433;'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
+        "title": "NASA JPL Horizons: 433 Eros range from Earth, Nov. 15, 2026",
+        "supports": "distanceKm: on Nov. 15, 2026 Eros was 2.49 AU from Earth (about 371.8 million km, 231 million miles)."
+      }
+    ]
   }
 ]
