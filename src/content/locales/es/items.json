@@ -1,0 +1,162 @@
+{
+  "phoenix": {
+    "letter": [
+      "¡Hola desde el extremo norte de Marte! Soy Phoenix, un módulo de aterrizaje. Toqué suelo en las llanuras árticas el 25 de mayo de 2008. Una cámara llamada HiRISE volaba muy alto sobre mí, en otra nave espacial. Me tomó una foto mientras yo bajaba flotando con mi paracaídas.",
+      "Al frente de mi equipo estaba Peter Smith, de la Universidad de Arizona en Tucson. Me enviaron a descubrir qué se esconde bajo el suelo frío del norte. Por eso usé mi brazo robótico para cavar zanjas pequeñas. ¡Justo debajo de la tierra encontré hielo de agua!",
+      "Luego llegó el invierno. La escarcha se amontonó sobre mis paneles solares y los rompió. En 2010, el orbitador Mars Odyssey pasó sobre mí 61 veces para escucharme, pero yo seguí en silencio. La NASA terminó mi misión en mayo de ese año. Ahora descanso aquí, orgulloso de lo que encontré."
+    ],
+    "signOff": "Tu amigo del ártico marciano, Phoenix",
+    "science": [
+      "Excavé hasta una capa llena de hielo, justo debajo de la superficie de Marte.",
+      "Unos grumos brillantes en una de mis zanjas desaparecieron en unos cuatro días. Fue una gran pista de que eran hielo de agua.",
+      "Mi aterrizaje fue la primera vez que una nave espacial fotografió a otra mientras aterrizaba en un planeta."
+    ],
+    "today": "Sigo en las llanuras árticas de Marte, justo donde aterricé. Mi última señal llegó a la Tierra el 2 de noviembre de 2008. Una foto de HiRISE del 7 de mayo de 2010 me muestra cubierto de polvo, y parece que uno de mis paneles solares se cayó.",
+    "arizonaNote": "Mi científico principal, Peter Smith, trabajaba en la Universidad de Arizona en Tucson. HiRISE, la cámara que me fotografió desde la órbita, también la opera la Universidad de Arizona.",
+    "quiz": {
+      "question": "¿Qué encontró Phoenix justo debajo de la tierra en Marte?",
+      "options": ["Hielo de agua", "Lava caliente", "Conchas de mar"],
+      "answerIndex": 0
+    }
+  },
+  "voyager-1": {
+    "letter": [
+      "¡Saludos desde muy, muy lejos! Soy Voyager 1. Salí de la Tierra el 5 de septiembre de 1977. En mi camino pasé cerca de Júpiter y de Saturno. Desde entonces no he dejado de viajar.",
+      "En agosto de 2012 entré al espacio interestelar, que es el espacio entre las estrellas. Nada hecho por personas había llegado ahí antes. Dos de mis instrumentos científicos siguen encendidos. Uno escucha las ondas de plasma. El otro mide el magnetismo.",
+      "El 18 de noviembre de 2026 llego a una gran meta: un día luz de la Tierra. Eso quiere decir que un rayo de luz tarda 24 horas en viajar de ti hasta mí. Son unos 16.1 mil millones de millas (25.9 mil millones de km). Soy el primer objeto hecho por humanos en llegar tan lejos."
+    ],
+    "signOff": "Sigo explorando, Voyager 1",
+    "science": [
+      "Soy el primer objeto hecho por humanos que viajó al espacio interestelar.",
+      "Mi instrumento de ondas de plasma y mi magnetómetro siguen encendidos aquí afuera, entre las estrellas.",
+      "El 18 de noviembre de 2026 me convierto en el primer objeto hecho por humanos en estar a un día luz de la Tierra."
+    ],
+    "today": "Estoy en el espacio interestelar, a unos 16.1 mil millones de millas (25.9 mil millones de km) de la Tierra, y sigo avanzando. La NASA llama a esta etapa mi misión extendida, y todavía reúno datos científicos. Casi todos mis instrumentos ya están apagados, pero mi instrumento de ondas de plasma y mi magnetómetro siguen encendidos.",
+    "quiz": {
+      "question": "¿Cuánto tarda la luz en recorrer un día luz?",
+      "options": ["24 minutos", "24 horas", "24 días"],
+      "answerIndex": 1
+    }
+  },
+  "apollo-11-eagle": {
+    "letter": [
+      "¡Hola desde el Mar de la Tranquilidad! Soy la mitad de abajo de Eagle, el módulo lunar del Apollo 11. El 20 de julio de 1969 llevé a Neil Armstrong y a Buzz Aldrin hasta la Luna. Fui el primer vehículo con tripulación en aterrizar aquí.",
+      "Me sostenía sobre cuatro patas con pies redondos. Los astronautas bajaron por mi escalera y fueron las primeras personas en caminar sobre la Luna. Hicieron experimentos y juntaron 21.55 kg (unas 47.5 libras) de rocas y suelo lunar para llevar a casa.",
+      "Después de 21 horas y 36 minutos, la mitad de arriba de Eagle me usó como plataforma de lanzamiento y se llevó a los astronautas. Yo me quedé. Una placa detrás de mi escalera dice en inglés: \"We came in peace for all mankind\", o sea, \"Vinimos en paz por toda la humanidad\". Descanso donde aterricé."
+    ],
+    "signOff": "Sigo de pie en la Base Tranquilidad, Eagle",
+    "science": [
+      "Fui el primer vehículo con tripulación en aterrizar en la Luna.",
+      "Las rocas que juntaron mis astronautas mostraron que hace mucho tiempo corrió lava por el Mar de la Tranquilidad.",
+      "Llevé un sismómetro que envió las primeras mediciones de los temblores dentro de la Luna."
+    ],
+    "today": "Sigo en la Base Tranquilidad, donde me dejaron los astronautas. El Lunar Reconnaissance Orbiter de la NASA me ha fotografiado desde solo 24 km (15 millas) sobre la superficie. En la foto se me ve a mí y los caminos oscuros que dejaron las botas de los astronautas.",
+    "arizonaNote": "Todos los astronautas que caminaron en la Luna entrenaron con científicos del Servicio Geológico de los Estados Unidos (USGS) en Flagstaff, Arizona. La cámara que me fotografía desde la órbita, LROC, tiene su centro de operaciones científicas en la Universidad Estatal de Arizona, en Tempe.",
+    "quiz": {
+      "question": "¿Para qué usó la mitad de arriba de Eagle a la mitad de abajo cuando dejó la Luna?",
+      "options": ["Como plataforma de lanzamiento", "Como paracaídas", "Como vela"],
+      "answerIndex": 0
+    }
+  },
+  "apollo-11-reflector": {
+    "letter": [
+      "¡Hola desde la Luna! Soy un reflector láser. Estoy hecho de 100 prismas pequeños de vidrio llamados cubos de esquina. En julio de 1969, Buzz Aldrin, astronauta del Apollo 11, me llevó al Mar de la Tranquilidad y me colocó mirando hacia la Tierra.",
+      "No necesito nada de energía. Los científicos en la Tierra me disparan rayos láser. Mis prismas rebotan la luz directo al lugar de donde vino. Al medir cuánto tarda en ir y volver, pueden calcular la distancia a la Luna con un error de solo unos milímetros.",
+      "Gracias a reflectores como yo, los científicos supieron que la Luna se aleja de la Tierra 3.8 cm (1.5 pulgadas) cada año. También descubrieron que la Luna tiene un núcleo líquido. Más de 50 años después del Apollo 11, sigo trabajando."
+    ],
+    "signOff": "Te devuelvo tu luz, el reflector del Apollo 11",
+    "science": [
+      "Al medir el tiempo de los rayos láser que rebotan en reflectores como yo, se conoce la distancia a la Luna con un error de solo unos milímetros.",
+      "Las mediciones con láser muestran que la Luna se aleja de la Tierra 3.8 cm (1.5 pulgadas) cada año.",
+      "Las mediciones con láser muestran que la Luna tiene un núcleo líquido."
+    ],
+    "today": "Sigo en el Mar de la Tranquilidad y todavía funciono. En un informe científico de 2026, científicos de la NASA contaron que rebotaron pulsos de láser en mí desde el Lunar Reconnaissance Orbiter, una nave espacial que da vueltas alrededor de la Luna.",
+    "arizonaNote": "Una foto muy nítida del lugar donde aterrizó el Apollo 11 me muestra a mí y hasta la cubierta que me quitaron los astronautas. La tomó LROC, una cámara lunar con su centro de operaciones científicas en la Universidad Estatal de Arizona, en Tempe.",
+    "worldNote": "Observatorios en Nuevo México, Francia, Italia y Alemania han disparado láseres a los reflectores de las misiones Apollo para medir la distancia a la Luna.",
+    "quiz": {
+      "question": "¿Qué hacen rebotar en el reflector los científicos en la Tierra?",
+      "options": ["Rayos láser", "Ondas de sonido", "Chorros de agua"],
+      "answerIndex": 0
+    }
+  },
+  "opportunity": {
+    "letter": [
+      "¡Hola desde Meridiani Planum, en Marte! Soy Opportunity, un rover (un vehículo explorador) del tamaño de un carrito de golf. Aterricé en enero de 2004, envuelto en bolsas de aire. Reboté por lo menos 26 veces y rodé hasta detenerme dentro de un cráter pequeño llamado Eagle.",
+      "Mi equipo me construyó para durar 90 días marcianos. ¡Seguí explorando más de 14 años! Estudié rocas con las herramientas de mi brazo y descubrí que aquí alguna vez corrió agua. En 2015 fui el primero en completar un maratón en otro mundo: 26.219 millas (42.195 km).",
+      "En 2018, una tormenta de polvo cubrió todo Marte y tapó la luz del Sol que necesitaban mis paneles solares. Mi última señal llegó a la Tierra el 10 de junio de 2018. Para entonces había recorrido 28.06 millas (45.16 km). Nadie llegó más lejos hasta que Perseverance me superó el 11 de octubre de 2026."
+    ],
+    "signOff": "Tu rover maratonista, Opportunity",
+    "science": [
+      "Encontré pruebas sólidas de que alguna vez corrió agua líquida entre las rocas de Meridiani Planum.",
+      "Cerca de mi escudo térmico encontré una roca del tamaño de un balón de básquetbol. Resultó ser un meteorito de hierro y níquel.",
+      "Fui el primero en recorrer más que un maratón en otro mundo."
+    ],
+    "today": "Descanso en Perseverance Valley, en el borde del cráter Endeavour. La NASA declaró terminada mi misión el 13 de febrero de 2019. Mi récord de 28.06 millas (45.16 km) se mantuvo hasta que el rover Perseverance de la NASA lo superó el 11 de octubre de 2026.",
+    "arizonaNote": "HiRISE, una cámara que opera la Universidad de Arizona, nos fotografió desde la órbita a mí y a las huellas de mis ruedas. Mi equipo usaba las fotos de HiRISE para planear mis recorridos.",
+    "quiz": {
+      "question": "¿Para cuántos días marcianos construyeron a Opportunity?",
+      "options": ["9", "90", "900"],
+      "answerIndex": 1
+    }
+  },
+  "spirit": {
+    "letter": [
+      "¡Hola desde el cráter Gusev, en Marte! Soy Spirit, un rover con seis ruedas. Aterricé en enero de 2004, 20 días antes que mi gemelo, Opportunity. Mi equipo me construyó para durar 90 días marcianos. Seguí trabajando más de seis años.",
+      "Subí hasta la cima de Husband Hill y tomé fotos de todo alrededor. Después, una de mis ruedas delanteras dejó de girar. Al arrastrarla, raspó el suelo y dejó ver una tierra brillante. Era sílice casi pura, una pista de que aquí hubo aguas termales o chimeneas de vapor.",
+      "En 2009 me atoré en un suelo blando junto a una meseta baja llamada Home Plate. Mi equipo intentó liberarme durante meses. Mi último mensaje llegó a la Tierra el 22 de marzo de 2010. En total recorrí 4.8 millas (7.73 km). Ahora descanso aquí."
+    ],
+    "signOff": "Tu amigo de las Columbia Hills, Spirit",
+    "science": [
+      "Mi rueda atorada desenterró un parche de sílice casi pura. Es una prueba sólida de que el Marte antiguo era mucho más húmedo que ahora.",
+      "Fui el primero en raspar una roca de Marte hasta abrirla, para que los científicos pudieran estudiar su interior.",
+      "El viento y los remolinos de polvo limpiaron mis paneles solares. Eso me dio más energía y más tiempo para explorar."
+    ],
+    "today": "Descanso cerca de Home Plate, en las Columbia Hills, dentro del cráter Gusev. La NASA dejó de intentar comunicarse conmigo el 25 de mayo de 2011. Una cámara en órbita todavía me puede ver aquí, pero el viento ya borró las huellas de mis ruedas.",
+    "arizonaNote": "La cámara que todavía me puede ver desde la órbita es HiRISE. La opera la Universidad de Arizona.",
+    "quiz": {
+      "question": "¿Qué dejó al descubierto la rueda atorada de Spirit?",
+      "options": ["Tierra brillante hecha de sílice", "Un lago congelado", "Una nave espacial enterrada"],
+      "answerIndex": 0
+    }
+  },
+  "ingenuity": {
+    "letter": [
+      "¡Hola desde Marte! Soy Ingenuity, un helicóptero pequeño. Peso unas 4 libras (1.8 kg). Viajé a Marte bien guardado bajo la panza del rover Perseverance. Aterrizamos en el cráter Jezero el 18 de febrero de 2021.",
+      "El aire de Marte es muy delgado, así que volar aquí es difícil. Mis dos rotores giran en direcciones opuestas, casi 3,000 veces por minuto. El 19 de abril de 2021 subí 3 metros (10 pies), me quedé flotando y aterricé. ¡Fue el primer vuelo controlado y con motor en otro planeta!",
+      "Mi equipo planeó cinco vuelos de prueba como máximo. ¡Yo hice 72! Me convertí en explorador y miraba el camino por delante para Perseverance. En mi último vuelo, el 18 de enero de 2024, se dañó una de mis aspas al aterrizar. Ya no puedo volar, así que ahora descanso."
+    ],
+    "signOff": "Tu amigo que vuela alto, Ingenuity",
+    "science": [
+      "Fui la primera aeronave en hacer un vuelo controlado y con motor en otro planeta.",
+      "En 72 vuelos, volé 128.8 minutos, recorrí 10.5 millas (17.0 km) y subí hasta 78.7 pies (24.0 metros) de altura.",
+      "Exploré lugares de Marte que el rover Perseverance podría visitar."
+    ],
+    "today": "Descanso entre ondas de arena, en un lugar que mi equipo llama Valinor Hills. La NASA anunció el fin de mi misión el 25 de enero de 2024, después de 72 vuelos en casi tres años.",
+    "arizonaNote": "Mastcam-Z, una cámara del rover Perseverance, me fotografió en mi lugar de descanso final. Sus fotos dan crédito a la Universidad Estatal de Arizona junto con la NASA y otros socios, y el equipo de Mastcam-Z las comparte en un sitio web de ASU.",
+    "quiz": {
+      "question": "¿Cuántos vuelos hizo Ingenuity en Marte?",
+      "options": ["5", "30", "72"],
+      "answerIndex": 2
+    }
+  },
+  "apollo-17-lrv": {
+    "letter": [
+      "¡Hola desde el valle Taurus-Littrow, en la Luna! Soy un Lunar Roving Vehicle, un carro eléctrico hecho para astronautas. Viajé hasta aquí doblado dentro del módulo lunar del Apollo 17. Aterrizamos el 11 de diciembre de 1972.",
+      "Gene Cernan y Harrison Schmitt me desdoblaron y se sentaron en mis dos asientos. Cada una de mis cuatro ruedas tiene su propio motor eléctrico, y mis llantas están tejidas con alambre de acero. Los llevé en tres paseos, hasta 7.6 km (4.7 millas) de su módulo lunar, para juntar rocas.",
+      "En total recorrí unos 36 km (22 millas). Al final, Gene me estacionó donde mi cámara de TV pudiera ver a los astronautas despegar de regreso a casa. Desde entonces descanso en ese lugar de estacionamiento."
+    ],
+    "signOff": "Estacionado con buena vista, el rover lunar del Apollo 17",
+    "science": [
+      "Ayudé a dos astronautas a juntar 110.52 kg (unas 244 libras) de rocas y suelo lunar.",
+      "En nuestro segundo día de manejo, Harrison Schmitt descubrió un parche de suelo anaranjado.",
+      "Harrison Schmitt dijo que los grandes descubrimientos del Apollo 15, 16 y 17 no habrían sido posibles sin rovers como yo."
+    ],
+    "today": "Sigo estacionado en el valle Taurus-Littrow. Por más de 40 años, ningún vehículo de la NASA manejó más lejos que yo en otro mundo. En 2013, la NASA anunció que el rover Opportunity, en Marte, había superado mi distancia.",
+    "arizonaNote": "Todos los astronautas que caminaron en la Luna entrenaron con científicos del Servicio Geológico de los Estados Unidos (USGS) en Flagstaff, Arizona. LROC, una cámara lunar con su centro de operaciones científicas en la Universidad Estatal de Arizona, en Tempe, sigue tomando fotos de los lugares donde aterrizaron las misiones Apollo.",
+    "quiz": {
+      "question": "¿Qué mueve cada una de las ruedas del rover lunar?",
+      "options": ["Su propio motor eléctrico", "Un motor a reacción", "Pedales"],
+      "answerIndex": 0
+    }
+  }
+}
