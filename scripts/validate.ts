@@ -20,10 +20,9 @@ import { BASE_LOCALE, listLocales, paths, PUBLIC_DIR, readJson, rel } from './li
 
 /**
  * Locales that are still being written. Missing files or keys in these are
- * warnings. Remove 'es' from this list once the Spanish agent has landed so
- * that gaps in Spanish fail the build.
+ * warnings. Spanish is complete, so it is strict: gaps in es fail the build.
  */
-const LOCALES_IN_PROGRESS = new Set(['es']);
+const LOCALES_IN_PROGRESS = new Set<string>();
 
 const errors: string[] = [];
 const warnings: string[] = [];
