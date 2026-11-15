@@ -233,5 +233,148 @@
         "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
       }
     ]
+  },
+  {
+    "id": "spirit",
+    "name": "Spirit rover",
+    "place": "Mars",
+    "locationName": "Near Home Plate in the Columbia Hills, Gusev Crater",
+    "launchDate": "2003-06-10",
+    "arrivalDate": "2004-01-04",
+    "lastContact": "2010-03-22",
+    "status": "resting",
+    "distanceKm": 225000000,
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
+    "illustration": "rover",
+    "imageId": "spirit",
+    "arizona": true,
+    "nssdcId": "2003-027A",
+    "officialUrl": "https://science.nasa.gov/mission/mer-spirit/",
+    "editorNote": "Landing date differs only by time zone: NSSDCA gives January 4, 2004 (04:35 UT), science.nasa.gov gives January 3, 2004 (20:35 PST). The data follows NSSDCA and the letter only says 'January 2004'. The sources also date the moment Spirit got stuck differently: NSSDCA says it broke through a crust on April 23, 2009 and could not move by May 1; science.nasa.gov says it became stuck on May 1, 2009. The letter only says '2009'.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-027A",
+        "title": "NSSDCA Master Catalog: Spirit",
+        "supports": "NSSDCA ID 2003-027A; launch June 10, 2003; landing January 4, 2004 (UT) in Gusev Crater; six wheels; lost the use of one wheel; stuck in sand in 2009; last transmission March 22, 2010; travelled a total of 7.73 km."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/mer-spirit/",
+        "title": "NASA Science: Spirit",
+        "supports": "Opportunity is its twin; first grinding of a rock on Mars with the rock abrasion tool (rock Adirondack); reached the summit of Husband Hill on Sept. 29, 2005 and took 360-degree panoramas; a front wheel stopped working and scraped up bright silica-rich soil, nearly pure silica, likely made by hot springs or steam vents, strong evidence ancient Mars was much wetter; dust devils and wind cleaned the solar panels and raised power; stuck in soft soil beside Home Plate in 2009; no contact after March 22, 2010; NASA ended recovery efforts May 25, 2011; traveled 4.8 miles (7.73 kilometers); operated 6 years, 2 months and 19 days, more than 25 times its intended lifetime."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/mer-opportunity/",
+        "title": "NASA Science: Opportunity",
+        "supports": "Opportunity landed 20 days after Spirit; both rovers were designed to last 90 Martian days."
+      },
+      {
+        "url": "https://www.uahirise.org/ESP_025815_1655",
+        "title": "HiRISE (University of Arizona): Spirit Lander and Bonneville Crater in Color",
+        "supports": "today and arizonaNote: the rover can still be seen from orbit near Home Plate in the Columbia Hills; its tracks have been erased by the wind; HiRISE is operated by the University of Arizona."
+      },
+      {
+        "url": "https://www.nasa.gov/hrp/hazard-distance-from-earth/",
+        "title": "NASA Human Research Program: Hazard: Distance From Earth",
+        "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
+      }
+    ]
+  },
+  {
+    "id": "ingenuity",
+    "name": "Ingenuity Mars Helicopter",
+    "place": "Mars",
+    "locationName": "Valinor Hills, its final airfield on Mars",
+    "launchDate": "2020-07-30",
+    "arrivalDate": "2021-02-18",
+    "status": "resting",
+    "distanceKm": 225000000,
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
+    "illustration": "probe",
+    "imageId": "ingenuity",
+    "arizona": true,
+    "nssdcId": "2020-052A",
+    "officialUrl": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+    "editorNote": "Ingenuity has no NSSDCA ID of its own; 2020-052A is the Mars 2020 mission (Perseverance) that carried it. lastContact is left out because no page that was opened for this item gives the date of the final signal. 'Valinor Hills' is the team's informal name, taken from the Mastcam-Z team page at Arizona State University. The Arizona note is limited to what the sources show (a Mastcam-Z image credit that includes ASU, and the ASU-hosted Mastcam-Z page); no opened page states who leads Mastcam-Z, so that claim is not made.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2020-052A",
+        "title": "NSSDCA Master Catalog: Mars 2020 (Perseverance, with the Ingenuity helicopter)",
+        "supports": "NSSDCA ID 2020-052A; launch July 30, 2020; landing February 18, 2021 in Jezero Crater; mass of roughly 1.8 kg; twin counter-rotating blades turning at almost 3000 rpm; mounted on the belly of the rover; flies in the thin Martian atmosphere; first flight April 19, 2021, hovering at 3 meters altitude."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/",
+        "title": "NASA Science: Ingenuity Mars Helicopter",
+        "supports": "First powered, controlled flight on another planet on April 19, 2021; designed for no more than five test flights; completed 72 flights across nearly three years; last flight Jan. 18, 2024; mission completed Jan. 25, 2024; 128.8 flying minutes, 10.5 miles (17.0 kilometers), altitudes as high as 78.7 feet (24.0 meters); 3.97 pounds (1.8 kilograms); served as an aerial scout previewing areas for the Perseverance rover."
+      },
+      {
+        "url": "https://www.jpl.nasa.gov/news/after-three-years-on-mars-nasas-ingenuity-helicopter-mission-ends/",
+        "title": "NASA JPL news, Jan. 25, 2024: After Three Years on Mars, NASA's Ingenuity Helicopter Mission Ends",
+        "supports": "A rotor blade was damaged during the landing of the Jan. 18, 2024 flight and the helicopter can no longer fly; end of mission announced Jan. 25, 2024; a Mastcam-Z picture of Ingenuity is credited NASA/JPL-Caltech/ASU/MSSS."
+      },
+      {
+        "url": "https://mastcamz.asu.edu/galleries/sol-1067-ingenuity-pdi-mastcam-z-mosaic/",
+        "title": "Mastcam-Z (Arizona State University): Sol 1067, Valinor Hills, Ingenuity's Final Resting Place",
+        "supports": "locationName, today and arizonaNote: the final resting spot is informally named Valinor Hills and is surrounded by sand; Perseverance's Mastcam-Z photographed Ingenuity there; the Mastcam-Z team page is hosted at Arizona State University."
+      },
+      {
+        "url": "https://www.nasa.gov/hrp/hazard-distance-from-earth/",
+        "title": "NASA Human Research Program: Hazard: Distance From Earth",
+        "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
+      }
+    ]
+  },
+  {
+    "id": "apollo-17-lrv",
+    "name": "Apollo 17 Lunar Roving Vehicle",
+    "place": "Moon",
+    "locationName": "Taurus-Littrow Valley",
+    "launchDate": "1972-12-07",
+    "arrivalDate": "1972-12-11",
+    "status": "resting",
+    "distanceKm": 384400,
+    "distanceNote": "NASA says the Moon is an average of 238,855 miles (384,400 km) from Earth. The real distance changes a little during every orbit.",
+    "illustration": "rover",
+    "imageId": "apollo-17-lrv",
+    "arizona": true,
+    "nssdcId": "1972-096C",
+    "officialUrl": "https://www.nasa.gov/mission/apollo-17/",
+    "editorNote": "The rover has no NSSDCA ID of its own; 1972-096C is the Apollo 17 Lunar Module that carried it. Sources disagree slightly on the total distance driven: NSSDCA says 35.9 km, science.nasa.gov says 22.21 miles (35.744 km), and LROC says 'more than 36 kilometers'. The content follows NSSDCA, rounded to 'about 36 km (22 miles)'. The Arizona note uses the USGS statement that every moonwalker trained in Flagstaff; the USGS page does not name the Apollo 17 crew or say they trained at Cinder Lake, so neither is claimed.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html",
+        "title": "NSSDCA: The Apollo Lunar Roving Vehicle",
+        "supports": "An electric vehicle; driven on Apollo 17 by Gene Cernan and Harrison Schmitt on three traverses; went 35.9 km; greatest range from the lunar module 7.6 km; folded and stored in the lunar module; two side-by-side seats; tires of woven steel strands; each wheel had its own electric drive motor; TV camera; Harrison Schmitt's statement that the major discoveries of Apollo 15, 16 and 17 would not have been possible without the rover."
+      },
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-096C",
+        "title": "NSSDCA Master Catalog: Apollo 17 Lunar Module / ALSEP",
+        "supports": "NSSDCA ID 1972-096C; launch December 7, 1972; landing December 11, 1972 in the Taurus-Littrow area; the lunar module carried the Lunar Roving Vehicle; 110.52 kg of lunar samples collected; Schmitt discovered a patch of orange soil on the second moonwalk."
+      },
+      {
+        "url": "https://www.lroc.asu.edu/posts/1278",
+        "title": "LROC (Arizona State University): Apollo 17 Remains Unchallenged After Fifty Years",
+        "supports": "Cernan parked the rover so its video camera could capture the liftoff; the farthest drive reached about 4.7 miles (7.6 kilometers) from the lunar module; the landing site hardware remains preserved on the surface; LROC continues to image the Apollo sites."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/mer-opportunity/",
+        "title": "NASA Science: Opportunity",
+        "supports": "today: on May 16, 2013 NASA announced Opportunity had passed the record for the farthest distance traveled by any NASA vehicle on another celestial body, set by the Apollo 17 Lunar Roving Vehicle in December 1972 (22.21 miles)."
+      },
+      {
+        "url": "https://www.usgs.gov/science/science-explorer/planetary-science/usgs-in-space",
+        "title": "U.S. Geological Survey: The USGS in Space Exploration, Mission Operations, and Training",
+        "supports": "arizonaNote: every astronaut who ever set foot on the Moon trained with the USGS in Flagstaff, Arizona."
+      },
+      {
+        "url": "https://news.asu.edu/20220722-discoveries-capturing-moon",
+        "title": "ASU News, July 22, 2022: Capturing the moon",
+        "supports": "arizonaNote: the LROC Science Operations Center is on Arizona State University's Tempe campus."
+      },
+      {
+        "url": "https://science.nasa.gov/moon/facts/",
+        "title": "NASA Science: Moon Facts",
+        "supports": "distanceKm: the Moon is an average of 238,855 miles (384,400 kilometers) away."
+      }
+    ]
   }
 ]
