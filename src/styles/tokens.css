@@ -10,10 +10,15 @@
   --color-yellow: #ffcf3f; /* one accent per view */
   --color-earth: #a9c4e4; /* Earth blue: links and data on navy */
   --color-ink: #0b1328; /* text on paper */
+  --color-copper: #9e4420; /* Arizona connection; 5.4:1 on paper */
+  --color-airmail: #3b6cb0; /* the blue stripe of the airmail border */
+  --color-stamp: #fffdf8; /* stamp paper, a step lighter than the postcard */
+  --color-line: rgb(169 196 228 / 0.3); /* hairlines on navy */
 
   /* Type */
   --font-ui: 'Inter Tight', system-ui, sans-serif;
   --font-data: 'IBM Plex Mono', ui-monospace, monospace;
+  --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-md: 1rem;
   --text-lg: 1.25rem;

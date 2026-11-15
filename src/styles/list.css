@@ -1,0 +1,119 @@
+/* Hardware list: filters, rows, status pills. */
+.filters {
+  display: grid;
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.filters [role='group'] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.filters [role='group'] .label {
+  width: 100%;
+  color: var(--color-earth);
+}
+
+.chip {
+  min-height: 40px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-earth);
+  border-radius: 20px;
+  font-size: var(--text-sm);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--color-paper);
+  border-color: var(--color-paper);
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.filter-count {
+  min-height: var(--space-3);
+  margin: 0;
+  color: var(--color-earth);
+}
+
+.hardware-list {
+  display: grid;
+  padding: 0;
+  list-style: none;
+}
+
+.hardware-list > li {
+  border-top: 1px solid var(--color-line);
+}
+
+.hardware-list > li > a {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  min-height: 72px;
+  padding: var(--space-1);
+  border-inline-start: var(--space-1) solid transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+.hardware-list > li > a:hover {
+  background: rgb(169 196 228 / 0.1);
+}
+
+/* Yellow marks "you are here": the one accent in this view. */
+.hardware-list > li > a[aria-current='page'] {
+  border-inline-start-color: var(--color-yellow);
+  background: rgb(169 196 228 / 0.16);
+}
+
+.row-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hardware-name {
+  display: block;
+  font-weight: 600;
+}
+
+.row-text .label {
+  color: var(--color-earth);
+}
+
+.az-tag {
+  padding: 0 4px;
+  border-radius: 4px;
+  background: var(--color-copper);
+  color: var(--color-paper);
+}
+
+.pill {
+  display: inline-block;
+  flex: none;
+  padding: 0 var(--space-1);
+  border: 1px solid currentColor;
+  border-radius: 12px;
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.pill[data-status='working'] {
+  border-color: var(--color-earth);
+  background: var(--color-earth);
+  color: var(--color-ink);
+}
+
+.pill[data-status='drifting'] {
+  border-style: dashed;
+}
+
+/* Under 900 px the postcard opens inside the list, below its row. */
+.hardware-list .postcard,
+.layout-side > .postcard {
+  margin: var(--space-1) 0 var(--space-3);
+}
