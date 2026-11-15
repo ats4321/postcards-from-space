@@ -163,4 +163,4 @@ Same method: every page opened and read in full from a saved copy (`curl`, then 
 | On pace for one light-day in November 2035 | What Is a Light-Day? (Nov. 12, 2026) | "on pace to be one light-day away from Earth in nine more years, in November 2035" |
 | About 13.5 billion miles (21.7 billion km) from Earth | JPL Horizons, target -32, observer Earth, 2026-11-15 | "delta 144.876864912917" (AU); 1 AU = 149,597,870.7 km |
 
-Conflicts (also in editorNote): interstellar entry Nov. 5 vs Dec. 10, 2018 on the same NASA page; Saturn flyby Aug. 25 vs 26, 1981; Neptune "five moons" vs "six new moons" on the same page, so no Neptune moon count is used.
+Conflicts (also in editorNote): interstellar entry Nov. 25 vs Dec. 10, 2018 on the same NASA page; Saturn flyby Aug. 25 vs 26, 1981; Neptune "five moons" vs "six new moons" on the same page, so no Neptune moon count is used.
