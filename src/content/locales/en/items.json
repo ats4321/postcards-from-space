@@ -276,5 +276,24 @@
       "options": ["Jupiter", "Mars", "Venus"],
       "answerIndex": 0
     }
+  },
+  "dawn": {
+    "letter": [
+      "Hello from the asteroid belt! I am Dawn. I left Earth on September 27, 2007. I fly with ion engines. They use electricity to shoot out tiny bits of xenon gas. Each push is about as strong as holding a sheet of paper. It is gentle, but I kept pushing for years!",
+      "In 2011, I reached Vesta, the second-biggest world in the asteroid belt. I was the first spacecraft to orbit anything between Mars and Jupiter. I mapped Vesta's craters and measured its gravity. In 2012, I left for my next stop.",
+      "In 2015, I went into orbit around Ceres, a dwarf planet. That made me the first to orbit two worlds beyond Earth! On October 31, 2018, I used up the fuel that kept me pointed at Earth, so I went quiet. I am still circling Ceres. I am resting here now."
+    ],
+    "signOff": "Still circling Ceres, Dawn",
+    "science": [
+      "I was the first spacecraft to orbit two worlds beyond Earth, and the first to visit a dwarf planet.",
+      "I showed that a group of meteorites found on Earth came from Vesta.",
+      "I found that the bright spots on Ceres are made of salts."
+    ],
+    "today": "I am still circling the dwarf planet Ceres. NASA announced the end of my mission on November 1, 2018, after I ran out of fuel. NASA expects me to stay in orbit for at least 20 years, and most likely for at least 50. One of my last pictures shows the bright spots in Occator Crater.",
+    "quiz": {
+      "question": "Which two worlds did Dawn orbit in the asteroid belt?",
+      "options": ["Vesta and Ceres", "Mars and Venus", "The Moon and the Sun"],
+      "answerIndex": 0
+    }
   }
 }
