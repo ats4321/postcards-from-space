@@ -133,4 +133,37 @@ Official page: <https://science.nasa.gov/mission/voyager/voyager-1/>
 - [NSSDCA Master Catalog: Voyager 1](https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A): NSSDCA ID 1977-084A; launch September 5, 1977.
 - [NASA Science: Where Are Voyager 1 and Voyager 2 Now? (page updated Nov. 12, 2026)](https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/): Voyager 1 reaches one light-day, 16.094 billion miles (25.902 billion km), on Nov. 18, 2026 at 2:16:07 a.m. PST and is the first human-made object to reach that distance; a light-day is the distance light travels in 24 hours; the magnetometer and plasma wave subsystem are on and the other instruments are off; it flew past Jupiter and Saturn.
 - [NASA Science: Voyager 1 (page updated Nov. 12, 2026)](https://science.nasa.gov/mission/voyager/voyager-1/): Launch September 5, 1977; entered interstellar space in August 2012; first human-made object to venture into interstellar space; listed as an active mission.
+
+### Images
+
+- `phoenix`: NASA/JPL-Caltech/University of Arizona/Texas A&M University. <https://photojournal.jpl.nasa.gov/catalog/PIA11719> (NASA image, free to use under NASA's media usage guidelines.)
+- `phoenix-now`: NASA/JPL-Caltech/University of Arizona. <https://www.uahirise.org/PSP_008591_2485> (NASA image, free to use under NASA's media usage guidelines.)
+- `voyager-1`: NASA/JPL-Caltech. <https://photojournal.jpl.nasa.gov/catalog/PIA26353> (NASA image, free to use under NASA's media usage guidelines.)
+- `apollo-11-eagle`: NASA. <https://images.nasa.gov/details/as11-40-5915> (NASA image, free to use under NASA's media usage guidelines.)
+- `apollo-11-site-now`: NASA/GSFC/Arizona State University. <https://lroc.im-ldi.com/images/484> (NASA image, free to use under NASA's media usage guidelines.)
+- `apollo-11-reflector`: NASA. <https://images.nasa.gov/details/as11-40-5948> (NASA image, free to use under NASA's media usage guidelines.)
+- `opportunity`: NASA/JPL-Caltech/Cornell Univ./Arizona State Univ.. <https://photojournal.jpl.nasa.gov/catalog/PIA18079> (NASA image, free to use under NASA's media usage guidelines.)
+- `opportunity-now`: NASA/JPL-Caltech/University of Arizona. <https://www.uahirise.org/ESP_056955_1775> (NASA image, free to use under NASA's media usage guidelines.)
+- `spirit`: NASA/JPL/Cornell. <https://photojournal.jpl.nasa.gov/catalog/PIA07371> (NASA image, free to use under NASA's media usage guidelines.)
+- `spirit-now`: NASA/JPL-Caltech/University of Arizona. <https://www.uahirise.org/ESP_021925_1650> (NASA image, free to use under NASA's media usage guidelines.)
+- `ingenuity`: NASA/JPL-Caltech/ASU/MSSS. <https://photojournal.jpl.nasa.gov/catalog/PIA25881> (NASA image, free to use under NASA's media usage guidelines.)
+- `ingenuity-now`: NASA/JPL-Caltech/ASU/MSSS. <https://photojournal.jpl.nasa.gov/catalog/PIA26236> (NASA image, free to use under NASA's media usage guidelines.)
+- `apollo-17-lrv`: NASA. <https://images.nasa.gov/details/as17-147-22527> (NASA image, free to use under NASA's media usage guidelines.)
+- `apollo-17-lrv-now`: NASA/GSFC/Arizona State University. <https://lroc.im-ldi.com/images/379> (NASA image, free to use under NASA's media usage guidelines.)
+- `insight`: NASA/JPL-Caltech. <https://photojournal.jpl.nasa.gov/catalog/PIA22876> (NASA image, free to use under NASA's media usage guidelines.)
+- `insight-now`: NASA/JPL-Caltech/University of Arizona. <https://www.uahirise.org/ESP_061684_1845> (NASA image, free to use under NASA's media usage guidelines.)
+- `viking-1`: NASA/JPL. <https://photojournal.jpl.nasa.gov/catalog/PIA00381> (NASA image, free to use under NASA's media usage guidelines.)
+- `viking-1-now`: NASA/JPL-Caltech/University of Arizona. <https://www.uahirise.org/PSP_001521_2025> (NASA image, free to use under NASA's media usage guidelines.)
+- `sojourner`: NASA/JPL. <https://photojournal.jpl.nasa.gov/catalog/PIA01122> (NASA image, free to use under NASA's media usage guidelines.)
+- `sojourner-now`: NASA/JPL-Caltech/University of Arizona. <https://www.uahirise.org/PSP_001890_1995> (NASA image, free to use under NASA's media usage guidelines.)
+- `voyager-2`: NASA/JPL-Caltech. <https://photojournal.jpl.nasa.gov/catalog/PIA21736> (NASA image, free to use under NASA's media usage guidelines.)
+- `pioneer-10`: NASA Ames Research Center. <https://images.nasa.gov/details/ARC-1972-AC72-2135> (NASA image, free to use under NASA's media usage guidelines.)
+- `surveyor-3`: NASA. <https://images.nasa.gov/details/as12-48-7121> (NASA image, free to use under NASA's media usage guidelines.)
+- `surveyor-3-now`: NASA/GSFC/Arizona State University. <https://lroc.im-ldi.com/images/1135> (NASA image, free to use under NASA's media usage guidelines.)
+- `apollo-12-alsep`: NASA. <https://images.nasa.gov/details/as12-47-6918> (NASA image, free to use under NASA's media usage guidelines.)
+- `apollo-12-alsep-now`: NASA/GSFC/Arizona State University. <https://lroc.im-ldi.com/images/401> (NASA image, free to use under NASA's media usage guidelines.)
+- `dawn`: NASA/JPL. <https://photojournal.jpl.nasa.gov/catalog/PIA12018> (NASA image, free to use under NASA's media usage guidelines.)
+- `near-shoemaker`: NASA. <https://images.nasa.gov/details/9701593> (NASA image, free to use under NASA's media usage guidelines.)
+- `pioneer-11`: Painting by Wilson Hurley, NASA Ames Research Center. <https://images.nasa.gov/details/ARC-2000-80-HC-251> (NASA image, free to use under NASA's media usage guidelines.)
+- `kepler`: NASA/JPL-Caltech/Ball Aerospace. <https://photojournal.jpl.nasa.gov/catalog/PIA11188> (NASA image, free to use under NASA's media usage guidelines.)
 <!-- references:end -->
