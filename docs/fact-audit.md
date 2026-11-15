@@ -221,3 +221,91 @@ Conflicts (also in editorNote): last contact 13 Nov. 1982 (NSSDCA, used) vs Nov.
 | HiRISE Operations Center, University of Arizona, Tucson | HiRISE page footer | "HiRISE Operations Center 1541 E. University Blvd Tucson, Arizona"; "University of Arizona" |
 
 Conflicts (also in editorNote): rover roll-off July 5 (US time, science.nasa.gov) vs 6 July UT (NSSDCA), so the letter says "my second Martian day"; "about 15" bounces (science.nasa.gov) vs a first bounce "and at least another 15" (NSSDCA).
+
+---
+
+# Round 3 (added November 15, 2026)
+
+Same method: every page opened and read in full from a saved copy (`curl`, then text-extracted), not search snippets.
+
+## surveyor-3
+| Claim | Source | Quote |
+|---|---|---|
+| Robot lander with three legs | NSSDCA-1967-035A | "Three hinged landing legs were attached to the lower corners of the structure" |
+| Landed April 20, 1967 | NSSDCA-1967-035A; SN-surveyor-3 | "final touchdown at 00:04:53 UT on 20 April 1967"; "April 20, 1967: Landed on the Moon" |
+| Shiny rocks confused the radar; engines did not shut off; bounced twice | SN-surveyor-3; NSSDCA | "highly reflective rocks confused the lander's descent radar, and the main engine failed to cut off"; "bounced off the lunar surface twice"; "Touchdown on the lunar surface occurred three times" |
+| Came to help the astronauts; was the ground strong enough | NSSDCA; SN-surveyor-3 | "to support the coming crewed Apollo landings"; "the lunar surface was solid enough to hold the weight of an Apollo lunar module" |
+| Scoop on a long arm; trenches up to 18 cm (7 in) | NSSDCA; SN-surveyor-3 | "a 12 cm long by 5 cm wide scoop mounted on a 1.5 meter pantograph arm"; "dig up to 7 inches (18 centimeters) deep" |
+| 6,326 pictures | NSSDCA; SN-surveyor-3 | "the television camera returned 6326 pictures"; "the first of 6,326 TV pictures" |
+| Last message May 4, 1967; did not wake after the two-week night | NSSDCA | "The last data were returned on 04 May 1967 at 00:04 UT and Surveyor 3 failed to come back to life following the two week lunar night" |
+| Two and a half years later, Conrad and Bean landed nearby, walked over, took the camera home | SN-surveyor-3; NSSDCA | "nearly two-and-a-half years of exposure on the Moon's surface"; "Pete Conrad and Alan Bean visited the spacecraft"; "removing about 10 kg of parts from the spacecraft, including the TV camera" |
+| First Surveyor with a scoop | SN-surveyor-3 | "for the first time carried a surface-sampling instrument" |
+| Pictures of an eclipse of the Sun by the Earth | NSSDCA | "Images of an eclipse of the Sun by the Earth and related thermal measurements were recorded" |
+| On a slope inside a small crater; about 180 m (197 yd) from Apollo 12 | NSSDCA; SN-surveyor-3 | "came to rest on a 14 degree slope inside a subdued 200 meter crater"; "approximately 197 yards (180 meters) from the inactive Surveyor 3 lander" |
+| Parts taken home so scientists could see how they changed | SN-surveyor-3 | "to allow scientists to evaluate the effects of nearly two-and-a-half years of exposure" |
+| LROC photographed it, the Apollo 12 lander and tracks | LROC image 1135 | "The Lunar Module descent stage, Apollo Lunar Science Experiment Package (ALSEP), and Surveyor III spacecraft are all visible along with astronaut tracks" |
+| Arizona: Flagstaff training; LROC SOC at ASU | USGS; ASU-LROC; LROC image 1135 | "Every astronaut who ever set foot on the Moon trained with the USGS in Flagstaff, Arizona"; "[NASA/GSFC/Arizona State University]" |
+
+Conflicts (also in editorNote): touchdown time 00:04:17 vs 00:04:53 UT; Apollo 12 landing Nov. 19 (NSSDCA, LROC) vs Nov. 18 (science.nasa.gov) and visit Nov. 20 vs Nov. 19, so no Apollo 12 dates are used; last data May 4 (NSSDCA, used) vs "operated … to 3 May" (LROC). Cut: the camera's current display location (no 2026 source) and the disputed bacteria story.
+
+## pioneer-10
+| Claim | Source | Quote |
+|---|---|---|
+| Left Earth in March 1972 | NSSDCA-1972-012A; SN-pioneer-10 | "Launch Date: 1972-03-03"; "March 2, 1972 / 01:49:04 UT" |
+| NASA's first mission to the outer planets | SN-pioneer-10 | "Pioneer 10 was NASA's first mission to the outer planets" |
+| Entered the asteroid belt July 1972; first through it; fewer hits than expected | SN-pioneer-10 | "On July 15, 1972, the spacecraft entered the asteroid belt"; "First spacecraft to fly through the main asteroid belt"; "some asteroid hits, although fewer than expected" |
+| December 1973, first to fly past Jupiter | SN-pioneer-10; NSSDCA | "Dec. 4, 1973: Pioneer 10's closest approach to Jupiter"; "First spacecraft to fly past Jupiter"; "the first to investigate the planet Jupiter" |
+| About 500 pictures, including the Great Red Spot | SN-pioneer-10 | "took about 500 pictures of Jupiter's atmosphere … clearly showing such landmarks as the Great Red Spot" |
+| First close-up pictures of Ganymede | SN-pioneer-10 | "It was the first spacecraft to obtain close-up images of Ganymede" |
+| 1983, crossed Neptune's orbit; first beyond the farthest planet | SN-pioneer-10 | "crossed the orbit of Neptune (then the outermost planet) on June 13, 1983, thus becoming the first human-made object to go beyond the furthest planet" |
+| Planned 21 months; more than 30 years | SN-pioneer-10 | "Originally designed for a 21-month mission to fly by Jupiter, Pioneer 10 lasted more than 30 years" |
+| Last signal Jan. 23, 2003; took 11 h 20 min | SN-pioneer-10; NSSDCA | "on Jan. 23, 2003, it sent its last signal"; "That signal took 11 hours and 20 minutes to reach Earth"; "signal was last detected on 23 January 2003" |
+| Jupiter's magnetic tail almost 800 million km, reaching Saturn's orbit | SN-pioneer-10 | "Jupiter's enormous magnetic tail, almost 800 million kilometers long, covered the whole distance between the two planets" |
+| First to run on nuclear power alone | SN-pioneer-10 | "First spacecraft to use all-nuclear electrical power" |
+| Heading toward red star Aldebaran; about two million years | NSSDCA; SN-pioneer-10 | "heading generally towards the red star Aldebaran"; "expected to pass by Aldebaran in about two million years" |
+| Plaque: man, woman, where the Sun is | SN-pioneer-10; NSSDCA | "an aluminum plaque with diagrams of a man and a woman, the solar system, and its location relative to 14 pulsars"; "determine the position of the Sun" |
+| About 13.1 billion miles (21.1 billion km), calculated | JPL Horizons, target -23, observer Earth, 2026-11-15 | "Target body name: Pioneer 10 (spacecraft) (-23) {source: pioneer_10_merged}"; "2026-Nov-15 00:00 141.358656970320" (AU) |
+
+Conflicts (also in editorNote): launch 1972-03-03 (NSSDCA, used) vs March 2, 1972 01:49 UT (science.nasa.gov), so the letter says "March 1972"; four RTGs (NSSDCA) vs two (science.nasa.gov), so no number; Jupiter closest-approach distance 200,000 km vs 130,354 km, not used.
+
+## dawn
+| Claim | Source | Quote |
+|---|---|---|
+| Left Earth September 27, 2007 | NSSDCA-2007-043A; SN-dawn | "Launch Date: 2007-09-27"; "Launch Sept. 27, 2007" |
+| Ion engines use electricity to shoot out xenon | SN-dawn ion propulsion; NSSDCA | "using an electrical charge to accelerate ions from xenon fuel"; "xenon which is ionized and accelerated by electrodes" |
+| Each push about as strong as holding a sheet of paper; kept pushing for years | SN-dawn ion propulsion | "about the amount of force involved in holding a single piece of notebook paper in your hand"; "the ion propulsion system will operate for thousands of days" |
+| 2011, reached Vesta, second-biggest world in the belt | NASA 2018-11-01; SN-dawn Vesta | "In 2011, when Dawn arrived at Vesta, the second largest world in the main asteroid belt" |
+| First to orbit anything between Mars and Jupiter | NASA 2018-11-01 | "the spacecraft became the first to orbit a body in the region between Mars and Jupiter" |
+| Mapped Vesta's craters and measured its gravity | SN-dawn Vesta | "Dawn mapped Vesta's geology, composition, cratering record and more. It determined Vesta's interior structure by measuring its gravity field" |
+| Left Vesta in 2012 | NSSDCA | "Dawn departed Vesta on 5 September 2012" |
+| 2015, orbit around Ceres, a dwarf planet; first to orbit two worlds beyond Earth; first to visit a dwarf planet | NASA 2018-11-01; NSSDCA | "In 2015, when Dawn went into orbit around Ceres, a dwarf planet … the mission became the first to visit a dwarf planet and go into orbit around two destinations beyond Earth"; "entered initial orbit around Ceres on 6 March 2015" |
+| Oct. 31, 2018, used up the fuel that kept it pointed at Earth | SN-dawn mission status; NASA 2018-11-01 | "Dawn depleted its hydrazine propellant on Oct. 31"; "hydrazine, which keeps it oriented and in communication with Earth" |
+| NASA announced the end Nov. 1, 2018 | NASA 2018-11-01 (dated "Nov 01, 2018") | "Dawn spacecraft has gone silent, ending a historic mission" |
+| Still circling Ceres; at least 20 years, likely at least 50 | NASA 2018-11-01 | "Dawn will remain in orbit for at least 20 years, and engineers have more than 99 percent confidence the orbit will last for at least 50 years" |
+| A group of meteorites on Earth came from Vesta | SN-dawn Vesta | "confirmed that Vesta is the parent body of the howardite-eucrite-diogenite (HED) meteorites" |
+| Bright spots on Ceres are salts | SN-dawn Ceres | "'bright spots' and are deposits of carbonates and other salts" |
+| One of the last pictures shows the bright spots of Occator Crater | NASA 2018-11-01 | "This photo of Ceres and the bright regions of Occator Crater was one of the last views NASA's Dawn spacecraft transmitted" |
+| Ceres about 301.7 million km (distanceNote) | JPL Horizons, target 1 Ceres, observer Earth, 2026-11-15 | "2026-Nov-15 00:00 2.01671571762595" (AU) |
+
+Conflicts (also in editorNote): no source gives the time of the last signal received (NSSDCA "communications ended on 31 October 2018"; NASA release: missed sessions Oct. 31 and Nov. 1), so lastContact is left out; NSSDCA mass 725 kg vs 747.1 kg dry; ion thrust 92 mN (NSSDCA) vs 91 mN (science.nasa.gov); neither number used.
+
+## near-shoemaker
+| Claim | Source | Quote |
+|---|---|---|
+| Left Earth February 17, 1996 | NSSDCA-1996-008A; SN-near-shoemaker | "Launch Date: 1996-02-17"; "Feb. 17, 1996: Launch" |
+| Flew past Mathilde; covered with craters, less dense than thought | SN-near-shoemaker; NSSDCA | "the 4.5 billion-year-old asteroid is covered with craters and is less dense than previously believed"; "flyby of the 61 km diameter asteroid 253 Mathilde on June 27, 1997" |
+| Feb. 14, 2000 orbit around Eros; first to orbit an asteroid | SN-near-shoemaker; NSSDCA | "Feb. 14, 2000: NEAR entered orbit around Eros becoming the first human-made object to orbit an asteroid"; "The mission was the first-ever to orbit an asteroid" |
+| A month later renamed for geologist Eugene Shoemaker | SN-near-shoemaker | "on March 14, 2000, a month after entering asteroid orbit, NASA renamed the NEAR spacecraft NEAR Shoemaker in honor of Eugene M. Shoemaker (1928–1997), the renowned geologist" |
+| Circled Eros for a year | NSSDCA | "designed to study the near Earth asteroid Eros from close orbit over a period of a year" |
+| 160,000 pictures | SN-near-shoemaker | "The spacecraft returned about 10 times more data than originally planned, including 160,000 images" |
+| Not built to land; slow descent; touched down Feb. 12, 2001 at 6.4 km/h (4 mph) | SN-near-shoemaker | "which was not designed as a lander"; "Following a slow, controlled descent"; "touched down on Eros at a gentle 4 miles per hour (6.4 kilometers per hour)" |
+| First to land on an asteroid | SN-near-shoemaker; NSSDCA | "First spacecraft to land on an asteroid"; "This was the first spacecraft touchdown on an asteroid" |
+| Data for about two more weeks; succumbed to the cold | SN-near-shoemaker | "returned valuable data, especially from its gamma-ray spectrometer, for about two weeks"; "the spacecraft having succumbed to the extreme cold" |
+| Eros has no magnetic field | SN-near-shoemaker | "NEAR data showed that Eros had no magnetic field" |
+| Eros smaller than expected; about 33 km (21 miles) long | SN-near-shoemaker; NSSDCA | "discovered that the minor planet was smaller than expected"; "the 21-mile long asteroid Eros"; "approximately 13 x 13 x 33 km in size" |
+| South of a saddle-shaped area called Himeros | SN-near-shoemaker | "just south of a saddle-shaped feature named Himeros" |
+| Last contact Feb. 28, 2001; Dec. 10, 2002 attempt failed | SN-near-shoemaker; NSSDCA | "The last contact with NEAR was Feb. 28, 2001"; "NASA's attempt to contact the probe nearly two years later on Dec. 10, 2002, was unsuccessful" |
+| Arizona: Gene Shoemaker, USGS; founded Astrogeology Science Center in Flagstaff; led much Apollo training | USGS | "Much of the Apollo astronaut training was led by USGS scientist, Dr. Gene Shoemaker"; "founder of the USGS Astrogeology Science Center"; "the USGS Astrogeology Science Center is located in Flagstaff, Arizona" |
+| Eros about 371.8 million km (distanceNote) | JPL Horizons, target 433 Eros, observer Earth, 2026-11-15 | "2026-Nov-15 00:00 2.48512906451361" (AU) |
+
+Conflicts (also in editorNote): touchdown 19:44 UT (science.nasa.gov) vs 20:01:52 UT (NSSDCA), only the date is used; mass 805 kg vs 487 kg, not used; undated "355 million kilometers from Earth" (science.nasa.gov) not used, Horizons used instead.

@@ -559,5 +559,188 @@
         "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
       }
     ]
+  },
+  {
+    "id": "surveyor-3",
+    "name": "Surveyor 3",
+    "place": "Moon",
+    "locationName": "A small crater in Oceanus Procellarum, next to the Apollo 12 landing site",
+    "launchDate": "1967-04-17",
+    "arrivalDate": "1967-04-20",
+    "lastContact": "1967-05-04",
+    "status": "resting",
+    "distanceKm": 384400,
+    "distanceNote": "NASA says the Moon is an average of 238,855 miles (384,400 km) from Earth. The real distance changes a little during every orbit.",
+    "illustration": "lander",
+    "imageId": "surveyor-3",
+    "arizona": true,
+    "nssdcId": "1967-035A",
+    "officialUrl": "https://science.nasa.gov/mission/surveyor-3/",
+    "editorNote": "Landing time: NSSDCA gives initial touchdown 00:04:17 UT and final touchdown 00:04:53 UT on 20 April 1967 (19 April EST); science.nasa.gov says the lander settled on its third touchdown at 00:04:17 UT. Both agree on April 20, 1967 (UT), which is arrivalDate; the letter gives only the date. Number of bounces: NSSDCA 'Touchdown on the lunar surface occurred three times', science.nasa.gov 'bounced off the lunar surface twice'; these agree, and the letter says it bounced twice. lastContact: NSSDCA 'last data were returned on 04 May 1967 at 00:04 UT'; LROC says it operated until 3 May 1967; NSSDCA is used. Apollo 12 dates conflict: NSSDCA and LROC put the Intrepid landing on 19 November 1969 and the Surveyor visit on 20 November (UT); science.nasa.gov says Nov. 18 and Nov. 19 (US time). The text gives no Apollo 12 dates, only 'two and a half years later' (science.nasa.gov: 'nearly two-and-a-half years of exposure'). Distance from Intrepid: about 180 m (NSSDCA; science.nasa.gov '197 yards (180 meters)'); LROC says 'within 200 meters'. Cut: NSSDCA says the camera 'is now on display' at the Smithsonian National Air and Space Museum, but no 2026 source confirming it is on view was found, so the text does not say where the camera is now. Also cut: the popular story that Earth bacteria survived inside the returned camera, which is disputed and not in any source used here. Arizona: the LROC page footer lists the Science Operations Center under 'Phoenix, Arizona' while ASU News places it on ASU's Tempe campus, so the text says only 'Arizona State University'. The USGS page does not name the Apollo 12 crew, so the Arizona note does not claim where Conrad and Bean trained.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+        "title": "NSSDCA Master Catalog: Surveyor 3",
+        "supports": "NSSDCA ID 1967-035A; launch 17 April 1967; second Surveyor to soft-land; program goal to support the crewed Apollo landings; three landing legs; surface sampler scoop on a 1.5 m arm; touchdown occurred three times because the vernier engines kept firing; landed 20 April 1967 on a 14 degree slope inside a 200 m crater in Oceanus Procellarum; trenches as deep as 18 cm; 6,326 pictures; images of an eclipse of the Sun by the Earth; last data 04 May 1967; did not come back to life after the two-week lunar night; Apollo 12 landed within about 180 m; Pete Conrad and Alan Bean removed about 10 kg of parts including the TV camera."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/surveyor-3/",
+        "title": "NASA Science: Surveyor 3",
+        "supports": "Key dates: launch April 17, 1967, landed April 20, 1967; first Surveyor to carry a surface-sampling instrument, digging up to 7 inches (18 centimeters); reflective rocks confused the descent radar and the lander bounced twice; 6,326 TV pictures; scientists concluded the surface was solid enough to hold an Apollo lunar module; Apollo 12 landed about 197 yards (180 meters) away; the astronauts recovered parts including the scoop and camera to study the effects of nearly two-and-a-half years on the Moon."
+      },
+      {
+        "url": "https://lroc.im-ldi.com/images/1135",
+        "title": "LROC (Arizona State University): Apollo 12 Fifty-first Anniversary",
+        "supports": "today and arizonaNote: LROC low-altitude image shows the Apollo 12 descent stage, the ALSEP and the Surveyor III spacecraft with astronaut tracks; image credit NASA/GSFC/Arizona State University; Intrepid landed within 200 meters of Surveyor III, which operated from 20 April to 3 May 1967."
+      },
+      {
+        "url": "https://www.usgs.gov/science/science-explorer/planetary-science/usgs-in-space",
+        "title": "U.S. Geological Survey: The USGS in Space Exploration, Mission Operations, and Training",
+        "supports": "arizonaNote: every astronaut who ever set foot on the Moon trained with the USGS in Flagstaff, Arizona."
+      },
+      {
+        "url": "https://news.asu.edu/20220722-discoveries-capturing-moon",
+        "title": "ASU News, July 22, 2022: Capturing the moon",
+        "supports": "arizonaNote: the LROC Science Operations Center is at Arizona State University."
+      },
+      {
+        "url": "https://science.nasa.gov/moon/facts/",
+        "title": "NASA Science: Moon Facts",
+        "supports": "distanceKm: the Moon is an average of 238,855 miles (384,400 kilometers) away."
+      }
+    ]
+  },
+  {
+    "id": "pioneer-10",
+    "name": "Pioneer 10",
+    "place": "Deep space",
+    "locationName": "Leaving the solar system, heading toward the star Aldebaran",
+    "launchDate": "1972-03-03",
+    "lastContact": "2003-01-23",
+    "status": "drifting",
+    "distanceKm": 21147000000,
+    "distanceNote": "Distance from Earth on Nov. 15, 2026: 141.36 AU (about 21.15 billion km, 13.14 billion miles), from NASA JPL's Horizons system. No one has heard from Pioneer 10 since 2003, so this is where JPL calculates it should be. It moves a little farther away every second.",
+    "illustration": "probe",
+    "imageId": "pioneer-10",
+    "arizona": false,
+    "nssdcId": "1972-012A",
+    "officialUrl": "https://science.nasa.gov/mission/pioneer-10/",
+    "editorNote": "Launch date conflict: NSSDCA gives 1972-03-03 (and calls 03 March 2002 'the 30th anniversary of Pioneer 10's launch date'); science.nasa.gov gives 'March 2, 1972 / 01:49:04 UT'. launchDate follows NSSDCA; the letter only says 'March 1972'. Power source conflict: NSSDCA says four SNAP-19 RTGs, science.nasa.gov says two; no number is used, only 'nuclear power'. Jupiter closest approach distance differs (NSSDCA about 200,000 km, science.nasa.gov 130,354 km); no distance is used, only the date (both say December 4, 1973). lastContact is the last signal detected, Jan. 23, 2003 (both sources); the last telemetry data came on April 27, 2002. distanceKm comes from a JPL Horizons query for Nov. 15, 2026 (delta = 141.358656970320 AU, 1 AU = 149,597,870.7 km, trajectory 'pioneer_10_merged'); because the spacecraft is no longer tracked, this is a calculated position, which distanceNote says.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-012A",
+        "title": "NSSDCA Master Catalog: Pioneer 10",
+        "supports": "NSSDCA ID 1972-012A; launch date 1972-03-03; first mission to the outer solar system and first to investigate Jupiter; closest approach to Jupiter on 04 December 1973; heading generally towards the red star Aldebaran, a journey of about two million years; signal last detected on 23 January 2003; plaque with drawings of a man, a woman and the location of the Sun and Earth in our galaxy."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/pioneer-10/",
+        "title": "NASA Science: Pioneer 10",
+        "supports": "NASA's first mission to the outer planets; entered the asteroid belt July 15, 1972, first spacecraft to fly through it, with fewer asteroid hits than expected; first to fly past Jupiter, closest approach Dec. 4, 1973; about 500 pictures of Jupiter's atmosphere showing the Great Red Spot; first close-up images of Ganymede; Jupiter's magnetic tail, almost 800 million km long, covers the distance between Jupiter and Saturn; crossed Neptune's orbit June 13, 1983, the first human-made object to go beyond the farthest planet; designed for 21 months, lasted more than 30 years; last signal Jan. 23, 2003, which took 11 hours and 20 minutes to reach Earth; first spacecraft to use all-nuclear electrical power; aluminum plaque with a man, a woman, the solar system and its location relative to 14 pulsars; expected to pass by Aldebaran in about two million years."
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='-23'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
+        "title": "NASA JPL Horizons: Pioneer 10 (-23) range from Earth, Nov. 15, 2026",
+        "supports": "distanceKm and today: on Nov. 15, 2026 Pioneer 10's calculated position was 141.36 AU from Earth (about 21.15 billion km, 13.14 billion miles)."
+      }
+    ]
+  },
+  {
+    "id": "dawn",
+    "name": "Dawn",
+    "place": "Asteroids",
+    "locationName": "In orbit around Ceres, a dwarf planet in the asteroid belt",
+    "launchDate": "2007-09-27",
+    "arrivalDate": "2015-03-06",
+    "status": "resting",
+    "distanceKm": 301700000,
+    "distanceNote": "Distance from Earth to Ceres on Nov. 15, 2026: 2.02 AU (about 301.7 million km, 187.5 million miles), from NASA JPL's Horizons system. Dawn circles Ceres, so it is about this far away too. The distance changes a lot as Earth and Ceres move around the Sun.",
+    "illustration": "orbiter",
+    "imageId": "dawn",
+    "arizona": false,
+    "nssdcId": "2007-043A",
+    "officialUrl": "https://science.nasa.gov/mission/dawn/",
+    "editorNote": "lastContact is left out on purpose: NSSDCA says 'communications ended on 31 October 2018', the Dawn mission status page says Dawn 'depleted its hydrazine propellant on Oct. 31', and the Nov. 1, 2018 NASA release says Dawn missed its scheduled communications sessions on Oct. 31 and Nov. 1. No source gives the date and time of the last signal actually received, so the text says only that Dawn ran out of fuel on October 31, 2018 and that NASA announced the end on November 1, 2018. arrivalDate is orbit entry at Ceres, Dawn's final destination (NSSDCA: 6 March 2015 at 12:29 UT); Vesta orbit began 16 July 2011 (NSSDCA). Status 'resting' because the mission is over and Dawn is an inert spacecraft parked in orbit ('an inert celestial monument … in orbit around one of the alien worlds it unveiled', mission status page). Mass differs inside NSSDCA (facts box 725 kg; text 747.1 kg dry, 1,217.7 kg at launch); no mass is used. Ion thrust: NSSDCA gives 92 mN, the science.nasa.gov ion propulsion page 91 mN; the text uses only the page's comparison to holding a sheet of paper. distanceKm is Ceres' distance from a JPL Horizons query for Nov. 15, 2026 (delta = 2.01671571762595 AU, 1 AU = 149,597,870.7 km).",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A",
+        "title": "NSSDCA Master Catalog: Dawn",
+        "supports": "NSSDCA ID 2007-043A; launch 27 September 2007; ion propulsion using xenon that is ionized and accelerated; reached Vesta 16 July 2011; departed Vesta 5 September 2012; entered orbit around Ceres 6 March 2015; communications ended 31 October 2018; remained in orbit around Ceres."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/dawn/",
+        "title": "NASA Science: Dawn",
+        "supports": "Launch Sept. 27, 2007; stays at giant asteroid Vesta and dwarf planet Ceres, both in the main asteroid belt between Mars and Jupiter; type Orbiter; status Successful."
+      },
+      {
+        "url": "https://www.nasa.gov/news-release/nasas-dawn-mission-to-asteroid-belt-comes-to-end/",
+        "title": "NASA news release, Nov. 1, 2018: NASA's Dawn Mission to Asteroid Belt Comes to End",
+        "supports": "Dawn has gone silent, ending its mission; ran out of hydrazine and missed communications on Oct. 31 and Nov. 1, 2018; turned science fiction into science fact with ion propulsion; at Vesta in 2011, the first spacecraft to orbit a body between Mars and Jupiter; at Ceres in 2015, the first to visit a dwarf planet and to orbit two destinations beyond Earth; will stay in orbit at least 20 years, with more than 99 percent confidence of at least 50 years; one of the last views showed the bright regions of Occator Crater."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/dawn/mission-status/",
+        "title": "NASA Science: Dawn Mission Status",
+        "supports": "Dawn depleted its hydrazine propellant on Oct. 31, 2018; without it Dawn cannot point its solar arrays at the Sun or its antenna at Earth; Dawn is now an inert spacecraft in orbit around Ceres."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/dawn/technology/ion-propulsion/",
+        "title": "NASA Science: Dawn Ion Propulsion",
+        "supports": "Ion engines use an electrical charge to accelerate ions from xenon fuel; each engine's push is about the force of holding a single sheet of notebook paper; it would take four days to go from 0 to 60 mph; ion propulsion let Dawn orbit two different solar system bodies, a first."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/dawn/science/vesta/",
+        "title": "NASA Science: Dawn at Vesta",
+        "supports": "Vesta is the second largest object in the asteroid belt; Dawn confirmed Vesta is the parent body of the HED meteorites found on Earth."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/dawn/science/ceres/",
+        "title": "NASA Science: Dawn at Ceres",
+        "supports": "Ceres is a dwarf planet; its bright spots are deposits of carbonates and other salts; Occator Crater is home to the brightest area on Ceres."
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='DES=2000001%3B'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
+        "title": "NASA JPL Horizons: Ceres range from Earth, Nov. 15, 2026",
+        "supports": "distanceKm: on Nov. 15, 2026 Ceres was 2.02 AU from Earth (about 301.7 million km, 187.5 million miles)."
+      }
+    ]
+  },
+  {
+    "id": "near-shoemaker",
+    "name": "NEAR Shoemaker",
+    "place": "Asteroids",
+    "locationName": "Asteroid 433 Eros, just south of a saddle-shaped area called Himeros",
+    "launchDate": "1996-02-17",
+    "arrivalDate": "2001-02-12",
+    "lastContact": "2001-02-28",
+    "status": "resting",
+    "distanceKm": 371800000,
+    "distanceNote": "Distance from Earth to Eros on Nov. 15, 2026: 2.49 AU (about 371.8 million km, 231 million miles), from NASA JPL's Horizons system. Eros orbits the Sun on a different path than Earth, so this distance changes a lot.",
+    "illustration": "orbiter",
+    "imageId": "near-shoemaker",
+    "arizona": true,
+    "nssdcId": "1996-008A",
+    "officialUrl": "https://science.nasa.gov/mission/near-shoemaker/",
+    "editorNote": "arrivalDate is the landing on Eros (Feb. 12, 2001, both sources), where NEAR rests today; orbit around Eros began Feb. 14, 2000. Touchdown time conflict: science.nasa.gov 19:44 UT, NSSDCA 20:01:52 UT; only the date is used. Mass conflict: science.nasa.gov 805 kg, NSSDCA facts box 487 kg; no mass is used. Eros size: NSSDCA 'approximately 13 x 13 x 33 km', science.nasa.gov '21-mile long asteroid'; the text uses 33 km (21 miles). science.nasa.gov gives Eros as 'approximately 221 million miles (355 million kilometers) from Earth' with no date; distanceKm instead comes from a JPL Horizons query for Nov. 15, 2026 (delta = 2.48512906451361 AU, 1 AU = 149,597,870.7 km). The 160,000 images are for the whole mission (science.nasa.gov). Arizona: the USGS page calls him 'Dr. Gene Shoemaker'; NSSDCA says the spacecraft was 'renamed in honor of Gene Shoemaker' and science.nasa.gov 'Eugene M. Shoemaker (1928–1997)'.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-008A",
+        "title": "NSSDCA Master Catalog: NEAR Shoemaker",
+        "supports": "NSSDCA ID 1996-008A; launch 1996-02-17; renamed in honor of Gene Shoemaker; first-ever to orbit an asteroid and to touch down on one; flew within 1,200 km of asteroid 253 Mathilde on June 27, 1997; orbit insertion at Eros 14 February 2000; Eros about 13 x 13 x 33 km; touchdown in the saddle region of Eros on 12 February 2001; final contact 28 February 2001; later contact attempt on 10 December 2002 unsuccessful."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/near-shoemaker/",
+        "title": "NASA Science: NEAR Shoemaker",
+        "supports": "Launch Feb. 17, 1996; Mathilde flyby June 27, 1997 showed it covered with craters and less dense than previously believed; entered orbit around Eros Feb. 14, 2000, the first human-made object to orbit an asteroid; renamed March 14, 2000 in honor of geologist Eugene M. Shoemaker; not designed as a lander, touched down Feb. 12, 2001 at 4 miles per hour (6.4 km/h) just south of a saddle-shaped feature named Himeros; first spacecraft to land on an asteroid; returned data for about two weeks; last contact Feb. 28, 2001 after succumbing to the extreme cold; contact attempt Dec. 10, 2002 failed; Eros has no magnetic field; 21-mile long asteroid; returned 160,000 images."
+      },
+      {
+        "url": "https://www.usgs.gov/science/science-explorer/planetary-science/usgs-in-space",
+        "title": "U.S. Geological Survey: The USGS in Space Exploration, Mission Operations, and Training",
+        "supports": "arizonaNote: the USGS Astrogeology Science Center is in Flagstaff, Arizona; much of the Apollo astronaut training was led by USGS scientist Dr. Gene Shoemaker, founder of the USGS Astrogeology Science Center."
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='433%3B'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
+        "title": "NASA JPL Horizons: 433 Eros range from Earth, Nov. 15, 2026",
+        "supports": "distanceKm: on Nov. 15, 2026 Eros was 2.49 AU from Earth (about 371.8 million km, 231 million miles)."
+      }
+    ]
   }
 ]

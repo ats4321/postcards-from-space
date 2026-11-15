@@ -237,5 +237,83 @@
       "options": ["On a long runway", "Inside giant bouncing airbags", "Hanging from a balloon"],
       "answerIndex": 1
     }
+  },
+  "surveyor-3": {
+    "letter": [
+      "Hello from the Moon! I am Surveyor 3, a robot lander with three legs. I landed on April 20, 1967. On the way down, shiny rocks confused my radar, so my engines did not shut off in time. I bounced twice before I finally settled down!",
+      "I came to help the astronauts who would follow me. NASA needed to know if the ground was strong enough to hold their landers. I had a scoop on a long arm, and I dug trenches up to 18 cm (7 inches) deep. I also sent home 6,326 pictures.",
+      "My last message reached Earth on May 4, 1967. Then the two-week Moon night came, and I did not wake up again. Two and a half years later, I had visitors! Apollo 12 astronauts Pete Conrad and Alan Bean landed nearby. They walked over and took my camera home to Earth."
+    ],
+    "signOff": "Your three-legged friend on the Moon, Surveyor 3",
+    "science": [
+      "My scoop tests showed that the Moon's ground was solid enough to hold an Apollo lunar module.",
+      "I was the first Surveyor lander to carry a scoop for digging into the Moon's soil.",
+      "I took pictures of an eclipse of the Sun, when Earth passed in front of the Sun as seen from the Moon."
+    ],
+    "today": "I am still sitting on a slope inside a small crater, about 180 meters (197 yards) from where Apollo 12 landed. The astronauts took some of my parts home, so scientists could see how two and a half years on the Moon had changed them. A camera in orbit called LROC has photographed me, the Apollo 12 lander and the astronauts' tracks.",
+    "arizonaNote": "Every astronaut who walked on the Moon trained with U.S. Geological Survey scientists in Flagstaff, Arizona. LROC, the Moon camera that photographs my landing site, has its science operations center at Arizona State University.",
+    "quiz": {
+      "question": "How many times did Surveyor 3 bounce before it settled on the Moon?",
+      "options": ["It never bounced", "Twice", "Ten times"],
+      "answerIndex": 1
+    }
+  },
+  "pioneer-10": {
+    "letter": [
+      "Greetings from far, far away! I am Pioneer 10. I left Earth in March 1972. NASA calls me its first mission to the outer planets. That July, I entered the asteroid belt. I was the first spacecraft to fly through it. A few tiny space rocks hit me, but fewer than scientists expected.",
+      "In December 1973, I became the first spacecraft to fly past Jupiter. I took about 500 pictures of its clouds, including the Great Red Spot. I also took the first close-up pictures of Ganymede, one of Jupiter's moons.",
+      "In 1983, I crossed the orbit of Neptune. I was the first human-made object to go beyond the farthest planet. My team planned a 21-month trip, but I kept going for more than 30 years. My last signal reached Earth on January 23, 2003. It took 11 hours and 20 minutes to get there!"
+    ],
+    "signOff": "Drifting toward the stars, Pioneer 10",
+    "science": [
+      "I was the first spacecraft to fly through the asteroid belt and the first to fly past Jupiter.",
+      "I found that Jupiter's giant magnetic tail is almost 800 million km (about 500 million miles) long. It stretches all the way out to Saturn's orbit.",
+      "I was the first spacecraft to run on nuclear power alone."
+    ],
+    "today": "I am drifting out of the solar system, heading toward a red star called Aldebaran. I will need about two million years to pass by it. I carry a metal plaque with drawings of a man and a woman and a map of where the Sun is, in case anyone ever finds me. NASA JPL calculates that I am now about 13.1 billion miles (21.1 billion km) from Earth.",
+    "quiz": {
+      "question": "Which planet was Pioneer 10 the first spacecraft to fly past?",
+      "options": ["Jupiter", "Mars", "Venus"],
+      "answerIndex": 0
+    }
+  },
+  "dawn": {
+    "letter": [
+      "Hello from the asteroid belt! I am Dawn. I left Earth on September 27, 2007. I fly with ion engines. They use electricity to shoot out tiny bits of xenon gas. Each push is about as strong as holding a sheet of paper. It is gentle, but I kept pushing for years!",
+      "In 2011, I reached Vesta, the second-biggest world in the asteroid belt. I was the first spacecraft to orbit anything between Mars and Jupiter. I mapped Vesta's craters and measured its gravity. In 2012, I left for my next stop.",
+      "In 2015, I went into orbit around Ceres, a dwarf planet. That made me the first to orbit two worlds beyond Earth! On October 31, 2018, I used up the fuel that kept me pointed at Earth, so I went quiet. I am still circling Ceres. I am resting here now."
+    ],
+    "signOff": "Still circling Ceres, Dawn",
+    "science": [
+      "I was the first spacecraft to orbit two worlds beyond Earth, and the first to visit a dwarf planet.",
+      "I showed that a group of meteorites found on Earth came from Vesta.",
+      "I found that the bright spots on Ceres are made of salts."
+    ],
+    "today": "I am still circling the dwarf planet Ceres. NASA announced the end of my mission on November 1, 2018, after I ran out of fuel. NASA expects me to stay in orbit for at least 20 years, and most likely for at least 50. One of my last pictures shows the bright spots in Occator Crater.",
+    "quiz": {
+      "question": "Which two worlds did Dawn orbit in the asteroid belt?",
+      "options": ["Vesta and Ceres", "Mars and Venus", "The Moon and the Sun"],
+      "answerIndex": 0
+    }
+  },
+  "near-shoemaker": {
+    "letter": [
+      "Hello from asteroid Eros! I am NEAR Shoemaker. I left Earth on February 17, 1996. On my way, I flew past another asteroid called Mathilde. I found that it is covered with craters and is less dense than scientists thought.",
+      "On February 14, 2000, I went into orbit around Eros. I was the first spacecraft ever to orbit an asteroid! A month later, NASA renamed me to honor Eugene Shoemaker, a famous geologist. I circled Eros for a year. In all, I sent home 160,000 pictures.",
+      "I was not built to land. But on February 12, 2001, my team slowly lowered me onto Eros. I touched down at just 6.4 km (4 miles) per hour. I was the first spacecraft to land on an asteroid! I sent data for about two more weeks, until the cold was too much for me."
+    ],
+    "signOff": "Your friend on Eros, NEAR Shoemaker",
+    "science": [
+      "I was the first spacecraft to orbit an asteroid and the first to land on one.",
+      "I found that Eros has no magnetic field.",
+      "I found that Eros is smaller than scientists expected. It is about 33 km (21 miles) long."
+    ],
+    "today": "I am still sitting on Eros, just south of a saddle-shaped area called Himeros. My last contact with Earth was on February 28, 2001. NASA tried to call me again on December 10, 2002, but I did not answer. I am resting here now.",
+    "arizonaNote": "I am named after Gene Shoemaker, a U.S. Geological Survey scientist. He founded the USGS Astrogeology Science Center in Flagstaff, Arizona, and led much of the training for the Apollo astronauts.",
+    "quiz": {
+      "question": "What was NEAR Shoemaker the first spacecraft to do?",
+      "options": ["Land on an asteroid", "Land on Mars", "Visit Pluto"],
+      "answerIndex": 0
+    }
   }
 }
