@@ -1,6 +1,6 @@
 # Postcards from Space
 
-**Live site: <https://lilongwe-tau.vercel.app/>**
+**Live site: <https://postcards-from-space.vercel.app/>**
 
 An interactive, story-driven web app for the 2026 NASA Space Apps Challenge
 "Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars".
