@@ -1,6 +1,6 @@
 # Postcards from Space
 
-**Live site:** <https://lilongwe-tau.vercel.app/>
+**Live site:** <https://postcards-from-space.vercel.app/>
 
 ## Project summary
 
