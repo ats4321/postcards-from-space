@@ -519,5 +519,45 @@
         "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
       }
     ]
+  },
+  {
+    "id": "sojourner",
+    "name": "Sojourner rover",
+    "place": "Mars",
+    "locationName": "Ares Vallis, an ancient flood plain, near the Mars Pathfinder lander",
+    "launchDate": "1996-12-04",
+    "arrivalDate": "1997-07-04",
+    "lastContact": "1997-09-27",
+    "status": "resting",
+    "distanceKm": 225000000,
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
+    "illustration": "rover",
+    "imageId": "sojourner",
+    "arizona": true,
+    "nssdcId": "1996-068A",
+    "officialUrl": "https://science.nasa.gov/mission/mars-pathfinder/",
+    "editorNote": "Sojourner has no NSSDCA ID of its own in the pages opened; 1996-068A is the Mars Pathfinder mission (lander and rover). lastContact is the mission's final data transmission (NSSDCA: 'until 27 September 1997 when communications were lost'; science.nasa.gov: 'final data transmission on Sept. 27, 1997'); the rover talked to Earth through the lander. Rover roll-off: NSSDCA gives 6 July 1997 about 05:40 UT (1:40 a.m. EDT); science.nasa.gov says 'the night of July 5, late in … sol 2' (US time). The letter only says 'on my second Martian day'. Bounces: science.nasa.gov 'about 15 times'; NSSDCA a first bounce 'and at least another 15'; the letter says 'about 15 times'. Sojourner's position today is HiRISE's 'proposed current location', so the text says scientists think a feature 'may be' the rover. Arizona: the HiRISE page's operations center is at the University of Arizona in Tucson.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-068A",
+        "title": "NSSDCA Master Catalog: Mars Pathfinder",
+        "supports": "NSSDCA ID 1996-068A; launch 4 December 1996; landed 4 July 1997 in the Ares Vallis region, an outwash plain carved by a huge flood; air bags formed a protective ball around the lander, which bounced and rolled before stopping; rover rolled onto the surface on 6 July (UT); lander named the Sagan Memorial Station; images and experiments by lander and rover until 27 September 1997 when communications were lost."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/mars-pathfinder/",
+        "title": "NASA Science: Mars Pathfinder (page modified Sept. 29, 2026)",
+        "supports": "Delivered the first-ever robotic rover, Sojourner, to the Martian surface; rover weighs 23 pounds (10.6 kilograms) and stands 1 foot (30 centimeters) tall; named after civil-rights crusader Sojourner Truth; lander named the Carl Sagan Memorial Station; landed July 4, 1997 in Ares Vallis, an ancient flood plain; first use of the airbag landing technique; bounced about 15 times; rover rolled down the lander's ramp on sol 2; 550 images from the rover; Alpha Proton X-ray Spectrometer on the rover determined the elemental composition of rocks and soils; findings from lander and rover suggest Mars was once warm and wet; final data transmission Sept. 27, 1997."
+      },
+      {
+        "url": "https://www.uahirise.org/PSP_001890_1995",
+        "title": "HiRISE (University of Arizona): Mars Pathfinder Landing Site",
+        "supports": "today and arizonaNote: HiRISE image acquired 21 December 2006 shows the Pathfinder lander, ramps and airbags; the proposed current location of Sojourner is a feature about the right size that was not present in the lander's Gallery Panorama; HiRISE Operations Center, University of Arizona, Tucson."
+      },
+      {
+        "url": "https://www.nasa.gov/hrp/hazard-distance-from-earth/",
+        "title": "NASA Human Research Program: Hazard: Distance From Earth",
+        "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
+      }
+    ]
   }
 ]

@@ -202,3 +202,22 @@ Conflicts (also in editorNote): last signal Dec. 15 vs mission declared over Dec
 | HiRISE operated by the University of Arizona | HiRISE page | "is operated by the University of Arizona" |
 
 Conflicts (also in editorNote): last contact 13 Nov. 1982 (NSSDCA, used) vs Nov. 11, 1982 (science.nasa.gov); renaming January 1981 (NSSDCA) vs January 1982 (science.nasa.gov), so no year is given.
+
+## sojourner
+| Claim | Source | Quote |
+|---|---|---|
+| Ares Vallis, an ancient flood plain | SN-mars-pathfinder; NSSDCA-1996-068A | "Ares Vallis … is an ancient flood plain in Mars' northern hemisphere"; "a large outwash plain" |
+| 23 pounds (10.6 kg), 1 foot (30 cm) tall | SN-mars-pathfinder | "the 23-pound (10.6 kilogram) rover, Sojourner"; "its full height of 1 foot (30 centimeters)" |
+| First-ever robotic rover on the surface of Mars | SN-mars-pathfinder | "deliver the first-ever robotic rover, Sojourner, to the Martian surface" |
+| Named after Sojourner Truth, civil-rights crusader | SN-mars-pathfinder | "named Sojourner after American civil-rights crusader Sojourner Truth" |
+| Landed July 4, 1997 in giant airbags; bounced about 15 times | SN-mars-pathfinder; NSSDCA | "bounced like a giant beach ball about 15 times"; "impacted at 16:56:55 UT … on 4 July 1997" |
+| Rolled down a ramp on the second Martian day | SN-mars-pathfinder | "late in the second Martian day, or sol 2, Sojourner … rolled down the lander's rear ramp" |
+| Studied rocks and soil; X-ray instrument measured their makeup | SN-mars-pathfinder | "Alpha Proton X-ray Spectrometer: Determined the elemental composition of rocks and soils"; "the Mars Pathfinder rover deploying its Alpha Proton X-Ray Spectrometer" |
+| 550 pictures | SN-mars-pathfinder | "550 images from the rover" |
+| Clues suggest Mars was once warm and wet | SN-mars-pathfinder | "Findings from … both the lander and the rover suggest that Mars was at one time in its past warm and wet" |
+| Last message September 27, 1997 | SN-mars-pathfinder; NSSDCA | "the final data transmission on Sept. 27, 1997"; "until 27 September 1997 when communications were lost" |
+| Lander now the Carl Sagan Memorial Station | SN-mars-pathfinder | "The lander, named the Carl Sagan Memorial Station" |
+| December 2006 HiRISE image; a feature about its size, not in older pictures, may be Sojourner | HiRISE PSP_001890_1995 | "Acquisition date 21 December 2006"; "a feature at this location that is about the right size for Sojourner and that wasn't present when the Gallery Panorama was taken" |
+| HiRISE Operations Center, University of Arizona, Tucson | HiRISE page footer | "HiRISE Operations Center 1541 E. University Blvd Tucson, Arizona"; "University of Arizona" |
+
+Conflicts (also in editorNote): rover roll-off July 5 (US time, science.nasa.gov) vs 6 July UT (NSSDCA), so the letter says "my second Martian day"; "about 15" bounces (science.nasa.gov) vs a first bounce "and at least another 15" (NSSDCA).

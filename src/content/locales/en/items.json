@@ -217,5 +217,25 @@
       "options": ["Look for signs of life", "Build a base for astronauts", "Bring rocks back to Earth"],
       "answerIndex": 0
     }
+  },
+  "sojourner": {
+    "letter": [
+      "Hello from Ares Vallis on Mars! I am Sojourner, a small rover. I weigh just 23 pounds (10.6 kg) and stand 1 foot (30 cm) tall. NASA calls me the first-ever robotic rover on the surface of Mars. I was named after Sojourner Truth, who fought for civil rights.",
+      "I rode to Mars on the Pathfinder lander. We landed on July 4, 1997, wrapped in giant airbags. We bounced about 15 times before we stopped! On my second Martian day, I rolled down a ramp onto the rocky ground of an ancient flood plain.",
+      "My job was to study rocks and soil up close. I also took 550 pictures. Clues from my lander and me suggest Mars was once warm and wet. Our last message reached Earth on September 27, 1997. I am resting here now."
+    ],
+    "signOff": "Your small friend in Ares Vallis, Sojourner",
+    "science": [
+      "I was the first robotic rover ever delivered to the surface of Mars.",
+      "My X-ray instrument measured what Martian rocks and soil are made of.",
+      "Clues from my lander and me suggest that Mars was once warm and wet."
+    ],
+    "today": "I am still near the Pathfinder lander, now called the Carl Sagan Memorial Station, in Ares Vallis. In December 2006, the HiRISE camera in orbit photographed our landing site. Scientists spotted a feature about my size that was not there in older pictures. They think it may be me.",
+    "arizonaNote": "HiRISE, the camera that may have spotted me from orbit, is run from the HiRISE Operations Center at the University of Arizona in Tucson.",
+    "quiz": {
+      "question": "How did Sojourner and the Pathfinder lander land safely on Mars?",
+      "options": ["On a long runway", "Inside giant bouncing airbags", "Hanging from a balloon"],
+      "answerIndex": 1
+    }
   }
 }
