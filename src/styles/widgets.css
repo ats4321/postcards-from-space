@@ -1,0 +1,176 @@
+/* Countdown, Mission Passport and distance ladder. */
+.countdown-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  align-items: baseline;
+  padding: var(--space-2) 0;
+  border-block: 1px solid var(--color-line);
+}
+
+.countdown-band h2,
+.countdown-band p {
+  margin: 0;
+}
+
+.countdown-band h2 {
+  width: 100%;
+  font-weight: 400;
+  color: var(--color-earth);
+}
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+  font-family: var(--font-data);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown b {
+  font-size: var(--text-xl);
+  font-weight: 400;
+}
+
+.passport-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-2);
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.passport-head h2,
+.passport-head p {
+  margin: 0;
+}
+
+.passport-head progress {
+  width: 160px;
+  height: var(--space-1);
+  accent-color: var(--color-red);
+}
+
+.passport-badge {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: center;
+  padding: var(--space-2);
+  border: var(--border) solid var(--color-red);
+  border-radius: var(--radius);
+}
+
+.passport-badge svg {
+  flex: none;
+  fill: none;
+  stroke: var(--color-red);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.passport-badge strong {
+  display: block;
+  font-size: var(--text-lg);
+}
+
+.passport-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: var(--space-2) var(--space-1);
+  padding: 0;
+  list-style: none;
+}
+
+.passport-slots a {
+  display: grid;
+  gap: var(--space-1);
+  justify-items: center;
+  padding: var(--space-1);
+  border-radius: var(--radius);
+  color: inherit;
+  font-size: var(--text-sm);
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+}
+
+.passport-slots a:hover {
+  background: rgb(169 196 228 / 0.1);
+}
+
+.slot-empty {
+  width: 56px;
+  height: 72px;
+  border: 1px dashed var(--color-earth);
+  border-radius: 4px;
+}
+
+.ladder > p:first-of-type {
+  max-width: var(--measure);
+}
+
+.ladder svg {
+  display: block;
+  overflow: visible;
+}
+
+.ladder-grid,
+.ladder-rung {
+  stroke: var(--color-line);
+}
+
+.ladder-tick {
+  stroke: var(--color-earth);
+  stroke-width: 2;
+}
+
+.ladder-axis,
+.ladder-label {
+  fill: var(--color-earth);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+}
+
+.ladder-label {
+  fill: var(--color-paper);
+}
+
+.ladder-hit {
+  fill: transparent;
+}
+
+.ladder-dot {
+  fill: var(--color-paper);
+  stroke: var(--color-navy);
+  stroke-width: 2;
+}
+
+.ladder a:hover .ladder-dot {
+  fill: var(--color-earth);
+}
+
+.ladder a[aria-current='page'] .ladder-dot {
+  fill: var(--color-yellow);
+}
+
+.ladder a:focus-visible {
+  outline: none;
+}
+
+.ladder a:focus-visible .ladder-hit {
+  stroke: var(--color-yellow);
+  stroke-width: 3;
+}
+
+.ladder-note {
+  max-width: var(--measure);
+  min-height: var(--space-8);
+  margin-top: var(--space-2);
+  color: var(--color-earth);
+}
+
+.ladder-note strong {
+  color: var(--color-paper);
+}

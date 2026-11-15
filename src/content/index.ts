@@ -56,10 +56,12 @@ export function getUiStrings(language: Language): UiStrings {
   };
 }
 
-/** The words for one item. Falls back to English until a translation exists. */
+/**
+ * The words for one item. Each string missing from the translation falls back
+ * to English on its own, so a half-translated item still shows in full.
+ */
 export function getItemText(id: string, language: Language): ItemText | undefined {
-  return (
-    forLanguage(textFiles, language, 'items.json')?.[id] ??
-    forLanguage(textFiles, DEFAULT_LANGUAGE, 'items.json')?.[id]
-  );
+  const base = forLanguage(textFiles, DEFAULT_LANGUAGE, 'items.json')?.[id];
+  const local = forLanguage(textFiles, language, 'items.json')?.[id];
+  return base || local ? ({ ...base, ...local } as ItemText) : undefined;
 }

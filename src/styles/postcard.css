@@ -1,0 +1,359 @@
+/* Postcard, stamp, postmark and quiz. Everything here sits on paper. */
+.postcard {
+  /* Yellow is invisible on paper, so focus is drawn in ink here. */
+  --focus-ring: 3px solid var(--color-ink);
+  container-type: inline-size;
+  padding: var(--space-1);
+  border-radius: var(--radius);
+  /* Airmail border: hard-edged stripes, not a decorative fade. */
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-red) 0 16px,
+    var(--color-paper) 16px 24px,
+    var(--color-airmail) 24px 40px,
+    var(--color-paper) 40px 48px
+  );
+  color: var(--color-ink);
+}
+
+.postcard-inner {
+  padding: var(--space-2);
+  background: var(--color-paper);
+}
+
+.postcard a {
+  color: inherit;
+}
+
+.postcard section,
+.postcard figure {
+  margin-top: var(--space-3);
+}
+
+.postcard-head {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.postcard-head h2 {
+  font-size: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+.postcard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+}
+
+.postcard-actions button {
+  min-height: 40px;
+  padding: 0 var(--space-2);
+  border-width: 1px;
+  font-size: var(--text-sm);
+}
+
+.read-aloud {
+  display: inline-flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.read-aloud svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.read-aloud[aria-pressed='true'] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Stamp with the postmark struck across its lower left corner. */
+.postage {
+  position: relative;
+  flex: none;
+  padding-inline-start: var(--space-3);
+}
+
+.postmark {
+  position: absolute;
+  left: -16px;
+  bottom: -24px;
+  z-index: 1;
+  width: 120px;
+  fill: none;
+  stroke: var(--color-red);
+  stroke-width: 1.5;
+  opacity: 0.8;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.postmark text {
+  fill: var(--color-red);
+  stroke: none;
+  font-family: var(--font-data);
+  font-size: 11px;
+}
+
+.postmark .postmark-arc {
+  font-size: 9px;
+}
+
+/*
+ * Stamp. One unit --p is the perforation pitch; the stamp is 7 x 9 units, so each
+ * side holds a whole number of holes. Holes are centred on the edge at
+ * (i + 0.5) * p, which leaves half a tooth at both ends of every side and a
+ * clean square corner. Two mask layers (top/bottom holes, left/right holes)
+ * are intersected to cut them out.
+ */
+.stamp {
+  --p: 8px;
+  --w: calc(var(--p) * 7);
+  --h: calc(var(--p) * 9);
+  --hole: calc(var(--p) * 0.3);
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: var(--w);
+  height: var(--h);
+  filter: drop-shadow(0 1px 1px rgb(11 19 40 / 0.4));
+}
+
+.stamp--row {
+  --p: 6px;
+}
+
+.stamp--card {
+  --p: 12px;
+}
+
+.stamp-paper {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: var(--p); /* the even margin around the picture */
+  background: var(--color-stamp);
+  -webkit-mask:
+    radial-gradient(circle at 50% 50%, #0000 var(--hole), #000 calc(var(--hole) + 0.5px)) 0
+      calc(var(--h) / -2) / var(--p) var(--h),
+    radial-gradient(circle at 50% 50%, #0000 var(--hole), #000 calc(var(--hole) + 0.5px))
+      calc(var(--w) / -2) 0 / var(--w) var(--p);
+  mask:
+    radial-gradient(circle at 50% 50%, #0000 var(--hole), #000 calc(var(--hole) + 0.5px)) 0
+      calc(var(--h) / -2) / var(--p) var(--h),
+    radial-gradient(circle at 50% 50%, #0000 var(--hole), #000 calc(var(--hole) + 0.5px))
+      calc(var(--w) / -2) 0 / var(--w) var(--p);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.stamp-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stamp-year {
+  position: absolute;
+  right: var(--p);
+  bottom: var(--p);
+  padding: 0 calc(var(--p) * 0.5);
+  background: var(--color-stamp);
+  color: var(--color-ink);
+  font-family: var(--font-data);
+  font-size: calc(var(--p) * 1.25);
+  line-height: calc(var(--p) * 2);
+}
+
+.stamp-cancel {
+  position: absolute;
+  left: -15%;
+  bottom: -10%;
+  width: 75%;
+  fill: none;
+  stroke: var(--color-red);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-12deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stamp-land {
+    animation: stamp-land 0.45s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+  }
+}
+
+@keyframes stamp-land {
+  from {
+    opacity: 0;
+    transform: translateY(-24px) scale(1.6) rotate(-10deg);
+  }
+}
+
+.postcard-body {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.letter {
+  max-width: var(--measure);
+  font-size: 1.125rem;
+}
+
+.sign-off {
+  font-weight: 600;
+}
+
+/* Facts are set like the address lines on the back of a postcard. */
+.facts {
+  margin: 0 0 var(--space-1);
+}
+
+.facts div {
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid rgb(11 19 40 / 0.3);
+}
+
+.facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.hero {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid var(--color-ink);
+}
+
+.postcard figcaption {
+  margin-top: var(--space-1);
+}
+
+.science {
+  max-width: var(--measure);
+  padding-inline-start: var(--space-3);
+}
+
+.science li {
+  margin-bottom: var(--space-1);
+}
+
+.postcard section > p {
+  max-width: var(--measure);
+}
+
+.arizona {
+  padding-inline-start: var(--space-2);
+  border-inline-start: var(--space-1) solid var(--color-copper);
+}
+
+.arizona-badge {
+  display: inline-block;
+  padding: 0 var(--space-1);
+  border-radius: 4px;
+  background: var(--color-copper);
+  color: var(--color-paper);
+  line-height: var(--space-3);
+}
+
+.quiz {
+  padding-top: var(--space-3);
+  border-top: 1px dashed rgb(11 19 40 / 0.5);
+}
+
+.quiz-question {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.quiz-options {
+  display: grid;
+  gap: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+.quiz-options button {
+  text-align: start;
+  background: var(--color-stamp);
+}
+
+.quiz-options button:hover:enabled {
+  background: var(--color-earth);
+}
+
+.quiz-options button[data-state='wrong'] {
+  border-style: dashed;
+  text-decoration: line-through;
+}
+
+.quiz-options button[data-state='right'] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.quiz-options button:disabled {
+  cursor: default;
+}
+
+.quiz-options button:disabled:not([data-state='right']) {
+  border-color: rgb(11 19 40 / 0.3);
+}
+
+.quiz-result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  min-height: var(--space-6);
+}
+
+.quiz-result p {
+  flex: 1 1 200px;
+  margin: 0;
+  font-weight: 600;
+}
+
+@container (min-width: 560px) {
+  .postcard-inner {
+    padding: var(--space-4);
+  }
+
+  .postcard-head h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .stamp--card {
+    --p: 16px;
+  }
+
+  .postmark {
+    left: -40px;
+    width: 152px;
+  }
+
+  .postcard-body {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: var(--space-4);
+  }
+
+  .postcard-facts {
+    padding-inline-start: var(--space-4);
+    border-inline-start: 1px solid rgb(11 19 40 / 0.3);
+  }
+
+  .quiz-options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

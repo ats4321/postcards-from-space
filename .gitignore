@@ -6,4 +6,6 @@ dist
 .env.*
 *.local
 .DS_Store
+test-results
+playwright-report
 .cache

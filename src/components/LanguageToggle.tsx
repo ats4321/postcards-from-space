@@ -14,7 +14,8 @@ export function LanguageToggle() {
           aria-pressed={code === language}
           onClick={() => setLanguage(code)}
         >
-          {t(`language.${code}`)}
+          <span aria-hidden="true">{code.toUpperCase()}</span>
+          <span className="visually-hidden">{t(`language.${code}`)}</span>
         </button>
       ))}
     </div>
