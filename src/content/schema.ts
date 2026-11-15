@@ -118,6 +118,11 @@ export const ImageSchema = z
     credit: text,
     sourceUrl: httpsUrl.optional(),
     license: text,
+    /** "hero" is the item's main picture (id equals the item id); "now" shows where it rests today. */
+    kind: z.enum(['hero', 'now']).optional(),
+    /** Pixel size of the file, written by `npm run fetch-images` so the UI can reserve space. */
+    width: z.number().int().positive().optional(),
+    height: z.number().int().positive().optional(),
   })
   .strict()
   .superRefine((image, ctx) => {
