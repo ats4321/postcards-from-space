@@ -183,3 +183,22 @@ Conflicts (also in editorNote): interstellar entry Nov. 25 vs Dec. 10, 2018 on t
 | HiRISE operated by the University of Arizona in Tucson | NASA Dec. 16, 2024; HiRISE ESP_061684_1845 | "The University of Arizona, in Tucson, operates HiRISE" |
 
 Conflicts (also in editorNote): last signal Dec. 15 vs mission declared over Dec. 21, 2022; 1,319 marsquakes (JPL) vs "over 1,300 seismic events" (highlights).
+
+## viking-1
+| Claim | Source | Quote |
+|---|---|---|
+| Chryse Planitia, the Golden Plain | SN-viking-1; NSSDCA-1975-075C | "the western slopes of Chryse Planitia (Golden Plain)"; "touched down in western Chryse Planitia" |
+| Touched down July 20, 1976 | SN-viking-1; HiRISE PSP_001521_2025 | "July 20, 1976: Lander touched down"; "touched down in western Chryse Planitia on 20 July 1976" |
+| First truly successful landing on Mars; first pictures from the surface | SN-viking-1 | "NASA's Viking 1 made the first truly successful landing on Mars"; "began transmitting the first images from the surface of the Red Planet" |
+| First picture began 25 seconds after landing | NSSDCA-1975-075C | "Transmission of the first surface image began 25 seconds after landing." |
+| Job: look for signs of life | SN-viking-1 | "designed to reach Mars and collect evidence on the possibility on life on Mars" |
+| July 28, 1976: arm scooped soil into a biology lab | SN-viking-1 | "On July 28, 1976, the lander's robot arm scooped up the first soil samples and deposited them into a special biological laboratory" |
+| Some results looked a little like life; organics test negative | SN-viking-1 | "could have been construed as indicating the presence of life (weak positive), but the major test for organic compounds … gave negative results" |
+| Temperatures −123 °F (−86 °C) to −27 °F (−33 °C) | SN-viking-1 | "minus 123 degrees Fahrenheit (minus 86 degrees Celsius) before dawn to minus 27 degrees Fahrenheit (minus 33 degrees Celsius) in the afternoon" |
+| Weather reports for years | SN-viking-1 | "continued to return daily (and then eventually weekly) weather reports" |
+| Renamed Thomas Mutch Memorial Station after the imaging team leader | NSSDCA; SN-viking-1 | "named the Thomas Mutch Memorial Station … in honor of the original leader of the Viking imaging team" |
+| November 1982, a faulty command cut off contact | SN-viking-1; NSSDCA | "a faulty command sent from Earth resulted in an interruption of communications"; "operated until 13 November 1982 when contact was lost" |
+| HiRISE found it in 2006, with likely heat shield, backshell and parachute | HiRISE PSP_001521_2025 | "Acquisition date 22 November 2006"; "likely locations have been found for the heat shield, backshell, and parachute" |
+| HiRISE operated by the University of Arizona | HiRISE page | "is operated by the University of Arizona" |
+
+Conflicts (also in editorNote): last contact 13 Nov. 1982 (NSSDCA, used) vs Nov. 11, 1982 (science.nasa.gov); renaming January 1981 (NSSDCA) vs January 1982 (science.nasa.gov), so no year is given.

@@ -197,5 +197,25 @@
       "options": ["Rainstorms", "Marsquakes", "Rivers of water"],
       "answerIndex": 1
     }
+  },
+  "viking-1": {
+    "letter": [
+      "Hello from Chryse Planitia, the Golden Plain of Mars! I am the Viking 1 lander. I touched down on July 20, 1976. NASA calls it the first truly successful landing on Mars. Just 25 seconds after I landed, I began sending my first picture home.",
+      "My big job was to look for signs of life. On July 28, 1976, my robot arm scooped up soil and put it into my own tiny biology lab. Some results looked a little like life. But my main test for organic compounds came back negative.",
+      "I also sent weather reports to Earth for years. Later, I was renamed the Thomas Mutch Memorial Station, after the leader of the Viking camera team. In November 1982, a wrong command from Earth cut off my radio. I am resting here now."
+    ],
+    "signOff": "Your friend on the Golden Plain, Viking 1",
+    "science": [
+      "I made the first truly successful landing on Mars and sent back the first pictures from its surface.",
+      "I tested Martian soil for signs of life. My main test for organic compounds came back negative.",
+      "I measured temperatures from minus 123°F (minus 86°C) before dawn to minus 27°F (minus 33°C) in the afternoon."
+    ],
+    "today": "I am still standing in western Chryse Planitia. In 2006, the HiRISE camera on an orbiter found me from space. It also spotted what are likely my heat shield, my backshell and my parachute nearby.",
+    "arizonaNote": "HiRISE, the camera that found me from orbit in 2006, is operated by the University of Arizona.",
+    "quiz": {
+      "question": "What was Viking 1's big job on Mars?",
+      "options": ["Look for signs of life", "Build a base for astronauts", "Bring rocks back to Earth"],
+      "answerIndex": 0
+    }
   }
 }

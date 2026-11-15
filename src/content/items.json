@@ -479,5 +479,45 @@
         "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
       }
     ]
+  },
+  {
+    "id": "viking-1",
+    "name": "Viking 1 Lander",
+    "place": "Mars",
+    "locationName": "Western Chryse Planitia, the Golden Plain of Mars",
+    "launchDate": "1975-08-20",
+    "arrivalDate": "1976-07-20",
+    "lastContact": "1982-11-13",
+    "status": "resting",
+    "distanceKm": 225000000,
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
+    "illustration": "lander",
+    "imageId": "viking-1",
+    "arizona": true,
+    "nssdcId": "1975-075C",
+    "officialUrl": "https://science.nasa.gov/mission/viking-1/",
+    "editorNote": "1975-075C is the NSSDCA ID of the Viking 1 Lander (the orbiter is 1975-075A). Sources conflict on the end date: NSSDCA says the lander 'operated until 13 November 1982 when contact was lost'; science.nasa.gov says Nov. 11, 1982, when a faulty command interrupted communications. Following the rule, lastContact uses NSSDCA; the letter only says 'November 1982'. The renaming to the Thomas Mutch Memorial Station is dated January 1981 by NSSDCA and January 1982 by science.nasa.gov, so the letter gives no year. NSSDCA does not state the landing day in words but gives the 20 July separation and a same-sequence landing; science.nasa.gov and HiRISE both say July 20, 1976.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-075C",
+        "title": "NSSDCA Master Catalog: Viking 1 Lander",
+        "supports": "NSSDCA ID 1975-075C; launch 20 August 1975; landed in western Chryse Planitia; transmission of the first surface image began 25 seconds after landing; studied biology, chemistry, weather and the surface; sampler arm; biology experiment and gas chromatograph mass spectrometer; seismometer failed to uncage; named the Thomas Mutch Memorial Station after the original leader of the Viking imaging team; operated until 13 November 1982 when contact was lost."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/viking-1/",
+        "title": "NASA Science: Viking 1 (page modified July 20, 2026)",
+        "supports": "Touched down July 20, 1976 and began transmitting the first images from the surface of Mars; first truly successful landing on Mars; landed on the western slopes of Chryse Planitia (Golden Plain); designed to collect evidence on the possibility of life; robot arm scooped soil samples on July 28, 1976 into a biological laboratory; results could have been read as a weak positive, but the test for organic compounds was negative; temperatures from minus 123 F (minus 86 C) before dawn to minus 27 F (minus 33 C) in the afternoon; daily and later weekly weather reports; a faulty command from Earth interrupted communications in November 1982."
+      },
+      {
+        "url": "https://www.uahirise.org/PSP_001521_2025",
+        "title": "HiRISE (University of Arizona): Viking Lander 1 (Thomas Mutch Memorial Station)",
+        "supports": "today and arizonaNote: HiRISE image acquired 22 November 2006 precisely locates the lander, about 3 meters across, in western Chryse Planitia, with likely locations for the heat shield, backshell and parachute; landed 20 July 1976; HiRISE is operated by the University of Arizona."
+      },
+      {
+        "url": "https://www.nasa.gov/hrp/hazard-distance-from-earth/",
+        "title": "NASA Human Research Program: Hazard: Distance From Earth",
+        "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
+      }
+    ]
   }
 ]
