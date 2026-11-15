@@ -141,3 +141,83 @@ wording confirmed (see Apollo 11 reflector).
 | Schmitt: discoveries not possible without the rover | NSSDCA LRV page | "would not have been possible" |
 | Record until Opportunity passed it (announced 2013) | SN-opportunity | "a record set by the Apollo 17 Lunar Roving Vehicle" |
 | Arizona: Flagstaff training; LROC in Tempe still imaging sites | USGS; ASU-LROC; LROC post 1278 | "LROC continues to image the Apollo sites" |
+
+---
+
+# Round 2 (added November 15, 2026)
+
+Same method: every page opened and read in full from a saved copy (`curl`, then text-extracted), not search snippets.
+
+## voyager-2
+| Claim | Source | Quote |
+|---|---|---|
+| Launched August 20, 1977, 16 days before Voyager 1 | NSSDCA-1977-076A; SN-voyager-2 | "liftoff occurring 20 Aug. 1977"; "launched sixteen days after Voyager 2" |
+| Golden record with sounds and pictures of Earth, greetings in 55 languages | NSSDCA-1977-076A | "sounds and images of Earth"; "greetings in 55 languages" |
+| Jupiter 1979, Saturn 1981, Uranus 1986, Neptune 1989 | NSSDCA-1977-076A; SN-voyager-2 | "Jupiter (closest approach on 09 July 1979) and Saturn (26 August 1981)"; "Uranus (24 January 1986) and Neptune (25 August 1989)" |
+| Only spacecraft to visit Uranus and Neptune; only one to study all four giants up close | SN-voyager-2 | "the only spacecraft to visit Uranus and Neptune"; "the only spacecraft to study all four of the solar system's giant planets at close range" |
+| At Uranus: 10 new moons, two new rings | SN-voyager-2 | "At Uranus, Voyager 2 discovered 10 new moons and two new rings." |
+| Entered interstellar space in 2018; second spacecraft to do so | SN-voyager-2; NASA advisory Nov. 10, 2026 | "the second spacecraft to enter interstellar space"; "Voyager 2 entered in 2018" |
+| Three instruments on: magnetometer, plasma wave, cosmic ray; others off | Where are Voyager 1 and 2 now (updated April 17, 2026); Voyager blog Aug. 4, 2026 | "Cosmic Ray Subsystem (CRS) … On"; "keep its three instruments operating" |
+| Off "to save power or because they wore out" | Where are Voyager 1 and 2 now | "Off to save power"; "Off because of degraded performance" |
+| Extended mission (NASA's exact status wording) | SN-voyager-2 (modified Sept. 28, 2026) | "Status Extended Mission" |
+| On pace for one light-day in November 2035 | What Is a Light-Day? (Nov. 12, 2026) | "on pace to be one light-day away from Earth in nine more years, in November 2035" |
+| About 13.5 billion miles (21.7 billion km) from Earth | JPL Horizons, target -32, observer Earth, 2026-11-15 | "delta 144.876864912917" (AU); 1 AU = 149,597,870.7 km |
+
+Conflicts (also in editorNote): interstellar entry Nov. 25 vs Dec. 10, 2018 on the same NASA page; Saturn flyby Aug. 25 vs 26, 1981; Neptune "five moons" vs "six new moons" on the same page, so no Neptune moon count is used.
+
+## insight
+| Claim | Source | Quote |
+|---|---|---|
+| Landed November 26, 2018 in Elysium Planitia, a flat, smooth plain near the equator | NSSDCA-2018-042A; SN-insight | "landed in the western Elysium Planitia region on 26 November 2018"; "landed near Mars' equator on the western side of a flat, smooth plain called Elysium Planitia" |
+| Came to study the inside of Mars, not the surface; "like a doctor checking a heartbeat" | SN-insight | "InSight's purpose was to study the interior of Mars, not the surface"; "take the planet's vital signs: its pulse, temperature, and reflexes" |
+| Robotic arm set the seismometer on the ground | SN-insight; NSSDCA | "It lifted a seismometer and heat flow probe from the deck and placed them on the surface" |
+| First to detect marsquakes; more than 1,300 | SN-insight highlights; JPL Dec. 21, 2022 | "InSight made the first-ever detection of quakes on the Red Planet"; "over 1,300 seismic events"; "detected 1,319 marsquakes" |
+| Some quakes caused by space rocks (meteoroid impacts) | JPL Dec. 21, 2022 | "including quakes caused by meteoroid impacts" |
+| Dust on two round solar panels cut its power; arm sprinkled dirt on windy days | JPL Dec. 21, 2022; NSSDCA | "dust accumulating on the lander's solar panels gradually reduced its energy"; "sprinkle dirt from the scoop onto the panels during windy days"; "two disc-shaped solar panel arrays" |
+| Last message December 15, 2022 | NSSDCA; SN-insight; JPL | "The last transmission from InSight was received on 15 December 2022" |
+| Core is molten and bigger than expected | SN-insight highlights | "Mars' core is molten and considerably larger than expected" |
+| Most weather data of any surface mission; thousands of dust devils | SN-insight highlights | "the most comprehensive weather data of any mission sent to the surface of Mars"; "detected thousands of passing dust devils" |
+| Retired December 2022 after running out of power | NASA Dec. 16, 2024; JPL | "NASA retired InSight in December 2022, after the lander ran out of power" |
+| Photographed from orbit October 23, 2024; panels now reddish-brown | NASA Dec. 16, 2024 | "on Oct. 23, 2024"; "acquired the same reddish-brown hue as the rest of the planet" |
+| NASA said in December 2024 it would stop listening at the end of that year | NASA Dec. 16, 2024 | "NASA will stop listening for InSight at the end of this year" |
+| HiRISE operated by the University of Arizona in Tucson | NASA Dec. 16, 2024; HiRISE ESP_061684_1845 | "The University of Arizona, in Tucson, operates HiRISE" |
+
+Conflicts (also in editorNote): last signal Dec. 15 vs mission declared over Dec. 21, 2022; 1,319 marsquakes (JPL) vs "over 1,300 seismic events" (highlights).
+
+## viking-1
+| Claim | Source | Quote |
+|---|---|---|
+| Chryse Planitia, the Golden Plain | SN-viking-1; NSSDCA-1975-075C | "the western slopes of Chryse Planitia (Golden Plain)"; "touched down in western Chryse Planitia" |
+| Touched down July 20, 1976 | SN-viking-1; HiRISE PSP_001521_2025 | "July 20, 1976: Lander touched down"; "touched down in western Chryse Planitia on 20 July 1976" |
+| First truly successful landing on Mars; first pictures from the surface | SN-viking-1 | "NASA's Viking 1 made the first truly successful landing on Mars"; "began transmitting the first images from the surface of the Red Planet" |
+| First picture began 25 seconds after landing | NSSDCA-1975-075C | "Transmission of the first surface image began 25 seconds after landing." |
+| Job: look for signs of life | SN-viking-1 | "designed to reach Mars and collect evidence on the possibility on life on Mars" |
+| July 28, 1976: arm scooped soil into a biology lab | SN-viking-1 | "On July 28, 1976, the lander's robot arm scooped up the first soil samples and deposited them into a special biological laboratory" |
+| Some results looked a little like life; organics test negative | SN-viking-1 | "could have been construed as indicating the presence of life (weak positive), but the major test for organic compounds … gave negative results" |
+| Temperatures −123 °F (−86 °C) to −27 °F (−33 °C) | SN-viking-1 | "minus 123 degrees Fahrenheit (minus 86 degrees Celsius) before dawn to minus 27 degrees Fahrenheit (minus 33 degrees Celsius) in the afternoon" |
+| Weather reports for years | SN-viking-1 | "continued to return daily (and then eventually weekly) weather reports" |
+| Renamed Thomas Mutch Memorial Station after the imaging team leader | NSSDCA; SN-viking-1 | "named the Thomas Mutch Memorial Station … in honor of the original leader of the Viking imaging team" |
+| November 1982, a faulty command cut off contact | SN-viking-1; NSSDCA | "a faulty command sent from Earth resulted in an interruption of communications"; "operated until 13 November 1982 when contact was lost" |
+| HiRISE found it in 2006, with likely heat shield, backshell and parachute | HiRISE PSP_001521_2025 | "Acquisition date 22 November 2006"; "likely locations have been found for the heat shield, backshell, and parachute" |
+| HiRISE operated by the University of Arizona | HiRISE page | "is operated by the University of Arizona" |
+
+Conflicts (also in editorNote): last contact 13 Nov. 1982 (NSSDCA, used) vs Nov. 11, 1982 (science.nasa.gov); renaming January 1981 (NSSDCA) vs January 1982 (science.nasa.gov), so no year is given.
+
+## sojourner
+| Claim | Source | Quote |
+|---|---|---|
+| Ares Vallis, an ancient flood plain | SN-mars-pathfinder; NSSDCA-1996-068A | "Ares Vallis … is an ancient flood plain in Mars' northern hemisphere"; "a large outwash plain" |
+| 23 pounds (10.6 kg), 1 foot (30 cm) tall | SN-mars-pathfinder | "the 23-pound (10.6 kilogram) rover, Sojourner"; "its full height of 1 foot (30 centimeters)" |
+| First-ever robotic rover on the surface of Mars | SN-mars-pathfinder | "deliver the first-ever robotic rover, Sojourner, to the Martian surface" |
+| Named after Sojourner Truth, civil-rights crusader | SN-mars-pathfinder | "named Sojourner after American civil-rights crusader Sojourner Truth" |
+| Landed July 4, 1997 in giant airbags; bounced about 15 times | SN-mars-pathfinder; NSSDCA | "bounced like a giant beach ball about 15 times"; "impacted at 16:56:55 UT … on 4 July 1997" |
+| Rolled down a ramp on the second Martian day | SN-mars-pathfinder | "late in the second Martian day, or sol 2, Sojourner … rolled down the lander's rear ramp" |
+| Studied rocks and soil; X-ray instrument measured their makeup | SN-mars-pathfinder | "Alpha Proton X-ray Spectrometer: Determined the elemental composition of rocks and soils"; "the Mars Pathfinder rover deploying its Alpha Proton X-Ray Spectrometer" |
+| 550 pictures | SN-mars-pathfinder | "550 images from the rover" |
+| Clues suggest Mars was once warm and wet | SN-mars-pathfinder | "Findings from … both the lander and the rover suggest that Mars was at one time in its past warm and wet" |
+| Last message September 27, 1997 | SN-mars-pathfinder; NSSDCA | "the final data transmission on Sept. 27, 1997"; "until 27 September 1997 when communications were lost" |
+| Lander now the Carl Sagan Memorial Station | SN-mars-pathfinder | "The lander, named the Carl Sagan Memorial Station" |
+| December 2006 HiRISE image; a feature about its size, not in older pictures, may be Sojourner | HiRISE PSP_001890_1995 | "Acquisition date 21 December 2006"; "a feature at this location that is about the right size for Sojourner and that wasn't present when the Gallery Panorama was taken" |
+| HiRISE Operations Center, University of Arizona, Tucson | HiRISE page footer | "HiRISE Operations Center 1541 E. University Blvd Tucson, Arizona"; "University of Arizona" |
+
+Conflicts (also in editorNote): rover roll-off July 5 (US time, science.nasa.gov) vs 6 July UT (NSSDCA), so the letter says "my second Martian day"; "about 15" bounces (science.nasa.gov) vs a first bounce "and at least another 15" (NSSDCA).

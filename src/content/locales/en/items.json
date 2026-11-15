@@ -158,5 +158,84 @@
       "options": ["Its own electric motor", "A jet engine", "Foot pedals"],
       "answerIndex": 0
     }
+  },
+  "voyager-2": {
+    "letter": [
+      "Hello from between the stars! I am Voyager 2. I left Earth on August 20, 1977, 16 days before my twin, Voyager 1. I carry a golden record with sounds and pictures of Earth, and greetings in 55 languages.",
+      "I flew past Jupiter in 1979 and Saturn in 1981. Then my team sent me on to Uranus in 1986 and Neptune in 1989. I am still the only spacecraft that has visited those two planets. At Uranus, I found 10 new moons and two new rings!",
+      "In 2018, I crossed into interstellar space, the space between the stars. Three of my science instruments are still switched on. Today I am about 13.5 billion miles (21.7 billion km) from you. NASA says I am on pace to be one light-day from Earth in November 2035."
+    ],
+    "signOff": "Your friend beyond Neptune, Voyager 2",
+    "science": [
+      "I am the only spacecraft that has visited Uranus and Neptune, and the only one to study all four giant planets up close.",
+      "At Uranus, I discovered 10 new moons and two new rings.",
+      "I am the second spacecraft to reach interstellar space. My magnetometer, plasma wave and cosmic ray instruments still measure the space between the stars."
+    ],
+    "today": "I am in interstellar space, about 13.5 billion miles (21.7 billion km) from Earth, and I am still going. NASA calls this my extended mission. My magnetometer, my plasma wave instrument and my cosmic ray instrument are still on. All my other instruments are off to save power or because they wore out.",
+    "quiz": {
+      "question": "Which two planets has only Voyager 2 visited?",
+      "options": ["Uranus and Neptune", "Mercury and Venus", "Earth and Mars"],
+      "answerIndex": 0
+    }
+  },
+  "insight": {
+    "letter": [
+      "Hello from Elysium Planitia, a flat, smooth plain near the middle of Mars! I am InSight, a lander. I landed on November 26, 2018. I did not come to look at the surface. I came to listen to the inside of Mars, like a doctor checking a heartbeat.",
+      "My robotic arm lifted a very sensitive seismometer off my deck and set it on the ground. It felt Mars shake. I was the first to detect marsquakes! I counted more than 1,300 of them. Some were caused by space rocks crashing into the ground.",
+      "Dust slowly covered my two round solar panels, so I had less and less power. My team even had my arm sprinkle dirt on the panels on windy days to sweep dust away. My last message reached Earth on December 15, 2022. I am resting here now."
+    ],
+    "signOff": "Listening for you from Elysium Planitia, InSight",
+    "science": [
+      "I was the first to detect quakes on Mars. My seismometer measured more than 1,300 of them.",
+      "Quake waves showed that the core of Mars is molten and bigger than scientists expected.",
+      "I collected more weather data than any other mission on the surface of Mars, and I felt thousands of dust devils pass by."
+    ],
+    "today": "I am still sitting on Elysium Planitia. NASA retired me in December 2022 after I ran out of power. A camera in orbit photographed me on October 23, 2024. My solar panels are now the same reddish-brown color as the ground around me. In December 2024, NASA said it would stop listening for me at the end of that year.",
+    "arizonaNote": "The camera that photographs me from orbit is HiRISE. It is operated by the University of Arizona in Tucson.",
+    "quiz": {
+      "question": "What did InSight's seismometer detect for the first time on Mars?",
+      "options": ["Rainstorms", "Marsquakes", "Rivers of water"],
+      "answerIndex": 1
+    }
+  },
+  "viking-1": {
+    "letter": [
+      "Hello from Chryse Planitia, the Golden Plain of Mars! I am the Viking 1 lander. I touched down on July 20, 1976. NASA calls it the first truly successful landing on Mars. Just 25 seconds after I landed, I began sending my first picture home.",
+      "My big job was to look for signs of life. On July 28, 1976, my robot arm scooped up soil and put it into my own tiny biology lab. Some results looked a little like life. But my main test for organic compounds came back negative.",
+      "I also sent weather reports to Earth for years. Later, I was renamed the Thomas Mutch Memorial Station, after the leader of the Viking camera team. In November 1982, a wrong command from Earth cut off my radio. I am resting here now."
+    ],
+    "signOff": "Your friend on the Golden Plain, Viking 1",
+    "science": [
+      "I made the first truly successful landing on Mars and sent back the first pictures from its surface.",
+      "I tested Martian soil for signs of life. My main test for organic compounds came back negative.",
+      "I measured temperatures from minus 123°F (minus 86°C) before dawn to minus 27°F (minus 33°C) in the afternoon."
+    ],
+    "today": "I am still standing in western Chryse Planitia. In 2006, the HiRISE camera on an orbiter found me from space. It also spotted what are likely my heat shield, my backshell and my parachute nearby.",
+    "arizonaNote": "HiRISE, the camera that found me from orbit in 2006, is operated by the University of Arizona.",
+    "quiz": {
+      "question": "What was Viking 1's big job on Mars?",
+      "options": ["Look for signs of life", "Build a base for astronauts", "Bring rocks back to Earth"],
+      "answerIndex": 0
+    }
+  },
+  "sojourner": {
+    "letter": [
+      "Hello from Ares Vallis on Mars! I am Sojourner, a small rover. I weigh just 23 pounds (10.6 kg) and stand 1 foot (30 cm) tall. NASA calls me the first-ever robotic rover on the surface of Mars. I was named after Sojourner Truth, who fought for civil rights.",
+      "I rode to Mars on the Pathfinder lander. We landed on July 4, 1997, wrapped in giant airbags. We bounced about 15 times before we stopped! On my second Martian day, I rolled down a ramp onto the rocky ground of an ancient flood plain.",
+      "My job was to study rocks and soil up close. I also took 550 pictures. Clues from my lander and me suggest Mars was once warm and wet. Our last message reached Earth on September 27, 1997. I am resting here now."
+    ],
+    "signOff": "Your small friend in Ares Vallis, Sojourner",
+    "science": [
+      "I was the first robotic rover ever delivered to the surface of Mars.",
+      "My X-ray instrument measured what Martian rocks and soil are made of.",
+      "Clues from my lander and me suggest that Mars was once warm and wet."
+    ],
+    "today": "I am still near the Pathfinder lander, now called the Carl Sagan Memorial Station, in Ares Vallis. In December 2006, the HiRISE camera in orbit photographed our landing site. Scientists spotted a feature about my size that was not there in older pictures. They think it may be me.",
+    "arizonaNote": "HiRISE, the camera that may have spotted me from orbit, is run from the HiRISE Operations Center at the University of Arizona in Tucson.",
+    "quiz": {
+      "question": "How did Sojourner and the Pathfinder lander land safely on Mars?",
+      "options": ["On a long runway", "Inside giant bouncing airbags", "Hanging from a balloon"],
+      "answerIndex": 1
+    }
   }
 }
