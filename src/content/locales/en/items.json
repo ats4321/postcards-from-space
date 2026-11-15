@@ -1,0 +1,41 @@
+{
+  "phoenix": {
+    "letter": [
+      "Hello from the top of Mars! I am Phoenix, a lander. I touched down on the arctic plains on May 25, 2008. A camera called HiRISE was flying high above me on another spacecraft. It took my picture while I floated down under my parachute.",
+      "My team was led by Peter Smith at the University of Arizona in Tucson. They sent me to learn what hides under the cold northern ground. So I used my robotic arm to dig small trenches. Just below the soil, I found water ice!",
+      "Then winter came. Frost piled up on my solar panels and broke them. In 2010, the Mars Odyssey orbiter flew over me 61 times and listened, but I stayed quiet. NASA ended my mission that May. I am resting here now, and I am proud of what I found."
+    ],
+    "signOff": "Your friend in the Martian arctic, Phoenix",
+    "science": [
+      "I dug into a layer full of ice just under the surface of Mars.",
+      "Bright clumps in one of my trenches vanished after about four days. That was a big clue that they were water ice.",
+      "My landing was the first time one spacecraft photographed another spacecraft landing on a planet."
+    ],
+    "today": "I am still sitting on the arctic plains of Mars, right where I landed. My last signal reached Earth on November 2, 2008. A HiRISE picture from May 7, 2010 shows me covered in dust, with one solar panel that seems to have fallen down.",
+    "arizonaNote": "My lead scientist, Peter Smith, worked at the University of Arizona in Tucson. HiRISE, the camera that photographed me from orbit, is run by the University of Arizona too.",
+    "quiz": {
+      "question": "What did Phoenix find just under the soil on Mars?",
+      "options": ["Water ice", "Hot lava", "Sea shells"],
+      "answerIndex": 0
+    }
+  },
+  "voyager-1": {
+    "letter": [
+      "Greetings from very, very far away! I am Voyager 1. I left Earth on September 5, 1977. On my way out, I flew past Jupiter and Saturn. I have been traveling ever since.",
+      "In August 2012, I crossed into interstellar space. That is the space between the stars. Nothing made by people had ever gone there before. Two of my science instruments are still switched on. One listens for plasma waves. The other measures magnetism.",
+      "On November 18, 2026, I reach a big milestone: one light-day from Earth. That means a beam of light needs 24 hours to travel from you to me. It is about 16.1 billion miles (25.9 billion km). I am the first human-made object to get this far."
+    ],
+    "signOff": "Still exploring, Voyager 1",
+    "science": [
+      "I am the first human-made object to travel into interstellar space.",
+      "My plasma wave instrument and my magnetometer are still switched on, out here between the stars.",
+      "On November 18, 2026, I become the first human-made object to be one light-day from Earth."
+    ],
+    "today": "I am in interstellar space, about 16.1 billion miles (25.9 billion km) from Earth, and I am still going. NASA lists my mission as active. Most of my instruments are now off, but my plasma wave instrument and my magnetometer are still on.",
+    "quiz": {
+      "question": "How long does light take to travel one light-day?",
+      "options": ["24 minutes", "24 hours", "24 days"],
+      "answerIndex": 1
+    }
+  }
+}
