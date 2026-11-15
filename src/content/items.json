@@ -376,5 +376,53 @@
         "supports": "distanceKm: the Moon is an average of 238,855 miles (384,400 kilometers) away."
       }
     ]
+  },
+  {
+    "id": "voyager-2",
+    "name": "Voyager 2",
+    "place": "Deep space",
+    "locationName": "Interstellar space",
+    "launchDate": "1977-08-20",
+    "status": "working",
+    "distanceKm": 21673000000,
+    "distanceNote": "Distance from Earth on Nov. 15, 2026: 144.88 AU (about 21.67 billion km, 13.47 billion miles), from NASA JPL's Horizons system. Voyager 2 moves farther away every second; NASA says it will reach one light-day from Earth in November 2035.",
+    "illustration": "probe",
+    "imageId": "voyager-2",
+    "arizona": false,
+    "nssdcId": "1977-076A",
+    "officialUrl": "https://science.nasa.gov/mission/voyager/voyager-2/",
+    "editorNote": "NASA's exact status wording is 'Status: Extended Mission' on the science.nasa.gov Voyager 2 page (modified Sept. 28, 2026); the same page's banner says 'Active Mission'. The text uses 'extended mission'. Interstellar entry date conflicts on that page: 'Key Dates' gives Nov. 25, 2018, while the text says 'On Dec. 10, 2018' it joined Voyager 1 (Dec. 10 was the public announcement); the letter only says '2018'. Saturn flyby: NSSDCA gives 26 Aug. 1981, science.nasa.gov key dates give Aug. 25, 1981 (closest approach 01:21 UT Aug. 26); the letter only says '1981'. Neptune moons: the same NASA page says both 'five moons' and 'six new moons', so no number is used for Neptune. No NASA page gives a plain-text current distance (the odometer is drawn by JavaScript), so distanceKm comes from a JPL Horizons query for Nov. 15, 2026 (delta = 144.876864912917 AU, 1 AU = 149,597,870.7 km), cross-checked against NASA's 'one light-day in November 2035'.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
+        "title": "NSSDCA Master Catalog: Voyager 2",
+        "supports": "NSSDCA ID 1977-076A; launch 20 Aug. 1977; first of the two Voyagers to launch, sixteen days before Voyager 1; flybys of Jupiter (9 July 1979), Saturn (26 August 1981), Uranus (24 January 1986) and Neptune (25 August 1989); 12-inch gold-plated copper disk with sounds and images of Earth, including greetings in 55 languages."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/voyager/voyager-2/",
+        "title": "NASA Science: Voyager 2 (page modified Sept. 28, 2026)",
+        "supports": "Status: Extended Mission; launch Aug. 20, 1977; only spacecraft to visit Uranus and Neptune; only spacecraft to study all four giant planets at close range; first human-made object to fly past Uranus and to fly by Neptune; at Uranus discovered 10 new moons and two new rings; entered interstellar space in 2018, the second spacecraft to do so; the Neptune flyby capped a 12-year tour of the giant planets."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
+        "title": "NASA Science: Where Are Voyager 1 and Voyager 2 Now? (instrument table updated April 17, 2026)",
+        "supports": "Voyager 2 instrument status: Cosmic Ray Subsystem On, Magnetometer On, Plasma Wave Subsystem On; all other instruments off; Voyager 1 and Voyager 2 are the only spacecraft to ever operate outside the heliosphere."
+      },
+      {
+        "url": "https://science.nasa.gov/blogs/voyager/2026/08/04/nasa-engineers-help-prolong-voyager-2s-science-mission/",
+        "title": "NASA Voyager blog, Aug. 4, 2026: NASA Engineers Help Prolong Voyager 2's Science Mission",
+        "supports": "Voyager 2 is operating three science instruments in interstellar space; engineers freed up power to keep them on for at least an extra year."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/",
+        "title": "NASA Science: Voyager 1: What Is a Light-Day? (Nov. 12, 2026)",
+        "supports": "Voyager 2 took a different path to visit Uranus and Neptune and is on pace to be one light-day from Earth in November 2035."
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='-32'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
+        "title": "NASA JPL Horizons: Voyager 2 (-32) range from Earth, Nov. 15, 2026",
+        "supports": "distanceKm and today: on Nov. 15, 2026 Voyager 2 was 144.88 AU from Earth (about 21.67 billion km, 13.47 billion miles)."
+      }
+    ]
   }
 ]

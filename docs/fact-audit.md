@@ -141,3 +141,26 @@ wording confirmed (see Apollo 11 reflector).
 | Schmitt: discoveries not possible without the rover | NSSDCA LRV page | "would not have been possible" |
 | Record until Opportunity passed it (announced 2013) | SN-opportunity | "a record set by the Apollo 17 Lunar Roving Vehicle" |
 | Arizona: Flagstaff training; LROC in Tempe still imaging sites | USGS; ASU-LROC; LROC post 1278 | "LROC continues to image the Apollo sites" |
+
+---
+
+# Round 2 (added November 15, 2026)
+
+Same method: every page opened and read in full from a saved copy (`curl`, then text-extracted), not search snippets.
+
+## voyager-2
+| Claim | Source | Quote |
+|---|---|---|
+| Launched August 20, 1977, 16 days before Voyager 1 | NSSDCA-1977-076A; SN-voyager-2 | "liftoff occurring 20 Aug. 1977"; "launched sixteen days after Voyager 2" |
+| Golden record with sounds and pictures of Earth, greetings in 55 languages | NSSDCA-1977-076A | "sounds and images of Earth"; "greetings in 55 languages" |
+| Jupiter 1979, Saturn 1981, Uranus 1986, Neptune 1989 | NSSDCA-1977-076A; SN-voyager-2 | "Jupiter (closest approach on 09 July 1979) and Saturn (26 August 1981)"; "Uranus (24 January 1986) and Neptune (25 August 1989)" |
+| Only spacecraft to visit Uranus and Neptune; only one to study all four giants up close | SN-voyager-2 | "the only spacecraft to visit Uranus and Neptune"; "the only spacecraft to study all four of the solar system's giant planets at close range" |
+| At Uranus: 10 new moons, two new rings | SN-voyager-2 | "At Uranus, Voyager 2 discovered 10 new moons and two new rings." |
+| Entered interstellar space in 2018; second spacecraft to do so | SN-voyager-2; NASA advisory Nov. 10, 2026 | "the second spacecraft to enter interstellar space"; "Voyager 2 entered in 2018" |
+| Three instruments on: magnetometer, plasma wave, cosmic ray; others off | Where are Voyager 1 and 2 now (updated April 17, 2026); Voyager blog Aug. 4, 2026 | "Cosmic Ray Subsystem (CRS) … On"; "keep its three instruments operating" |
+| Off "to save power or because they wore out" | Where are Voyager 1 and 2 now | "Off to save power"; "Off because of degraded performance" |
+| Extended mission (NASA's exact status wording) | SN-voyager-2 (modified Sept. 28, 2026) | "Status Extended Mission" |
+| On pace for one light-day in November 2035 | What Is a Light-Day? (Nov. 12, 2026) | "on pace to be one light-day away from Earth in nine more years, in November 2035" |
+| About 13.5 billion miles (21.7 billion km) from Earth | JPL Horizons, target -32, observer Earth, 2026-11-15 | "delta 144.876864912917" (AU); 1 AU = 149,597,870.7 km |
+
+Conflicts (also in editorNote): interstellar entry Nov. 5 vs Dec. 10, 2018 on the same NASA page; Saturn flyby Aug. 25 vs 26, 1981; Neptune "five moons" vs "six new moons" on the same page, so no Neptune moon count is used.
