@@ -221,3 +221,29 @@ Conflicts (also in editorNote): last contact 13 Nov. 1982 (NSSDCA, used) vs Nov.
 | HiRISE Operations Center, University of Arizona, Tucson | HiRISE page footer | "HiRISE Operations Center 1541 E. University Blvd Tucson, Arizona"; "University of Arizona" |
 
 Conflicts (also in editorNote): rover roll-off July 5 (US time, science.nasa.gov) vs 6 July UT (NSSDCA), so the letter says "my second Martian day"; "about 15" bounces (science.nasa.gov) vs a first bounce "and at least another 15" (NSSDCA).
+
+---
+
+# Round 3 (added November 15, 2026)
+
+Same method: every page opened and read in full from a saved copy (`curl`, then text-extracted), not search snippets.
+
+## surveyor-3
+| Claim | Source | Quote |
+|---|---|---|
+| Robot lander with three legs | NSSDCA-1967-035A | "Three hinged landing legs were attached to the lower corners of the structure" |
+| Landed April 20, 1967 | NSSDCA-1967-035A; SN-surveyor-3 | "final touchdown at 00:04:53 UT on 20 April 1967"; "April 20, 1967: Landed on the Moon" |
+| Shiny rocks confused the radar; engines did not shut off; bounced twice | SN-surveyor-3; NSSDCA | "highly reflective rocks confused the lander's descent radar, and the main engine failed to cut off"; "bounced off the lunar surface twice"; "Touchdown on the lunar surface occurred three times" |
+| Came to help the astronauts; was the ground strong enough | NSSDCA; SN-surveyor-3 | "to support the coming crewed Apollo landings"; "the lunar surface was solid enough to hold the weight of an Apollo lunar module" |
+| Scoop on a long arm; trenches up to 18 cm (7 in) | NSSDCA; SN-surveyor-3 | "a 12 cm long by 5 cm wide scoop mounted on a 1.5 meter pantograph arm"; "dig up to 7 inches (18 centimeters) deep" |
+| 6,326 pictures | NSSDCA; SN-surveyor-3 | "the television camera returned 6326 pictures"; "the first of 6,326 TV pictures" |
+| Last message May 4, 1967; did not wake after the two-week night | NSSDCA | "The last data were returned on 04 May 1967 at 00:04 UT and Surveyor 3 failed to come back to life following the two week lunar night" |
+| Two and a half years later, Conrad and Bean landed nearby, walked over, took the camera home | SN-surveyor-3; NSSDCA | "nearly two-and-a-half years of exposure on the Moon's surface"; "Pete Conrad and Alan Bean visited the spacecraft"; "removing about 10 kg of parts from the spacecraft, including the TV camera" |
+| First Surveyor with a scoop | SN-surveyor-3 | "for the first time carried a surface-sampling instrument" |
+| Pictures of an eclipse of the Sun by the Earth | NSSDCA | "Images of an eclipse of the Sun by the Earth and related thermal measurements were recorded" |
+| On a slope inside a small crater; about 180 m (197 yd) from Apollo 12 | NSSDCA; SN-surveyor-3 | "came to rest on a 14 degree slope inside a subdued 200 meter crater"; "approximately 197 yards (180 meters) from the inactive Surveyor 3 lander" |
+| Parts taken home so scientists could see how they changed | SN-surveyor-3 | "to allow scientists to evaluate the effects of nearly two-and-a-half years of exposure" |
+| LROC photographed it, the Apollo 12 lander and tracks | LROC image 1135 | "The Lunar Module descent stage, Apollo Lunar Science Experiment Package (ALSEP), and Surveyor III spacecraft are all visible along with astronaut tracks" |
+| Arizona: Flagstaff training; LROC SOC at ASU | USGS; ASU-LROC; LROC image 1135 | "Every astronaut who ever set foot on the Moon trained with the USGS in Flagstaff, Arizona"; "[NASA/GSFC/Arizona State University]" |
+
+Conflicts (also in editorNote): touchdown time 00:04:17 vs 00:04:53 UT; Apollo 12 landing Nov. 19 (NSSDCA, LROC) vs Nov. 18 (science.nasa.gov) and visit Nov. 20 vs Nov. 19, so no Apollo 12 dates are used; last data May 4 (NSSDCA, used) vs "operated … to 3 May" (LROC). Cut: the camera's current display location (no 2026 source) and the disputed bacteria story.

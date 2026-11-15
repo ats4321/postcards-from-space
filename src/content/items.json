@@ -559,5 +559,55 @@
         "supports": "distanceKm: Mars is, on average, 140 million miles from Earth."
       }
     ]
+  },
+  {
+    "id": "surveyor-3",
+    "name": "Surveyor 3",
+    "place": "Moon",
+    "locationName": "A small crater in Oceanus Procellarum, next to the Apollo 12 landing site",
+    "launchDate": "1967-04-17",
+    "arrivalDate": "1967-04-20",
+    "lastContact": "1967-05-04",
+    "status": "resting",
+    "distanceKm": 384400,
+    "distanceNote": "NASA says the Moon is an average of 238,855 miles (384,400 km) from Earth. The real distance changes a little during every orbit.",
+    "illustration": "lander",
+    "imageId": "surveyor-3",
+    "arizona": true,
+    "nssdcId": "1967-035A",
+    "officialUrl": "https://science.nasa.gov/mission/surveyor-3/",
+    "editorNote": "Landing time: NSSDCA gives initial touchdown 00:04:17 UT and final touchdown 00:04:53 UT on 20 April 1967 (19 April EST); science.nasa.gov says the lander settled on its third touchdown at 00:04:17 UT. Both agree on April 20, 1967 (UT), which is arrivalDate; the letter gives only the date. Number of bounces: NSSDCA 'Touchdown on the lunar surface occurred three times', science.nasa.gov 'bounced off the lunar surface twice'; these agree, and the letter says it bounced twice. lastContact: NSSDCA 'last data were returned on 04 May 1967 at 00:04 UT'; LROC says it operated until 3 May 1967; NSSDCA is used. Apollo 12 dates conflict: NSSDCA and LROC put the Intrepid landing on 19 November 1969 and the Surveyor visit on 20 November (UT); science.nasa.gov says Nov. 18 and Nov. 19 (US time). The text gives no Apollo 12 dates, only 'two and a half years later' (science.nasa.gov: 'nearly two-and-a-half years of exposure'). Distance from Intrepid: about 180 m (NSSDCA; science.nasa.gov '197 yards (180 meters)'); LROC says 'within 200 meters'. Cut: NSSDCA says the camera 'is now on display' at the Smithsonian National Air and Space Museum, but no 2026 source confirming it is on view was found, so the text does not say where the camera is now. Also cut: the popular story that Earth bacteria survived inside the returned camera, which is disputed and not in any source used here. Arizona: the LROC page footer lists the Science Operations Center under 'Phoenix, Arizona' while ASU News places it on ASU's Tempe campus, so the text says only 'Arizona State University'. The USGS page does not name the Apollo 12 crew, so the Arizona note does not claim where Conrad and Bean trained.",
+    "sources": [
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-035A",
+        "title": "NSSDCA Master Catalog: Surveyor 3",
+        "supports": "NSSDCA ID 1967-035A; launch 17 April 1967; second Surveyor to soft-land; program goal to support the crewed Apollo landings; three landing legs; surface sampler scoop on a 1.5 m arm; touchdown occurred three times because the vernier engines kept firing; landed 20 April 1967 on a 14 degree slope inside a 200 m crater in Oceanus Procellarum; trenches as deep as 18 cm; 6,326 pictures; images of an eclipse of the Sun by the Earth; last data 04 May 1967; did not come back to life after the two-week lunar night; Apollo 12 landed within about 180 m; Pete Conrad and Alan Bean removed about 10 kg of parts including the TV camera."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/surveyor-3/",
+        "title": "NASA Science: Surveyor 3",
+        "supports": "Key dates: launch April 17, 1967, landed April 20, 1967; first Surveyor to carry a surface-sampling instrument, digging up to 7 inches (18 centimeters); reflective rocks confused the descent radar and the lander bounced twice; 6,326 TV pictures; scientists concluded the surface was solid enough to hold an Apollo lunar module; Apollo 12 landed about 197 yards (180 meters) away; the astronauts recovered parts including the scoop and camera to study the effects of nearly two-and-a-half years on the Moon."
+      },
+      {
+        "url": "https://lroc.im-ldi.com/images/1135",
+        "title": "LROC (Arizona State University): Apollo 12 Fifty-first Anniversary",
+        "supports": "today and arizonaNote: LROC low-altitude image shows the Apollo 12 descent stage, the ALSEP and the Surveyor III spacecraft with astronaut tracks; image credit NASA/GSFC/Arizona State University; Intrepid landed within 200 meters of Surveyor III, which operated from 20 April to 3 May 1967."
+      },
+      {
+        "url": "https://www.usgs.gov/science/science-explorer/planetary-science/usgs-in-space",
+        "title": "U.S. Geological Survey: The USGS in Space Exploration, Mission Operations, and Training",
+        "supports": "arizonaNote: every astronaut who ever set foot on the Moon trained with the USGS in Flagstaff, Arizona."
+      },
+      {
+        "url": "https://news.asu.edu/20220722-discoveries-capturing-moon",
+        "title": "ASU News, July 22, 2022: Capturing the moon",
+        "supports": "arizonaNote: the LROC Science Operations Center is at Arizona State University."
+      },
+      {
+        "url": "https://science.nasa.gov/moon/facts/",
+        "title": "NASA Science: Moon Facts",
+        "supports": "distanceKm: the Moon is an average of 238,855 miles (384,400 kilometers) away."
+      }
+    ]
   }
 ]

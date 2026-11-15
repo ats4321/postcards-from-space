@@ -237,5 +237,25 @@
       "options": ["On a long runway", "Inside giant bouncing airbags", "Hanging from a balloon"],
       "answerIndex": 1
     }
+  },
+  "surveyor-3": {
+    "letter": [
+      "Hello from the Moon! I am Surveyor 3, a robot lander with three legs. I landed on April 20, 1967. On the way down, shiny rocks confused my radar, so my engines did not shut off in time. I bounced twice before I finally settled down!",
+      "I came to help the astronauts who would follow me. NASA needed to know if the ground was strong enough to hold their landers. I had a scoop on a long arm, and I dug trenches up to 18 cm (7 inches) deep. I also sent home 6,326 pictures.",
+      "My last message reached Earth on May 4, 1967. Then the two-week Moon night came, and I did not wake up again. Two and a half years later, I had visitors! Apollo 12 astronauts Pete Conrad and Alan Bean landed nearby. They walked over and took my camera home to Earth."
+    ],
+    "signOff": "Your three-legged friend on the Moon, Surveyor 3",
+    "science": [
+      "My scoop tests showed that the Moon's ground was solid enough to hold an Apollo lunar module.",
+      "I was the first Surveyor lander to carry a scoop for digging into the Moon's soil.",
+      "I took pictures of an eclipse of the Sun, when Earth passed in front of the Sun as seen from the Moon."
+    ],
+    "today": "I am still sitting on a slope inside a small crater, about 180 meters (197 yards) from where Apollo 12 landed. The astronauts took some of my parts home, so scientists could see how two and a half years on the Moon had changed them. A camera in orbit called LROC has photographed me, the Apollo 12 lander and the astronauts' tracks.",
+    "arizonaNote": "Every astronaut who walked on the Moon trained with U.S. Geological Survey scientists in Flagstaff, Arizona. LROC, the Moon camera that photographs my landing site, has its science operations center at Arizona State University.",
+    "quiz": {
+      "question": "How many times did Surveyor 3 bounce before it settled on the Moon?",
+      "options": ["It never bounced", "Twice", "Ten times"],
+      "answerIndex": 1
+    }
   }
 }
