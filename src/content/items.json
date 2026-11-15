@@ -659,7 +659,7 @@
     "arizona": false,
     "nssdcId": "2007-043A",
     "officialUrl": "https://science.nasa.gov/mission/dawn/",
-    "editorNote": "lastContact is left out on purpose: NSSDCA says 'communications ended on 31 October 2018', the Dawn mission status page says Dawn 'depleted its hydrazine propellant on Oct. 31', and the Nov. 1, 2018 JPL release says Dawn missed its scheduled communications sessions on Oct. 31 and Nov. 1. No source gives the date and time of the last signal actually received, so the text says only that Dawn ran out of fuel on October 31, 2018 and that NASA announced the end on November 1, 2018. arrivalDate is orbit entry at Ceres, Dawn's final destination (NSSDCA: 6 March 2015 at 12:29 UT); Vesta orbit began 16 July 2011 (NSSDCA). Status 'resting' because the mission is over and Dawn is an inert spacecraft parked in orbit ('an inert celestial monument … in orbit around one of the alien worlds it unveiled', mission status page). Mass differs inside NSSDCA (facts box 725 kg; text 747.1 kg dry, 1,217.7 kg at launch); no mass is used. Ion thrust: NSSDCA gives 92 mN, the science.nasa.gov ion propulsion page 91 mN; the text uses only the page's comparison to holding a sheet of paper. distanceKm is Ceres' distance from a JPL Horizons query for Nov. 15, 2026 (delta = 2.01671571762595 AU, 1 AU = 149,597,870.7 km).",
+    "editorNote": "lastContact is left out on purpose: NSSDCA says 'communications ended on 31 October 2018', the Dawn mission status page says Dawn 'depleted its hydrazine propellant on Oct. 31', and the Nov. 1, 2018 NASA release says Dawn missed its scheduled communications sessions on Oct. 31 and Nov. 1. No source gives the date and time of the last signal actually received, so the text says only that Dawn ran out of fuel on October 31, 2018 and that NASA announced the end on November 1, 2018. arrivalDate is orbit entry at Ceres, Dawn's final destination (NSSDCA: 6 March 2015 at 12:29 UT); Vesta orbit began 16 July 2011 (NSSDCA). Status 'resting' because the mission is over and Dawn is an inert spacecraft parked in orbit ('an inert celestial monument … in orbit around one of the alien worlds it unveiled', mission status page). Mass differs inside NSSDCA (facts box 725 kg; text 747.1 kg dry, 1,217.7 kg at launch); no mass is used. Ion thrust: NSSDCA gives 92 mN, the science.nasa.gov ion propulsion page 91 mN; the text uses only the page's comparison to holding a sheet of paper. distanceKm is Ceres' distance from a JPL Horizons query for Nov. 15, 2026 (delta = 2.01671571762595 AU, 1 AU = 149,597,870.7 km).",
     "sources": [
       {
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A",
@@ -672,9 +672,9 @@
         "supports": "Launch Sept. 27, 2007; stays at giant asteroid Vesta and dwarf planet Ceres, both in the main asteroid belt between Mars and Jupiter; type Orbiter; status Successful."
       },
       {
-        "url": "https://www.jpl.nasa.gov/news/nasas-dawn-mission-to-asteroid-belt-comes-to-end/",
-        "title": "NASA JPL, Nov. 1, 2018: NASA's Dawn Mission to Asteroid Belt Comes to End",
-        "supports": "Ran out of hydrazine and missed communications on Oct. 31 and Nov. 1, 2018; turned science fiction into science fact with ion propulsion; at Vesta in 2011, the first spacecraft to orbit a body between Mars and Jupiter; at Ceres in 2015, the first to visit a dwarf planet and to orbit two destinations beyond Earth; will stay in orbit at least 20 years, with more than 99 percent confidence of at least 50 years; one of the last views showed the bright regions of Occator Crater."
+        "url": "https://www.nasa.gov/news-release/nasas-dawn-mission-to-asteroid-belt-comes-to-end/",
+        "title": "NASA news release, Nov. 1, 2018: NASA's Dawn Mission to Asteroid Belt Comes to End",
+        "supports": "Dawn has gone silent, ending its mission; ran out of hydrazine and missed communications on Oct. 31 and Nov. 1, 2018; turned science fiction into science fact with ion propulsion; at Vesta in 2011, the first spacecraft to orbit a body between Mars and Jupiter; at Ceres in 2015, the first to visit a dwarf planet and to orbit two destinations beyond Earth; will stay in orbit at least 20 years, with more than 99 percent confidence of at least 50 years; one of the last views showed the bright regions of Occator Crater."
       },
       {
         "url": "https://science.nasa.gov/mission/dawn/mission-status/",
@@ -697,7 +697,7 @@
         "supports": "Ceres is a dwarf planet; its bright spots are deposits of carbonates and other salts; Occator Crater is home to the brightest area on Ceres."
       },
       {
-        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='DES=2000001;'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='DES=2000001%3B'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
         "title": "NASA JPL Horizons: Ceres range from Earth, Nov. 15, 2026",
         "supports": "distanceKm: on Nov. 15, 2026 Ceres was 2.02 AU from Earth (about 301.7 million km, 187.5 million miles)."
       }
@@ -737,7 +737,7 @@
         "supports": "arizonaNote: the USGS Astrogeology Science Center is in Flagstaff, Arizona; much of the Apollo astronaut training was led by USGS scientist Dr. Gene Shoemaker, founder of the USGS Astrogeology Science Center."
       },
       {
-        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='433;'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='433%3B'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
         "title": "NASA JPL Horizons: 433 Eros range from Earth, Nov. 15, 2026",
         "supports": "distanceKm: on Nov. 15, 2026 Eros was 2.49 AU from Earth (about 371.8 million km, 231 million miles)."
       }

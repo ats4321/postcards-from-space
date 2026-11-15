@@ -274,20 +274,20 @@ Conflicts (also in editorNote): launch 1972-03-03 (NSSDCA, used) vs March 2, 197
 | Left Earth September 27, 2007 | NSSDCA-2007-043A; SN-dawn | "Launch Date: 2007-09-27"; "Launch Sept. 27, 2007" |
 | Ion engines use electricity to shoot out xenon | SN-dawn ion propulsion; NSSDCA | "using an electrical charge to accelerate ions from xenon fuel"; "xenon which is ionized and accelerated by electrodes" |
 | Each push about as strong as holding a sheet of paper; kept pushing for years | SN-dawn ion propulsion | "about the amount of force involved in holding a single piece of notebook paper in your hand"; "the ion propulsion system will operate for thousands of days" |
-| 2011, reached Vesta, second-biggest world in the belt | JPL 2018-11-01; SN-dawn Vesta | "In 2011, when Dawn arrived at Vesta, the second largest world in the main asteroid belt" |
-| First to orbit anything between Mars and Jupiter | JPL 2018-11-01 | "the spacecraft became the first to orbit a body in the region between Mars and Jupiter" |
+| 2011, reached Vesta, second-biggest world in the belt | NASA 2018-11-01; SN-dawn Vesta | "In 2011, when Dawn arrived at Vesta, the second largest world in the main asteroid belt" |
+| First to orbit anything between Mars and Jupiter | NASA 2018-11-01 | "the spacecraft became the first to orbit a body in the region between Mars and Jupiter" |
 | Mapped Vesta's craters and measured its gravity | SN-dawn Vesta | "Dawn mapped Vesta's geology, composition, cratering record and more. It determined Vesta's interior structure by measuring its gravity field" |
 | Left Vesta in 2012 | NSSDCA | "Dawn departed Vesta on 5 September 2012" |
-| 2015, orbit around Ceres, a dwarf planet; first to orbit two worlds beyond Earth; first to visit a dwarf planet | JPL 2018-11-01; NSSDCA | "In 2015, when Dawn went into orbit around Ceres, a dwarf planet … the mission became the first to visit a dwarf planet and go into orbit around two destinations beyond Earth"; "entered initial orbit around Ceres on 6 March 2015" |
-| Oct. 31, 2018, used up the fuel that kept it pointed at Earth | SN-dawn mission status; JPL | "Dawn depleted its hydrazine propellant on Oct. 31"; "hydrazine, which keeps it oriented and in communication with Earth" |
-| NASA announced the end Nov. 1, 2018 | JPL 2018-11-01 (dated Nov. 1, 2018) | "NASA declares Dawn's historic mission over after spacecraft depletes its hydrazine fuel" |
-| Still circling Ceres; at least 20 years, likely at least 50 | JPL 2018-11-01 | "Dawn will remain in orbit for at least 20 years, and engineers have more than 99 percent confidence the orbit will last for at least 50 years" |
+| 2015, orbit around Ceres, a dwarf planet; first to orbit two worlds beyond Earth; first to visit a dwarf planet | NASA 2018-11-01; NSSDCA | "In 2015, when Dawn went into orbit around Ceres, a dwarf planet … the mission became the first to visit a dwarf planet and go into orbit around two destinations beyond Earth"; "entered initial orbit around Ceres on 6 March 2015" |
+| Oct. 31, 2018, used up the fuel that kept it pointed at Earth | SN-dawn mission status; NASA 2018-11-01 | "Dawn depleted its hydrazine propellant on Oct. 31"; "hydrazine, which keeps it oriented and in communication with Earth" |
+| NASA announced the end Nov. 1, 2018 | NASA 2018-11-01 (dated "Nov 01, 2018") | "Dawn spacecraft has gone silent, ending a historic mission" |
+| Still circling Ceres; at least 20 years, likely at least 50 | NASA 2018-11-01 | "Dawn will remain in orbit for at least 20 years, and engineers have more than 99 percent confidence the orbit will last for at least 50 years" |
 | A group of meteorites on Earth came from Vesta | SN-dawn Vesta | "confirmed that Vesta is the parent body of the howardite-eucrite-diogenite (HED) meteorites" |
 | Bright spots on Ceres are salts | SN-dawn Ceres | "'bright spots' and are deposits of carbonates and other salts" |
-| One of the last pictures shows the bright spots of Occator Crater | JPL 2018-11-01 | "This photo of Ceres and the bright regions of Occator Crater was one of the last views NASA's Dawn spacecraft transmitted" |
+| One of the last pictures shows the bright spots of Occator Crater | NASA 2018-11-01 | "This photo of Ceres and the bright regions of Occator Crater was one of the last views NASA's Dawn spacecraft transmitted" |
 | Ceres about 301.7 million km (distanceNote) | JPL Horizons, target 1 Ceres, observer Earth, 2026-11-15 | "2026-Nov-15 00:00 2.01671571762595" (AU) |
 
-Conflicts (also in editorNote): no source gives the time of the last signal received (NSSDCA "communications ended on 31 October 2018"; JPL: missed sessions Oct. 31 and Nov. 1), so lastContact is left out; NSSDCA mass 725 kg vs 747.1 kg dry; ion thrust 92 mN (NSSDCA) vs 91 mN (science.nasa.gov); neither number used.
+Conflicts (also in editorNote): no source gives the time of the last signal received (NSSDCA "communications ended on 31 October 2018"; NASA release: missed sessions Oct. 31 and Nov. 1), so lastContact is left out; NSSDCA mass 725 kg vs 747.1 kg dry; ion thrust 92 mN (NSSDCA) vs 91 mN (science.nasa.gov); neither number used.
 
 ## near-shoemaker
 | Claim | Source | Quote |
