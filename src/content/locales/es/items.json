@@ -253,5 +253,83 @@
       ],
       "answerIndex": 1
     }
+  },
+  "surveyor-3": {
+    "letter": [
+      "¡Hola desde la Luna! Soy Surveyor 3, un módulo de aterrizaje robótico con tres patas. Aterricé el 20 de abril de 1967. Mientras bajaba, unas rocas brillantes confundieron a mi radar, así que mis motores no se apagaron a tiempo. ¡Reboté dos veces antes de quedarme quieto por fin!",
+      "Vine a ayudar a los astronautas que llegarían después de mí. La NASA necesitaba saber si el suelo era lo bastante firme para sostener sus módulos de aterrizaje. Yo tenía una pala en un brazo largo y cavé zanjas de hasta 18 cm (7 pulgadas) de profundidad. También envié a casa 6,326 fotos.",
+      "Mi último mensaje llegó a la Tierra el 4 de mayo de 1967. Luego llegó la noche lunar, que dura dos semanas, y ya no volví a despertar. ¡Dos años y medio después, tuve visitas! Los astronautas del Apollo 12, Pete Conrad y Alan Bean, aterrizaron cerca. Caminaron hasta mí y se llevaron mi cámara a la Tierra."
+    ],
+    "signOff": "Tu amigo de tres patas en la Luna, Surveyor 3",
+    "science": [
+      "Mis pruebas con la pala mostraron que el suelo de la Luna era lo bastante firme para sostener un módulo lunar Apollo.",
+      "Fui el primer módulo Surveyor que llevó una pala para cavar en el suelo de la Luna.",
+      "Tomé fotos de un eclipse de Sol, cuando la Tierra pasó por delante del Sol, visto desde la Luna."
+    ],
+    "today": "Sigo en una ladera dentro de un cráter pequeño, a unos 180 metros (197 yardas) de donde aterrizó el Apollo 12. Los astronautas se llevaron algunas de mis piezas a casa, para que los científicos vieran cómo las habían cambiado dos años y medio en la Luna. Una cámara en órbita llamada LROC nos ha fotografiado a mí, al módulo del Apollo 12 y a las huellas de los astronautas.",
+    "arizonaNote": "Todos los astronautas que caminaron en la Luna entrenaron con científicos del Servicio Geológico de los Estados Unidos (USGS) en Flagstaff, Arizona. LROC, la cámara lunar que fotografía mi lugar de aterrizaje, tiene su centro de operaciones científicas en la Universidad Estatal de Arizona.",
+    "quiz": {
+      "question": "¿Cuántas veces rebotó Surveyor 3 antes de quedarse quieto en la Luna?",
+      "options": ["Nunca rebotó", "Dos veces", "Diez veces"],
+      "answerIndex": 1
+    }
+  },
+  "pioneer-10": {
+    "letter": [
+      "¡Saludos desde muy, muy lejos! Soy Pioneer 10. Salí de la Tierra en marzo de 1972. La NASA me llama su primera misión a los planetas exteriores. En julio entré en el cinturón de asteroides y fui la primera nave espacial en atravesarlo. Me golpearon unas rocas diminutas, pero menos de las que esperaban los científicos.",
+      "En diciembre de 1973, fui la primera nave espacial que pasó cerca de Júpiter. Tomé unas 500 fotos de sus nubes, incluida la Gran Mancha Roja. También tomé las primeras fotos de cerca de Ganímedes, una de las lunas de Júpiter.",
+      "En 1983 crucé la órbita de Neptuno. Fui el primer objeto hecho por humanos que llegó más allá del planeta más lejano. Mi equipo planeó un viaje de 21 meses, pero seguí adelante durante más de 30 años. Mi última señal llegó a la Tierra el 23 de enero de 2003. ¡Tardó 11 horas y 20 minutos en llegar!"
+    ],
+    "signOff": "A la deriva hacia las estrellas, Pioneer 10",
+    "science": [
+      "Fui la primera nave espacial que atravesó el cinturón de asteroides y la primera que pasó cerca de Júpiter.",
+      "Descubrí que la gigantesca cola magnética de Júpiter mide casi 800 millones de km (unos 500 millones de millas) de largo. Se extiende hasta la órbita de Saturno.",
+      "Fui la primera nave espacial que funcionó solo con energía nuclear."
+    ],
+    "today": "Voy saliendo del sistema solar a la deriva, rumbo a una estrella roja llamada Aldebarán. Necesitaré unos dos millones de años para pasar cerca de ella. Llevo una placa de metal con dibujos de un hombre y una mujer y un mapa de dónde está el Sol, por si alguien me encuentra algún día. El JPL de la NASA calcula que ahora estoy a unos 13.1 mil millones de millas (21.1 mil millones de km) de la Tierra.",
+    "quiz": {
+      "question": "¿Cerca de qué planeta pasó Pioneer 10 antes que cualquier otra nave espacial?",
+      "options": ["Júpiter", "Marte", "Venus"],
+      "answerIndex": 0
+    }
+  },
+  "dawn": {
+    "letter": [
+      "¡Hola desde el cinturón de asteroides! Soy Dawn. Salí de la Tierra el 27 de septiembre de 2007. Vuelo con motores iónicos. Usan electricidad para lanzar pedacitos diminutos de gas xenón. Cada empujón es tan fuerte como sostener una hoja de papel. ¡Es suave, pero seguí empujando durante años!",
+      "En 2011 llegué a Vesta, el segundo mundo más grande del cinturón de asteroides. Fui la primera nave espacial que orbitó algo entre Marte y Júpiter. Hice mapas de los cráteres de Vesta y medí su gravedad. En 2012 partí hacia mi siguiente parada.",
+      "En 2015 entré en órbita alrededor de Ceres, un planeta enano. ¡Así fui la primera en orbitar dos mundos más allá de la Tierra! El 31 de octubre de 2018 se me acabó el combustible que me mantenía apuntando hacia la Tierra, así que me quedé en silencio. Sigo dando vueltas alrededor de Ceres. Ahora descanso aquí."
+    ],
+    "signOff": "Todavía girando alrededor de Ceres, Dawn",
+    "science": [
+      "Fui la primera nave espacial que orbitó dos mundos más allá de la Tierra, y la primera que visitó un planeta enano.",
+      "Demostré que un grupo de meteoritos encontrados en la Tierra vino de Vesta.",
+      "Descubrí que las manchas brillantes de Ceres están hechas de sales."
+    ],
+    "today": "Sigo dando vueltas alrededor del planeta enano Ceres. La NASA anunció el fin de mi misión el 1 de noviembre de 2018, después de que me quedé sin combustible. La NASA espera que siga en órbita al menos 20 años, y lo más probable es que sean al menos 50. Una de mis últimas fotos muestra las manchas brillantes del cráter Occator.",
+    "quiz": {
+      "question": "¿Qué dos mundos del cinturón de asteroides orbitó Dawn?",
+      "options": ["Vesta y Ceres", "Marte y Venus", "La Luna y el Sol"],
+      "answerIndex": 0
+    }
+  },
+  "near-shoemaker": {
+    "letter": [
+      "¡Hola desde el asteroide Eros! Soy NEAR Shoemaker. Salí de la Tierra el 17 de febrero de 1996. En el camino, pasé cerca de otro asteroide llamado Mathilde. Descubrí que está cubierto de cráteres y que es menos denso de lo que pensaban los científicos.",
+      "El 14 de febrero de 2000 entré en órbita alrededor de Eros. ¡Fui la primera nave espacial de la historia en orbitar un asteroide! Un mes después, la NASA me cambió el nombre en honor a Eugene Shoemaker, un geólogo famoso. Di vueltas alrededor de Eros durante un año. En total, envié a casa 160,000 fotos.",
+      "No me construyeron para aterrizar. Pero el 12 de febrero de 2001, mi equipo me bajó despacio hasta Eros. Toqué el suelo a solo 6.4 km (4 millas) por hora. ¡Fui la primera nave espacial que aterrizó en un asteroide! Envié datos durante unas dos semanas más, hasta que el frío fue demasiado para mí."
+    ],
+    "signOff": "Tu amigo en Eros, NEAR Shoemaker",
+    "science": [
+      "Fui la primera nave espacial que orbitó un asteroide y la primera que aterrizó en uno.",
+      "Descubrí que Eros no tiene campo magnético.",
+      "Descubrí que Eros es más pequeño de lo que esperaban los científicos. Mide unos 33 km (21 millas) de largo."
+    ],
+    "today": "Sigo en Eros, justo al sur de una zona con forma de silla de montar llamada Himeros. Mi último contacto con la Tierra fue el 28 de febrero de 2001. La NASA intentó llamarme otra vez el 10 de diciembre de 2002, pero no respondí. Ahora descanso aquí.",
+    "arizonaNote": "Me pusieron el nombre de Gene Shoemaker, un científico del Servicio Geológico de los Estados Unidos (USGS). Él fundó el Centro de Ciencias Astrogeológicas del USGS en Flagstaff, Arizona, y dirigió gran parte del entrenamiento de los astronautas de Apollo.",
+    "quiz": {
+      "question": "¿Qué hizo NEAR Shoemaker antes que cualquier otra nave espacial?",
+      "options": ["Aterrizar en un asteroide", "Aterrizar en Marte", "Visitar Plutón"],
+      "answerIndex": 0
+    }
   }
 }
