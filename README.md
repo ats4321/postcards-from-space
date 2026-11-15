@@ -29,6 +29,7 @@ npm run dev        # local dev server
 | `npm run validate` | Check all content JSON against the schema and the cross-references. |
 | `npm run check-links` | Request every source and image URL and report any that do not answer 200. Needs network. |
 | `npm run references` | Regenerate the References section below from the content JSON. |
+| `npm run fetch-images` | Download the NASA photos listed in `scripts/fetch-images.ts`, convert them to WebP in `public/img/` (max 1200 px, under 200 KB) and record their sizes in `images.json`. Needs network the first time; `-- --force` redoes every conversion. |
 
 Before every pull request:
 
@@ -95,6 +96,8 @@ on any error.
 | `file` | `/img/<name>.webp`, or `/img/illustrations/<name>.svg` until a photo is added. The file must exist in `public/`. |
 | `alt`, `credit`, `license` | text |
 | `sourceUrl` | https link to where the image came from. Required for photos. |
+| `kind?` | `hero` (the item's main picture, id equals the item id) or `now` (where it rests today) |
+| `width?`, `height?` | pixel size, written by `npm run fetch-images` |
 
 **Cross-checks**
 
