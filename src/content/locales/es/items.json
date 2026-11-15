@@ -158,5 +158,100 @@
       "options": ["Su propio motor eléctrico", "Un motor a reacción", "Pedales"],
       "answerIndex": 0
     }
+  },
+  "voyager-2": {
+    "letter": [
+      "¡Hola desde el espacio entre las estrellas! Soy Voyager 2. Salí de la Tierra el 20 de agosto de 1977, 16 días antes que mi gemela, Voyager 1. Llevo un disco de oro con sonidos e imágenes de la Tierra, y saludos en 55 idiomas.",
+      "Pasé cerca de Júpiter en 1979 y de Saturno en 1981. Luego mi equipo me envió hacia Urano en 1986 y Neptuno en 1989. Sigo siendo la única nave espacial que ha visitado esos dos planetas. ¡En Urano descubrí 10 lunas nuevas y dos anillos nuevos!",
+      "En 2018 entré al espacio interestelar, que es el espacio entre las estrellas. Tres de mis instrumentos científicos siguen encendidos. Hoy estoy a unos 13.5 mil millones de millas (21.7 mil millones de km) de ti. La NASA dice que voy en camino de estar a un día luz de la Tierra en noviembre de 2035."
+    ],
+    "signOff": "Tu amiga más allá de Neptuno, Voyager 2",
+    "science": [
+      "Soy la única nave espacial que ha visitado Urano y Neptuno, y la única que ha estudiado de cerca los cuatro planetas gigantes.",
+      "En Urano descubrí 10 lunas nuevas y dos anillos nuevos.",
+      "Soy la segunda nave espacial en llegar al espacio interestelar. Mi magnetómetro y mis instrumentos de ondas de plasma y de rayos cósmicos siguen midiendo el espacio entre las estrellas."
+    ],
+    "today": "Estoy en el espacio interestelar, a unos 13.5 mil millones de millas (21.7 mil millones de km) de la Tierra, y sigo avanzando. La NASA llama a esta etapa mi misión extendida. Mi magnetómetro, mi instrumento de ondas de plasma y mi instrumento de rayos cósmicos siguen encendidos. Todos mis otros instrumentos están apagados para ahorrar energía o porque se desgastaron.",
+    "quiz": {
+      "question": "¿Qué dos planetas ha visitado solamente Voyager 2?",
+      "options": [
+        "Urano y Neptuno",
+        "Mercurio y Venus",
+        "La Tierra y Marte"
+      ],
+      "answerIndex": 0
+    }
+  },
+  "insight": {
+    "letter": [
+      "¡Hola desde Elysium Planitia, una llanura plana y lisa cerca del centro de Marte! Soy InSight, un módulo de aterrizaje. Aterricé el 26 de noviembre de 2018. No vine a mirar la superficie. Vine a escuchar el interior de Marte, como un médico que revisa los latidos del corazón.",
+      "Mi brazo robótico levantó de mi cubierta un sismómetro muy sensible y lo puso en el suelo. Sintió temblar a Marte. ¡Fui el primero en detectar martemotos! Conté más de 1,300. Algunos los causaron rocas espaciales que chocaron contra el suelo.",
+      "El polvo fue cubriendo poco a poco mis dos paneles solares redondos, así que tenía cada vez menos energía. Mi equipo hasta usó mi brazo para echar tierra sobre los paneles en días de viento y así barrer el polvo. Mi último mensaje llegó a la Tierra el 15 de diciembre de 2022. Ahora descanso aquí."
+    ],
+    "signOff": "Escuchándote desde Elysium Planitia, InSight",
+    "science": [
+      "Fui el primero en detectar sismos en Marte. Mi sismómetro midió más de 1,300.",
+      "Las ondas de los sismos mostraron que el núcleo de Marte está fundido y es más grande de lo que esperaban los científicos.",
+      "Reuní más datos del clima que cualquier otra misión en la superficie de Marte, y sentí pasar miles de remolinos de polvo."
+    ],
+    "today": "Sigo en Elysium Planitia. La NASA me retiró en diciembre de 2022, cuando me quedé sin energía. Una cámara en órbita me fotografió el 23 de octubre de 2024. Ahora mis paneles solares son del mismo color café rojizo que el suelo a mi alrededor. En diciembre de 2024, la NASA dijo que dejaría de escucharme al final de ese año.",
+    "arizonaNote": "La cámara que me fotografía desde la órbita es HiRISE. La opera la Universidad de Arizona en Tucson.",
+    "quiz": {
+      "question": "¿Qué detectó por primera vez en Marte el sismómetro de InSight?",
+      "options": [
+        "Tormentas de lluvia",
+        "Martemotos",
+        "Ríos de agua"
+      ],
+      "answerIndex": 1
+    }
+  },
+  "viking-1": {
+    "letter": [
+      "¡Hola desde Chryse Planitia, la Llanura Dorada de Marte! Soy el módulo de aterrizaje Viking 1. Toqué suelo el 20 de julio de 1976. La NASA dice que fue el primer aterrizaje realmente exitoso en Marte. Solo 25 segundos después de aterrizar, empecé a enviar mi primera foto a casa.",
+      "Mi gran trabajo era buscar señales de vida. El 28 de julio de 1976, mi brazo robótico recogió tierra y la puso en mi propio laboratorio de biología, muy pequeño. Algunos resultados se parecían un poco a la vida. Pero mi prueba principal para buscar compuestos orgánicos salió negativa.",
+      "También envié reportes del clima a la Tierra durante años. Más tarde me pusieron un nuevo nombre: Estación Memorial Thomas Mutch, en honor al líder del equipo de cámaras de Viking. En noviembre de 1982, una orden equivocada desde la Tierra cortó mi radio. Ahora descanso aquí."
+    ],
+    "signOff": "Tu amigo de la Llanura Dorada, Viking 1",
+    "science": [
+      "Hice el primer aterrizaje realmente exitoso en Marte y envié las primeras fotos de su superficie.",
+      "Analicé el suelo de Marte en busca de señales de vida. Mi prueba principal para buscar compuestos orgánicos salió negativa.",
+      "Medí temperaturas desde menos 123 °F (menos 86 °C) antes del amanecer hasta menos 27 °F (menos 33 °C) en la tarde."
+    ],
+    "today": "Sigo de pie en el oeste de Chryse Planitia. En 2006, la cámara HiRISE de un orbitador me encontró desde el espacio. También vio cerca de mí lo que probablemente son mi escudo térmico, mi cubierta trasera y mi paracaídas.",
+    "arizonaNote": "HiRISE, la cámara que me encontró desde la órbita en 2006, la opera la Universidad de Arizona.",
+    "quiz": {
+      "question": "¿Cuál era el gran trabajo de Viking 1 en Marte?",
+      "options": [
+        "Buscar señales de vida",
+        "Construir una base para astronautas",
+        "Traer rocas a la Tierra"
+      ],
+      "answerIndex": 0
+    }
+  },
+  "sojourner": {
+    "letter": [
+      "¡Hola desde Ares Vallis, en Marte! Soy Sojourner, un rover pequeño. Peso solo 23 libras (10.6 kg) y mido 1 pie (30 cm) de alto. La NASA dice que soy el primer rover robótico de la historia en la superficie de Marte. Me pusieron el nombre de Sojourner Truth, quien luchó por los derechos civiles.",
+      "Viajé a Marte en el módulo de aterrizaje Pathfinder. Aterrizamos el 4 de julio de 1997, envueltos en bolsas de aire gigantes. ¡Rebotamos unas 15 veces antes de detenernos! En mi segundo día marciano, bajé por una rampa hasta el suelo rocoso de una antigua llanura de inundación.",
+      "Mi trabajo era estudiar de cerca las rocas y el suelo. También tomé 550 fotos. Las pistas que reunimos mi módulo y yo sugieren que Marte fue alguna vez cálido y húmedo. Nuestro último mensaje llegó a la Tierra el 27 de septiembre de 1997. Ahora descanso aquí."
+    ],
+    "signOff": "Tu pequeño amigo en Ares Vallis, Sojourner",
+    "science": [
+      "Fui el primer rover robótico que llegó a la superficie de Marte.",
+      "Mi instrumento de rayos X midió de qué están hechos las rocas y el suelo de Marte.",
+      "Las pistas que reunimos mi módulo y yo sugieren que Marte fue alguna vez cálido y húmedo."
+    ],
+    "today": "Sigo cerca del módulo Pathfinder, que ahora se llama Estación Memorial Carl Sagan, en Ares Vallis. En diciembre de 2006, la cámara HiRISE en órbita fotografió nuestro lugar de aterrizaje. Los científicos vieron algo de mi tamaño que no aparecía en fotos más antiguas. Creen que podría ser yo.",
+    "arizonaNote": "HiRISE, la cámara que tal vez me vio desde la órbita, se maneja desde el Centro de Operaciones de HiRISE en la Universidad de Arizona en Tucson.",
+    "quiz": {
+      "question": "¿Cómo aterrizaron a salvo en Marte Sojourner y el módulo Pathfinder?",
+      "options": [
+        "En una pista larga",
+        "Dentro de bolsas de aire gigantes que rebotaban",
+        "Colgando de un globo"
+      ],
+      "answerIndex": 1
+    }
   }
 }
