@@ -87,7 +87,7 @@ const MANIFEST: Entry[] = [
   { id: 'apollo-12-alsep-now', kind: 'now', ...lroc(401, 'news/uploads/M175428601RE_25cm_AP12_area.png') },
   { id: 'dawn', kind: 'hero', ...photojournal('PIA12018') },
   { id: 'near-shoemaker', kind: 'hero', ...library('9701593') },
-  { id: 'pioneer-11', kind: 'hero', ...library('ARC-2000-80-HC-251') },
+  { id: 'pioneer-11', kind: 'hero', ...library('KSC-73P-0116') },
   { id: 'kepler', kind: 'hero', ...photojournal('PIA11188') },
 ];
 

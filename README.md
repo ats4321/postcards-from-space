@@ -164,6 +164,6 @@ Official page: <https://science.nasa.gov/mission/voyager/voyager-1/>
 - `apollo-12-alsep-now`: NASA/GSFC/Arizona State University. <https://lroc.im-ldi.com/images/401> (NASA image, free to use under NASA's media usage guidelines.)
 - `dawn`: NASA/JPL. <https://photojournal.jpl.nasa.gov/catalog/PIA12018> (NASA image, free to use under NASA's media usage guidelines.)
 - `near-shoemaker`: NASA. <https://images.nasa.gov/details/9701593> (NASA image, free to use under NASA's media usage guidelines.)
-- `pioneer-11`: Painting by Wilson Hurley, NASA Ames Research Center. <https://images.nasa.gov/details/ARC-2000-80-HC-251> (NASA image, free to use under NASA's media usage guidelines.)
+- `pioneer-11`: NASA. <https://images.nasa.gov/details/KSC-73P-0116> (NASA image, free to use under NASA's media usage guidelines.)
 - `kepler`: NASA/JPL-Caltech/Ball Aerospace. <https://photojournal.jpl.nasa.gov/catalog/PIA11188> (NASA image, free to use under NASA's media usage guidelines.)
 <!-- references:end -->

@@ -310,13 +310,13 @@
   {
     "id": "pioneer-11",
     "file": "/img/pioneer-11.webp",
-    "alt": "Painting of the Pioneer 11 spacecraft flying toward Saturn and its rings.",
-    "credit": "Painting by Wilson Hurley, NASA Ames Research Center",
-    "sourceUrl": "https://images.nasa.gov/details/ARC-2000-80-HC-251",
+    "alt": "Black-and-white photo of the Pioneer 11 spacecraft before launch in 1973, its large dish antenna on top, standing between the two open halves of the nose cone that will cover it.",
+    "credit": "NASA",
+    "sourceUrl": "https://images.nasa.gov/details/KSC-73P-0116",
     "license": "NASA image, free to use under NASA's media usage guidelines.",
     "kind": "hero",
     "width": 1200,
-    "height": 800
+    "height": 1500
   },
   {
     "id": "kepler",
