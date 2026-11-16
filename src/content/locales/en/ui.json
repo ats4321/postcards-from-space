@@ -54,7 +54,7 @@
   "ladder.note": "Earth is off the left edge. Each step on this scale is ten times farther than the one before.",
   "ladder.pick": "Pick a point to send that machine a radio hello.",
   "ladder.keys": "Use the arrow keys to move between points. Press Enter to send a hello.",
-  "ladder.point": "{name}: {distance}. Radio time: {time}.",
+  "ladder.point": "{name}, {stamp}: {distance}. Radio time: {time}.",
   "ladder.sped": "The pulse is sped up; the time shown is real.",
   "ladder.about": "about {time}",
   "ladder.lightTime": "Radio time from Earth",
@@ -80,5 +80,7 @@
   "ladder.light.second": "1 light-second",
   "ladder.light.minute": "1 light-minute",
   "ladder.light.hour": "1 light-hour",
-  "ladder.light.day": "1 light-day"
+  "ladder.light.day": "1 light-day",
+  "ladder.legend.stamped": "Stamp in your passport",
+  "ladder.legend.open": "No stamp yet"
 }

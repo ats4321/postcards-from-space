@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type 
 import { getItemName, type Item } from '../content';
 import { formatDistance, formatLightTime, LIGHT_KM_PER_S } from '../lib/format';
 import { useI18n } from '../lib/i18n';
+import { readStored } from '../lib/useStoredState';
 import { Stamp } from './Stamp';
 import { useMediaQuery } from './useMediaQuery';
 
@@ -98,6 +99,12 @@ export function DistanceLadder({ items, selectedId }: Props) {
     view === 'distance'
       ? decades.map((power) => ({ km: 10 ** power, label: `${compact.format(10 ** power)} km` }))
       : LIGHT_TICKS.map(([unit, seconds]) => ({ km: seconds * LIGHT_KM_PER_S, label: t(`ladder.light.${unit}`) }));
+
+  // Same storage the Passport uses. App re-renders the ladder whenever a stamp lands,
+  // so reading on every render keeps the dots current without touching App.
+  // ponytail: no cross-tab sync; add a 'storage' listener if that ever matters.
+  const stored = readStored<unknown>('pfs.stamps', []);
+  const stamps = Array.isArray(stored) ? stored : [];
 
   const about = t('ladder.about');
   const lightTime = (item: Item) => formatLightTime(item.distanceKm, language, about);
@@ -211,6 +218,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
           )}
           {order.map(({ item, x, y }, index) => {
             const name = getItemName(item.id, language);
+            const stamped = stamps.includes(item.id);
             return (
               <g
                 key={item.id}
@@ -219,9 +227,15 @@ export function DistanceLadder({ items, selectedId }: Props) {
                   else points.current.delete(item.id);
                 }}
                 className="ladder-point"
+                data-stamped={stamped}
                 role="button"
                 tabIndex={item.id === tabId ? 0 : -1}
-                aria-label={t('ladder.point', { name, distance: formatDistance(item.distanceKm, language), time: lightTime(item) })}
+                aria-label={t('ladder.point', {
+                  name,
+                  stamp: t(stamped ? 'passport.stamped' : 'passport.open'),
+                  distance: formatDistance(item.distanceKm, language),
+                  time: lightTime(item),
+                })}
                 aria-current={item.id === selectedId ? 'true' : undefined}
                 onClick={() => {
                   setFocusId(item.id);
@@ -237,6 +251,20 @@ export function DistanceLadder({ items, selectedId }: Props) {
           })}
         </svg>
       </div>
+      <ul className="ladder-legend label" aria-hidden="true">
+        <li>
+          <svg width="16" height="16">
+            <circle className="ladder-dot" data-stamped="true" cx="8" cy="8" r="6" />
+          </svg>
+          {t('ladder.legend.stamped')}
+        </li>
+        <li>
+          <svg width="16" height="16">
+            <circle className="ladder-dot" cx="8" cy="8" r="6" />
+          </svg>
+          {t('ladder.legend.open')}
+        </li>
+      </ul>
       <p className="ladder-sped label">{t('ladder.sped')}</p>
       <p className="visually-hidden" id="ladder-keys">
         {t('ladder.keys')}
@@ -244,7 +272,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
       <div className="ladder-result" aria-live="polite" ref={card}>
         {shown ? (
           <div className="ladder-card">
-            <Stamp item={shown} size="row" />
+            <Stamp item={shown} size="row" cancelled={stamps.includes(shown.id)} />
             <div>
               <h3>{getItemName(shown.id, language)}</h3>
               <dl>

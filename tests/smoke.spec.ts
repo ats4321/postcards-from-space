@@ -64,7 +64,7 @@ for (const [language, day] of [
     await page.setViewportSize({ width: 390, height: 900 });
     await page.goto('/');
 
-    await page.locator('.ladder').getByRole('button', { name: /^Voyager 1:/ }).click();
+    await page.locator('.ladder').getByRole('button', { name: /^Voyager 1,/ }).click();
     const card = page.locator('.ladder-card');
     await expect(card.getByRole('heading', { name: 'Voyager 1' })).toBeVisible();
     await expect(card).toContainText(day);

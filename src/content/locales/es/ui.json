@@ -54,7 +54,7 @@
   "ladder.note": "La Tierra queda fuera del borde izquierdo. Cada paso de esta escala está diez veces más lejos que el anterior.",
   "ladder.pick": "Elige un punto para enviarle un saludo por radio a esa máquina.",
   "ladder.keys": "Usa las flechas para moverte entre los puntos. Pulsa Enter para enviar un saludo.",
-  "ladder.point": "{name}: {distance}. Tiempo por radio: {time}.",
+  "ladder.point": "{name}, {stamp}: {distance}. Tiempo por radio: {time}.",
   "ladder.sped": "El pulso va acelerado; el tiempo que se muestra es real.",
   "ladder.about": "aproximadamente {time}",
   "ladder.lightTime": "Tiempo por radio desde la Tierra",
@@ -80,5 +80,7 @@
   "ladder.light.second": "1 segundo luz",
   "ladder.light.minute": "1 minuto luz",
   "ladder.light.hour": "1 hora luz",
-  "ladder.light.day": "1 día luz"
+  "ladder.light.day": "1 día luz",
+  "ladder.legend.stamped": "Sello en tu pasaporte",
+  "ladder.legend.open": "Sin sello todavía"
 }
