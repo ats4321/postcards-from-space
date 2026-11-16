@@ -82,5 +82,17 @@
   "ladder.light.hour": "1 light-hour",
   "ladder.light.day": "1 light-day",
   "ladder.legend.stamped": "Stamp in your passport",
-  "ladder.legend.open": "No stamp yet"
+  "ladder.legend.open": "No stamp yet",
+  "laser.heading": "Try it: bounce a laser off me",
+  "laser.intro": "Light travels about 186,000 miles (300,000 km) every second, and I am about {distance} away. Fire a laser at my prisms, then press Catch it! when you think the light is back.",
+  "laser.earth": "Earth",
+  "laser.moon": "Moon",
+  "laser.fire": "Fire laser",
+  "laser.again": "Fire again",
+  "laser.catch": "Catch it!",
+  "laser.flying": "The laser is on its way to me and back…",
+  "laser.early": "You pressed at {yours}. The light came back at {real}, so you were {gap} early.",
+  "laser.late": "You pressed at {yours}. The light came back at {real}, so you were {gap} late.",
+  "laser.exact": "You pressed at {yours}. The light came back at {real}. Right on time!",
+  "laser.missed": "The light came back after {real}. Fire again and try to catch it."
 }

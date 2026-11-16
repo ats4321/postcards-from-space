@@ -81,6 +81,8 @@ wording confirmed (see Apollo 11 reflector).
 | Laser distance 357,000–407,000 km (distanceNote) | ILRS Apollo 11 | "(∼357,000 to 407,000 km)" |
 | LROC image shows reflector and its cover | LROC image 484 | "Lunar Ranging RetroReflector (LRRR)" |
 | worldNote: New Mexico, France, Italy, Germany | NASA 2019 | "observatories in New Mexico, France, Italy and Germany" |
+| Laser experiment: light travels about 186,000 miles (300,000 km) a second | NASA "What is a light-day?" | "Moving through space about 186,000 miles every second" |
+| Laser experiment: about {distance} away (item distanceKm, 384,400 km); echo time 2 × 384,400 ÷ 299,792.458 = 2.56 s, computed in code | NASA "What is a light-day?"; MOON | "238,855 miles (384,400 kilometers) from Earth"; "light can traverse that distance in 1.3 seconds" |
 
 ## opportunity
 | Claim | Source | Quote |

@@ -82,5 +82,17 @@
   "ladder.light.hour": "1 hora luz",
   "ladder.light.day": "1 día luz",
   "ladder.legend.stamped": "Sello en tu pasaporte",
-  "ladder.legend.open": "Sin sello todavía"
+  "ladder.legend.open": "Sin sello todavía",
+  "laser.heading": "Pruébalo: rebota un láser en mí",
+  "laser.intro": "La luz viaja unas 186,000 millas (300,000 km) cada segundo, y yo estoy a unas {distance}. Dispara un láser a mis prismas y luego pulsa ¡Atrápalo! cuando creas que la luz ya volvió.",
+  "laser.earth": "Tierra",
+  "laser.moon": "Luna",
+  "laser.fire": "Disparar láser",
+  "laser.again": "Disparar otra vez",
+  "laser.catch": "¡Atrápalo!",
+  "laser.flying": "El láser viene hacia mí y regresa…",
+  "laser.early": "Pulsaste a los {yours}. La luz volvió a los {real}, así que te adelantaste {gap}.",
+  "laser.late": "Pulsaste a los {yours}. La luz volvió a los {real}, así que llegaste {gap} tarde.",
+  "laser.exact": "Pulsaste a los {yours}. La luz volvió a los {real}. ¡Justo a tiempo!",
+  "laser.missed": "La luz volvió después de {real}. Dispara otra vez e intenta atraparla."
 }
