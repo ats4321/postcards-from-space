@@ -2,6 +2,7 @@ import { useRef, useState, type MouseEvent } from 'react';
 import { Countdown } from './components/Countdown';
 import { DistanceLadder } from './components/DistanceLadder';
 import { HardwareList } from './components/HardwareList';
+import { History } from './components/History';
 import { LanguageToggle } from './components/LanguageToggle';
 import { Passport } from './components/Passport';
 import { Postcard } from './components/Postcard';
@@ -90,6 +91,7 @@ export default function App() {
           )}
         </div>
         <Passport items={items} stamps={stamps} justEarned={justEarned} />
+        <History items={items} stamps={stamps} selectedId={selected?.id} />
         <DistanceLadder items={items} selectedId={selected?.id} />
       </main>
 
