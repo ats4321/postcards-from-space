@@ -52,6 +52,8 @@ wording confirmed (see Apollo 11 reflector).
 | Magnetometer and plasma wave instrument on, others off | Where are Voyager 1 and 2 now | "Magnetometer (MAG) On"; "Plasma Wave Subsystem (PWS) On" |
 | One light-day on November 18, 2026; 16.094 billion miles (25.902 billion km); first to reach it | Where are Voyager 1 and 2 now | "Voyager 1 will be the first human-made object to reach this distance" |
 | Extended mission, still collecting data | SN-voyager-1 | "Status Extended Mission"; "continues to collect data" |
+| Find Earth experiment: took the picture on February 14, 1990 | NASA Photojournal PIA00452; NASA "Voyager 1's Pale Blue Dot" | "Taken on Feb. 14, 1990, by NASA's Voyager 1 spacecraft"; "a photograph of Earth taken on Feb. 14, 1990" |
+| Find Earth experiment: Earth was about 0.12 of a pixel | NASA Photojournal PIA00452 | "Earth was a crescent only 0.12 pixel in size." |
 
 ## apollo-11-eagle
 | Claim | Source | Quote |
@@ -81,6 +83,8 @@ wording confirmed (see Apollo 11 reflector).
 | Laser distance 357,000–407,000 km (distanceNote) | ILRS Apollo 11 | "(∼357,000 to 407,000 km)" |
 | LROC image shows reflector and its cover | LROC image 484 | "Lunar Ranging RetroReflector (LRRR)" |
 | worldNote: New Mexico, France, Italy, Germany | NASA 2019 | "observatories in New Mexico, France, Italy and Germany" |
+| Laser experiment: light travels about 186,000 miles (300,000 km) a second | NASA "What is a light-day?" | "Moving through space about 186,000 miles every second" |
+| Laser experiment: about {distance} away (item distanceKm, 384,400 km); echo time 2 × 384,400 ÷ 299,792.458 = 2.56 s, computed in code | NASA "What is a light-day?"; MOON | "238,855 miles (384,400 kilometers) from Earth"; "light can traverse that distance in 1.3 seconds" |
 
 ## opportunity
 | Claim | Source | Quote |
