@@ -194,3 +194,46 @@ test('history: reduced motion shows everything and steps by year', async ({ page
   await history.getByRole('button', { name: 'Year after' }).click();
   await expect(history.locator('.history-year')).toContainText(String(now));
 });
+
+for (const [language, id, took] of [
+  ['en', 'ingenuity', 'It took'],
+  ['es', 'apollo-11-eagle', 'Tardé'],
+] as const) {
+  test(`journey: ${id} at 390px (${language})`, async ({ page }) => {
+    await page.addInitScript((lang) => localStorage.setItem('pfs.language', JSON.stringify(lang)), language);
+    await page.setViewportSize({ width: 390, height: 900 });
+    await page.goto(`/#journey-${id}`);
+    const journey = page.locator('.journey');
+    await expect(journey.locator('#journey-title')).toBeVisible();
+    await expect(journey.locator('.journey-count')).toContainText(/1 (of|de) 16/);
+
+    // Prediction: answer, then the computed duration is revealed.
+    await journey.locator('.journey-options button').first().click();
+    await expect(journey.locator('.journey-result')).toBeVisible();
+
+    // Play moves the clock off launch day.
+    const clock = journey.locator('[data-readout="clock"]');
+    const before = await clock.textContent();
+    await journey.locator('.journey-play').click();
+    await expect(clock).not.toHaveText(before ?? '');
+    await journey.locator('.journey-play').click(); // pause
+
+    // Chips jump: launch is "on the way", today shows a real distance.
+    const chips = journey.locator('.journey-chips button');
+    await chips.first().click();
+    const distance = journey.locator('[data-readout="distance"]');
+    await expect(distance).toHaveText(language === 'es' ? 'En camino' : 'On the way');
+    await chips.last().click();
+    await expect(distance).toContainText('km');
+
+    // Three chapters, then the computed "It took".
+    for (let i = 0; i < 3; i++) await journey.getByRole('button', { name: /Next chapter|Siguiente capítulo/ }).click();
+    await expect(journey.locator('.journey-took')).toContainText(took);
+
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    expect(overflow).toBeLessThanOrEqual(0);
+    const { violations } = await new AxeBuilder({ page }).analyze();
+    const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
+    expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
+  });
+}

@@ -73,6 +73,9 @@ export function Postcard({ item, earned, onCorrect, onClose, focusOnOpen }: Prop
                 text={[...text.letter, text.signOff].join(' ')}
                 lang={letterLanguage === 'es' ? 'es-US' : 'en-US'}
               />
+              <a className="journey-link" href={`#journey-${item.id}`}>
+                {t('journey.go')}
+              </a>
               <button type="button" onClick={onClose}>
                 {t('postcard.close')}
               </button>

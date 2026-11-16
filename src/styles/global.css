@@ -1,6 +1,7 @@
 @import './list.css';
 @import './postcard.css';
 @import './widgets.css';
+@import './journey.css';
 
 @font-face {
   font-family: 'Inter Tight';
