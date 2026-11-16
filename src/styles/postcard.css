@@ -357,3 +357,25 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Trip log: date in mono on the left, event on the right; stacks on narrow screens. */
+.trip-log ol {
+  max-width: var(--measure);
+  margin: 0 0 var(--space-1);
+  padding: 0;
+  list-style: none;
+}
+
+.trip-log li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 var(--space-2);
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid rgb(11 19 40 / 0.3);
+}
+
+@media (min-width: 560px) {
+  .trip-log li {
+    grid-template-columns: 24ch minmax(0, 1fr);
+  }
+}

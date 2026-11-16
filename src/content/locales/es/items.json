@@ -38,6 +38,28 @@
       "El 18 de noviembre de 2026 me convierto en el primer objeto hecho por humanos en estar a un día luz de la Tierra."
     ],
     "today": "Estoy en el espacio interestelar, a unos 16.1 mil millones de millas (25.9 mil millones de km) de la Tierra, y sigo avanzando. La NASA llama a esta etapa mi misión extendida, y todavía reúno datos científicos. Casi todos mis instrumentos ya están apagados, pero mi instrumento de ondas de plasma y mi magnetómetro siguen encendidos.",
+    "timeline": [
+      {
+        "date": "1977-09-05",
+        "event": "Salí de la Tierra."
+      },
+      {
+        "date": "1979-03-05",
+        "event": "Pasé lo más cerca de Júpiter."
+      },
+      {
+        "date": "1980-11-12",
+        "event": "Pasé lo más cerca de Saturno."
+      },
+      {
+        "date": "1990-02-14",
+        "event": "Tomé la foto de la Tierra llamada Un Punto Azul Pálido."
+      },
+      {
+        "date": "2012-08-25",
+        "event": "Crucé al espacio interestelar."
+      }
+    ],
     "quiz": {
       "question": "¿Cuánto tarda la luz en recorrer un día luz?",
       "options": ["24 minutos", "24 horas", "24 días"],
@@ -61,6 +83,32 @@
     ],
     "today": "Sigo en la Base Tranquilidad, donde me dejaron los astronautas. El Lunar Reconnaissance Orbiter de la NASA me ha fotografiado desde solo 24 km (15 millas) sobre la superficie. En la foto se me ve a mí y los caminos oscuros que dejaron las botas de los astronautas.",
     "arizonaNote": "Todos los astronautas que caminaron en la Luna entrenaron con científicos del Servicio Geológico de los Estados Unidos (USGS) en Flagstaff, Arizona. La cámara que me fotografía desde la órbita, LROC, tiene su centro de operaciones científicas en la Universidad Estatal de Arizona, en Tempe.",
+    "timeline": [
+      {
+        "date": "1969-07-16T13:32Z",
+        "event": "Despegamos en un cohete Saturno V."
+      },
+      {
+        "date": "1969-07-19T17:21Z",
+        "event": "Entramos en órbita alrededor de la Luna."
+      },
+      {
+        "date": "1969-07-20T20:17Z",
+        "event": "Aterricé en el Mar de la Tranquilidad."
+      },
+      {
+        "date": "1969-07-21T02:56Z",
+        "event": "Neil Armstrong pisó la Luna."
+      },
+      {
+        "date": "1969-07-21T17:54Z",
+        "event": "La mitad de arriba del Eagle despegó. Yo me quedé aquí."
+      },
+      {
+        "date": "1969-07-24T16:50Z",
+        "event": "Los astronautas amerizaron en el océano Pacífico."
+      }
+    ],
     "quiz": {
       "question": "¿Para qué usó la mitad de arriba de Eagle a la mitad de abajo cuando dejó la Luna?",
       "options": ["Como plataforma de lanzamiento", "Como paracaídas", "Como vela"],
@@ -199,6 +247,32 @@
       "Soy la segunda nave espacial en llegar al espacio interestelar. Mi magnetómetro y mis instrumentos de ondas de plasma y de rayos cósmicos siguen midiendo el espacio entre las estrellas."
     ],
     "today": "Estoy en el espacio interestelar, a unos 13.5 mil millones de millas (21.7 mil millones de km) de la Tierra, y sigo avanzando. La NASA llama a esta etapa mi misión extendida. Mi magnetómetro, mi instrumento de ondas de plasma y mi instrumento de rayos cósmicos siguen encendidos. Todos mis otros instrumentos están apagados para ahorrar energía o porque se desgastaron.",
+    "timeline": [
+      {
+        "date": "1977-08-20",
+        "event": "Salí de la Tierra."
+      },
+      {
+        "date": "1979-07-09",
+        "event": "Pasé junto a Júpiter."
+      },
+      {
+        "date": "1981-08-26",
+        "event": "Pasé junto a Saturno."
+      },
+      {
+        "date": "1986-01-24",
+        "event": "Pasé junto a Urano."
+      },
+      {
+        "date": "1989-08-25",
+        "event": "Pasé junto a Neptuno."
+      },
+      {
+        "date": "2018-11-05",
+        "event": "Crucé al espacio interestelar."
+      }
+    ],
     "quiz": {
       "question": "¿Qué dos planetas ha visitado solamente Voyager 2?",
       "options": [
@@ -329,6 +403,24 @@
       "Fui la primera nave espacial que funcionó solo con energía nuclear."
     ],
     "today": "Voy saliendo del sistema solar a la deriva, rumbo a una estrella roja llamada Aldebarán. Necesitaré unos dos millones de años para pasar cerca de ella. Llevo una placa de metal con dibujos de un hombre y una mujer y un mapa de dónde está el Sol, por si alguien me encuentra algún día. El JPL de la NASA calcula que ahora estoy a unos 13.1 mil millones de millas (21.1 mil millones de km) de la Tierra.",
+    "timeline": [
+      {
+        "date": "1972-03",
+        "event": "Salí de la Tierra."
+      },
+      {
+        "date": "1973-12-04",
+        "event": "Pasé lo más cerca de Júpiter."
+      },
+      {
+        "date": "1983-06-13",
+        "event": "Crucé la órbita de Neptuno."
+      },
+      {
+        "date": "2003-01-23",
+        "event": "La Tierra recibió mi última señal."
+      }
+    ],
     "quiz": {
       "question": "¿Cerca de qué planeta pasó Pioneer 10 antes que cualquier otra nave espacial?",
       "options": ["Júpiter", "Marte", "Venus"],

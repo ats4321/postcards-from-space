@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { DEFAULT_LANGUAGE, getImage, getImageAlt, getItemText, type Item } from '../content';
-import { formatDate, formatDistance } from '../lib/format';
+import { formatDate, formatDistance, formatTimelineDate } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 import { ItemImage } from './ItemImage';
 import { LaserBounce } from './LaserBounce';
@@ -130,6 +130,24 @@ export function Postcard({ item, earned, onCorrect, onClose, focusOnOpen }: Prop
             ))}
           </ul>
         </section>
+
+        {text.timeline && (
+          <section className="trip-log">
+            {/* A log with clock times is shown as Apollo-style "Mission clock". */}
+            <h3>{t(text.timeline.some((row) => row.date.includes('T')) ? 'postcard.missionClock' : 'postcard.tripLog')}</h3>
+            <ol>
+              {text.timeline.map((row) => (
+                <li key={row.date}>
+                  <time className="label" dateTime={row.date}>
+                    {formatTimelineDate(row.date, language)}
+                  </time>
+                  <span>{row.event}</span>
+                </li>
+              ))}
+            </ol>
+            {text.timeline.some((row) => row.date.includes('T')) && <p className="label">{t('postcard.utNote')}</p>}
+          </section>
+        )}
 
         <section>
           <h3>{t('postcard.today')}</h3>

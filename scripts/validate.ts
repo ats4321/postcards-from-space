@@ -103,6 +103,21 @@ function compareKeys(
 const NUMBER = /\d(?:[\d,.]*\d)?/g;
 const NUMBER_CHECKED_FIELDS = ['name', 'locationName', 'distanceNote', 'alt'];
 
+/** Trip log dates are facts, not words: every locale must list exactly the English dates. */
+function compareTimelines(
+  file: string,
+  base: Record<string, Record<string, unknown>>,
+  other: Record<string, Record<string, unknown>>,
+): void {
+  const dates = (entry: Record<string, unknown> | undefined) =>
+    JSON.stringify(((entry?.timeline as Array<{ date: string }> | undefined) ?? []).map((row) => row.date));
+  for (const [id, entry] of Object.entries(other)) {
+    if (dates(base[id]) !== dates(entry)) {
+      errors.push(`${file} › ${id} › timeline: dates differ from ${BASE_LOCALE}`);
+    }
+  }
+}
+
 function compareNumbers(
   file: string,
   base: Record<string, Record<string, unknown>>,
@@ -144,6 +159,13 @@ for (const locale of locales) {
     compareKeys(locale, file, base, translated);
     if (schema !== UiStringsSchema) {
       compareNumbers(
+        file,
+        base as Record<string, Record<string, unknown>>,
+        translated as Record<string, Record<string, unknown>>,
+      );
+    }
+    if (schema === ItemTextsFileSchema) {
+      compareTimelines(
         file,
         base as Record<string, Record<string, unknown>>,
         translated as Record<string, Record<string, unknown>>,

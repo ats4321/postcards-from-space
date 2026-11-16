@@ -56,7 +56,7 @@
       {
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-084A",
         "title": "NSSDCA Master Catalog: Voyager 1",
-        "supports": "NSSDCA ID 1977-084A; launch September 5, 1977."
+        "supports": "NSSDCA ID 1977-084A; launch September 5, 1977. Trip log: closest approach to Jupiter 05 March 1979 and to Saturn 12 Nov. 1980; family portrait taken 14 Feb. 1990."
       },
       {
         "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
@@ -66,7 +66,7 @@
       {
         "url": "https://science.nasa.gov/mission/voyager/voyager-1/",
         "title": "NASA Science: Voyager 1 (page updated Nov. 12, 2026)",
-        "supports": "Launch September 5, 1977; entered interstellar space in August 2012; first human-made object to venture into interstellar space; status 'Extended Mission'; continues to collect data."
+        "supports": "Launch September 5, 1977; entered interstellar space in August 2012; first human-made object to venture into interstellar space; status 'Extended Mission'; continues to collect data. Trip log: launch Sept. 5, 1977; Key Dates March 5, 1979 (Jupiter closest approach) and Nov. 12, 1980 (Saturn closest approach); on Aug. 25, 2012 it became the first to exit the heliosphere."
       },
       {
         "url": "https://science.nasa.gov/photojournal/solar-system-portrait-earth-as-pale-blue-dot/",
@@ -76,7 +76,7 @@
       {
         "url": "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/",
         "title": "Voyager 1’s Pale Blue Dot (NASA Science)",
-        "supports": "Find Earth experiment: the Pale Blue Dot is a photograph of Earth taken on Feb. 14, 1990, by NASA’s Voyager 1 spacecraft."
+        "supports": "Find Earth experiment: the Pale Blue Dot is a photograph of Earth taken on Feb. 14, 1990, by NASA’s Voyager 1 spacecraft. Trip log: Pale Blue Dot photo taken Feb. 14, 1990."
       }
     ]
   },
@@ -92,12 +92,17 @@
     "arizona": true,
     "nssdcId": "1969-059C",
     "officialUrl": "https://www.nasa.gov/mission/apollo-11/",
-    "editorNote": "NSSDCA ID 1969-059C covers the whole Lunar Module (both stages) plus the EASEP experiments; this postcard is only about the descent stage, which NSSDCA says was left behind on the Moon. NSSDCA says the fate of the ascent stage is not known, so the letter says nothing about where it ended up. The LROC page describes 'two and a half hours spent on the surface' while NSSDCA's times give a moonwalk of about 2 hours 15 minutes; the content states neither and only uses NSSDCA's 21 hours 36 minutes on the surface.",
+    "editorNote": "NSSDCA ID 1969-059C covers the whole Lunar Module (both stages) plus the EASEP experiments; this postcard is only about the descent stage, which NSSDCA says was left behind on the Moon. NSSDCA says the fate of the ascent stage is not known, so the letter says nothing about where it ended up. The LROC page describes 'two and a half hours spent on the surface' while NSSDCA's times give a moonwalk of about 2 hours 15 minutes; the content states neither and only uses NSSDCA's 21 hours 36 minutes on the surface. Mission clock times come from NSSDCA 1969-059A and are cut to the minute (seconds dropped, not rounded).",
     "sources": [
       {
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C",
         "title": "NSSDCA Master Catalog: Apollo 11 Lunar Module / EASEP",
         "supports": "NSSDCA ID 1969-059C; launch July 16, 1969; landing July 20, 1969 in the Sea of Tranquility; first crewed vehicle to land on the Moon; carried Neil Armstrong and Buzz Aldrin; four landing legs with round footpads and a ladder; plaque wording 'We came in peace for all mankind' on a strut behind the ladder; 21.55 kg of rock and soil collected; liftoff after 21 hours 36 minutes on the surface; the descent stage served as the launch platform and was left behind; the EASEP included a passive seismometer."
+      },
+      {
+        "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059A",
+        "title": "NSSDCA Master Catalog: Apollo 11 Command and Service Module (CSM)",
+        "supports": "Mission clock (all UT, shown to the minute): launch 16 July 1969 at 13:32; lunar orbit insertion 19 July at 17:21:50; LM landed 20:17:40 on 20 July in the Sea of Tranquility; Armstrong stepped onto the surface at 02:56:15 on 21 July; LM lifted off from the Moon at 17:54:01 on 21 July; splashdown in the Pacific Ocean on 24 July 1969 at 16:50:35."
       },
       {
         "url": "https://www.lroc.asu.edu/images/484",
@@ -379,17 +384,22 @@
     "arizona": false,
     "nssdcId": "1977-076A",
     "officialUrl": "https://science.nasa.gov/mission/voyager/voyager-2/",
-    "editorNote": "NASA's exact status wording is 'Status: Extended Mission' on the science.nasa.gov Voyager 2 page (modified Sept. 28, 2026); the same page's banner says 'Active Mission'. The text uses 'extended mission'. Interstellar entry date conflicts on that page: 'Key Dates' gives Nov. 25, 2018, while the text says 'On Dec. 10, 2018' it joined Voyager 1 (Dec. 10 was the public announcement); the letter only says '2018'. Saturn flyby: NSSDCA gives 26 Aug. 1981, science.nasa.gov key dates give Aug. 25, 1981 (closest approach 01:21 UT Aug. 26); the letter only says '1981'. Neptune moons: the same NASA page says both 'five moons' and 'six new moons', so no number is used for Neptune. No NASA page gives a plain-text current distance (the odometer is drawn by JavaScript), so distanceKm comes from a JPL Horizons query for Nov. 15, 2026 (delta = 144.876864912917 AU, 1 AU = 149,597,870.7 km), cross-checked against NASA's 'one light-day in November 2035'.",
+    "editorNote": "NASA's exact status wording is 'Status: Extended Mission' on the science.nasa.gov Voyager 2 page (modified Sept. 28, 2026); the same page's banner says 'Active Mission'. The text uses 'extended mission'. Interstellar entry date conflicts on that page: 'Key Dates' gives Nov. 25, 2018, while the text says 'On Dec. 10, 2018' it joined Voyager 1 (Dec. 10 was the public announcement); the letter only says '2018'. The Trip log uses Nov. 5, 2018, the heliopause crossing date in NASA's Dec. 10, 2018 article; NASA pages also list Nov. 25 and Dec. 10, 2018. Saturn flyby: NSSDCA gives 26 Aug. 1981, science.nasa.gov key dates give Aug. 25, 1981 (closest approach 01:21 UT Aug. 26); the letter only says '1981' and the Trip log follows NSSDCA (Aug. 26, 1981). Neptune moons: the same NASA page says both 'five moons' and 'six new moons', so no number is used for Neptune. No NASA page gives a plain-text current distance (the odometer is drawn by JavaScript), so distanceKm comes from a JPL Horizons query for Nov. 15, 2026 (delta = 144.876864912917 AU, 1 AU = 149,597,870.7 km), cross-checked against NASA's 'one light-day in November 2035'.",
     "sources": [
       {
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1977-076A",
         "title": "NSSDCA Master Catalog: Voyager 2",
-        "supports": "NSSDCA ID 1977-076A; launch 20 Aug. 1977; first of the two Voyagers to launch, sixteen days before Voyager 1; flybys of Jupiter (9 July 1979), Saturn (26 August 1981), Uranus (24 January 1986) and Neptune (25 August 1989); 12-inch gold-plated copper disk with sounds and images of Earth, including greetings in 55 languages."
+        "supports": "NSSDCA ID 1977-076A; launch 20 Aug. 1977; first of the two Voyagers to launch, sixteen days before Voyager 1; flybys of Jupiter (9 July 1979), Saturn (26 August 1981), Uranus (24 January 1986) and Neptune (25 August 1989); 12-inch gold-plated copper disk with sounds and images of Earth, including greetings in 55 languages. Trip log: launch, Jupiter, Saturn (26 August 1981), Uranus and Neptune dates."
       },
       {
         "url": "https://science.nasa.gov/mission/voyager/voyager-2/",
         "title": "NASA Science: Voyager 2 (page modified Sept. 28, 2026)",
         "supports": "Status: Extended Mission; launch Aug. 20, 1977; only spacecraft to visit Uranus and Neptune; only spacecraft to study all four giant planets at close range; first human-made object to fly past Uranus and to fly by Neptune; at Uranus discovered 10 new moons and two new rings; entered interstellar space in 2018, the second spacecraft to do so; the Neptune flyby capped a 12-year tour of the giant planets."
+      },
+      {
+        "url": "https://science.nasa.gov/missions/voyager-program/nasas-voyager-2-probe-enters-interstellar-space/",
+        "title": "NASA Science, Dec. 10, 2018: NASA's Voyager 2 Probe Enters Interstellar Space",
+        "supports": "Trip log: the probe crossed the outer edge of the heliosphere (the heliopause) on Nov. 5, 2018."
       },
       {
         "url": "https://science.nasa.gov/mission/voyager/where-are-voyager-1-and-voyager-2-now/",
@@ -598,17 +608,17 @@
     "arizona": false,
     "nssdcId": "1972-012A",
     "officialUrl": "https://science.nasa.gov/mission/pioneer-10/",
-    "editorNote": "Launch date conflict: NSSDCA gives 1972-03-03 (and calls 03 March 2002 'the 30th anniversary of Pioneer 10's launch date'); science.nasa.gov gives 'March 2, 1972 / 01:49:04 UT'. launchDate follows NSSDCA; the letter only says 'March 1972'. Power source conflict: NSSDCA says four SNAP-19 RTGs, science.nasa.gov says two; no number is used, only 'nuclear power'. Jupiter closest approach distance differs (NSSDCA about 200,000 km, science.nasa.gov 130,354 km); no distance is used, only the date (both say December 4, 1973). lastContact is the last signal detected, Jan. 23, 2003 (both sources); the last telemetry data came on April 27, 2002. distanceKm comes from a JPL Horizons query for Nov. 15, 2026 (delta = 141.358656970320 AU, 1 AU = 149,597,870.7 km, trajectory 'pioneer_10_merged'); because the spacecraft is no longer tracked, this is a calculated position, which distanceNote says.",
+    "editorNote": "Launch date conflict: NSSDCA gives 1972-03-03 (and calls 03 March 2002 'the 30th anniversary of Pioneer 10's launch date'); science.nasa.gov gives 'March 2, 1972 / 01:49:04 UT'. launchDate follows NSSDCA; the letter and the Trip log only say 'March 1972'. Power source conflict: NSSDCA says four SNAP-19 RTGs, science.nasa.gov says two; no number is used, only 'nuclear power'. Jupiter closest approach distance differs (NSSDCA about 200,000 km, science.nasa.gov 130,354 km); no distance is used, only the date (both say December 4, 1973). lastContact is the last signal detected, Jan. 23, 2003 (both sources); the last telemetry data came on April 27, 2002. distanceKm comes from a JPL Horizons query for Nov. 15, 2026 (delta = 141.358656970320 AU, 1 AU = 149,597,870.7 km, trajectory 'pioneer_10_merged'); because the spacecraft is no longer tracked, this is a calculated position, which distanceNote says.",
     "sources": [
       {
         "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-012A",
         "title": "NSSDCA Master Catalog: Pioneer 10",
-        "supports": "NSSDCA ID 1972-012A; launch date 1972-03-03; first mission to the outer solar system and first to investigate Jupiter; closest approach to Jupiter on 04 December 1973; heading generally towards the red star Aldebaran, a journey of about two million years; signal last detected on 23 January 2003; plaque with drawings of a man, a woman and the location of the Sun and Earth in our galaxy."
+        "supports": "NSSDCA ID 1972-012A; launch date 1972-03-03; first mission to the outer solar system and first to investigate Jupiter; closest approach to Jupiter on 04 December 1973; heading generally towards the red star Aldebaran, a journey of about two million years; signal last detected on 23 January 2003; plaque with drawings of a man, a woman and the location of the Sun and Earth in our galaxy. Trip log: launch in March 1972 (1972-03-03); Jupiter closest approach 04 December 1973; last signal 23 January 2003."
       },
       {
         "url": "https://science.nasa.gov/mission/pioneer-10/",
         "title": "NASA Science: Pioneer 10",
-        "supports": "NASA's first mission to the outer planets; entered the asteroid belt July 15, 1972, first spacecraft to fly through it, with fewer asteroid hits than expected; first to fly past Jupiter, closest approach Dec. 4, 1973; about 500 pictures of Jupiter's atmosphere showing the Great Red Spot; first close-up images of Ganymede; Jupiter's magnetic tail, almost 800 million km long, covers the distance between Jupiter and Saturn; crossed Neptune's orbit June 13, 1983, the first human-made object to go beyond the farthest planet; designed for 21 months, lasted more than 30 years; last signal Jan. 23, 2003, which took 11 hours and 20 minutes to reach Earth; first spacecraft to use all-nuclear electrical power; aluminum plaque with a man, a woman, the solar system and its location relative to 14 pulsars; expected to pass by Aldebaran in about two million years."
+        "supports": "NASA's first mission to the outer planets; entered the asteroid belt July 15, 1972, first spacecraft to fly through it, with fewer asteroid hits than expected; first to fly past Jupiter, closest approach Dec. 4, 1973; about 500 pictures of Jupiter's atmosphere showing the Great Red Spot; first close-up images of Ganymede; Jupiter's magnetic tail, almost 800 million km long, covers the distance between Jupiter and Saturn; crossed Neptune's orbit June 13, 1983, the first human-made object to go beyond the farthest planet; designed for 21 months, lasted more than 30 years; last signal Jan. 23, 2003, which took 11 hours and 20 minutes to reach Earth; first spacecraft to use all-nuclear electrical power; aluminum plaque with a man, a woman, the solar system and its location relative to 14 pulsars; expected to pass by Aldebaran in about two million years. Trip log: launch March 1972 (March 2, 1972); Dec. 4, 1973 closest approach to Jupiter; June 13, 1983 crossed the orbit of Neptune; Jan. 23, 2003 last signal received on Earth."
       },
       {
         "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND='-23'&OBJ_DATA='NO'&MAKE_EPHEM='YES'&EPHEM_TYPE='OBSERVER'&CENTER='500@399'&START_TIME='2026-11-15'&STOP_TIME='2026-11-16'&STEP_SIZE='1d'&QUANTITIES='20'",
