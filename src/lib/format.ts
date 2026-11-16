@@ -26,3 +26,29 @@ export function formatDate(isoDate: string, language: string): string {
     new Date(`${isoDate}T00:00:00Z`),
   );
 }
+
+/** Speed of light in km/s (exact, by definition of the metre). */
+export const LIGHT_KM_PER_S = 299_792.458;
+
+/**
+ * How long a radio message takes to cover `km`: "1.3 seconds", "12.5 minutes",
+ * "about 20 hours", "about 1 day". `about` is the translated "about {time}".
+ */
+export function formatLightTime(km: number, language: string, about = '{time}'): string {
+  const seconds = km / LIGHT_KM_PER_S;
+  const [value, unit, digits] =
+    seconds < 60
+      ? [seconds, 'second', 1]
+      : seconds < 3600
+        ? [seconds / 60, 'minute', 1]
+        : Math.round(seconds / 3600) < 24 // Voyager 1 sits a hair under 86,400 s; call 23.5 h+ "about 1 day"
+          ? [seconds / 3600, 'hour', 0]
+          : [seconds / 86_400, 'day', 0];
+  const time = new Intl.NumberFormat(language === 'es' ? 'es-MX' : language, {
+    style: 'unit',
+    unit,
+    unitDisplay: 'long',
+    maximumFractionDigits: digits,
+  }).format(value);
+  return digits === 0 ? about.replace('{time}', time) : time;
+}
