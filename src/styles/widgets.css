@@ -148,6 +148,41 @@
   outline-offset: 2px;
 }
 
+.ladder-chart {
+  position: relative;
+}
+
+/* Hover/focus preview. Sits above the point; the outer thirds anchor an edge, not the middle. */
+.ladder-tip {
+  position: absolute;
+  z-index: 1;
+  width: max-content;
+  max-width: min(240px, 70vw);
+  margin: 0;
+  padding: var(--space-1);
+  border-radius: 4px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+}
+
+.ladder-tip--start {
+  transform: translate(-24px, -100%);
+}
+
+.ladder-tip--end {
+  transform: translate(calc(-100% + 24px), -100%);
+}
+
+.ladder-tip strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+}
+
 .ladder svg {
   display: block;
   overflow: visible;

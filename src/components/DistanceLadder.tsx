@@ -15,8 +15,9 @@ const MAX_LOG = Math.log10(3e10);
 // Geometry in px, on the 8 px grid.
 const PAD = 16; // room for a dot at either end
 const TOP = 48; // axis labels, two rows when the light-time labels need them
-const LANE = 56; // one rung: 16 label + 24 dots + 16 gap
-const PITCH = 24; // between dots that share a rung (also the minimum touch spacing)
+const LANE = 64; // one rung: 16 label + 32 hit areas + 16 gap
+const PITCH = 32; // between dots that share a rung, so every 32 px hit area stays whole
+const HIT = 16; // hit-area radius: 32 px targets
 const CHAR = 7.2; // IBM Plex Mono advance at 12 px, used to keep labels inside the strip
 const DOT = 8;
 const PULSE_MS = 1500;
@@ -53,6 +54,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
   const [focusId, setFocusId] = useState<string>();
   const [sent, setSent] = useState<{ id: string; n: number }>();
   const [shownId, setShownId] = useState<string>();
+  const [previewId, setPreviewId] = useState<string>();
   const [view, setView] = useState<(typeof VIEWS)[number]>('distance');
 
   useLayoutEffect(() => {
@@ -82,7 +84,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
   const lanes = [...groups.values()].map((lane, index) => {
     const first = lane[0]!;
     const label = first.place === 'Deep space' ? getItemName(first.id, language) : t(`place.${first.place}`);
-    const rung = TOP + index * LANE + 36;
+    const rung = TOP + index * LANE + 40;
     const centre = lane.reduce((sum, item) => sum + xOf(item.distanceKm), 0) / lane.length;
     const span = (lane.length - 1) * PITCH;
     const start = clamp(centre - span / 2, PAD, Math.max(PAD, width - PAD - span));
@@ -111,6 +113,9 @@ export function DistanceLadder({ items, selectedId }: Props) {
   const tabId = focusId ?? order[0]?.item.id;
   const target = order.find((point) => point.item.id === sent?.id);
   const shown = items.find((item) => item.id === shownId);
+  const preview = order.find((point) => point.item.id === previewId);
+  // Anchor the tooltip's near edge in the outer thirds so it never leaves the strip.
+  const tipSide = !preview ? '' : preview.x < width / 3 ? 'start' : preview.x > (width * 2) / 3 ? 'end' : 'middle';
 
   const send = (id: string) => {
     window.clearTimeout(timer.current);
@@ -161,7 +166,9 @@ export function DistanceLadder({ items, selectedId }: Props) {
       className="ladder panel"
       aria-labelledby="ladder-heading"
       onKeyDown={(event) => {
-        if (event.key === 'Escape' && sent) close();
+        if (event.key !== 'Escape') return;
+        setPreviewId(undefined);
+        if (sent) close();
       }}
     >
       <h2 id="ladder-heading">{t('ladder.heading')}</h2>
@@ -181,7 +188,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
           </label>
         ))}
       </fieldset>
-      <div ref={box}>
+      <div className="ladder-chart" ref={box}>
         <svg width={width} height={height} role="group" aria-labelledby="ladder-heading" aria-describedby="ladder-keys">
           {ticks.map(({ km, label }, index) => {
             const x = xOf(km);
@@ -201,7 +208,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
             return (
               <g key={lane.first.id}>
                 <line className="ladder-rung" x1={0} x2={width} y1={lane.rung} y2={lane.rung} />
-                <text className="ladder-label" x={clamp(lane.centre - labelWidth / 2, 0, Math.max(0, width - labelWidth))} y={lane.rung - 20}>
+                <text className="ladder-label" x={clamp(lane.centre - labelWidth / 2, 0, Math.max(0, width - labelWidth))} y={lane.rung - 24}>
                   {lane.label}
                 </text>
                 {lane.points.map(({ item }) => (
@@ -239,17 +246,35 @@ export function DistanceLadder({ items, selectedId }: Props) {
                 aria-current={item.id === selectedId ? 'true' : undefined}
                 onClick={() => {
                   setFocusId(item.id);
+                  setPreviewId(undefined); // a tap fires mouseenter too; the card replaces the tooltip
                   send(item.id);
                 }}
                 onKeyDown={(event) => onPointKey(event, index)}
-                onFocus={() => setFocusId(item.id)}
+                onFocus={(event) => {
+                  setFocusId(item.id);
+                  // Keyboard focus previews; a click already opens the card.
+                  if (event.currentTarget.matches(':focus-visible')) setPreviewId(item.id);
+                }}
+                onBlur={() => setPreviewId(undefined)}
+                onMouseEnter={() => setPreviewId(item.id)}
+                onMouseLeave={() => setPreviewId(undefined)}
               >
-                <circle className="ladder-hit" cx={x} cy={y} r={12} />
+                <circle className="ladder-hit" cx={x} cy={y} r={HIT} />
                 <circle className="ladder-dot" cx={x} cy={y} r={DOT} />
               </g>
             );
           })}
         </svg>
+        {preview && (
+          <p
+            className={`ladder-tip ladder-tip--${tipSide}`}
+            aria-hidden="true"
+            style={{ left: preview.x, top: preview.y - HIT - 8 }}
+          >
+            <strong>{getItemName(preview.item.id, language)}</strong>
+            {formatDistance(preview.item.distanceKm, language)}
+          </p>
+        )}
       </div>
       <ul className="ladder-legend label" aria-hidden="true">
         <li>
