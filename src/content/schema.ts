@@ -82,6 +82,22 @@ export const QuizSchema = z
   .strict();
 
 /**
+ * One row of a postcard's "Trip log". `date` is ISO: "1972-03" when only the
+ * month is certain, "1979-03-05" for a day, "1969-07-20T20:17Z" for a time in UT.
+ * Dates must be identical in every locale (checked by `npm run validate`).
+ */
+const TIMELINE_DATE = /^\d{4}-\d{2}(?:-\d{2}(?:T\d{2}:\d{2}Z)?)?$/;
+export const TimelineEntrySchema = z
+  .object({
+    date: z
+      .string()
+      .regex(TIMELINE_DATE, 'must be YYYY-MM, YYYY-MM-DD or YYYY-MM-DDTHH:MMZ')
+      .refine((value) => !Number.isNaN(Date.parse(value.length === 7 ? `${value}-01` : value)), 'is not a real date'),
+    event: text,
+  })
+  .strict();
+
+/**
  * The words for one item in one language (src/content/locales/<lang>/items.json).
  * name, locationName and distanceNote live here (not in items.json) so they can be translated.
  */
@@ -96,6 +112,8 @@ export const ItemTextSchema = z
     today: text,
     arizonaNote: text.optional(),
     worldNote: text.optional(),
+    /** Optional "Trip log": short dated events, oldest first. Every date needs a source in items.json. */
+    timeline: z.array(TimelineEntrySchema).min(1).optional(),
     quiz: QuizSchema,
   })
   .strict();
@@ -230,6 +248,7 @@ export type Status = (typeof STATUSES)[number];
 export type Illustration = (typeof ILLUSTRATIONS)[number];
 export type Source = z.infer<typeof SourceSchema>;
 export type Item = z.infer<typeof ItemSchema>;
+export type TimelineEntry = z.infer<typeof TimelineEntrySchema>;
 export type Quiz = z.infer<typeof QuizSchema>;
 export type ItemText = z.infer<typeof ItemTextSchema>;
 export type Image = z.infer<typeof ImageSchema>;
