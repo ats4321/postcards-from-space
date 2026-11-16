@@ -111,6 +111,43 @@
   max-width: var(--measure);
 }
 
+.ladder-toggle {
+  display: flex;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  border: 0;
+}
+
+.ladder-toggle label {
+  display: flex;
+  align-items: center;
+  min-height: var(--space-6);
+  padding: 0 var(--space-2);
+  border: var(--border) solid var(--color-earth);
+  font-family: var(--font-data);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.ladder-toggle label:first-of-type {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.ladder-toggle label:last-of-type {
+  margin-inline-start: calc(var(--border) * -1);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.ladder-toggle label:has(:checked) {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.ladder-toggle label:has(:focus-visible) {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
 .ladder svg {
   display: block;
   overflow: visible;

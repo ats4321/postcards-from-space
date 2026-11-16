@@ -73,5 +73,12 @@
   "teacher.line": "Cada postal enseña para qué se envió una misión real de la NASA, qué descubrió y dónde está hoy. Revisamos cada dato con fuentes de la NASA.",
   "teacher.sources": "Fuentes",
   "teacher.credits": "Créditos de las imágenes",
-  "teacher.source": "Fuente"
+  "teacher.source": "Fuente",
+  "ladder.view": "Mostrar la escala como",
+  "ladder.view.distance": "Distancia",
+  "ladder.view.light": "Tiempo de viaje de la luz",
+  "ladder.light.second": "1 segundo luz",
+  "ladder.light.minute": "1 minuto luz",
+  "ladder.light.hour": "1 hora luz",
+  "ladder.light.day": "1 día luz"
 }

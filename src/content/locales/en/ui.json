@@ -73,5 +73,12 @@
   "teacher.line": "Each postcard teaches what a real NASA mission was sent to do, what it found and where it is today. Every fact is checked against NASA sources.",
   "teacher.sources": "Sources",
   "teacher.credits": "Image credits",
-  "teacher.source": "Source"
+  "teacher.source": "Source",
+  "ladder.view": "Show the scale as",
+  "ladder.view.distance": "Distance",
+  "ladder.view.light": "Light travel time",
+  "ladder.light.second": "1 light-second",
+  "ladder.light.minute": "1 light-minute",
+  "ladder.light.hour": "1 light-hour",
+  "ladder.light.day": "1 light-day"
 }

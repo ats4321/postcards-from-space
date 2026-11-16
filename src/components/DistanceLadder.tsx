@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react';
 import { getItemName, type Item } from '../content';
-import { formatDistance, formatLightTime } from '../lib/format';
+import { formatDistance, formatLightTime, LIGHT_KM_PER_S } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 import { Stamp } from './Stamp';
 import { useMediaQuery } from './useMediaQuery';
@@ -13,12 +13,21 @@ const MAX_LOG = Math.log10(3e10);
 
 // Geometry in px, on the 8 px grid.
 const PAD = 16; // room for a dot at either end
-const TOP = 32; // axis labels
+const TOP = 48; // axis labels, two rows when the light-time labels need them
 const LANE = 56; // one rung: 16 label + 24 dots + 16 gap
 const PITCH = 24; // between dots that share a rung (also the minimum touch spacing)
 const CHAR = 7.2; // IBM Plex Mono advance at 12 px, used to keep labels inside the strip
 const DOT = 8;
-const PULSE_MS = 1500; // matches the ladder-beam animation in widgets.css
+const PULSE_MS = 1500;
+// Light-time axis: one light-second, -minute, -hour and -day, in km.
+const LIGHT_TICKS = [
+  ['second', 1],
+  ['minute', 60],
+  ['hour', 3600],
+  ['day', 86_400],
+] as const;
+const VIEWS = ['distance', 'light'] as const;
+ // matches the ladder-beam animation in widgets.css
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 
@@ -43,6 +52,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
   const [focusId, setFocusId] = useState<string>();
   const [sent, setSent] = useState<{ id: string; n: number }>();
   const [shownId, setShownId] = useState<string>();
+  const [view, setView] = useState<(typeof VIEWS)[number]>('distance');
 
   useLayoutEffect(() => {
     const element = box.current;
@@ -82,6 +92,12 @@ export function DistanceLadder({ items, selectedId }: Props) {
 
   const compact = new Intl.NumberFormat(language, { notation: 'compact' });
   const decades = [5, 6, 7, 8, 9, 10].filter((_, index) => width >= 560 || index % 2 === 0);
+  // Both views share positions; only the axis labels change. Labels are clamped
+  // inside the strip and, when narrow, alternate between two rows so they never touch.
+  const ticks =
+    view === 'distance'
+      ? decades.map((power) => ({ km: 10 ** power, label: `${compact.format(10 ** power)} km` }))
+      : LIGHT_TICKS.map(([unit, seconds]) => ({ km: seconds * LIGHT_KM_PER_S, label: t(`ladder.light.${unit}`) }));
 
   const about = t('ladder.about');
   const lightTime = (item: Item) => formatLightTime(item.distanceKm, language, about);
@@ -143,16 +159,36 @@ export function DistanceLadder({ items, selectedId }: Props) {
     >
       <h2 id="ladder-heading">{t('ladder.heading')}</h2>
       <p>{t('ladder.note')}</p>
+      <fieldset className="ladder-toggle">
+        <legend className="visually-hidden">{t('ladder.view')}</legend>
+        {VIEWS.map((option) => (
+          <label key={option}>
+            <input
+              className="visually-hidden"
+              type="radio"
+              name="ladder-view"
+              checked={view === option}
+              onChange={() => setView(option)}
+            />
+            {t(`ladder.view.${option}`)}
+          </label>
+        ))}
+      </fieldset>
       <div ref={box}>
         <svg width={width} height={height} role="group" aria-labelledby="ladder-heading" aria-describedby="ladder-keys">
-          {decades.map((power) => (
-            <g key={power}>
-              <line className="ladder-grid" x1={xOf(10 ** power)} x2={xOf(10 ** power)} y1={24} y2={height} />
-              <text className="ladder-axis" x={xOf(10 ** power)} y={16} textAnchor={power === 5 ? 'start' : 'middle'} dx={power === 5 ? -PAD : 0}>
-                {compact.format(10 ** power)} km
-              </text>
-            </g>
-          ))}
+          {ticks.map(({ km, label }, index) => {
+            const x = xOf(km);
+            const labelWidth = label.length * CHAR;
+            const y = width < 560 && view === 'light' && index % 2 === 1 ? 36 : 16;
+            return (
+              <g key={label}>
+                <line className="ladder-grid" x1={x} x2={x} y1={y + 8} y2={height} />
+                <text className="ladder-axis" x={clamp(x - labelWidth / 2, 0, width - labelWidth)} y={y}>
+                  {label}
+                </text>
+              </g>
+            );
+          })}
           {lanes.map((lane) => {
             const labelWidth = lane.label.length * CHAR;
             return (
