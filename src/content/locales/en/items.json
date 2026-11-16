@@ -38,6 +38,28 @@
       "On November 18, 2026, I become the first human-made object to be one light-day from Earth."
     ],
     "today": "I am in interstellar space, about 16.1 billion miles (25.9 billion km) from Earth, and I am still going. NASA calls this my extended mission, and I still collect science data. Most of my instruments are now off, but my plasma wave instrument and my magnetometer are still on.",
+    "timeline": [
+      {
+        "date": "1977-09-05",
+        "event": "I left Earth."
+      },
+      {
+        "date": "1979-03-05",
+        "event": "I made my closest pass by Jupiter."
+      },
+      {
+        "date": "1980-11-12",
+        "event": "I made my closest pass by Saturn."
+      },
+      {
+        "date": "1990-02-14",
+        "event": "I took the Pale Blue Dot photo of Earth."
+      },
+      {
+        "date": "2012-08-25",
+        "event": "I crossed into interstellar space."
+      }
+    ],
     "quiz": {
       "question": "How long does light take to travel one light-day?",
       "options": ["24 minutes", "24 hours", "24 days"],
@@ -61,6 +83,32 @@
     ],
     "today": "I am still at Tranquility Base, where the astronauts left me. NASA's Lunar Reconnaissance Orbiter has photographed me from just 24 km (15 miles) above the surface. The picture shows me and the dark paths made by the astronauts' boots.",
     "arizonaNote": "Every astronaut who walked on the Moon trained with U.S. Geological Survey scientists in Flagstaff, Arizona. The camera that photographs me from orbit, LROC, has its science operations center at Arizona State University in Tempe.",
+    "timeline": [
+      {
+        "date": "1969-07-16T13:32Z",
+        "event": "We launched on a Saturn V rocket."
+      },
+      {
+        "date": "1969-07-19T17:21Z",
+        "event": "We went into orbit around the Moon."
+      },
+      {
+        "date": "1969-07-20T20:17Z",
+        "event": "I landed in the Sea of Tranquility."
+      },
+      {
+        "date": "1969-07-21T02:56Z",
+        "event": "Neil Armstrong stepped onto the Moon."
+      },
+      {
+        "date": "1969-07-21T17:54Z",
+        "event": "The top half of Eagle lifted off. I stayed behind."
+      },
+      {
+        "date": "1969-07-24T16:50Z",
+        "event": "The astronauts splashed down in the Pacific Ocean."
+      }
+    ],
     "quiz": {
       "question": "What did the top half of Eagle use the bottom half for when it left the Moon?",
       "options": ["A launch pad", "A parachute", "A sail"],
@@ -199,6 +247,32 @@
       "I am the second spacecraft to reach interstellar space. My magnetometer, plasma wave and cosmic ray instruments still measure the space between the stars."
     ],
     "today": "I am in interstellar space, about 13.5 billion miles (21.7 billion km) from Earth, and I am still going. NASA calls this my extended mission. My magnetometer, my plasma wave instrument and my cosmic ray instrument are still on. All my other instruments are off to save power or because they wore out.",
+    "timeline": [
+      {
+        "date": "1977-08-20",
+        "event": "I left Earth."
+      },
+      {
+        "date": "1979-07-09",
+        "event": "I flew past Jupiter."
+      },
+      {
+        "date": "1981-08-26",
+        "event": "I flew past Saturn."
+      },
+      {
+        "date": "1986-01-24",
+        "event": "I flew past Uranus."
+      },
+      {
+        "date": "1989-08-25",
+        "event": "I flew past Neptune."
+      },
+      {
+        "date": "2018-11-05",
+        "event": "I crossed into interstellar space."
+      }
+    ],
     "quiz": {
       "question": "Which two planets has only Voyager 2 visited?",
       "options": ["Uranus and Neptune", "Mercury and Venus", "Earth and Mars"],
@@ -313,6 +387,24 @@
       "I was the first spacecraft to run on nuclear power alone."
     ],
     "today": "I am drifting out of the solar system, heading toward a red star called Aldebaran. I will need about two million years to pass by it. I carry a metal plaque with drawings of a man and a woman and a map of where the Sun is, in case anyone ever finds me. NASA JPL calculates that I am now about 13.1 billion miles (21.1 billion km) from Earth.",
+    "timeline": [
+      {
+        "date": "1972-03",
+        "event": "I left Earth."
+      },
+      {
+        "date": "1973-12-04",
+        "event": "I made my closest pass by Jupiter."
+      },
+      {
+        "date": "1983-06-13",
+        "event": "I crossed the orbit of Neptune."
+      },
+      {
+        "date": "2003-01-23",
+        "event": "Earth heard my last signal."
+      }
+    ],
     "quiz": {
       "question": "Which planet was Pioneer 10 the first spacecraft to fly past?",
       "options": ["Jupiter", "Mars", "Venus"],

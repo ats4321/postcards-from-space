@@ -313,3 +313,54 @@ Conflicts (also in editorNote): no source gives the time of the last signal rece
 | Eros about 371.8 million km (distanceNote) | JPL Horizons, target 433 Eros, observer Earth, 2026-11-15 | "2026-Nov-15 00:00 2.48512906451361" (AU) |
 
 Conflicts (also in editorNote): touchdown 19:44 UT (science.nasa.gov) vs 20:01:52 UT (NSSDCA), only the date is used; mass 805 kg vs 487 kg, not used; undated "355 million kilometers from Earth" (science.nasa.gov) not used, Horizons used instead.
+
+---
+
+## Trip logs (added November 15, 2026)
+Every row was checked on the page itself (saved copy, opened November 15, 2026). Spanish rows use the
+same dates; `npm run validate` fails if a locale's timeline dates differ from English.
+
+Extra source keys: NSSDCA-a11csm = nssdc.gsfc.nasa.gov … id=1969-059A (Apollo 11 CSM);
+PBD = science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot; V2-IS = science.nasa.gov Dec. 10, 2018
+"NASA's Voyager 2 Probe Enters Interstellar Space".
+
+### voyager-1
+| Row | Source | Quote |
+|---|---|---|
+| Sept. 5, 1977: left Earth | SN-voyager-1; NSSDCA-voyager-1 | "Launch Date and Time Sept. 5, 1977 / 12:56:01 UT"; "Launch Date: 1977-09-05" |
+| Mar. 5, 1979: closest pass by Jupiter | NSSDCA-voyager-1; SN-voyager-1 | "making its closest approach on 05 March 1979"; "March 5, 1979: Jupiter flyby - closest approach" |
+| Nov. 12, 1980: closest pass by Saturn | NSSDCA-voyager-1; SN-voyager-1 | "Saturn (with closest approach on 12 Nov. 1980)"; "Nov. 12, 1980: Saturn flyby - closest approach" |
+| Feb. 14, 1990: Pale Blue Dot photo | PBD | "a photograph of Earth taken on Feb. 14, 1990, by NASA's Voyager 1" |
+| Aug. 25, 2012: crossed into interstellar space | SN-voyager-1 | "On Aug. 25, 2012, the spacecraft became the first to exit the heliosphere" |
+
+### voyager-2
+| Row | Source | Quote |
+|---|---|---|
+| Aug. 20, 1977: left Earth | SN-voyager-2 | "Launch Date and Time Aug. 20, 1977 / 14:29:44 UT" |
+| Jul. 9, 1979: flew past Jupiter | NSSDCA-voyager-2 | "flew by Jupiter (closest approach on 09 July 1979)" |
+| Aug. 26, 1981: flew past Saturn | NSSDCA-voyager-2 | "and Saturn (26 August 1981)" |
+| Jan. 24, 1986: flew past Uranus | NSSDCA-voyager-2 | "successful flybys of Uranus (24 January 1986)" |
+| Aug. 25, 1989: flew past Neptune | NSSDCA-voyager-2 | "and Neptune (25 August 1989)" |
+| Nov. 5, 2018: crossed into interstellar space | V2-IS (dated Dec 10, 2018) | "crossed the outer edge of the heliosphere on Nov. 5" |
+
+Conflicts (also in the item's editorNote): SN-voyager-2 "Key Dates" list "Aug 25, 1981: Saturn Flyby" (the same
+page says Aug. 26 elsewhere) and "Nov 25, 2018: Entered Interstellar Space"; its intro says "On Dec. 10, 2018" (the
+announcement). The Trip log follows NSSDCA for Saturn and the heliopause crossing date for interstellar space.
+
+### pioneer-10
+| Row | Source | Quote |
+|---|---|---|
+| March 1972: left Earth (day disputed, so month only) | NSSDCA-pioneer-10; SN-pioneer-10 | "Launch Date: 1972-03-03"; "Key Dates March 2, 1972: Launch" |
+| Dec. 4, 1973: closest pass by Jupiter | SN-pioneer-10; NSSDCA-pioneer-10 | "Dec. 4, 1973: Pioneer 10's closest approach to Jupiter" |
+| Jun. 13, 1983: crossed the orbit of Neptune | SN-pioneer-10 | "June 13, 1983: Pioneer 10 crossed the orbit of Neptune" |
+| Jan. 23, 2003: last signal | SN-pioneer-10 | "Jan. 23, 2003: Pioneer 10's last signal is received on Earth" |
+
+### apollo-11-eagle (Mission clock, UT, cut to the minute)
+| Row | Source | Quote |
+|---|---|---|
+| Jul. 16, 1969 13:32: launch on a Saturn V | NSSDCA-a11csm | "launch on Saturn V SA-504 on 16 July 1969 at 13:32 UT" |
+| Jul. 19 17:21: lunar orbit | NSSDCA-a11csm | "Lunar orbit insertion was achieved on 19 July at 17:21:50 UT" |
+| Jul. 20 20:17: landing, Sea of Tranquility | NSSDCA-a11csm | "The LM landed at 20:17:40 UT … in Mare Tranquilitatis" |
+| Jul. 21 02:56: Armstrong steps onto the Moon | NSSDCA-a11csm | "Armstrong stepped onto the lunar surface at 02:56:15 UT on 21 July" |
+| Jul. 21 17:54: top half lifts off, descent stage stays | NSSDCA-a11csm; NSSDCA-apollo-11-eagle | "The LM lifted off from the Moon at 17:54:01 UT on 21 July" |
+| Jul. 24 16:50: splashdown in the Pacific | NSSDCA-a11csm | "splashed down in the Pacific Ocean on 24 July 1969 at 16:50:35 UT" |

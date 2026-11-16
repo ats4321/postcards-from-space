@@ -27,6 +27,20 @@ export function formatDate(isoDate: string, language: string): string {
   );
 }
 
+/**
+ * Trip log dates: "1972-03" → "March 1972", "1979-03-05" → "March 5, 1979",
+ * "1969-07-20T20:17Z" → "July 20, 1969, 20:17 UT" (or the Spanish forms).
+ */
+export function formatTimelineDate(date: string, language: string): string {
+  if (date.length === 7) {
+    return new Intl.DateTimeFormat(language, { month: 'long', year: 'numeric', timeZone: 'UTC' }).format(
+      new Date(`${date}-01T00:00:00Z`),
+    );
+  }
+  const day = formatDate(date.slice(0, 10), language);
+  return date.length > 10 ? `${day}, ${date.slice(11, 16)} UT` : day;
+}
+
 /** Speed of light in km/s (exact, by definition of the metre). */
 export const LIGHT_KM_PER_S = 299_792.458;
 
