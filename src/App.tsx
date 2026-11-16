@@ -3,6 +3,7 @@ import { Countdown } from './components/Countdown';
 import { DistanceLadder } from './components/DistanceLadder';
 import { HardwareList } from './components/HardwareList';
 import { History } from './components/History';
+import { Journey } from './components/Journey';
 import { LanguageToggle } from './components/LanguageToggle';
 import { Passport } from './components/Passport';
 import { Postcard } from './components/Postcard';
@@ -16,6 +17,7 @@ import { useStoredState } from './lib/useStoredState';
 export default function App() {
   const { t } = useI18n();
   const route = useHashRoute();
+  const journey = route.startsWith('journey-') ? getItem(route.slice('journey-'.length)) : undefined;
   const selected = getItem(route);
   const [stored, setStamps] = useStoredState<string[]>('pfs.stamps', []);
   const stamps = Array.isArray(stored) ? stored : [];
@@ -46,9 +48,7 @@ export default function App() {
     // pushState, not location.hash = '', which would jump to the top of the page.
     window.history.pushState(null, '', window.location.pathname + window.location.search);
     window.dispatchEvent(new HashChangeEvent('hashchange'));
-    requestAnimationFrame(() =>
-      document.querySelector<HTMLElement>(`.hardware-list a[href="#${id}"]`)?.focus(),
-    );
+    requestAnimationFrame(() => document.querySelector<HTMLElement>(`.hardware-list a[href="#${id}"]`)?.focus());
   };
 
   const postcard = selected && (
@@ -75,25 +75,27 @@ export default function App() {
         <LanguageToggle />
       </header>
 
-      <main id="main" tabIndex={-1}>
-        <Countdown />
-        <div className="layout">
-          <HardwareList
-            items={items}
-            selectedId={selected?.id}
-            stamps={stamps}
-            inline={wide ? undefined : postcard}
-          />
-          {wide && (
-            <div className="layout-main">
-              {postcard ?? <p className="empty">{t('postcard.empty')}</p>}
-            </div>
-          )}
-        </div>
-        <Passport items={items} stamps={stamps} justEarned={justEarned} />
-        <History items={items} stamps={stamps} selectedId={selected?.id} />
-        <DistanceLadder items={items} selectedId={selected?.id} />
-      </main>
+      {journey ? (
+        <main id="main" tabIndex={-1}>
+          <Journey key={journey.id} item={journey} />
+        </main>
+      ) : (
+        <main id="main" tabIndex={-1}>
+          <Countdown />
+          <div className="layout">
+            <HardwareList
+              items={items}
+              selectedId={selected?.id}
+              stamps={stamps}
+              inline={wide ? undefined : postcard}
+            />
+            {wide && <div className="layout-main">{postcard ?? <p className="empty">{t('postcard.empty')}</p>}</div>}
+          </div>
+          <Passport items={items} stamps={stamps} justEarned={justEarned} />
+          <History items={items} stamps={stamps} selectedId={selected?.id} />
+          <DistanceLadder items={items} selectedId={selected?.id} />
+        </main>
+      )}
 
       <TeacherStrip items={items} />
     </>

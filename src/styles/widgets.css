@@ -468,3 +468,49 @@
   stroke: var(--color-yellow);
   stroke-width: 2;
 }
+
+/* Time machine on the ladder. */
+.ladder-time {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin-block: var(--space-2);
+}
+
+.ladder-time label {
+  flex: 1 1 200px;
+}
+
+.ladder-time input {
+  width: 100%;
+  accent-color: var(--color-earth);
+}
+
+.ladder-ring {
+  fill: none;
+  stroke: var(--color-earth);
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+}
+
+.ladder-moments {
+  margin-top: var(--space-2);
+}
+
+.ladder-moments ol {
+  max-height: 320px;
+  overflow-y: auto;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.ladder-moments .link-button {
+  margin: 0;
+  min-height: 40px;
+  text-align: start;
+}
+
+.ladder-moments .label {
+  display: inline;
+}

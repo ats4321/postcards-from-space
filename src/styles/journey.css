@@ -1,0 +1,165 @@
+/* Journey view (#journey-<id>): on the night-sky page, one yellow accent (the Sun). */
+.journey {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 880px;
+  margin: 0 auto;
+  padding: var(--space-2);
+}
+
+.journey h2 {
+  margin: var(--space-1) 0;
+  font-size: var(--text-xl);
+  overflow-wrap: anywhere;
+}
+
+.journey h3 {
+  margin: 0 0 var(--space-1);
+}
+
+.journey p {
+  margin: 0;
+  max-width: var(--measure);
+}
+
+.journey a {
+  color: var(--color-earth);
+}
+
+.journey-count {
+  margin-top: var(--space-1) !important;
+}
+
+.journey-predict,
+.journey-chapters {
+  padding: var(--space-2);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+}
+
+.journey-options,
+.journey-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.journey-chips {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.journey-chips button {
+  min-height: 40px;
+  padding: 0 var(--space-1);
+  border-width: 1px;
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+}
+
+.journey-chips button[aria-pressed='true'] {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.journey-stage {
+  margin: 0;
+}
+
+.journey-scene {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.journey-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.journey-range {
+  flex: 1 1 160px;
+}
+
+.journey-range input {
+  width: 100%;
+  accent-color: var(--color-earth);
+}
+
+.journey-speed {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.journey-speed select {
+  min-height: 40px;
+  font: inherit;
+}
+
+.journey-now .label {
+  color: var(--color-earth);
+}
+
+.journey-readouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.journey-readouts div {
+  padding: var(--space-1) 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.journey-readouts dd {
+  margin: 0;
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.journey-readouts dd .label {
+  display: inline;
+  font-weight: 400;
+}
+
+.journey-photo {
+  max-width: 480px;
+  margin: 0;
+}
+
+.journey-photo .hero {
+  border-color: var(--color-line);
+}
+
+.journey-chapters h3 .label {
+  margin-top: var(--space-1);
+  color: var(--color-earth);
+}
+
+.journey-chapters p {
+  margin-bottom: var(--space-2);
+}
+
+.journey-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 var(--space-2);
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-bubble {
+    transition: none;
+  }
+}
