@@ -1,5 +1,8 @@
 {
   "phoenix": {
+    "name": "Módulo de aterrizaje Phoenix",
+    "locationName": "Vastitas Borealis, las llanuras árticas de Marte",
+    "distanceNote": "La NASA dice que Marte está, en promedio, a 140 millones de millas (unos 225 millones de km) de la Tierra. La distancia real cambia todo el tiempo, porque los dos planetas giran alrededor del Sol.",
     "letter": [
       "¡Hola desde el extremo norte de Marte! Soy Phoenix, un módulo de aterrizaje. Toqué suelo en las llanuras árticas el 25 de mayo de 2008. Una cámara llamada HiRISE volaba muy alto sobre mí, en otra nave espacial. Me tomó una foto mientras yo bajaba flotando con mi paracaídas.",
       "Al frente de mi equipo estaba Peter Smith, de la Universidad de Arizona en Tucson. Me enviaron a descubrir qué se esconde bajo el suelo frío del norte. Por eso usé mi brazo robótico para cavar zanjas pequeñas. ¡Justo debajo de la tierra encontré hielo de agua!",
@@ -20,6 +23,9 @@
     }
   },
   "voyager-1": {
+    "name": "Voyager 1",
+    "locationName": "Espacio interestelar",
+    "distanceNote": "Un día luz es la distancia que recorre la luz en 24 horas (299,792.458 km por segundo durante 86,400 segundos). La NASA lo redondea a 16.094 mil millones de millas (25.902 mil millones de km). Voyager 1 llega ahí el 18 de noviembre de 2026.",
     "letter": [
       "¡Saludos desde muy, muy lejos! Soy Voyager 1. Salí de la Tierra el 5 de septiembre de 1977. En mi camino pasé cerca de Júpiter y de Saturno. Desde entonces no he dejado de viajar.",
       "En agosto de 2012 entré al espacio interestelar, que es el espacio entre las estrellas. Nada hecho por personas había llegado ahí antes. Dos de mis instrumentos científicos siguen encendidos. Uno escucha las ondas de plasma. El otro mide el magnetismo.",
@@ -39,6 +45,9 @@
     }
   },
   "apollo-11-eagle": {
+    "name": "Módulo lunar Eagle del Apollo 11 (etapa de descenso)",
+    "locationName": "Base Tranquilidad, Mar de la Tranquilidad",
+    "distanceNote": "La NASA dice que la Luna está, en promedio, a 238,855 millas (384,400 km) de la Tierra. La distancia real cambia un poco en cada órbita.",
     "letter": [
       "¡Hola desde el Mar de la Tranquilidad! Soy la mitad de abajo de Eagle, el módulo lunar del Apollo 11. El 20 de julio de 1969 llevé a Neil Armstrong y a Buzz Aldrin hasta la Luna. Fui el primer vehículo con tripulación en aterrizar aquí.",
       "Me sostenía sobre cuatro patas con pies redondos. Los astronautas bajaron por mi escalera y fueron las primeras personas en caminar sobre la Luna. Hicieron experimentos y juntaron 21.55 kg (unas 47.5 libras) de rocas y suelo lunar para llevar a casa.",
@@ -59,6 +68,9 @@
     }
   },
   "apollo-11-reflector": {
+    "name": "Retrorreflector láser del Apollo 11",
+    "locationName": "Base Tranquilidad, Mar de la Tranquilidad",
+    "distanceNote": "La NASA dice que la Luna está, en promedio, a 238,855 millas (384,400 km) de la Tierra. Las estaciones láser miden una distancia hasta los reflectores que va de unos 357,000 a 407,000 km.",
     "letter": [
       "¡Hola desde la Luna! Soy un reflector láser. Estoy hecho de 100 prismas pequeños de vidrio llamados cubos de esquina. En julio de 1969, Buzz Aldrin, astronauta del Apollo 11, me llevó al Mar de la Tranquilidad y me colocó mirando hacia la Tierra.",
       "No necesito nada de energía. Los científicos en la Tierra me disparan rayos láser. Mis prismas rebotan la luz directo al lugar de donde vino. Al medir cuánto tarda en ir y volver, pueden calcular la distancia a la Luna con un error de solo unos milímetros.",
@@ -80,6 +92,9 @@
     }
   },
   "opportunity": {
+    "name": "Rover Opportunity",
+    "locationName": "Perseverance Valley, en el borde del cráter Endeavour, Meridiani Planum",
+    "distanceNote": "La NASA dice que Marte está, en promedio, a 140 millones de millas (unos 225 millones de km) de la Tierra. La distancia real cambia todo el tiempo, porque los dos planetas giran alrededor del Sol.",
     "letter": [
       "¡Hola desde Meridiani Planum, en Marte! Soy Opportunity, un rover (un vehículo explorador) del tamaño de un carrito de golf. Aterricé en enero de 2004, envuelto en bolsas de aire. Reboté por lo menos 26 veces y rodé hasta detenerme dentro de un cráter pequeño llamado Eagle.",
       "Mi equipo me construyó para durar 90 días marcianos. ¡Seguí explorando más de 14 años! Estudié rocas con las herramientas de mi brazo y descubrí que aquí alguna vez corrió agua. En 2015 fui el primero en completar un maratón en otro mundo: 26.219 millas (42.195 km).",
@@ -100,6 +115,9 @@
     }
   },
   "spirit": {
+    "name": "Rover Spirit",
+    "locationName": "Cerca de Home Plate, en las Columbia Hills, cráter Gusev",
+    "distanceNote": "La NASA dice que Marte está, en promedio, a 140 millones de millas (unos 225 millones de km) de la Tierra. La distancia real cambia todo el tiempo, porque los dos planetas giran alrededor del Sol.",
     "letter": [
       "¡Hola desde el cráter Gusev, en Marte! Soy Spirit, un rover con seis ruedas. Aterricé en enero de 2004, 20 días antes que mi gemelo, Opportunity. Mi equipo me construyó para durar 90 días marcianos. Seguí trabajando más de seis años.",
       "Subí hasta la cima de Husband Hill y tomé fotos de todo alrededor. Después, una de mis ruedas delanteras dejó de girar. Al arrastrarla, raspó el suelo y dejó ver una tierra brillante. Era sílice casi pura, una pista de que aquí hubo aguas termales o chimeneas de vapor.",
@@ -120,6 +138,9 @@
     }
   },
   "ingenuity": {
+    "name": "Helicóptero marciano Ingenuity",
+    "locationName": "Valinor Hills, su último aeródromo en Marte",
+    "distanceNote": "La NASA dice que Marte está, en promedio, a 140 millones de millas (unos 225 millones de km) de la Tierra. La distancia real cambia todo el tiempo, porque los dos planetas giran alrededor del Sol.",
     "letter": [
       "¡Hola desde Marte! Soy Ingenuity, un helicóptero pequeño. Peso unas 4 libras (1.8 kg). Viajé a Marte bien guardado bajo la panza del rover Perseverance. Aterrizamos en el cráter Jezero el 18 de febrero de 2021.",
       "El aire de Marte es muy delgado, así que volar aquí es difícil. Mis dos rotores giran en direcciones opuestas, casi 3,000 veces por minuto. El 19 de abril de 2021 subí 3 metros (10 pies), me quedé flotando y aterricé. ¡Fue el primer vuelo controlado y con motor en otro planeta!",
@@ -140,6 +161,9 @@
     }
   },
   "apollo-17-lrv": {
+    "name": "Vehículo de exploración lunar del Apollo 17",
+    "locationName": "Valle Taurus-Littrow",
+    "distanceNote": "La NASA dice que la Luna está, en promedio, a 238,855 millas (384,400 km) de la Tierra. La distancia real cambia un poco en cada órbita.",
     "letter": [
       "¡Hola desde el valle Taurus-Littrow, en la Luna! Soy un Lunar Roving Vehicle, un carro eléctrico hecho para astronautas. Viajé hasta aquí doblado dentro del módulo lunar del Apollo 17. Aterrizamos el 11 de diciembre de 1972.",
       "Gene Cernan y Harrison Schmitt me desdoblaron y se sentaron en mis dos asientos. Cada una de mis cuatro ruedas tiene su propio motor eléctrico, y mis llantas están tejidas con alambre de acero. Los llevé en tres paseos, hasta 7.6 km (4.7 millas) de su módulo lunar, para juntar rocas.",
@@ -160,6 +184,9 @@
     }
   },
   "voyager-2": {
+    "name": "Voyager 2",
+    "locationName": "Espacio interestelar",
+    "distanceNote": "Distancia desde la Tierra el 15 de noviembre de 2026: 144.88 UA (unos 21.67 mil millones de km, 13.47 mil millones de millas), según el sistema Horizons de JPL, de la NASA. Voyager 2 se aleja más cada segundo; la NASA dice que llegará a un día luz de la Tierra en noviembre de 2035.",
     "letter": [
       "¡Hola desde el espacio entre las estrellas! Soy Voyager 2. Salí de la Tierra el 20 de agosto de 1977, 16 días antes que mi gemela, Voyager 1. Llevo un disco de oro con sonidos e imágenes de la Tierra, y saludos en 55 idiomas.",
       "Pasé cerca de Júpiter en 1979 y de Saturno en 1981. Luego mi equipo me envió hacia Urano en 1986 y Neptuno en 1989. Sigo siendo la única nave espacial que ha visitado esos dos planetas. ¡En Urano descubrí 10 lunas nuevas y dos anillos nuevos!",
@@ -183,6 +210,9 @@
     }
   },
   "insight": {
+    "name": "Módulo de aterrizaje InSight",
+    "locationName": "Elysium Planitia, una llanura plana y lisa cerca del ecuador de Marte",
+    "distanceNote": "La NASA dice que Marte está, en promedio, a 140 millones de millas (unos 225 millones de km) de la Tierra. La distancia real cambia todo el tiempo, porque los dos planetas giran alrededor del Sol.",
     "letter": [
       "¡Hola desde Elysium Planitia, una llanura plana y lisa cerca del centro de Marte! Soy InSight, un módulo de aterrizaje. Aterricé el 26 de noviembre de 2018. No vine a mirar la superficie. Vine a escuchar el interior de Marte, como un médico que revisa los latidos del corazón.",
       "Mi brazo robótico levantó de mi cubierta un sismómetro muy sensible y lo puso en el suelo. Sintió temblar a Marte. ¡Fui el primero en detectar martemotos! Conté más de 1,300. Algunos los causaron rocas espaciales que chocaron contra el suelo.",
@@ -207,6 +237,9 @@
     }
   },
   "viking-1": {
+    "name": "Módulo de aterrizaje Viking 1",
+    "locationName": "Oeste de Chryse Planitia, la Llanura Dorada de Marte",
+    "distanceNote": "La NASA dice que Marte está, en promedio, a 140 millones de millas (unos 225 millones de km) de la Tierra. La distancia real cambia todo el tiempo, porque los dos planetas giran alrededor del Sol.",
     "letter": [
       "¡Hola desde Chryse Planitia, la Llanura Dorada de Marte! Soy el módulo de aterrizaje Viking 1. Toqué suelo el 20 de julio de 1976. La NASA dice que fue el primer aterrizaje realmente exitoso en Marte. Solo 25 segundos después de aterrizar, empecé a enviar mi primera foto a casa.",
       "Mi gran trabajo era buscar señales de vida. El 28 de julio de 1976, mi brazo robótico recogió tierra y la puso en mi propio laboratorio de biología, muy pequeño. Algunos resultados se parecían un poco a la vida. Pero mi prueba principal para buscar compuestos orgánicos salió negativa.",
@@ -231,6 +264,9 @@
     }
   },
   "sojourner": {
+    "name": "Rover Sojourner",
+    "locationName": "Ares Vallis, una antigua llanura de inundación, cerca del módulo de aterrizaje Mars Pathfinder",
+    "distanceNote": "La NASA dice que Marte está, en promedio, a 140 millones de millas (unos 225 millones de km) de la Tierra. La distancia real cambia todo el tiempo, porque los dos planetas giran alrededor del Sol.",
     "letter": [
       "¡Hola desde Ares Vallis, en Marte! Soy Sojourner, un rover pequeño. Peso solo 23 libras (10.6 kg) y mido 1 pie (30 cm) de alto. La NASA dice que soy el primer rover robótico de la historia en la superficie de Marte. Me pusieron el nombre de Sojourner Truth, quien luchó por los derechos civiles.",
       "Viajé a Marte en el módulo de aterrizaje Pathfinder. Aterrizamos el 4 de julio de 1997, envueltos en bolsas de aire gigantes. ¡Rebotamos unas 15 veces antes de detenernos! En mi segundo día marciano, bajé por una rampa hasta el suelo rocoso de una antigua llanura de inundación.",
@@ -255,6 +291,9 @@
     }
   },
   "surveyor-3": {
+    "name": "Surveyor 3",
+    "locationName": "Un cráter pequeño en Oceanus Procellarum, junto al sitio de aterrizaje del Apollo 12",
+    "distanceNote": "La NASA dice que la Luna está, en promedio, a 238,855 millas (384,400 km) de la Tierra. La distancia real cambia un poco en cada órbita.",
     "letter": [
       "¡Hola desde la Luna! Soy Surveyor 3, un módulo de aterrizaje robótico con tres patas. Aterricé el 20 de abril de 1967. Mientras bajaba, unas rocas brillantes confundieron a mi radar, así que mis motores no se apagaron a tiempo. ¡Reboté dos veces antes de quedarme quieto por fin!",
       "Vine a ayudar a los astronautas que llegarían después de mí. La NASA necesitaba saber si el suelo era lo bastante firme para sostener sus módulos de aterrizaje. Yo tenía una pala en un brazo largo y cavé zanjas de hasta 18 cm (7 pulgadas) de profundidad. También envié a casa 6,326 fotos.",
@@ -275,6 +314,9 @@
     }
   },
   "pioneer-10": {
+    "name": "Pioneer 10",
+    "locationName": "Saliendo del sistema solar, rumbo a la estrella Aldebarán",
+    "distanceNote": "Distancia desde la Tierra el 15 de noviembre de 2026: 141.36 UA (unos 21.15 mil millones de km, 13.14 mil millones de millas), según el sistema Horizons de JPL, de la NASA. Nadie ha sabido nada de Pioneer 10 desde 2003, así que aquí es donde JPL calcula que debería estar. Se aleja un poco más cada segundo.",
     "letter": [
       "¡Saludos desde muy, muy lejos! Soy Pioneer 10. Salí de la Tierra en marzo de 1972. La NASA me llama su primera misión a los planetas exteriores. En julio entré en el cinturón de asteroides y fui la primera nave espacial en atravesarlo. Me golpearon unas rocas diminutas, pero menos de las que esperaban los científicos.",
       "En diciembre de 1973, fui la primera nave espacial que pasó cerca de Júpiter. Tomé unas 500 fotos de sus nubes, incluida la Gran Mancha Roja. También tomé las primeras fotos de cerca de Ganímedes, una de las lunas de Júpiter.",
@@ -294,6 +336,9 @@
     }
   },
   "dawn": {
+    "name": "Dawn",
+    "locationName": "En órbita alrededor de Ceres, un planeta enano del cinturón de asteroides",
+    "distanceNote": "Distancia de la Tierra a Ceres el 15 de noviembre de 2026: 2.02 UA (unos 301.7 millones de km, 187.5 millones de millas), según el sistema Horizons de JPL, de la NASA. Dawn da vueltas alrededor de Ceres, así que también está más o menos a esa distancia. La distancia cambia mucho mientras la Tierra y Ceres se mueven alrededor del Sol.",
     "letter": [
       "¡Hola desde el cinturón de asteroides! Soy Dawn. Salí de la Tierra el 27 de septiembre de 2007. Vuelo con motores iónicos. Usan electricidad para lanzar pedacitos diminutos de gas xenón. Cada empujón es tan fuerte como sostener una hoja de papel. ¡Es suave, pero seguí empujando durante años!",
       "En 2011 llegué a Vesta, el segundo mundo más grande del cinturón de asteroides. Fui la primera nave espacial que orbitó algo entre Marte y Júpiter. Hice mapas de los cráteres de Vesta y medí su gravedad. En 2012 partí hacia mi siguiente parada.",
@@ -313,6 +358,9 @@
     }
   },
   "near-shoemaker": {
+    "name": "NEAR Shoemaker",
+    "locationName": "Asteroide 433 Eros, justo al sur de una zona con forma de silla de montar llamada Himeros",
+    "distanceNote": "Distancia de la Tierra a Eros el 15 de noviembre de 2026: 2.49 UA (unos 371.8 millones de km, 231 millones de millas), según el sistema Horizons de JPL, de la NASA. Eros gira alrededor del Sol por un camino distinto al de la Tierra, así que esta distancia cambia mucho.",
     "letter": [
       "¡Hola desde el asteroide Eros! Soy NEAR Shoemaker. Salí de la Tierra el 17 de febrero de 1996. En el camino, pasé cerca de otro asteroide llamado Mathilde. Descubrí que está cubierto de cráteres y que es menos denso de lo que pensaban los científicos.",
       "El 14 de febrero de 2000 entré en órbita alrededor de Eros. ¡Fui la primera nave espacial de la historia en orbitar un asteroide! Un mes después, la NASA me cambió el nombre en honor a Eugene Shoemaker, un geólogo famoso. Di vueltas alrededor de Eros durante un año. En total, envié a casa 160,000 fotos.",

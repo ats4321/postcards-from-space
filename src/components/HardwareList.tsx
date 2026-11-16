@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from 'react';
-import type { Item, Place, Status } from '../content';
+import { getItemName, type Item, type Place, type Status } from '../content';
 import { useI18n } from '../lib/i18n';
 import { Stamp } from './Stamp';
 import { StatusPill } from './StatusPill';
@@ -22,7 +22,7 @@ function toggled<T>(list: T[], value: T): T[] {
 
 /** Every item, with filters for place, status and the Arizona connection. */
 export function HardwareList({ items, selectedId, stamps, inline }: Props) {
-  const { t } = useI18n();
+  const { language, t } = useI18n();
   const [places, setPlaces] = useState<Place[]>([]);
   const [statuses, setStatuses] = useState<Status[]>([]);
   const [arizona, setArizona] = useState(false);
@@ -111,7 +111,7 @@ export function HardwareList({ items, selectedId, stamps, inline }: Props) {
             <a href={`#${item.id}`} aria-current={item.id === selectedId ? 'page' : undefined}>
               <Stamp item={item} size="row" cancelled={stamps.includes(item.id)} />
               <span className="row-text">
-                <span className="hardware-name">{item.name}</span>
+                <span className="hardware-name">{getItemName(item.id, language)}</span>
                 <span className="label">
                   {t(`place.${item.place}`)} ·{' '}
                   <span className="visually-hidden">

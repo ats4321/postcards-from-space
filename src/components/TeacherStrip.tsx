@@ -1,9 +1,9 @@
-import { getImage, type Item } from '../content';
+import { getImage, getItemName, type Item } from '../content';
 import { useI18n } from '../lib/i18n';
 
 /** Footer for adults: what the app teaches, every source, every image credit. */
 export function TeacherStrip({ items }: { items: Item[] }) {
-  const { t } = useI18n();
+  const { language, t } = useI18n();
 
   return (
     <footer className="teacher">
@@ -14,7 +14,7 @@ export function TeacherStrip({ items }: { items: Item[] }) {
         <summary>{t('teacher.sources')}</summary>
         {items.map((item) => (
           <section key={item.id}>
-            <h3>{item.name}</h3>
+            <h3>{getItemName(item.id, language)}</h3>
             <ul>
               {item.sources.map((source) => (
                 <li key={source.url}>
@@ -37,7 +37,7 @@ export function TeacherStrip({ items }: { items: Item[] }) {
               (image) =>
                 image && (
                   <li key={image.id}>
-                    <strong>{item.name}</strong>: {image.credit}.{' '}
+                    <strong>{getItemName(item.id, language)}</strong>: {image.credit}.{' '}
                     {image.sourceUrl && (
                       <a href={image.sourceUrl} target="_blank" rel="noreferrer">
                         {t('teacher.source')}

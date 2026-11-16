@@ -1,0 +1,92 @@
+{
+  "phoenix": {
+    "alt": "The Phoenix lander seen from above on flat, reddish Martian ground, with a round solar panel on each side."
+  },
+  "phoenix-now": {
+    "alt": "View from orbit of reddish Martian ground with small labelled close-ups of the Phoenix lander, its backshell and parachute, and its heat shield."
+  },
+  "voyager-1": {
+    "alt": "Artist's drawing of a Voyager probe, with its big white dish antenna and long booms, speeding through purple space."
+  },
+  "apollo-11-eagle": {
+    "alt": "The Apollo 11 lunar module Eagle standing on its four legs on the gray surface of the Moon, with bootprints in the dust."
+  },
+  "apollo-11-site-now": {
+    "alt": "View from orbit of the Apollo 11 landing site, a gray cratered plain with labels marking the lunar module, the laser reflector and other gear left behind."
+  },
+  "apollo-11-reflector": {
+    "alt": "Astronaut Buzz Aldrin on the Moon beside the science experiments he has just set up, with the flag and the lunar module behind him."
+  },
+  "opportunity": {
+    "alt": "Self-portrait of the Opportunity rover from above, showing its flat solar panels and camera mast on dusty Martian ground."
+  },
+  "opportunity-now": {
+    "alt": "View from orbit of rocky Martian slopes inside Endeavour Crater, with a white box marking the spot where Opportunity rests."
+  },
+  "spirit": {
+    "alt": "Self-portrait of the Spirit rover from above, showing its solar panels and camera mast on reddish Martian ground."
+  },
+  "spirit-now": {
+    "alt": "View from orbit of reddish Martian ground, where the Spirit rover shows up as a tiny bright dot beside a low rounded plateau."
+  },
+  "ingenuity": {
+    "alt": "The small Ingenuity helicopter standing on four thin legs on rocky Martian ground, with two long rotor blades on top."
+  },
+  "ingenuity-now": {
+    "alt": "Wide view from the Perseverance rover of sandy ripples on Mars at Ingenuity's final airfield, where the helicopter sits far away on the dunes."
+  },
+  "apollo-17-lrv": {
+    "alt": "Astronaut Eugene Cernan driving the Lunar Roving Vehicle on the Moon, with the lunar module and a gray mountain behind him."
+  },
+  "apollo-17-lrv-now": {
+    "alt": "View from orbit of the parked Apollo 17 lunar rover, shown as a small dark spot, next to a drawing of the rover and a photo of it on the Moon."
+  },
+  "insight": {
+    "alt": "Selfie of the InSight lander on Mars, showing its deck of instruments between two round, many-sided solar panels."
+  },
+  "insight-now": {
+    "alt": "View from orbit of flat orange Martian plains, where the InSight lander is a small spot in the middle of a darker patch of ground."
+  },
+  "viking-1": {
+    "alt": "Black-and-white photo of rocks and dust on Mars, with one round foot of the Viking 1 lander in the lower right corner."
+  },
+  "viking-1-now": {
+    "alt": "View from orbit of bumpy Martian ground with labels pointing to the Viking 1 lander, its backshell and its possible parachute."
+  },
+  "sojourner": {
+    "alt": "The small six-wheeled Sojourner rover, with a flat solar panel on top, among rocks on reddish Martian ground."
+  },
+  "sojourner-now": {
+    "alt": "View from orbit of rocky, cratered Martian plains around the Mars Pathfinder landing site, where Sojourner and its lander rest."
+  },
+  "voyager-2": {
+    "alt": "Engineers in white clean-room suits working on the Voyager 2 spacecraft and its big dish antenna in 1977."
+  },
+  "pioneer-10": {
+    "alt": "The Pioneer 10 spacecraft in a workshop before launch, with its large dish antenna on top and gold-wrapped parts below."
+  },
+  "surveyor-3": {
+    "alt": "Black-and-white photo of the Surveyor 3 lander sitting on the gray slope of a Moon crater, taken by Apollo 12 astronauts."
+  },
+  "surveyor-3-now": {
+    "alt": "View from orbit of the Apollo 12 site, with labels marking the Intrepid descent stage, the science station and Surveyor 3."
+  },
+  "apollo-12-alsep": {
+    "alt": "Science instruments of the Apollo 12 experiment package standing on the Moon, with an astronaut's long shadow in front."
+  },
+  "apollo-12-alsep-now": {
+    "alt": "View from orbit of the gray, cratered Apollo 12 landing area, with small labels marking hardware left on the Moon."
+  },
+  "dawn": {
+    "alt": "The Dawn spacecraft before launch, with its long solar panel wings folded flat against its sides."
+  },
+  "near-shoemaker": {
+    "alt": "The NEAR spacecraft in a clean room before launch, with a round white dish antenna on top and solar panels folded down its sides."
+  },
+  "pioneer-11": {
+    "alt": "Black-and-white photo of the Pioneer 11 spacecraft before launch in 1973, its large dish antenna on top, standing between the two open halves of the nose cone that will cover it."
+  },
+  "kepler": {
+    "alt": "The tall, gold-wrapped Kepler space telescope standing in a clean room, with workers in white suits at its base."
+  }
+}

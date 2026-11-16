@@ -1,4 +1,4 @@
-import type { Item } from '../content';
+import { getItemName, type Item } from '../content';
 import { useI18n } from '../lib/i18n';
 import { Stamp } from './Stamp';
 
@@ -6,7 +6,7 @@ type Props = { items: Item[]; stamps: string[]; justEarned?: string };
 
 /** One slot per item, a progress bar, and a badge once every stamp is collected. */
 export function Passport({ items, stamps, justEarned }: Props) {
-  const { t } = useI18n();
+  const { language, t } = useI18n();
   const earned = items.filter((item) => stamps.includes(item.id)).length;
   const complete = items.length > 0 && earned === items.length;
 
@@ -48,7 +48,7 @@ export function Passport({ items, stamps, justEarned }: Props) {
                 ) : (
                   <span className="slot-empty" aria-hidden="true" />
                 )}
-                <span className="slot-name">{item.name}</span>
+                <span className="slot-name">{getItemName(item.id, language)}</span>
                 <span className="visually-hidden">
                   : {t(stamped ? 'passport.stamped' : 'passport.open')}
                 </span>

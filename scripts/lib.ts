@@ -12,6 +12,7 @@ export const paths = {
   items: join(CONTENT_DIR, 'items.json'),
   images: join(CONTENT_DIR, 'images.json'),
   itemText: (locale: string) => join(LOCALES_DIR, locale, 'items.json'),
+  imageText: (locale: string) => join(LOCALES_DIR, locale, 'images.json'),
   ui: (locale: string) => join(LOCALES_DIR, locale, 'ui.json'),
 };
 

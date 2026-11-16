@@ -37,14 +37,15 @@ Deadline: submission closes Sunday Nov 15, 2026, 11:59 pm Arizona time (MST, UTC
 
 ## Data contract (src/content/schema.ts is the source of truth)
 Item (language-neutral, items.json):
-  id (kebab-case), name, place: "Moon"|"Mars"|"Asteroids"|"Deep space", locationName,
+  id (kebab-case), place: "Moon"|"Mars"|"Asteroids"|"Deep space",
   launchDate, arrivalDate?, lastContact?, status: "working"|"resting"|"drifting",
-  distanceKm (typical, with distanceNote), illustration fallback key, imageId,
+  distanceKm (typical, explained by the text's distanceNote), illustration fallback key, imageId,
   arizona: boolean, nssdcId?, officialUrl, sources: [{ url, title, supports }]
 Item text (locales/<lang>/items.json, keyed by id):
-  letter: [p1, p2, p3], signOff, science: [3 bullets], today, arizonaNote?, worldNote?,
+  name, locationName, distanceNote, letter: [p1, p2, p3], signOff, science: [3 bullets], today, arizonaNote?, worldNote?,
   quiz: { question, options: [a, b, c], answerIndex }
-Image (images.json): id, file, alt, credit, sourceUrl, license note.
+Image (images.json): id, file, credit, sourceUrl, license note.
+Image text (locales/<lang>/images.json, keyed by image id): { alt }.
 
 ## Accuracy rules (accuracy is a judging criterion; the challenge says "Accuracy is important")
 - Every number, date, name and "first" claim must be supported by an entry in that item's sources,

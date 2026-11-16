@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react';
-import type { Item } from '../content';
+import { getItemName, getItemText, type Item } from '../content';
 import { formatDistance } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 
@@ -72,7 +72,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
           ))}
           {lanes.map((lane, index) => {
             const first = lane[0]!;
-            const label = first.place === 'Deep space' ? first.name : t(`place.${first.place}`);
+            const label = first.place === 'Deep space' ? getItemName(first.id, language) : t(`place.${first.place}`);
             const rung = TOP + index * LANE + 36;
             const centre = lane.reduce((sum, item) => sum + xOf(item.distanceKm), 0) / lane.length;
             const span = (lane.length - 1) * PITCH;
@@ -91,7 +91,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
                   <a
                     key={item.id}
                     href={`#${item.id}`}
-                    aria-label={`${item.name}: ${formatDistance(item.distanceKm, language)}`}
+                    aria-label={`${getItemName(item.id, language)}: ${formatDistance(item.distanceKm, language)}`}
                     aria-current={item.id === selectedId ? 'page' : undefined}
                     onMouseEnter={() => setHovered(item.id)}
                     onMouseLeave={() => setHovered(undefined)}
@@ -111,9 +111,9 @@ export function DistanceLadder({ items, selectedId }: Props) {
         {active ? (
           <>
             <strong>
-              {active.name}: {formatDistance(active.distanceKm, language)}.
+              {getItemName(active.id, language)}: {formatDistance(active.distanceKm, language)}.
             </strong>{' '}
-            {active.distanceNote}
+            {getItemText(active.id, language)?.distanceNote}
           </>
         ) : (
           t('ladder.pick')

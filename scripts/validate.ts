@@ -12,6 +12,7 @@ import type { ZodIssue, ZodTypeAny } from 'zod';
 import {
   ContentSchema,
   ImagesFileSchema,
+  ImageTextsFileSchema,
   ItemsFileSchema,
   ItemTextsFileSchema,
   UiStringsSchema,
@@ -58,10 +59,16 @@ function load<S extends ZodTypeAny>(path: string, schema: S): S['_output'] | und
 const items = load(paths.items, ItemsFileSchema);
 const images = load(paths.images, ImagesFileSchema);
 const baseText = load(paths.itemText(BASE_LOCALE), ItemTextsFileSchema);
+const baseImageText = load(paths.imageText(BASE_LOCALE), ImageTextsFileSchema);
 const baseUi = load(paths.ui(BASE_LOCALE), UiStringsSchema);
 
-if (items && images && baseText) {
-  const content = ContentSchema.safeParse({ items, images, text: baseText });
+if (items && images && baseText && baseImageText) {
+  const content = ContentSchema.safeParse({
+    items,
+    images,
+    text: baseText,
+    imageText: baseImageText,
+  });
   if (!content.success) reportIssues('cross-references', content.error.issues);
 }
 
@@ -88,12 +95,41 @@ function compareKeys(
   }
 }
 
+/**
+ * Every number in an English string must appear unchanged in the translation,
+ * so a translated distance or date can never drift from the sourced English.
+ * Numbers use the same style in every locale ("238,855", "16.094").
+ */
+const NUMBER = /\d(?:[\d,.]*\d)?/g;
+const NUMBER_CHECKED_FIELDS = ['name', 'locationName', 'distanceNote', 'alt'];
+
+function compareNumbers(
+  file: string,
+  base: Record<string, Record<string, unknown>>,
+  other: Record<string, Record<string, unknown>>,
+): void {
+  for (const [id, entry] of Object.entries(other)) {
+    for (const field of NUMBER_CHECKED_FIELDS) {
+      const english = base[id]?.[field];
+      const translated = entry[field];
+      if (typeof english !== 'string' || typeof translated !== 'string') continue;
+      const found = new Set(translated.match(NUMBER));
+      for (const number of english.match(NUMBER) ?? []) {
+        if (!found.has(number)) {
+          errors.push(`${file} › ${id} › ${field}: number "${number}" from ${BASE_LOCALE} is missing`);
+        }
+      }
+    }
+  }
+}
+
 const locales = new Set([...listLocales(), ...LOCALES_IN_PROGRESS]);
 locales.delete(BASE_LOCALE);
 
 for (const locale of locales) {
   const checks = [
     { path: paths.itemText(locale), schema: ItemTextsFileSchema, base: baseText },
+    { path: paths.imageText(locale), schema: ImageTextsFileSchema, base: baseImageText },
     { path: paths.ui(locale), schema: UiStringsSchema, base: baseUi },
   ];
   for (const { path, schema, base } of checks) {
@@ -104,7 +140,15 @@ for (const locale of locales) {
       continue;
     }
     const translated = load(path, schema);
-    if (translated && base) compareKeys(locale, file, base, translated);
+    if (!translated || !base) continue;
+    compareKeys(locale, file, base, translated);
+    if (schema !== UiStringsSchema) {
+      compareNumbers(
+        file,
+        base as Record<string, Record<string, unknown>>,
+        translated as Record<string, Record<string, unknown>>,
+      );
+    }
   }
 }
 

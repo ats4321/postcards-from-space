@@ -1,5 +1,8 @@
 {
   "phoenix": {
+    "name": "Phoenix Mars Lander",
+    "locationName": "Vastitas Borealis, the arctic plains of Mars",
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
     "letter": [
       "Hello from the top of Mars! I am Phoenix, a lander. I touched down on the arctic plains on May 25, 2008. A camera called HiRISE was flying high above me on another spacecraft. It took my picture while I floated down under my parachute.",
       "My team was led by Peter Smith at the University of Arizona in Tucson. They sent me to learn what hides under the cold northern ground. So I used my robotic arm to dig small trenches. Just below the soil, I found water ice!",
@@ -20,6 +23,9 @@
     }
   },
   "voyager-1": {
+    "name": "Voyager 1",
+    "locationName": "Interstellar space",
+    "distanceNote": "One light-day, the distance light travels in 24 hours (299,792.458 km per second for 86,400 seconds). NASA rounds it to 16.094 billion miles (25.902 billion km). Voyager 1 reaches it on Nov. 18, 2026.",
     "letter": [
       "Greetings from very, very far away! I am Voyager 1. I left Earth on September 5, 1977. On my way out, I flew past Jupiter and Saturn. I have been traveling ever since.",
       "In August 2012, I crossed into interstellar space. That is the space between the stars. Nothing made by people had ever gone there before. Two of my science instruments are still switched on. One listens for plasma waves. The other measures magnetism.",
@@ -39,6 +45,9 @@
     }
   },
   "apollo-11-eagle": {
+    "name": "Apollo 11 Lunar Module Eagle (descent stage)",
+    "locationName": "Tranquility Base, Sea of Tranquility",
+    "distanceNote": "NASA says the Moon is an average of 238,855 miles (384,400 km) from Earth. The real distance changes a little during every orbit.",
     "letter": [
       "Hello from the Sea of Tranquility! I am the bottom half of Eagle, the Apollo 11 lunar module. On July 20, 1969, I carried Neil Armstrong and Buzz Aldrin down to the Moon. I was the first vehicle with a crew ever to land here.",
       "I stood on four legs with round footpads. The astronauts climbed down my ladder and became the first people to walk on the Moon. They set up experiments and collected 21.55 kg (about 47.5 pounds) of Moon rock and soil to take home.",
@@ -59,6 +68,9 @@
     }
   },
   "apollo-11-reflector": {
+    "name": "Apollo 11 Laser Ranging Retroreflector",
+    "locationName": "Tranquility Base, Sea of Tranquility",
+    "distanceNote": "NASA says the Moon is an average of 238,855 miles (384,400 km) from Earth. Laser stations measure a distance to the reflectors that swings between about 357,000 and 407,000 km.",
     "letter": [
       "Hi from the Moon! I am a laser reflector. I am made of 100 small glass prisms called corner cubes. In July 1969, Apollo 11 astronaut Buzz Aldrin carried me out onto the Sea of Tranquility and set me down facing Earth.",
       "I need no power at all. Scientists on Earth fire laser beams at me. My prisms bounce the light straight back to where it came from. By timing the trip there and back, scientists can measure the distance to the Moon to within a few millimeters.",
@@ -80,6 +92,9 @@
     }
   },
   "opportunity": {
+    "name": "Opportunity rover",
+    "locationName": "Perseverance Valley, on the rim of Endeavour Crater, Meridiani Planum",
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
     "letter": [
       "Hello from Meridiani Planum on Mars! I am Opportunity, a rover about the size of a golf cart. I landed in January 2004, wrapped in airbags. I bounced at least 26 times and rolled to a stop inside a small crater called Eagle.",
       "My team built me to last 90 Martian days. I kept exploring for more than 14 years! I studied rocks with the tools on my arm and found that water once flowed here. In 2015, I became the first to finish a marathon on another world: 26.219 miles (42.195 km).",
@@ -100,6 +115,9 @@
     }
   },
   "spirit": {
+    "name": "Spirit rover",
+    "locationName": "Near Home Plate in the Columbia Hills, Gusev Crater",
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
     "letter": [
       "Hello from Gusev Crater on Mars! I am Spirit, a rover with six wheels. I landed in January 2004, 20 days before my twin, Opportunity. My team built me to last 90 Martian days. I kept working for more than six years.",
       "I climbed to the top of Husband Hill and took pictures all the way around. Later, one of my front wheels stopped turning. As I dragged it, it scraped the ground and uncovered bright soil. The soil was almost pure silica, a clue that hot springs or steam vents were once here.",
@@ -120,6 +138,9 @@
     }
   },
   "ingenuity": {
+    "name": "Ingenuity Mars Helicopter",
+    "locationName": "Valinor Hills, its final airfield on Mars",
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
     "letter": [
       "Hello from Mars! I am Ingenuity, a small helicopter. I weigh about 4 pounds (1.8 kg). I rode to Mars tucked under the belly of the Perseverance rover. We landed in Jezero Crater on February 18, 2021.",
       "The air on Mars is very thin, so flying here is hard. My two rotors spin in opposite directions, almost 3,000 times a minute. On April 19, 2021, I rose 3 meters (10 feet), hovered, and landed. It was the first powered, controlled flight on another planet!",
@@ -140,6 +161,9 @@
     }
   },
   "apollo-17-lrv": {
+    "name": "Apollo 17 Lunar Roving Vehicle",
+    "locationName": "Taurus-Littrow Valley",
+    "distanceNote": "NASA says the Moon is an average of 238,855 miles (384,400 km) from Earth. The real distance changes a little during every orbit.",
     "letter": [
       "Hello from the Taurus-Littrow Valley on the Moon! I am a Lunar Roving Vehicle, an electric car built for astronauts. I flew here folded up inside the Apollo 17 lunar module. We landed on December 11, 1972.",
       "Gene Cernan and Harrison Schmitt unfolded me and sat in my two seats. Each of my four wheels has its own electric motor, and my tires are woven from steel wire. I took them on three drives, as far as 7.6 km (4.7 miles) from their lander, to collect rocks.",
@@ -160,6 +184,9 @@
     }
   },
   "voyager-2": {
+    "name": "Voyager 2",
+    "locationName": "Interstellar space",
+    "distanceNote": "Distance from Earth on Nov. 15, 2026: 144.88 AU (about 21.67 billion km, 13.47 billion miles), from NASA JPL's Horizons system. Voyager 2 moves farther away every second; NASA says it will reach one light-day from Earth in November 2035.",
     "letter": [
       "Hello from between the stars! I am Voyager 2. I left Earth on August 20, 1977, 16 days before my twin, Voyager 1. I carry a golden record with sounds and pictures of Earth, and greetings in 55 languages.",
       "I flew past Jupiter in 1979 and Saturn in 1981. Then my team sent me on to Uranus in 1986 and Neptune in 1989. I am still the only spacecraft that has visited those two planets. At Uranus, I found 10 new moons and two new rings!",
@@ -179,6 +206,9 @@
     }
   },
   "insight": {
+    "name": "InSight Mars Lander",
+    "locationName": "Elysium Planitia, a flat, smooth plain near the Martian equator",
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
     "letter": [
       "Hello from Elysium Planitia, a flat, smooth plain near the middle of Mars! I am InSight, a lander. I landed on November 26, 2018. I did not come to look at the surface. I came to listen to the inside of Mars, like a doctor checking a heartbeat.",
       "My robotic arm lifted a very sensitive seismometer off my deck and set it on the ground. It felt Mars shake. I was the first to detect marsquakes! I counted more than 1,300 of them. Some were caused by space rocks crashing into the ground.",
@@ -199,6 +229,9 @@
     }
   },
   "viking-1": {
+    "name": "Viking 1 Lander",
+    "locationName": "Western Chryse Planitia, the Golden Plain of Mars",
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
     "letter": [
       "Hello from Chryse Planitia, the Golden Plain of Mars! I am the Viking 1 lander. I touched down on July 20, 1976. NASA calls it the first truly successful landing on Mars. Just 25 seconds after I landed, I began sending my first picture home.",
       "My big job was to look for signs of life. On July 28, 1976, my robot arm scooped up soil and put it into my own tiny biology lab. Some results looked a little like life. But my main test for organic compounds came back negative.",
@@ -219,6 +252,9 @@
     }
   },
   "sojourner": {
+    "name": "Sojourner rover",
+    "locationName": "Ares Vallis, an ancient flood plain, near the Mars Pathfinder lander",
+    "distanceNote": "NASA says Mars is, on average, 140 million miles (about 225 million km) from Earth. The real distance changes all the time as both planets orbit the Sun.",
     "letter": [
       "Hello from Ares Vallis on Mars! I am Sojourner, a small rover. I weigh just 23 pounds (10.6 kg) and stand 1 foot (30 cm) tall. NASA calls me the first-ever robotic rover on the surface of Mars. I was named after Sojourner Truth, who fought for civil rights.",
       "I rode to Mars on the Pathfinder lander. We landed on July 4, 1997, wrapped in giant airbags. We bounced about 15 times before we stopped! On my second Martian day, I rolled down a ramp onto the rocky ground of an ancient flood plain.",
@@ -239,6 +275,9 @@
     }
   },
   "surveyor-3": {
+    "name": "Surveyor 3",
+    "locationName": "A small crater in Oceanus Procellarum, next to the Apollo 12 landing site",
+    "distanceNote": "NASA says the Moon is an average of 238,855 miles (384,400 km) from Earth. The real distance changes a little during every orbit.",
     "letter": [
       "Hello from the Moon! I am Surveyor 3, a robot lander with three legs. I landed on April 20, 1967. On the way down, shiny rocks confused my radar, so my engines did not shut off in time. I bounced twice before I finally settled down!",
       "I came to help the astronauts who would follow me. NASA needed to know if the ground was strong enough to hold their landers. I had a scoop on a long arm, and I dug trenches up to 18 cm (7 inches) deep. I also sent home 6,326 pictures.",
@@ -259,6 +298,9 @@
     }
   },
   "pioneer-10": {
+    "name": "Pioneer 10",
+    "locationName": "Leaving the solar system, heading toward the star Aldebaran",
+    "distanceNote": "Distance from Earth on Nov. 15, 2026: 141.36 AU (about 21.15 billion km, 13.14 billion miles), from NASA JPL's Horizons system. No one has heard from Pioneer 10 since 2003, so this is where JPL calculates it should be. It moves a little farther away every second.",
     "letter": [
       "Greetings from far, far away! I am Pioneer 10. I left Earth in March 1972. NASA calls me its first mission to the outer planets. That July, I entered the asteroid belt. I was the first spacecraft to fly through it. A few tiny space rocks hit me, but fewer than scientists expected.",
       "In December 1973, I became the first spacecraft to fly past Jupiter. I took about 500 pictures of its clouds, including the Great Red Spot. I also took the first close-up pictures of Ganymede, one of Jupiter's moons.",
@@ -278,6 +320,9 @@
     }
   },
   "dawn": {
+    "name": "Dawn",
+    "locationName": "In orbit around Ceres, a dwarf planet in the asteroid belt",
+    "distanceNote": "Distance from Earth to Ceres on Nov. 15, 2026: 2.02 AU (about 301.7 million km, 187.5 million miles), from NASA JPL's Horizons system. Dawn circles Ceres, so it is about this far away too. The distance changes a lot as Earth and Ceres move around the Sun.",
     "letter": [
       "Hello from the asteroid belt! I am Dawn. I left Earth on September 27, 2007. I fly with ion engines. They use electricity to shoot out tiny bits of xenon gas. Each push is about as strong as holding a sheet of paper. It is gentle, but I kept pushing for years!",
       "In 2011, I reached Vesta, the second-biggest world in the asteroid belt. I was the first spacecraft to orbit anything between Mars and Jupiter. I mapped Vesta's craters and measured its gravity. In 2012, I left for my next stop.",
@@ -297,6 +342,9 @@
     }
   },
   "near-shoemaker": {
+    "name": "NEAR Shoemaker",
+    "locationName": "Asteroid 433 Eros, just south of a saddle-shaped area called Himeros",
+    "distanceNote": "Distance from Earth to Eros on Nov. 15, 2026: 2.49 AU (about 371.8 million km, 231 million miles), from NASA JPL's Horizons system. Eros orbits the Sun on a different path than Earth, so this distance changes a lot.",
     "letter": [
       "Hello from asteroid Eros! I am NEAR Shoemaker. I left Earth on February 17, 1996. On my way, I flew past another asteroid called Mathilde. I found that it is covered with craters and is less dense than scientists thought.",
       "On February 14, 2000, I went into orbit around Eros. I was the first spacecraft ever to orbit an asteroid! A month later, NASA renamed me to honor Eugene Shoemaker, a famous geologist. I circled Eros for a year. In all, I sent home 160,000 pictures.",
