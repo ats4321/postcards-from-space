@@ -194,3 +194,30 @@
   stroke: var(--color-stamp);
   stroke-width: 1.5;
 }
+
+/* Drawn globes: no textures, palette colours only. */
+.globe--earth circle {
+  fill: var(--color-earth);
+  stroke: var(--color-paper);
+  stroke-width: 1;
+}
+
+.globe--moon circle {
+  fill: var(--color-moon);
+}
+
+.globe--moon .globe-crater {
+  fill: var(--color-moon-dark);
+}
+
+.globe--mars circle {
+  fill: var(--color-rust);
+}
+
+.globe--asteroids path {
+  fill: var(--color-moon);
+}
+
+.globe--sun circle {
+  fill: var(--color-yellow);
+}

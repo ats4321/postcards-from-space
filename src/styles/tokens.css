@@ -13,6 +13,9 @@
   --color-copper: #9e4420; /* Arizona connection; 5.4:1 on paper */
   --color-airmail: #3b6cb0; /* the blue stripe of the airmail border */
   --color-stamp: #fffdf8; /* stamp paper, a step lighter than the postcard */
+  --color-moon: #a3a7b0; /* drawn Moon and asteroid rocks */
+  --color-moon-dark: #7d828c; /* Moon craters */
+  --color-rust: #c1502e; /* drawn Mars */
   --color-line: rgb(169 196 228 / 0.3); /* hairlines on navy */
 
   /* Type */

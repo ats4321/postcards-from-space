@@ -1,6 +1,7 @@
 import type { Item, ItemText } from '../content';
 import { asteroidName, deepSpaceAnchors, type Planet } from '../lib/journey';
 import { useI18n } from '../lib/i18n';
+import { Globe } from './Globe';
 
 type Props = {
   item: Item;
@@ -116,11 +117,11 @@ export function JourneyScene({ item, text, englishText, time, todayMs, photo }: 
           strokeDasharray="2 6"
           strokeLinecap="round"
         />
-        <circle cx="60" cy="130" r="28" fill="var(--color-earth)" />
+        <Globe kind="earth" x={60} y={130} r={28} />
         <text x="60" y="180" textAnchor="middle" {...label}>
           {t('journey.earth')}
         </text>
-        <circle cx="340" cy="130" r="14" fill="var(--color-paper)" />
+        <Globe kind="moon" x={340} y={130} r={14} />
         <text x="340" y="180" textAnchor="middle" {...label}>
           {t('journey.moon')}
         </text>
@@ -150,15 +151,15 @@ export function JourneyScene({ item, text, englishText, time, todayMs, photo }: 
           strokeDasharray="2 6"
           strokeLinecap="round"
         />
-        <circle cx={cx} cy={cy} r="12" fill="var(--color-yellow)" />
+        <Globe kind="sun" x={cx} y={cy} r={12} />
         <text x={cx} y={cy + 28} textAnchor="middle" {...label}>
           {t('journey.sun')}
         </text>
-        <circle cx={cx - r1} cy={cy} r="6" fill="var(--color-earth)" />
+        <Globe kind="earth" x={cx - r1} y={cy} r={6} />
         <text x={cx - r1} y={cy + 22} textAnchor="middle" {...label}>
           {t('journey.earth')}
         </text>
-        <circle cx={cx + r2} cy={cy} r="6" fill={item.place === 'Mars' ? 'var(--color-red)' : 'var(--color-paper)'} />
+        <Globe kind={item.place === 'Mars' ? 'mars' : 'asteroids'} x={cx + r2} y={cy} r={item.place === 'Mars' ? 6 : 10} />
         <text x={cx + r2 - 10} y={cy + 24} textAnchor="end" {...label}>
           {target}
         </text>
@@ -204,8 +205,8 @@ export function JourneyScene({ item, text, englishText, time, todayMs, photo }: 
         strokeDasharray="2 6"
         strokeLinecap="round"
       />
-      <circle r="9" fill="var(--color-yellow)" />
-      <circle cx={EARTH_R * Math.cos(Math.PI)} cy="0" r="4" fill="var(--color-earth)" />
+      <Globe kind="sun" x={0} y={0} r={9} />
+      <Globe kind="earth" x={EARTH_R * Math.cos(Math.PI)} y={0} r={4} />
       <text x={-EARTH_R} y="16" textAnchor="middle" {...label}>
         {t('journey.earth')}
       </text>

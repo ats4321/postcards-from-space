@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState, type CSSProperties, type KeyboardEve
 import { getImage, getItemName, type Item } from '../content';
 import { formatDistance, formatLightTime, LIGHT_KM_PER_S } from '../lib/format';
 import { useI18n } from '../lib/i18n';
+import { Globe, type GlobeKind } from './Globe';
 import { Bubble } from './JourneyScene';
 import { toYear } from '../lib/journey';
 
@@ -37,6 +38,7 @@ const LIGHT_TICKS = [
   ['day', 86_400],
 ] as const;
 const VIEWS = ['distance', 'light'] as const;
+const GLOBE: Partial<Record<string, GlobeKind>> = { Moon: 'moon', Mars: 'mars', Asteroids: 'asteroids' };
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 
@@ -173,11 +175,14 @@ export function LadderMap({ items, stamps, year, today, selectedId, machineId, p
             );
           })}
           {lanes.map((lane) => {
-            const labelWidth = lane.label.length * CHAR;
+            const globe = lane.first.place === 'Deep space' ? undefined : GLOBE[lane.first.place];
+            const labelWidth = lane.label.length * CHAR + (globe ? 16 : 0);
+            const labelX = clamp(lane.centre - labelWidth / 2, 0, Math.max(0, width - labelWidth));
             return (
               <g key={lane.first.id}>
                 <line className="ladder-rung" x1={0} x2={width} y1={lane.rung} y2={lane.rung} />
-                <text className="ladder-label" x={clamp(lane.centre - labelWidth / 2, 0, Math.max(0, width - labelWidth))} y={lane.rung - 24}>
+                {globe && <Globe kind={globe} x={labelX + 6} y={lane.rung - 28} r={6} />}
+                <text className="ladder-label" x={labelX + (globe ? 16 : 0)} y={lane.rung - 24}>
                   {lane.label}
                 </text>
                 {lane.points.map(({ item }) => (

@@ -3,11 +3,13 @@ import { getImage, getItemName, type Item, type Place } from '../content';
 import { formatDate } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 import '../styles/history.css';
+import { Globe, type GlobeKind } from './Globe';
 import { Bubble } from './JourneyScene';
 
 type Props = { items: Item[]; stamps: string[]; year: number; today: number; selectedId?: string; machineId?: string };
 
 const START = 1965;
+const GLOBE: Partial<Record<string, GlobeKind>> = { Moon: 'moon', Mars: 'mars', Asteroids: 'asteroids' };
 const PLACES: Place[] = ['Moon', 'Mars', 'Asteroids', 'Deep space'];
 
 // Geometry in px, on the 8 px grid.
@@ -115,11 +117,17 @@ export function HistoryTimeline({ items, stamps, year, today, selectedId, machin
               </text>
             </g>
           ))}
-          {bands.map(({ place, y: bandY }) => (
-            <text key={place} className="history-place" x={PAD_L} y={bandY + 16} aria-hidden="true">
-              {t(`place.${place}`)}
-            </text>
-          ))}
+          {bands.map(({ place, y: bandY }) => {
+            const globe = GLOBE[place];
+            return (
+              <g key={place} aria-hidden="true">
+                {globe && <Globe kind={globe} x={PAD_L - 8} y={bandY + 12} r={6} />}
+                <text className="history-place" x={PAD_L + (globe ? 8 : -8)} y={bandY + 16}>
+                  {t(`place.${place}`)}
+                </text>
+              </g>
+            );
+          })}
           {order.map(({ item, y: rowY }, index) => {
             const start = xOf(yearOf(item.launchDate));
             const end = Math.max(xOf(Math.min(endOf(item), year)), start + 2 * BAR);
