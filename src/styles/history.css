@@ -220,3 +220,13 @@
 .ladder-point[data-selected='true'] .ladder-hit {
   fill: rgb(255 207 63 / 0.15);
 }
+
+.where-card-bubble {
+  flex: none;
+}
+
+/* On the paper card and in the legend's paper-on-navy, the paper ring needs ink to show. */
+.ladder-card [data-ring='working'] > .bubble-ring,
+.ladder-card [data-ring='drifting'] > .bubble-ring {
+  stroke: var(--color-ink);
+}

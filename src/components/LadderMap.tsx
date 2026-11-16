@@ -1,7 +1,8 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react';
-import { getItemName, type Item } from '../content';
+import { getImage, getItemName, type Item } from '../content';
 import { formatDistance, formatLightTime, LIGHT_KM_PER_S } from '../lib/format';
 import { useI18n } from '../lib/i18n';
+import { Bubble } from './JourneyScene';
 import { toYear } from '../lib/journey';
 
 type Props = {
@@ -26,7 +27,8 @@ const LANE = 64; // one rung: 16 label + 32 hit areas + 16 gap
 const PITCH = 32; // between dots that share a rung, so every 32 px hit area stays whole
 const HIT = 16; // hit-area radius: 32 px targets
 const CHAR = 7.2; // IBM Plex Mono advance at 12 px, used to keep labels inside the strip
-const DOT = 8;
+const DOT = 8; // where the pulse stops short of a point
+const BUBBLE = 14; // 28 px photo bubbles inside 32 px hit areas
 // Light-time axis: one light-second, -minute, -hour and -day, in km.
 const LIGHT_TICKS = [
   ['second', 1],
@@ -232,7 +234,15 @@ export function LadderMap({ items, stamps, year, today, selectedId, machineId, p
                 onMouseLeave={() => setPreviewId(undefined)}
               >
                 <circle className="ladder-hit" cx={x} cy={y} r={HIT} />
-                <circle className={travelling ? 'ladder-ring' : 'ladder-dot'} cx={x} cy={y} r={DOT} />
+                <Bubble
+                  id={item.id}
+                  x={x}
+                  y={y}
+                  r={BUBBLE}
+                  photo={getImage(item.imageId)?.file}
+                  ring={travelling ? 'travelling' : item.status}
+                  stamped={stamped}
+                />
               </g>
             );
           })}
@@ -248,26 +258,6 @@ export function LadderMap({ items, stamps, year, today, selectedId, machineId, p
           </p>
         )}
       </div>
-      <ul className="ladder-legend label" aria-hidden="true">
-        <li>
-          <svg width="16" height="16">
-            <circle className="ladder-dot" data-stamped="true" cx="8" cy="8" r="6" />
-          </svg>
-          {t('ladder.legend.stamped')}
-        </li>
-        <li>
-          <svg width="16" height="16">
-            <circle className="ladder-dot" cx="8" cy="8" r="6" />
-          </svg>
-          {t('ladder.legend.open')}
-        </li>
-        <li>
-          <svg width="16" height="16">
-            <circle className="ladder-ring" cx="8" cy="8" r="6" />
-          </svg>
-          {t('ladder.onTheWay')}
-        </li>
-      </ul>
       <p className="ladder-sped label">{t('ladder.sped')}</p>
       <p className="visually-hidden" id="ladder-keys">
         {t('ladder.keys')}

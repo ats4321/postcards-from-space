@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { getItemName, getItemText, type Item } from '../content';
+import { getImage, getItemName, getItemText, type Item } from '../content';
 import { formatDate, formatDistance, formatLightTime, formatTimelineDate } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 import '../styles/history.css';
 import { toYear } from '../lib/journey';
 import { useStoredState } from '../lib/useStoredState';
 import { HistoryTimeline } from './HistoryTimeline';
+import { Bubble, type BubbleRing } from './JourneyScene';
 import { LadderMap } from './LadderMap';
-import { Stamp } from './Stamp';
 import { useMediaQuery } from './useMediaQuery';
 
 type Props = { items: Item[]; stamps: string[]; selectedId?: string };
@@ -17,6 +17,13 @@ const PLAY_MS = 12_000;
 const PULSE_MS = 1500; // matches the ladder-beam animation in widgets.css
 const VIEWS = ['map', 'timeline'] as const;
 type View = (typeof VIEWS)[number];
+const LEGEND: [BubbleRing, string, boolean][] = [
+  ['working', 'status.working', false],
+  ['resting', 'status.resting', false],
+  ['drifting', 'status.drifting', false],
+  ['travelling', 'ladder.onTheWay', false],
+  ['working', 'ladder.legend.stamped', true],
+];
 
 /**
  * "Where are they now?": one year, one Play control, one selected machine, and two
@@ -234,10 +241,32 @@ export function WhereNow({ items, stamps, selectedId }: Props) {
         </details>
       </div>
 
+
+      <ul className="ladder-legend where-legend label" aria-hidden="true">
+        {LEGEND.map(([ring, key, stamped]) => (
+          <li key={key}>
+            <svg width="24" height="24">
+              <Bubble id={`legend-${key}`} x={12} y={12} r={8} ring={ring} stamped={stamped} />
+            </svg>
+            {t(key)}
+          </li>
+        ))}
+      </ul>
+
       <div className="ladder-result" aria-live="polite" ref={card}>
         {shown ? (
           <div className="ladder-card">
-            <Stamp item={shown} size="row" cancelled={stamps.includes(shown.id)} />
+            <svg className="where-card-bubble" width="64" height="64" aria-hidden="true">
+              <Bubble
+                id={`card-${shown.id}`}
+                x={32}
+                y={32}
+                r={26}
+                photo={getImage(shown.imageId)?.file}
+                ring={travelling ? 'travelling' : shown.status}
+                stamped={stamps.includes(shown.id)}
+              />
+            </svg>
             <div>
               <h3>{getItemName(shown.id, language)}</h3>
               <dl>

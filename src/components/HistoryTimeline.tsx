@@ -1,8 +1,9 @@
 import { useLayoutEffect, useRef, useState, type KeyboardEvent } from 'react';
-import { getItemName, type Item, type Place } from '../content';
+import { getImage, getItemName, type Item, type Place } from '../content';
 import { formatDate } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 import '../styles/history.css';
+import { Bubble } from './JourneyScene';
 
 type Props = { items: Item[]; stamps: string[]; year: number; today: number; selectedId?: string; machineId?: string };
 
@@ -10,7 +11,7 @@ const START = 1965;
 const PLACES: Place[] = ['Moon', 'Mars', 'Asteroids', 'Deep space'];
 
 // Geometry in px, on the 8 px grid.
-const PAD_L = 8;
+const PAD_L = 16; // room for the 20 px bubble at the start of a bar
 const PAD_R = 24; // room for the "still going" arrow
 const TOP = 32; // year labels
 const ROW = 24; // one machine per row; the whole row is the hit area
@@ -156,10 +157,19 @@ export function HistoryTimeline({ items, stamps, year, today, selectedId, machin
                 onMouseEnter={() => setPreviewId(item.id)}
                 onMouseLeave={() => setPreviewId(undefined)}
               >
-                <rect className="history-hit" x={start - 4} y={rowY} width={end - start + (going ? 20 : 8)} height={ROW} rx={4} />
+                <rect className="history-hit" x={start - 12} y={rowY} width={end - start + (going ? 28 : 16)} height={ROW} rx={4} />
                 <rect className="history-fill" x={start} y={mid - BAR / 2} width={end - start} height={BAR} rx={BAR / 2} />
                 {going && <path className="history-fill" d={`M${end + 2} ${mid - 6} L${end + 12} ${mid} L${end + 2} ${mid + 6} Z`} />}
                 {arrived && <circle className="history-arrival" cx={xOf(yearOf(item.arrivalDate!))} cy={mid} r={2} />}
+                <Bubble
+                  id={item.id}
+                  x={start}
+                  y={mid}
+                  r={10}
+                  photo={getImage(item.imageId)?.file}
+                  ring={item.arrivalDate && yearOf(item.arrivalDate) > year ? 'travelling' : item.status}
+                  stamped={stamped}
+                />
               </a>
             );
           })}
@@ -176,18 +186,6 @@ export function HistoryTimeline({ items, stamps, year, today, selectedId, machin
       </div>
 
       <ul className="history-legend label" aria-hidden="true">
-        <li>
-          <svg width="24" height="16">
-            <rect className="history-fill" data-stamped="true" x="0" y="4" width="24" height="8" rx="4" />
-          </svg>
-          {t('ladder.legend.stamped')}
-        </li>
-        <li>
-          <svg width="24" height="16">
-            <rect className="history-fill" x="0" y="4" width="24" height="8" rx="4" />
-          </svg>
-          {t('ladder.legend.open')}
-        </li>
         <li>
           <svg width="24" height="16">
             <rect className="history-fill" x="0" y="4" width="24" height="8" rx="4" />

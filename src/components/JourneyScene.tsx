@@ -40,27 +40,52 @@ function radiusAt(anchors: Array<[number, number]>, time: number) {
   return anchors[anchors.length - 1]![1];
 }
 
-function Bubble({ id, x, y, photo }: { id: string; x: number; y: number; photo?: string }) {
+export type BubbleRing = 'journey' | 'working' | 'resting' | 'drifting' | 'travelling';
+
+/**
+ * A round "stamp bubble" cropped from a machine's hero photo. The Journey uses the
+ * red dashed ring; "Where are they now?" uses the ring for status and adds a red
+ * stamp badge once the reader has the stamp.
+ */
+export function Bubble({
+  id,
+  x,
+  y,
+  photo,
+  r = BUBBLE,
+  ring = 'journey',
+  stamped = false,
+}: {
+  id: string;
+  x: number;
+  y: number;
+  photo?: string;
+  r?: number;
+  ring?: BubbleRing;
+  stamped?: boolean;
+}) {
+  const clip = `bubble-${ring === 'journey' ? '' : 'w-'}${id}`;
   return (
-    <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)})`} className="journey-bubble">
-      <clipPath id={`bubble-${id}`}>
-        <circle r={BUBBLE} />
+    <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)})`} className="journey-bubble" data-ring={ring}>
+      <clipPath id={clip}>
+        <circle r={r} />
       </clipPath>
-      <circle r={BUBBLE + 2} fill="var(--color-stamp)" />
+      <circle r={r + 2} fill="var(--color-stamp)" />
       {photo ? (
         <image
           href={photo}
-          x={-BUBBLE}
-          y={-BUBBLE}
-          width={BUBBLE * 2}
-          height={BUBBLE * 2}
+          x={-r}
+          y={-r}
+          width={r * 2}
+          height={r * 2}
           preserveAspectRatio="xMidYMid slice"
-          clipPath={`url(#bubble-${id})`}
+          clipPath={`url(#${clip})`}
         />
       ) : (
-        <circle r={BUBBLE - 2} fill="var(--color-earth)" />
+        <circle r={r - 2} fill="var(--color-earth)" />
       )}
-      <circle r={BUBBLE + 2} fill="none" stroke="var(--color-red)" strokeWidth="2" strokeDasharray="2 2" />
+      <circle className="bubble-ring" r={ring === 'journey' ? r + 2 : r + 1} />
+      {stamped && <rect className="bubble-stamp" x={r * 0.4} y={-r - 2} width={10} height={10} rx={1} />}
     </g>
   );
 }
