@@ -64,7 +64,7 @@ for (const [language, day] of [
     await page.setViewportSize({ width: 390, height: 900 });
     await page.goto('/');
 
-    await page.locator('.ladder').getByRole('button', { name: /^Voyager 1,/ }).click();
+    await page.locator('.where .ladder').getByRole('button', { name: /^Voyager 1,/ }).click();
     const card = page.locator('.ladder-card');
     await expect(card.getByRole('heading', { name: 'Voyager 1' })).toBeVisible();
     await expect(card).toContainText(day);
@@ -151,23 +151,29 @@ for (const [id, heading] of [
   });
 }
 
-test('history: play to today, keyboard opens a postcard at 390px', async ({ page }) => {
+test('where: one Play control plays to today; Timeline keyboard opens a postcard at 390px', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 900 });
   await page.goto('/');
-  const history = page.locator('.history');
-  const year = history.locator('.history-year');
+  const where = page.locator('.where');
+  const year = where.locator('.history-year');
   const now = String(new Date().getFullYear());
 
-  await history.getByRole('button', { name: 'Play history' }).click();
+  // Exactly one Play history control on the whole page.
+  await expect(page.getByRole('button', { name: 'Play history' })).toHaveCount(1);
+  await where.getByRole('button', { name: 'Play history' }).click();
   await expect(year).not.toContainText(now);
-  await expect(history.getByRole('button', { name: 'Pause' })).toBeVisible();
+  await expect(where.locator('.where-left')).not.toContainText('16 of 16');
+  await expect(where.getByRole('button', { name: 'Pause' })).toBeVisible();
   await expect(year).toContainText(now, { timeout: 20_000 });
+  await expect(where.locator('.where-left')).toContainText('16 of 16');
+
+  await where.getByText('Timeline', { exact: true }).click();
+  const history = where.locator('.history');
   await expect(history.getByRole('link')).toHaveCount(16);
 
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   expect(overflow).toBeLessThanOrEqual(0);
-
-  const { violations } = await new AxeBuilder({ page }).include('.history').analyze();
+  const { violations } = await new AxeBuilder({ page }).include('.where').analyze();
   const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
   expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
 
@@ -182,19 +188,73 @@ test('history: play to today, keyboard opens a postcard at 390px', async ({ page
   await expect(page.locator('#quiz-heading')).toBeVisible();
 });
 
-test('history: reduced motion shows everything and steps by year', async ({ page }) => {
+test('where: view switch keeps the year and the selected machine, and is remembered', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/');
+  const where = page.locator('.where');
+
+  // A big moment jumps the year and selects Voyager 2, on the way.
+  await where.locator('.ladder-moments summary').click();
+  await where.getByRole('button', { name: /Voyager 2: I flew past Saturn/ }).click();
+  await expect(where.locator('.history-year')).toContainText('1981');
+  await expect(where.getByRole('button', { name: /^Voyager 2 \(On the way/ })).toBeVisible();
+  await expect(where.locator('.ladder-card h3')).toHaveText('Voyager 2');
+
+  await where.getByText('Timeline', { exact: true }).click();
+  await expect(where.locator('.history')).toBeVisible();
+  await expect(where.locator('.history-year')).toContainText('1981');
+  await expect(where.locator('.ladder-card h3')).toHaveText('Voyager 2');
+  await expect(where.locator('.history-bar[data-selected="true"]')).toHaveAttribute('href', '#voyager-2');
+
+  await page.reload();
+  await expect(page.locator('.where .history')).toBeVisible();
+  await page.locator('.where').getByText('Map', { exact: true }).click();
+  await expect(page.locator('.where .ladder')).toBeVisible();
+});
+
+test('where: reduced motion shows everything and steps by year', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 390, height: 900 });
   await page.goto('/');
-  const history = page.locator('.history');
+  const where = page.locator('.where');
   const now = new Date().getFullYear();
-  await expect(history.getByRole('button', { name: 'Play history' })).toHaveCount(0);
-  await expect(history.getByRole('link')).toHaveCount(16);
-  await history.getByRole('button', { name: 'Year before' }).click();
-  await expect(history.locator('.history-year')).toContainText(String(now - 1));
-  await history.getByRole('button', { name: 'Year after' }).click();
-  await expect(history.locator('.history-year')).toContainText(String(now));
+  await expect(where.getByRole('button', { name: 'Play history' })).toHaveCount(0);
+  await expect(where.locator('.where-left')).toContainText('16 of 16');
+  await where.getByRole('button', { name: 'Year before' }).click();
+  await expect(where.locator('.history-year')).toContainText(String(now - 1));
+  await where.getByRole('button', { name: 'Year after' }).click();
+  await expect(where.locator('.history-year')).toContainText(String(now));
 });
+
+for (const [language, title] of [
+  ['en', 'Where are they now?'],
+  ['es', '¿Dónde están ahora?'],
+] as const) {
+  for (const width of [390, 1280]) {
+    for (const view of ['map', 'timeline'] as const) {
+      test(`where: ${view} axe and no h-scroll at ${width}px (${language})`, async ({ page }) => {
+        await page.addInitScript(
+          ([lang, v]) => {
+            localStorage.setItem('pfs.language', JSON.stringify(lang));
+            localStorage.setItem('pfs.whereView', JSON.stringify(v));
+          },
+          [language, view] as const,
+        );
+        await page.setViewportSize({ width, height: 900 });
+        await page.goto('/');
+        const where = page.locator('.where');
+        await expect(where.locator('h2')).toHaveText(title);
+        await expect(where.locator(view === 'map' ? '.ladder' : '.history')).toBeVisible();
+        const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+        expect(overflow).toBeLessThanOrEqual(0);
+        const { violations } = await new AxeBuilder({ page }).analyze();
+        const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
+        expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
+        await where.screenshot({ path: `.context/where-${view}-${width}-${language}.png` });
+      });
+    }
+  }
+}
 
 for (const [language, id, took] of [
   ['en', 'ingenuity', 'It took'],
@@ -238,26 +298,3 @@ for (const [language, id, took] of [
     expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
   });
 }
-
-test('ladder: Play history reaches today at 390px', async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 900 });
-  await page.goto('/');
-  const ladder = page.locator('.ladder');
-  const play = ladder.getByRole('button', { name: 'Play history' });
-  await play.click();
-  await expect(ladder.locator('.ladder-left')).not.toContainText('16 of 16');
-  await expect(ladder.locator('.ladder-left')).toContainText('16 of 16', { timeout: 20_000 });
-  await expect(play).toHaveAttribute('aria-pressed', 'false');
-
-  // A big moment jumps the year; Voyager 2 is then a ring on the way.
-  await ladder.locator('.ladder-moments summary').click();
-  await ladder.getByRole('button', { name: /Voyager 2: I flew past Saturn/ }).click();
-  await expect(ladder.locator('.ladder-time .label').first()).toHaveText('Year: 1981');
-  await expect(ladder.getByRole('button', { name: /^Voyager 2 \(On the way/ })).toBeVisible();
-
-  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
-  expect(overflow).toBeLessThanOrEqual(0);
-  const { violations } = await new AxeBuilder({ page }).analyze();
-  const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
-  expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
-});

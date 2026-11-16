@@ -469,24 +469,6 @@
   stroke-width: 2;
 }
 
-/* Time machine on the ladder. */
-.ladder-time {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  align-items: center;
-  margin-block: var(--space-2);
-}
-
-.ladder-time label {
-  flex: 1 1 200px;
-}
-
-.ladder-time input {
-  width: 100%;
-  accent-color: var(--color-earth);
-}
-
 .ladder-ring {
   fill: none;
   stroke: var(--color-earth);

@@ -1,14 +1,12 @@
-import { useEffect, useLayoutEffect, useRef, useState, type KeyboardEvent } from 'react';
-import { getItemName, getItemText, type Item, type Place } from '../content';
+import { useLayoutEffect, useRef, useState, type KeyboardEvent } from 'react';
+import { getItemName, type Item, type Place } from '../content';
 import { formatDate } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 import '../styles/history.css';
-import { useMediaQuery } from './useMediaQuery';
 
-type Props = { items: Item[]; stamps: string[]; selectedId?: string };
+type Props = { items: Item[]; stamps: string[]; year: number; today: number; selectedId?: string; machineId?: string };
 
 const START = 1965;
-const PLAY_MS = 12_000;
 const PLACES: Place[] = ['Moon', 'Mars', 'Asteroids', 'Deep space'];
 
 // Geometry in px, on the 8 px grid.
@@ -26,28 +24,17 @@ const yearOf = (iso: string) => {
   return year + (date.getTime() - Date.UTC(year, 0, 1)) / YEAR_MS;
 };
 
-type Event = { at: number; key: string; item: Item; date: string };
-
 /**
  * Every machine on one time axis, one band per place. Bars run from launch to
  * the last signal; with no last signal they run to arrival, or to today when the
  * machine is still working. Only dates already in items.json are used.
- *
- * "Play" sweeps a year marker from 1965 to today; machines appear as their launch
- * passes. With reduced motion there is no sweep: everything shows, and the reader
- * steps year by year instead.
+ * The year comes from WhereNow; machines appear as their launch passes.
  */
-export function History({ items, stamps, selectedId }: Props) {
+export function HistoryTimeline({ items, stamps, year, today, selectedId, machineId }: Props) {
   const { language, t } = useI18n();
-  const reduceMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
   const box = useRef<HTMLDivElement>(null);
   const bars = useRef(new Map<string, Element & { focus(): void }>());
-  const frame = useRef<number>();
   const [width, setWidth] = useState(328);
-  const [today] = useState(() => (Date.now() - Date.UTC(1970, 0, 1)) / YEAR_MS + 1970);
-  // The marker. Starts at today, so everything shows until the reader presses Play.
-  const [year, setYear] = useState(today);
-  const [playing, setPlaying] = useState(false);
   const [focusId, setFocusId] = useState<string>();
   const [previewId, setPreviewId] = useState<string>();
 
@@ -60,31 +47,6 @@ export function History({ items, stamps, selectedId }: Props) {
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    if (!playing) return;
-    // Resume from wherever the marker is; a finished sweep restarts at 1965.
-    const from = year >= today ? START : year;
-    const began = performance.now() - ((from - START) / (today - START)) * PLAY_MS;
-    const tick = (now: number) => {
-      const next = START + ((now - began) / PLAY_MS) * (today - START);
-      if (next >= today) {
-        setYear(today);
-        setPlaying(false);
-        return;
-      }
-      setYear(next);
-      frame.current = requestAnimationFrame(tick);
-    };
-    frame.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame.current!);
-    // The sweep reads `year` only when it starts or resumes.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [playing, today]);
-
-  useEffect(() => {
-    if (reduceMotion) setPlaying(false);
-  }, [reduceMotion]);
 
   const xOf = (at: number) => PAD_L + ((Math.min(at, today) - START) / (today - START)) * (width - PAD_L - PAD_R);
 
@@ -106,30 +68,11 @@ export function History({ items, stamps, selectedId }: Props) {
   const endOf = (item: Item) =>
     item.lastContact ? yearOf(item.lastContact) : item.status === 'working' ? today : yearOf(item.arrivalDate ?? item.launchDate);
 
-  const events: Event[] = items
-    .flatMap((item) => [
-      { at: yearOf(item.launchDate), key: 'history.event.launch', item, date: item.launchDate },
-      ...(item.arrivalDate && item.place !== 'Deep space'
-        ? [{ at: yearOf(item.arrivalDate), key: `history.event.arrive.${item.place}`, item, date: item.arrivalDate }]
-        : []),
-      ...(item.lastContact ? [{ at: yearOf(item.lastContact), key: 'history.event.last', item, date: item.lastContact }] : []),
-    ])
-    .sort((a, b) => a.at - b.at);
-  const latest = events.filter((event) => event.at <= year).at(-1);
-  const caption = latest
-    ? t(latest.key, {
-        date: formatDate(latest.date, language),
-        name: getItemName(latest.item.id, language),
-        location: getItemText(latest.item.id, language)?.locationName ?? '',
-      })
-    : '';
-
   const shown = rows.filter(({ item }) => yearOf(item.launchDate) <= year);
   const order = [...shown].sort((a, b) => a.item.launchDate.localeCompare(b.item.launchDate) || a.y - b.y);
   const tabId = order.some((row) => row.item.id === focusId) ? focusId : order[0]?.item.id;
   const preview = shown.find((row) => row.item.id === previewId);
   const done = year >= today;
-  const shownYear = Math.floor(year);
   const ticks = Array.from({ length: Math.floor(today / 10) * 10 - 1960 }, (_, i) => 1970 + i)
     .filter((tick) => tick % (width >= 560 ? 10 : 20) === 0 && tick < today - 3);
 
@@ -152,8 +95,6 @@ export function History({ items, stamps, selectedId }: Props) {
     bars.current.get(id)?.focus();
   };
 
-  const step = (by: number) => setYear((current) => Math.min(today, Math.max(START, Math.floor(current) + by) + 0.999));
-
   const tip = preview && {
     x: (xOf(yearOf(preview.item.launchDate)) + xOf(endOf(preview.item))) / 2,
     y: preview.y,
@@ -161,49 +102,10 @@ export function History({ items, stamps, selectedId }: Props) {
   const tipSide = !tip ? '' : tip.x < width / 3 ? 'start' : tip.x > (width * 2) / 3 ? 'end' : 'middle';
 
   return (
-    <section className="history panel" aria-labelledby="history-heading">
-      <h2 id="history-heading">{t('history.heading')}</h2>
+    <div className="history">
       <p>{t('history.note')}</p>
-
-      <div className="history-controls">
-        {reduceMotion ? (
-          <>
-            <button type="button" onClick={() => step(-1)} disabled={shownYear <= START}>
-              {t('history.prev')}
-            </button>
-            <button type="button" onClick={() => step(1)} disabled={done}>
-              {t('history.next')}
-            </button>
-          </>
-        ) : playing ? (
-          <button type="button" onClick={() => setPlaying(false)}>
-            {t('history.pause')}
-          </button>
-        ) : (
-          <>
-            <button type="button" className="history-play" onClick={() => setPlaying(true)}>
-              {t(done ? 'history.play' : 'history.resume')}
-            </button>
-            {!done && (
-              <button type="button" onClick={() => { setYear(START); setPlaying(true); }}>
-                {t('history.replay')}
-              </button>
-            )}
-          </>
-        )}
-      </div>
-
-      {/* Silent while sweeping, so a screen reader is not flooded with 60 years. */}
-      <div className="history-readout" aria-live={playing ? 'off' : 'polite'} aria-atomic="true">
-        <p className="history-year">
-          <span className="visually-hidden">{t('history.year')} </span>
-          {shownYear}
-        </p>
-        <p className="history-caption">{caption || ' '}</p>
-      </div>
-
       <div className="history-chart" ref={box}>
-        <svg width={width} height={height} role="group" aria-labelledby="history-heading" aria-describedby="history-keys">
+        <svg width={width} height={height} role="group" aria-labelledby="where-heading" aria-describedby="history-keys">
           {ticks.map((tick) => (
             <g key={tick} aria-hidden="true">
               <line className="history-grid" x1={xOf(tick)} x2={xOf(tick)} y1={TOP - 8} y2={height} />
@@ -235,6 +137,8 @@ export function History({ items, stamps, selectedId }: Props) {
                 }}
                 className="history-bar"
                 data-stamped={stamped}
+                data-id={item.id}
+                data-selected={item.id === machineId}
                 tabIndex={item.id === tabId ? 0 : -1}
                 aria-label={t('history.bar', {
                   name,
@@ -301,6 +205,6 @@ export function History({ items, stamps, selectedId }: Props) {
       <p className="visually-hidden" id="history-keys">
         {t('history.keys')}
       </p>
-    </section>
+    </div>
   );
 }
