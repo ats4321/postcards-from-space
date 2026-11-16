@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useI18n } from '../lib/i18n';
+import { Square, Volume2 } from 'lucide-react';
+import { Icon } from './Icon';
 
 type Props = { text: string; lang: string };
 
@@ -43,9 +45,7 @@ export function ReadAloud({ text, lang }: Props) {
 
   return (
     <button type="button" className="read-aloud" aria-pressed={speaking} onClick={toggle}>
-      <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-        {speaking ? <path d="M3 3h10v10H3z" /> : <path d="M2 6h3l4-3v10l-4-3H2zM11 5.5a3.5 3.5 0 0 1 0 5" />}
-      </svg>
+      <Icon as={speaking ? Square : Volume2} />
       {t(speaking ? 'read.stop' : 'read.start')}
     </button>
   );

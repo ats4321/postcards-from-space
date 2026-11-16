@@ -9,6 +9,8 @@ import { HistoryTimeline } from './HistoryTimeline';
 import { Bubble, type BubbleRing } from './JourneyScene';
 import { LadderMap } from './LadderMap';
 import { useMediaQuery } from './useMediaQuery';
+import { CalendarRange, Map as MapIcon, Pause, Play, Radio, Rocket, RotateCcw } from 'lucide-react';
+import { Icon } from './Icon';
 
 type Props = { items: Item[]; stamps: string[]; selectedId?: string };
 
@@ -148,11 +150,13 @@ export function WhereNow({ items, stamps, selectedId }: Props) {
             </>
           ) : playing ? (
             <button type="button" className="history-play" onClick={() => setPlaying(false)}>
+              <Icon as={Pause} />
               {t('history.pause')}
             </button>
           ) : (
             <>
               <button type="button" className="history-play" onClick={() => setPlaying(true)}>
+                <Icon as={Play} />
                 {t(done ? 'history.play' : 'history.resume')}
               </button>
               {!done && (
@@ -163,6 +167,7 @@ export function WhereNow({ items, stamps, selectedId }: Props) {
                     setPlaying(true);
                   }}
                 >
+                  <Icon as={RotateCcw} />
                   {t('history.replay')}
                 </button>
               )}
@@ -204,6 +209,7 @@ export function WhereNow({ items, stamps, selectedId }: Props) {
               checked={view === option}
               onChange={() => setView(option)}
             />
+            <Icon as={option === 'map' ? MapIcon : CalendarRange} />
             {t(`where.view.${option}`)}
           </label>
         ))}
@@ -286,13 +292,17 @@ export function WhereNow({ items, stamps, selectedId }: Props) {
                 <a href={`#${shown.id}`}>{t('ladder.read')}</a>
                 {pulse?.id !== shown.id && (
                   <button type="button" onClick={() => send(shown.id)}>
+                    <Icon as={Radio} />
                     {t('where.hello')}
                   </button>
                 )}
                 <button type="button" onClick={close}>
                   {t('ladder.close')}
                 </button>
-                <a href={`#journey-${shown.id}`}>{t('journey.go')}</a>
+                <a href={`#journey-${shown.id}`}>
+                  <Icon as={Rocket} />
+                  {t('journey.go')}
+                </a>
               </p>
             </div>
           </div>
