@@ -67,11 +67,10 @@ on any error.
 | Field | Rule |
 | --- | --- |
 | `id` | kebab-case, unique. Also the deep link: `/#phoenix`. |
-| `name`, `locationName` | text |
 | `place` | `"Moon"`, `"Mars"`, `"Asteroids"` or `"Deep space"` |
 | `launchDate`, `arrivalDate?`, `lastContact?` | ISO dates, `YYYY-MM-DD` |
 | `status` | `"working"`, `"resting"` or `"drifting"` |
-| `distanceKm`, `distanceNote` | typical distance from Earth in km, and a note saying what the number means |
+| `distanceKm` | typical distance from Earth in km (the item text's `distanceNote` says what it means) |
 | `illustration` | fallback drawing: `lander`, `rover`, `orbiter`, `probe` or `instrument` |
 | `imageId` | must match an `id` in `images.json` |
 | `arizona` | `true` if there is an Arizona connection |
@@ -84,6 +83,8 @@ on any error.
 
 | Field | Rule |
 | --- | --- |
+| `name`, `locationName` | text. Mission and spacecraft names stay in English; descriptive words are translated. |
+| `distanceNote` | what `distanceKm` means |
 | `letter` | exactly 3 paragraphs, each at most 320 characters |
 | `signOff`, `today` | text |
 | `science` | exactly 3 bullets |
@@ -96,15 +97,20 @@ on any error.
 | --- | --- |
 | `id` | kebab-case, unique |
 | `file` | `/img/<name>.webp`, or `/img/illustrations/<name>.svg` until a photo is added. The file must exist in `public/`. |
-| `alt`, `credit`, `license` | text |
+| `credit`, `license` | text (credits are attributions and are not translated) |
 | `sourceUrl` | https link to where the image came from. Required for photos. |
 | `kind?` | `hero` (the item's main picture, id equals the item id) or `now` (where it rests today) |
 | `width?`, `height?` | pixel size, written by `npm run fetch-images` |
+
+**Image text** (`src/content/locales/<lang>/images.json`, keyed by image id): `{ "alt": "..." }`.
 
 **Cross-checks**
 
 - Every item has text in `locales/en/items.json` and an image entry in `images.json`.
 - No text exists for an item that is not in `items.json`.
+- Every image has alt text in `locales/en/images.json`, and no alt text exists for a missing image.
+- Every number in an English `name`, `locationName`, `distanceNote` or `alt` appears unchanged in
+  the translation (same number style: `238,855`, `16.094`).
 - Every other locale has the same keys as English. Gaps in Spanish are warnings for now and the
   app falls back to English; remove `es` from `LOCALES_IN_PROGRESS` in `scripts/validate.ts` to
   make them errors.

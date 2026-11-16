@@ -7,7 +7,7 @@
  */
 import imagesJson from './images.json';
 import itemsJson from './items.json';
-import type { Image, Item, ItemText, UiStrings } from './schema';
+import type { Image, ImageText, Item, ItemText, UiStrings } from './schema';
 
 export type { Image, Item, ItemText, Place, Quiz, Source, Status, UiStrings } from './schema';
 
@@ -28,6 +28,11 @@ const uiFiles = import.meta.glob<UiStrings>('./locales/*/ui.json', {
   import: 'default',
 });
 const textFiles = import.meta.glob<Record<string, ItemText>>('./locales/*/items.json', {
+  eager: true,
+  import: 'default',
+});
+
+const imageTextFiles = import.meta.glob<Record<string, ImageText>>('./locales/*/images.json', {
   eager: true,
   import: 'default',
 });
@@ -64,4 +69,18 @@ export function getItemText(id: string, language: Language): ItemText | undefine
   const base = forLanguage(textFiles, DEFAULT_LANGUAGE, 'items.json')?.[id];
   const local = forLanguage(textFiles, language, 'items.json')?.[id];
   return base || local ? ({ ...base, ...local } as ItemText) : undefined;
+}
+
+/** An item's display name in a language (English if not translated). */
+export function getItemName(id: string, language: Language): string {
+  return getItemText(id, language)?.name ?? id;
+}
+
+/** A picture's alt text in a language, falling back to English. */
+export function getImageAlt(id: string, language: Language): string {
+  return (
+    forLanguage(imageTextFiles, language, 'images.json')?.[id]?.alt ??
+    forLanguage(imageTextFiles, DEFAULT_LANGUAGE, 'images.json')?.[id]?.alt ??
+    ''
+  );
 }

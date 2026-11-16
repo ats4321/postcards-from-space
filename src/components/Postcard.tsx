@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { DEFAULT_LANGUAGE, getImage, getItemText, type Item } from '../content';
+import { DEFAULT_LANGUAGE, getImage, getImageAlt, getItemText, type Item } from '../content';
 import { formatDate, formatDistance } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 import { ItemImage } from './ItemImage';
@@ -60,10 +60,10 @@ export function Postcard({ item, earned, onCorrect, onClose, focusOnOpen }: Prop
         <header className="postcard-head">
           <div>
             <p className="label">
-              {t(`place.${item.place}`)} · {item.locationName}
+              {t(`place.${item.place}`)} · {text.locationName}
             </p>
             <h2 id="postcard-title" ref={title} tabIndex={-1}>
-              {item.name}
+              {text.name}
             </h2>
             <StatusPill status={item.status} />
             <div className="postcard-actions">
@@ -102,7 +102,7 @@ export function Postcard({ item, earned, onCorrect, onClose, focusOnOpen }: Prop
                 </div>
               ))}
             </dl>
-            <p className="label">{item.distanceNote}</p>
+            <p className="label">{text.distanceNote}</p>
           </div>
         </div>
 
@@ -111,7 +111,7 @@ export function Postcard({ item, earned, onCorrect, onClose, focusOnOpen }: Prop
             className="hero"
             image={image}
             fallback={`/img/illustrations/${item.illustration}.svg`}
-            alt={image?.alt ?? item.name}
+            alt={image ? getImageAlt(image.id, language) : text.name}
           />
           {image && (
             <figcaption className="label">
@@ -134,7 +134,7 @@ export function Postcard({ item, earned, onCorrect, onClose, focusOnOpen }: Prop
           <p>{text.today}</p>
           {nowImage && (
             <figure>
-              <ItemImage className="hero" image={nowImage} alt={nowImage.alt} lazy />
+              <ItemImage className="hero" image={nowImage} alt={getImageAlt(nowImage.id, language)} lazy />
               <figcaption className="label">
                 {t('postcard.credit')}: {nowImage.credit}
               </figcaption>

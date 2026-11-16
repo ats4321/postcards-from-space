@@ -1,0 +1,92 @@
+{
+  "phoenix": {
+    "alt": "El módulo de aterrizaje Phoenix visto desde arriba sobre un suelo marciano plano y rojizo, con un panel solar redondo a cada lado."
+  },
+  "phoenix-now": {
+    "alt": "Vista desde la órbita de un suelo marciano rojizo, con pequeños acercamientos rotulados del módulo Phoenix, su cubierta trasera y su paracaídas, y su escudo térmico."
+  },
+  "voyager-1": {
+    "alt": "Dibujo artístico de una sonda Voyager, con su gran antena blanca en forma de plato y sus brazos largos, avanzando a toda velocidad por el espacio morado."
+  },
+  "apollo-11-eagle": {
+    "alt": "El módulo lunar Eagle del Apollo 11 parado sobre sus cuatro patas en la superficie gris de la Luna, con huellas de botas en el polvo."
+  },
+  "apollo-11-site-now": {
+    "alt": "Vista desde la órbita del sitio de aterrizaje del Apollo 11, una llanura gris con cráteres y rótulos que marcan el módulo lunar, el reflector láser y otros equipos que se quedaron ahí."
+  },
+  "apollo-11-reflector": {
+    "alt": "El astronauta Buzz Aldrin en la Luna junto a los experimentos científicos que acaba de instalar, con la bandera y el módulo lunar detrás de él."
+  },
+  "opportunity": {
+    "alt": "Autorretrato del rover Opportunity visto desde arriba, con sus paneles solares planos y su mástil con cámaras sobre el suelo polvoriento de Marte."
+  },
+  "opportunity-now": {
+    "alt": "Vista desde la órbita de laderas rocosas de Marte dentro del cráter Endeavour, con un recuadro blanco que marca el lugar donde descansa Opportunity."
+  },
+  "spirit": {
+    "alt": "Autorretrato del rover Spirit visto desde arriba, con sus paneles solares y su mástil con cámaras sobre el suelo rojizo de Marte."
+  },
+  "spirit-now": {
+    "alt": "Vista desde la órbita de un suelo marciano rojizo, donde el rover Spirit aparece como un puntito brillante junto a una meseta baja y redondeada."
+  },
+  "ingenuity": {
+    "alt": "El pequeño helicóptero Ingenuity parado sobre cuatro patas delgadas en el suelo rocoso de Marte, con dos aspas largas encima."
+  },
+  "ingenuity-now": {
+    "alt": "Vista amplia, tomada por el rover Perseverance, de ondas de arena en Marte en el último aeródromo de Ingenuity, donde el helicóptero se ve a lo lejos sobre las dunas."
+  },
+  "apollo-17-lrv": {
+    "alt": "El astronauta Eugene Cernan maneja el vehículo de exploración lunar en la Luna, con el módulo lunar y una montaña gris detrás de él."
+  },
+  "apollo-17-lrv-now": {
+    "alt": "Vista desde la órbita del vehículo lunar del Apollo 17 estacionado, que se ve como una pequeña mancha oscura, junto a un dibujo del vehículo y una foto de él en la Luna."
+  },
+  "insight": {
+    "alt": "Selfie del módulo de aterrizaje InSight en Marte, con su plataforma de instrumentos entre dos paneles solares redondos de muchos lados."
+  },
+  "insight-now": {
+    "alt": "Vista desde la órbita de llanuras marcianas planas y anaranjadas, donde el módulo InSight es una pequeña mancha en medio de una zona de suelo más oscuro."
+  },
+  "viking-1": {
+    "alt": "Foto en blanco y negro de rocas y polvo en Marte, con un pie redondo del módulo de aterrizaje Viking 1 en la esquina inferior derecha."
+  },
+  "viking-1-now": {
+    "alt": "Vista desde la órbita de un suelo marciano disparejo, con rótulos que señalan el módulo de aterrizaje Viking 1, su cubierta trasera y su posible paracaídas."
+  },
+  "sojourner": {
+    "alt": "El pequeño rover Sojourner, de seis ruedas y con un panel solar plano encima, entre rocas sobre el suelo rojizo de Marte."
+  },
+  "sojourner-now": {
+    "alt": "Vista desde la órbita de llanuras marcianas rocosas y con cráteres alrededor del sitio de aterrizaje de Mars Pathfinder, donde descansan Sojourner y su módulo de aterrizaje."
+  },
+  "voyager-2": {
+    "alt": "Ingenieros con trajes blancos de sala limpia trabajan en la nave Voyager 2 y su gran antena de plato en 1977."
+  },
+  "pioneer-10": {
+    "alt": "La nave Pioneer 10 en un taller antes del lanzamiento, con su gran antena de plato arriba y piezas envueltas en dorado abajo."
+  },
+  "surveyor-3": {
+    "alt": "Foto en blanco y negro del módulo de aterrizaje Surveyor 3 sobre la ladera gris de un cráter de la Luna, tomada por los astronautas del Apollo 12."
+  },
+  "surveyor-3-now": {
+    "alt": "Vista desde la órbita del sitio del Apollo 12, con rótulos que marcan la etapa de descenso Intrepid, la estación científica y Surveyor 3."
+  },
+  "apollo-12-alsep": {
+    "alt": "Instrumentos científicos del paquete de experimentos del Apollo 12 sobre la Luna, con la larga sombra de un astronauta al frente."
+  },
+  "apollo-12-alsep-now": {
+    "alt": "Vista desde la órbita de la zona de aterrizaje del Apollo 12, gris y con cráteres, con pequeños rótulos que marcan equipos que se quedaron en la Luna."
+  },
+  "dawn": {
+    "alt": "La nave Dawn antes del lanzamiento, con sus largas alas de paneles solares plegadas contra sus costados."
+  },
+  "near-shoemaker": {
+    "alt": "La nave NEAR en una sala limpia antes del lanzamiento, con una antena de plato blanca y redonda arriba y paneles solares plegados a los lados."
+  },
+  "pioneer-11": {
+    "alt": "Foto en blanco y negro de la nave Pioneer 11 antes de su lanzamiento en 1973, con su gran antena de plato arriba, de pie entre las dos mitades abiertas de la punta del cohete que la va a cubrir."
+  },
+  "kepler": {
+    "alt": "El alto telescopio espacial Kepler, envuelto en dorado, de pie en una sala limpia, con trabajadores con trajes blancos en su base."
+  }
+}

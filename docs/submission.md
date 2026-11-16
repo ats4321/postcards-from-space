@@ -49,7 +49,6 @@ LCP 0.8 s, CLS 0, TBT 0 ms.
 
 ## Known limitations
 
-- Image alt text, distance notes and item names are English-only.
 - Three challenge-listed items are not covered: Apollo 12 ALSEP, Pioneer 11 and Kepler.
 - The Spanish has not yet been reviewed by a native speaker.
 
