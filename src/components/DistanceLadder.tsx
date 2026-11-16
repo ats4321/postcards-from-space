@@ -1,7 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react';
-import { getItemName, type Item } from '../content';
-import { formatDistance, formatLightTime, LIGHT_KM_PER_S } from '../lib/format';
+import { getItemName, getItemText, type Item } from '../content';
+import { formatDistance, formatLightTime, formatTimelineDate, LIGHT_KM_PER_S } from '../lib/format';
 import { useI18n } from '../lib/i18n';
+import { toYear } from '../lib/journey';
 import { readStored } from '../lib/useStoredState';
 import { Stamp } from './Stamp';
 import { useMediaQuery } from './useMediaQuery';
@@ -29,6 +30,8 @@ const LIGHT_TICKS = [
   ['day', 86_400],
 ] as const;
 const VIEWS = ['distance', 'light'] as const;
+const HISTORY_START = 1965;
+const HISTORY_PLAY_MS = 12_000;
  // matches the ladder-beam animation in widgets.css
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
@@ -56,6 +59,36 @@ export function DistanceLadder({ items, selectedId }: Props) {
   const [shownId, setShownId] = useState<string>();
   const [previewId, setPreviewId] = useState<string>();
   const [view, setView] = useState<(typeof VIEWS)[number]>('distance');
+  // Time machine: the year shown. Starts at today, so every machine shows until the reader moves it.
+  const [today] = useState(() => toYear(new Date().toISOString().slice(0, 10)));
+  const [year, setYear] = useState(today);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    if (!playing) return;
+    let frame = 0;
+    let previous = performance.now();
+    const step = (now: number) => {
+      const dy = ((now - previous) / HISTORY_PLAY_MS) * (today - HISTORY_START);
+      previous = now;
+      setYear((y) => {
+        const next = Math.min(today, y + dy);
+        if (next >= today) setPlaying(false);
+        return next;
+      });
+      frame = requestAnimationFrame(step);
+    };
+    frame = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frame);
+  }, [playing, today]);
+
+  const playHistory = () => {
+    if (playing) return setPlaying(false);
+    // Reduced motion: no sweep, go straight to today.
+    if (reduceMotion) return setYear(today);
+    if (year >= today) setYear(HISTORY_START);
+    setPlaying(true);
+  };
 
   useLayoutEffect(() => {
     const element = box.current;
@@ -90,7 +123,27 @@ export function DistanceLadder({ items, selectedId }: Props) {
     const start = clamp(centre - span / 2, PAD, Math.max(PAD, width - PAD - span));
     return { first, label, rung, centre, points: lane.map((item, position) => ({ item, x: start + position * PITCH, y: rung })) };
   });
-  const order = lanes.flatMap((lane) => lane.points);
+  // Hidden before launch; a ring between Earth and the destination while travelling (deep space travels until today).
+  const stateOf = (item: Item) => {
+    const launch = toYear(item.launchDate);
+    if (year < launch) return { shown: false, travelling: false, f: 0 };
+    const end = item.arrivalDate ? toYear(item.arrivalDate) : today;
+    return { shown: true, travelling: year < end, f: Math.min(1, (year - launch) / (end - launch || 1)) };
+  };
+  const order = lanes.flatMap((lane) => lane.points).filter(({ item }) => stateOf(item).shown);
+  const left = order.length;
+  const moments = items
+    .flatMap((item) => {
+      const name = getItemName(item.id, language);
+      const rows = getItemText(item.id, language)?.timeline ?? [];
+      return [
+        ...(item.arrivalDate && !rows.some((row) => row.date.startsWith(item.arrivalDate!))
+          ? [{ date: item.arrivalDate, caption: `${name}: ${t('postcard.arrived')}` }]
+          : []),
+        ...rows.map((row) => ({ date: row.date, caption: `${name}: ${row.event}` })),
+      ];
+    })
+    .sort((a, b) => toYear(a.date) - toYear(b.date));
   const height = TOP + lanes.length * LANE;
 
   const compact = new Intl.NumberFormat(language, { notation: 'compact' });
@@ -114,6 +167,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
   const target = order.find((point) => point.item.id === sent?.id);
   const shown = items.find((item) => item.id === shownId);
   const preview = order.find((point) => point.item.id === previewId);
+  const shownTravelling = !!shown && stateOf(shown).travelling;
   // Anchor the tooltip's near edge in the outer thirds so it never leaves the strip.
   const tipSide = !preview ? '' : preview.x < width / 3 ? 'start' : preview.x > (width * 2) / 3 ? 'end' : 'middle';
 
@@ -188,6 +242,28 @@ export function DistanceLadder({ items, selectedId }: Props) {
           </label>
         ))}
       </fieldset>
+      <div className="ladder-time">
+        <button type="button" className="ladder-play" aria-pressed={playing} onClick={playHistory}>
+          {t(playing ? 'ladder.pauseHistory' : 'ladder.playHistory')}
+        </button>
+        <label>
+          <span className="label">{t('ladder.year', { year: Math.floor(year) })}</span>
+          <input
+            type="range"
+            min={HISTORY_START}
+            max={Math.floor(today)}
+            value={Math.min(Math.floor(year), Math.floor(today))}
+            onChange={(event) => {
+              setPlaying(false);
+              const next = Number(event.target.value);
+              setYear(next >= Math.floor(today) ? today : next);
+            }}
+          />
+        </label>
+        <p className="label ladder-left" aria-live={playing ? 'off' : 'polite'}>
+          {t('ladder.left', { n: left, total: items.length })}
+        </p>
+      </div>
       <div className="ladder-chart" ref={box}>
         <svg width={width} height={height} role="group" aria-labelledby="ladder-heading" aria-describedby="ladder-keys">
           {ticks.map(({ km, label }, index) => {
@@ -223,9 +299,11 @@ export function DistanceLadder({ items, selectedId }: Props) {
               <circle className="ladder-photon" cx={0} cy={target.y} r={4} />
             </g>
           )}
-          {order.map(({ item, x, y }, index) => {
+          {order.map(({ item, x: destX, y }, index) => {
             const name = getItemName(item.id, language);
             const stamped = stamps.includes(item.id);
+            const { travelling, f } = stateOf(item);
+            const x = travelling ? PAD + (destX - PAD) * f : destX;
             return (
               <g
                 key={item.id}
@@ -237,8 +315,9 @@ export function DistanceLadder({ items, selectedId }: Props) {
                 data-stamped={stamped}
                 role="button"
                 tabIndex={item.id === tabId ? 0 : -1}
+                data-travelling={travelling}
                 aria-label={t('ladder.point', {
-                  name,
+                  name: travelling ? `${name} (${t('ladder.onTheWay')})` : name,
                   stamp: t(stamped ? 'passport.stamped' : 'passport.open'),
                   distance: formatDistance(item.distanceKm, language),
                   time: lightTime(item),
@@ -260,7 +339,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
                 onMouseLeave={() => setPreviewId(undefined)}
               >
                 <circle className="ladder-hit" cx={x} cy={y} r={HIT} />
-                <circle className="ladder-dot" cx={x} cy={y} r={DOT} />
+                <circle className={travelling ? 'ladder-ring' : 'ladder-dot'} cx={x} cy={y} r={DOT} />
               </g>
             );
           })}
@@ -289,8 +368,33 @@ export function DistanceLadder({ items, selectedId }: Props) {
           </svg>
           {t('ladder.legend.open')}
         </li>
+        <li>
+          <svg width="16" height="16">
+            <circle className="ladder-ring" cx="8" cy="8" r="6" />
+          </svg>
+          {t('ladder.onTheWay')}
+        </li>
       </ul>
       <p className="ladder-sped label">{t('ladder.sped')}</p>
+      <details className="ladder-moments">
+        <summary>{t('ladder.moments')}</summary>
+        <ol>
+          {moments.map(({ date, caption }) => (
+            <li key={`${date}-${caption}`}>
+              <button
+                type="button"
+                className="link-button"
+                onClick={() => {
+                  setPlaying(false);
+                  setYear(toYear(date));
+                }}
+              >
+                <span className="label">{formatTimelineDate(date, language)}</span> {caption}
+              </button>
+            </li>
+          ))}
+        </ol>
+      </details>
       <p className="visually-hidden" id="ladder-keys">
         {t('ladder.keys')}
       </p>
@@ -302,12 +406,14 @@ export function DistanceLadder({ items, selectedId }: Props) {
               <h3>{getItemName(shown.id, language)}</h3>
               <dl>
                 <dt className="label">{t('postcard.distance')}</dt>
-                <dd>{formatDistance(shown.distanceKm, language)}</dd>
+                {/* While travelling, no distance number: the stored one is where it ends up. */}
+                <dd>{shownTravelling ? t('journey.onTheWay') : formatDistance(shown.distanceKm, language)}</dd>
                 <dt className="label">{t('ladder.lightTime')}</dt>
-                <dd>{t('ladder.hello', { time: lightTime(shown) })}</dd>
+                <dd>{shownTravelling ? t('journey.depends') : t('ladder.hello', { time: lightTime(shown) })}</dd>
               </dl>
               <p className="ladder-actions">
                 <a href={`#${shown.id}`}>{t('ladder.read')}</a>
+                <a href={`#journey-${shown.id}`}>{t('journey.go')}</a>
                 <button type="button" onClick={close}>
                   {t('ladder.close')}
                 </button>

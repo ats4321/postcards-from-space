@@ -182,5 +182,11 @@
   "journey.next": "Next chapter",
   "journey.end": "The end of my journey",
   "journey.took": "It took {time}, from {launch} to {arrival}.",
-  "journey.again": "Start again"
+  "journey.again": "Start again",
+  "ladder.playHistory": "Play history",
+  "ladder.pauseHistory": "Pause",
+  "ladder.year": "Year: {year}",
+  "ladder.left": "{n} of {total} machines have left Earth",
+  "ladder.onTheWay": "On the way (estimated position)",
+  "ladder.moments": "Big moments"
 }

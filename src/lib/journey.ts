@@ -14,7 +14,7 @@ export type Milestone = {
   event?: string;
 };
 
-function toMs(date: string): number {
+export function toMs(date: string): number {
   return Date.parse(date.length === 7 ? `${date}-01T00:00:00Z` : date.length === 10 ? `${date}T00:00:00Z` : date);
 }
 
@@ -118,4 +118,10 @@ export function deepSpaceAnchors(englishText: ItemText) {
 /** The asteroid's name as written in the item's own location text (Ceres, Eros). */
 export function asteroidName(locationName: string): string | undefined {
   return locationName.match(/\b(Ceres|Eros)\b/)?.[1];
+}
+
+const YEAR_MS = 365.25 * DAY_MS;
+/** Any content date ("1972-03", "1969-07-20", "1969-07-20T20:17Z") as a fractional year. */
+export function toYear(date: string): number {
+  return (toMs(date) - Date.UTC(1970, 0, 1)) / YEAR_MS + 1970;
 }

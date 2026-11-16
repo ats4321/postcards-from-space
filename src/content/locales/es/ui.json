@@ -182,5 +182,11 @@
   "journey.next": "Siguiente capítulo",
   "journey.end": "El final de mi viaje",
   "journey.took": "Tardé {time}, del {launch} al {arrival}.",
-  "journey.again": "Empezar de nuevo"
+  "journey.again": "Empezar de nuevo",
+  "ladder.playHistory": "Reproducir la historia",
+  "ladder.pauseHistory": "Pausa",
+  "ladder.year": "Año: {year}",
+  "ladder.left": "{n} de {total} máquinas han salido de la Tierra",
+  "ladder.onTheWay": "En camino (posición estimada)",
+  "ladder.moments": "Grandes momentos"
 }

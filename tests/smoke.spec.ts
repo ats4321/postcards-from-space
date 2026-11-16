@@ -68,7 +68,8 @@ for (const [language, day] of [
     const card = page.locator('.ladder-card');
     await expect(card.getByRole('heading', { name: 'Voyager 1' })).toBeVisible();
     await expect(card).toContainText(day);
-    await expect(card.getByRole('link')).toHaveAttribute('href', '#voyager-1');
+    await expect(card.getByRole('link').first()).toHaveAttribute('href', '#voyager-1');
+    await expect(card.getByRole('link').last()).toHaveAttribute('href', '#journey-voyager-1');
 
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     expect(overflow).toBeLessThanOrEqual(0);
@@ -237,3 +238,26 @@ for (const [language, id, took] of [
     expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
   });
 }
+
+test('ladder: Play history reaches today at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto('/');
+  const ladder = page.locator('.ladder');
+  const play = ladder.getByRole('button', { name: 'Play history' });
+  await play.click();
+  await expect(ladder.locator('.ladder-left')).not.toContainText('16 of 16');
+  await expect(ladder.locator('.ladder-left')).toContainText('16 of 16', { timeout: 20_000 });
+  await expect(play).toHaveAttribute('aria-pressed', 'false');
+
+  // A big moment jumps the year; Voyager 2 is then a ring on the way.
+  await ladder.locator('.ladder-moments summary').click();
+  await ladder.getByRole('button', { name: /Voyager 2: I flew past Saturn/ }).click();
+  await expect(ladder.locator('.ladder-time .label').first()).toHaveText('Year: 1981');
+  await expect(ladder.getByRole('button', { name: /^Voyager 2 \(On the way/ })).toBeVisible();
+
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  expect(overflow).toBeLessThanOrEqual(0);
+  const { violations } = await new AxeBuilder({ page }).analyze();
+  const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
+  expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
+});
