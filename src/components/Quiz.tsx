@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Item, Quiz as QuizData } from '../content';
 import { useI18n } from '../lib/i18n';
 import { Stamp } from './Stamp';
@@ -10,6 +10,13 @@ export function Quiz({ item, quiz, earned, onCorrect }: Props) {
   const { t } = useI18n();
   const [wrong, setWrong] = useState<number[]>([]);
   const [fresh, setFresh] = useState(false);
+  const next = useRef<HTMLButtonElement>(null);
+
+  // The answer button is disabled once right, so focus would fall to <body>.
+  // preventScroll keeps the landing stamp where the reader is looking.
+  useEffect(() => {
+    if (fresh) next.current?.focus({ preventScroll: true });
+  }, [fresh]);
 
   const answer = (index: number) => {
     if (index === quiz.answerIndex) {
@@ -57,6 +64,7 @@ export function Quiz({ item, quiz, earned, onCorrect }: Props) {
         <p role="status">{message}</p>
         {earned && (
           <button
+            ref={next}
             type="button"
             onClick={() => document.getElementById('passport-heading')?.focus()}
           >
