@@ -7,8 +7,8 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { ImagesFileSchema, ItemsFileSchema } from '../src/content/schema';
-import { paths, readJson, rel, ROOT } from './lib';
+import { ImagesFileSchema, ItemsFileSchema, ItemTextsFileSchema } from '../src/content/schema';
+import { BASE_LOCALE, paths, readJson, rel, ROOT } from './lib';
 
 const README = join(ROOT, 'README.md');
 const SUBMISSION = join(ROOT, 'docs', 'submission.md');
@@ -24,10 +24,11 @@ function load(path: string): unknown {
 function buildReferences(): string {
   const items = ItemsFileSchema.parse(load(paths.items));
   const images = ImagesFileSchema.parse(load(paths.images));
+  const text = ItemTextsFileSchema.parse(load(paths.itemText(BASE_LOCALE)));
   const lines: string[] = [];
 
   for (const item of items) {
-    lines.push(`### ${item.name}`, '');
+    lines.push(`### ${text[item.id]?.name ?? item.id}`, '');
     lines.push(`Official page: <${item.officialUrl}>`, '');
     for (const source of item.sources) {
       lines.push(`- [${source.title}](${source.url}): ${source.supports}`);

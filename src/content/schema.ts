@@ -44,16 +44,13 @@ export const SourceSchema = z
 export const ItemSchema = z
   .object({
     id: kebabId,
-    name: text,
     place: z.enum(PLACES),
-    locationName: text,
     launchDate: isoDate,
     arrivalDate: isoDate.optional(),
     lastContact: isoDate.optional(),
     status: z.enum(STATUSES),
-    /** Typical distance from Earth in kilometres. Explain the choice in distanceNote. */
+    /** Typical distance from Earth in kilometres. Explain the choice in the item text's distanceNote. */
     distanceKm: z.number().positive(),
-    distanceNote: text,
     illustration: z.enum(ILLUSTRATIONS),
     imageId: kebabId,
     arizona: z.boolean(),
@@ -84,9 +81,15 @@ export const QuizSchema = z
   })
   .strict();
 
-/** The words for one item in one language (src/content/locales/<lang>/items.json). */
+/**
+ * The words for one item in one language (src/content/locales/<lang>/items.json).
+ * name, locationName and distanceNote live here (not in items.json) so they can be translated.
+ */
 export const ItemTextSchema = z
   .object({
+    name: text,
+    locationName: text,
+    distanceNote: text,
     letter: z.tuple([letterParagraph, letterParagraph, letterParagraph]),
     signOff: text,
     science: z.tuple([text, text, text]),
@@ -114,7 +117,6 @@ export const ImageSchema = z
         (value) => WEBP_FILE.test(value) || ILLUSTRATION_FILE.test(value),
         'must be /img/<name>.webp or /img/illustrations/<name>.svg',
       ),
-    alt: text,
     credit: text,
     sourceUrl: httpsUrl.optional(),
     license: text,
@@ -154,6 +156,9 @@ function refineUniqueIds(list: ReadonlyArray<{ id: string }>, ctx: z.RefinementC
 export const ItemsFileSchema = z.array(ItemSchema).superRefine(refineUniqueIds);
 export const ImagesFileSchema = z.array(ImageSchema).superRefine(refineUniqueIds);
 export const ItemTextsFileSchema = z.record(kebabId, ItemTextSchema);
+/** The words for one picture in one language (src/content/locales/<lang>/images.json). Credits stay in images.json. */
+export const ImageTextSchema = z.object({ alt: text }).strict();
+export const ImageTextsFileSchema = z.record(kebabId, ImageTextSchema);
 /** UI strings (src/content/locales/<lang>/ui.json): a flat map of key to text. */
 export const UiStringsSchema = z.record(z.string().min(1), text);
 
@@ -167,6 +172,7 @@ export const ContentSchema = z
     items: ItemsFileSchema,
     images: ImagesFileSchema,
     text: ItemTextsFileSchema,
+    imageText: ImageTextsFileSchema,
   })
   .superRefine((content, ctx) => {
     const itemIds = new Set(content.items.map((item) => item.id));
@@ -189,6 +195,25 @@ export const ContentSchema = z
       }
     });
 
+    content.images.forEach((image, index) => {
+      if (!(image.id in content.imageText)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['images', index, 'id'],
+          message: `image "${image.id}" has no alt text`,
+        });
+      }
+    });
+    for (const id of Object.keys(content.imageText)) {
+      if (!imageIds.has(id)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['imageText', id],
+          message: `alt text for "${id}" has no matching image in images.json`,
+        });
+      }
+    }
+
     for (const id of Object.keys(content.text)) {
       if (!itemIds.has(id)) {
         ctx.addIssue({
@@ -208,5 +233,6 @@ export type Item = z.infer<typeof ItemSchema>;
 export type Quiz = z.infer<typeof QuizSchema>;
 export type ItemText = z.infer<typeof ItemTextSchema>;
 export type Image = z.infer<typeof ImageSchema>;
+export type ImageText = z.infer<typeof ImageTextSchema>;
 export type UiStrings = z.infer<typeof UiStringsSchema>;
 export type Content = z.infer<typeof ContentSchema>;
