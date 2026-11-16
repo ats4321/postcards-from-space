@@ -111,6 +111,78 @@
   max-width: var(--measure);
 }
 
+.ladder-toggle {
+  display: flex;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  border: 0;
+}
+
+.ladder-toggle label {
+  display: flex;
+  align-items: center;
+  min-height: var(--space-6);
+  padding: 0 var(--space-2);
+  border: var(--border) solid var(--color-earth);
+  font-family: var(--font-data);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.ladder-toggle label:first-of-type {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.ladder-toggle label:last-of-type {
+  margin-inline-start: calc(var(--border) * -1);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.ladder-toggle label:has(:checked) {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.ladder-toggle label:has(:focus-visible) {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.ladder-chart {
+  position: relative;
+}
+
+/* Hover/focus preview. Sits above the point; the outer thirds anchor an edge, not the middle. */
+.ladder-tip {
+  position: absolute;
+  z-index: 1;
+  width: max-content;
+  max-width: min(240px, 70vw);
+  margin: 0;
+  padding: var(--space-1);
+  border-radius: 4px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+}
+
+.ladder-tip--start {
+  transform: translate(-24px, -100%);
+}
+
+.ladder-tip--end {
+  transform: translate(calc(-100% + 24px), -100%);
+}
+
+.ladder-tip strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+}
+
 .ladder svg {
   display: block;
   overflow: visible;
@@ -142,35 +214,146 @@
 }
 
 .ladder-dot {
-  fill: var(--color-paper);
-  stroke: var(--color-navy);
+  fill: var(--color-navy);
+  stroke: var(--color-paper);
   stroke-width: 2;
 }
 
-.ladder a:hover .ladder-dot {
+/* Stamp already in the Passport: filled yellow. */
+[data-stamped='true'] > .ladder-dot,
+.ladder-dot[data-stamped='true'] {
+  fill: var(--color-yellow);
+  stroke: var(--color-navy);
+}
+
+.ladder-point {
+  cursor: pointer;
+}
+
+.ladder-point[data-stamped='false']:hover .ladder-dot {
   fill: var(--color-earth);
 }
 
-.ladder a[aria-current='page'] .ladder-dot {
-  fill: var(--color-yellow);
+/* The postcard open above: a red ring, like a postmark. */
+.ladder-point[aria-current='true'] .ladder-hit {
+  stroke: var(--color-red);
+  stroke-width: 2;
 }
 
-.ladder a:focus-visible {
+.ladder-point:focus {
   outline: none;
 }
 
-.ladder a:focus-visible .ladder-hit {
+.ladder-point:focus-visible .ladder-hit {
   stroke: var(--color-yellow);
   stroke-width: 3;
 }
 
+/* "Send a hello": the beam draws from Earth to the point while the photon rides it. */
+.ladder-pulse {
+  pointer-events: none;
+}
+
+.ladder-beam {
+  stroke: var(--color-earth);
+  stroke-width: 2;
+  stroke-dasharray: 1;
+  animation: ladder-beam 1.5s ease-in-out;
+}
+
+.ladder-photon {
+  fill: var(--color-paper);
+  opacity: 0;
+  animation: ladder-photon 1.5s ease-in-out;
+}
+
+@keyframes ladder-beam {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes ladder-photon {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(var(--to));
+  }
+}
+
+.ladder-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-xs);
+}
+
+.ladder-legend li {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.ladder-sped {
+  margin-top: var(--space-1);
+  color: var(--color-earth);
+  font-size: var(--text-xs);
+}
+
 .ladder-note {
   max-width: var(--measure);
-  min-height: var(--space-8);
-  margin-top: var(--space-2);
   color: var(--color-earth);
 }
 
-.ladder-note strong {
-  color: var(--color-paper);
+.ladder-result {
+  min-height: var(--space-8);
+  margin-top: var(--space-2);
+}
+
+.ladder-card {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  max-width: var(--measure);
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.ladder-card dl {
+  margin-bottom: var(--space-1);
+}
+
+.ladder-card dt {
+  color: var(--color-copper);
+  font-size: var(--text-xs);
+}
+
+.ladder-card dd {
+  margin: 0 0 var(--space-1);
+}
+
+.ladder-card a {
+  color: var(--color-airmail);
+  font-weight: 600;
+}
+
+.ladder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin: 0;
+}
+
+.ladder-actions button {
+  min-height: var(--space-4);
+  padding-block: 0;
 }

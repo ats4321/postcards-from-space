@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 
-function read<T>(key: string, fallback: T): T {
+/** One-off read of a stored value, for components that only display it. */
+export function readStored<T>(key: string, fallback: T): T {
   try {
     const raw = window.localStorage.getItem(key);
     return raw === null ? fallback : (JSON.parse(raw) as T);
@@ -14,7 +15,7 @@ function read<T>(key: string, fallback: T): T {
  * is blocked, for example in private browsing, it works as plain state.
  */
 export function useStoredState<T>(key: string, fallback: T): [T, (value: T) => void] {
-  const [value, setValue] = useState<T>(() => read(key, fallback));
+  const [value, setValue] = useState<T>(() => readStored(key, fallback));
 
   const store = useCallback(
     (next: T) => {

@@ -54,3 +54,25 @@ test('Spanish, keyboard navigation and reduced motion work at mobile width', asy
   );
   expect(motion).toBe('1e-05s');
 });
+
+for (const [language, day] of [
+  ['en', '1 day'],
+  ['es', '1 día'],
+] as const) {
+  test(`ladder: send a hello to Voyager 1 at 390px (${language})`, async ({ page }) => {
+    await page.addInitScript((lang) => localStorage.setItem('pfs.language', JSON.stringify(lang)), language);
+    await page.setViewportSize({ width: 390, height: 900 });
+    await page.goto('/');
+
+    await page.locator('.ladder').getByRole('button', { name: /^Voyager 1,/ }).click();
+    const card = page.locator('.ladder-card');
+    await expect(card.getByRole('heading', { name: 'Voyager 1' })).toBeVisible();
+    await expect(card).toContainText(day);
+    await expect(card.getByRole('link')).toHaveAttribute('href', '#voyager-1');
+
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    expect(overflow).toBeLessThanOrEqual(0);
+    await page.keyboard.press('Escape');
+    await expect(card).toHaveCount(0);
+  });
+}
