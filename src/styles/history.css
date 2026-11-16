@@ -1,0 +1,173 @@
+/* History timeline: every machine on one time axis. Shares the ladder's look. */
+.history > p:first-of-type {
+  max-width: var(--measure);
+}
+
+.history-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.history-controls button {
+  min-height: var(--space-6);
+  padding: 0 var(--space-2);
+  border: var(--border) solid var(--color-earth);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-paper);
+  font: inherit;
+  cursor: pointer;
+}
+
+.history-controls .history-play {
+  border-color: var(--color-paper);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.history-controls button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.history-controls button:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.history-readout {
+  margin: var(--space-2) 0;
+}
+
+.history-readout p {
+  margin: 0;
+}
+
+.history-year {
+  font-family: var(--font-data);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-heading);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Two lines tall, so a long caption never shifts the chart while it plays. */
+.history-caption {
+  min-height: calc(2 * var(--leading-body) * 1em);
+  max-width: var(--measure);
+}
+
+.history-chart {
+  position: relative;
+}
+
+.history svg {
+  display: block;
+  overflow: visible;
+}
+
+.history-grid {
+  stroke: var(--color-line);
+}
+
+.history-axis,
+.history-place {
+  fill: var(--color-earth);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+}
+
+.history-place {
+  fill: var(--color-paper);
+}
+
+.history-marker {
+  stroke: var(--color-paper);
+  stroke-width: 2;
+}
+
+.history-hit {
+  fill: transparent;
+}
+
+.history-fill {
+  fill: var(--color-earth);
+}
+
+/* Stamp already in the Passport: the passport's yellow, as on the ladder. */
+[data-stamped='true'] > .history-fill,
+.history-fill[data-stamped='true'] {
+  fill: var(--color-yellow);
+}
+
+.history-arrival {
+  fill: var(--color-navy);
+}
+
+.history-bar {
+  cursor: pointer;
+}
+
+.history-bar:hover .history-hit {
+  fill: rgb(169 196 228 / 0.15);
+}
+
+/* The postcard open above: a red ring, like a postmark. */
+.history-bar[aria-current='true'] .history-hit {
+  stroke: var(--color-red);
+  stroke-width: 2;
+}
+
+.history-bar:focus {
+  outline: none;
+}
+
+.history-bar:focus-visible .history-hit {
+  stroke: var(--color-yellow);
+  stroke-width: 3;
+}
+
+.history-tip {
+  position: absolute;
+  z-index: 1;
+  width: max-content;
+  max-width: min(240px, 70vw);
+  margin: 0;
+  padding: var(--space-1);
+  border-radius: 4px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+}
+
+.history-tip--start {
+  transform: translate(0, -100%);
+}
+
+.history-tip--end {
+  transform: translate(calc(-100% + 24px), -100%);
+}
+
+.history-tip strong {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+}
+
+.history-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.history-legend li {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}

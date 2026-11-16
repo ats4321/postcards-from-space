@@ -149,3 +149,48 @@ for (const [id, heading] of [
     await page.locator('.trip-log').screenshot({ path: `.context/triplog-${id}.png` });
   });
 }
+
+test('history: play to today, keyboard opens a postcard at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto('/');
+  const history = page.locator('.history');
+  const year = history.locator('.history-year');
+  const now = String(new Date().getFullYear());
+
+  await history.getByRole('button', { name: 'Play history' }).click();
+  await expect(year).not.toContainText(now);
+  await expect(history.getByRole('button', { name: 'Pause' })).toBeVisible();
+  await expect(year).toContainText(now, { timeout: 20_000 });
+  await expect(history.getByRole('link')).toHaveCount(16);
+
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  expect(overflow).toBeLessThanOrEqual(0);
+
+  const { violations } = await new AxeBuilder({ page }).include('.history').analyze();
+  const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
+  expect(serious.map((v) => `${v.id}: ${v.nodes.map((n) => n.target).join(', ')}`)).toEqual([]);
+
+  // First bar in launch order is Surveyor 3; the right arrow moves to the next launch.
+  const first = history.locator('a[tabindex="0"]');
+  await expect(first).toHaveAttribute('href', '#surveyor-3');
+  await first.focus();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.locator(':focus')).toHaveAttribute('href', '#apollo-11-eagle');
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL(/#apollo-11-eagle$/);
+  await expect(page.locator('#quiz-heading')).toBeVisible();
+});
+
+test('history: reduced motion shows everything and steps by year', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto('/');
+  const history = page.locator('.history');
+  const now = new Date().getFullYear();
+  await expect(history.getByRole('button', { name: 'Play history' })).toHaveCount(0);
+  await expect(history.getByRole('link')).toHaveCount(16);
+  await history.getByRole('button', { name: 'Year before' }).click();
+  await expect(history.locator('.history-year')).toContainText(String(now - 1));
+  await history.getByRole('button', { name: 'Year after' }).click();
+  await expect(history.locator('.history-year')).toContainText(String(now));
+});
