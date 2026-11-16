@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type MouseEvent } from 'react';
+import { useRef, useState, type MouseEvent } from 'react';
 import { Countdown } from './components/Countdown';
 import { DistanceLadder } from './components/DistanceLadder';
 import { HardwareList } from './components/HardwareList';
@@ -14,21 +14,20 @@ import { useStoredState } from './lib/useStoredState';
 
 export default function App() {
   const { t } = useI18n();
-  const selected = getItem(useHashRoute());
+  const route = useHashRoute();
+  const selected = getItem(route);
   const [stored, setStamps] = useStoredState<string[]>('pfs.stamps', []);
   const stamps = Array.isArray(stored) ? stored : [];
   const [justEarned, setJustEarned] = useState<string>();
   const wide = useMediaQuery('(min-width: 900px)');
 
   // True once the reader has picked a postcard, as opposed to arriving on a deep link.
+  // Set during render so the postcard mounts with the right value; a hashchange
+  // listener ran too late, and the flag flipping on a later re-render (a stamp
+  // award) refocused the title and scrolled the page up.
+  const firstRoute = useRef(route);
   const navigated = useRef(false);
-  useEffect(() => {
-    const onChange = () => {
-      navigated.current = true;
-    };
-    window.addEventListener('hashchange', onChange);
-    return () => window.removeEventListener('hashchange', onChange);
-  }, []);
+  if (route !== firstRoute.current) navigated.current = true;
 
   const awardStamp = (id: string) => {
     setJustEarned(id);
