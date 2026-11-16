@@ -1,6 +1,8 @@
 import { getItemName, type Item } from '../content';
 import { useI18n } from '../lib/i18n';
 import { Stamp } from './Stamp';
+import { Stamp as StampIcon } from 'lucide-react';
+import { Icon } from './Icon';
 
 type Props = { items: Item[]; stamps: string[]; justEarned?: string };
 
@@ -14,6 +16,7 @@ export function Passport({ items, stamps, justEarned }: Props) {
     <section className="passport panel" aria-labelledby="passport-heading">
       <div className="passport-head">
         <h2 id="passport-heading" tabIndex={-1}>
+          <Icon as={StampIcon} />
           {t('passport.heading')}
         </h2>
         <p className="label" id="passport-progress">

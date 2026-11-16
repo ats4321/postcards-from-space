@@ -177,6 +177,7 @@ main > *,
 
 .language-toggle {
   display: flex;
+  align-items: center;
 }
 
 .language-toggle button {
@@ -185,7 +186,7 @@ main > *,
   font-family: var(--font-data);
 }
 
-.language-toggle button:first-child {
+.language-toggle button:first-of-type {
   border-radius: var(--radius) 0 0 var(--radius);
 }
 
@@ -294,4 +295,15 @@ main > *,
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Lucide icons sit before the label text. */
+.language-toggle > .icon {
+  color: var(--color-earth);
+}
+
+.icon {
+  flex: none;
+  margin-inline-end: var(--space-1);
+  vertical-align: -3px;
 }

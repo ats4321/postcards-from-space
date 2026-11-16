@@ -1,13 +1,21 @@
-import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react';
-import { getItemName, getItemText, type Item } from '../content';
-import { formatDistance, formatLightTime, formatTimelineDate, LIGHT_KM_PER_S } from '../lib/format';
+import { useLayoutEffect, useRef, useState, type CSSProperties, type KeyboardEvent } from 'react';
+import { getImage, getItemName, type Item } from '../content';
+import { formatDistance, formatLightTime, LIGHT_KM_PER_S } from '../lib/format';
 import { useI18n } from '../lib/i18n';
+import { Globe, type GlobeKind } from './Globe';
+import { Bubble } from './JourneyScene';
 import { toYear } from '../lib/journey';
-import { readStored } from '../lib/useStoredState';
-import { Stamp } from './Stamp';
-import { useMediaQuery } from './useMediaQuery';
 
-type Props = { items: Item[]; selectedId?: string };
+type Props = {
+  items: Item[];
+  stamps: string[];
+  year: number;
+  today: number;
+  selectedId?: string;
+  machineId?: string;
+  pulse?: { id: string; n: number };
+  onSend: (id: string) => void;
+};
 
 /** The scale runs from 100,000 km (closer than the Moon) to 30 billion km (past Voyager 1). */
 const MIN_LOG = 5;
@@ -20,8 +28,8 @@ const LANE = 64; // one rung: 16 label + 32 hit areas + 16 gap
 const PITCH = 32; // between dots that share a rung, so every 32 px hit area stays whole
 const HIT = 16; // hit-area radius: 32 px targets
 const CHAR = 7.2; // IBM Plex Mono advance at 12 px, used to keep labels inside the strip
-const DOT = 8;
-const PULSE_MS = 1500;
+const DOT = 8; // where the pulse stops short of a point
+const BUBBLE = 14; // 28 px photo bubbles inside 32 px hit areas
 // Light-time axis: one light-second, -minute, -hour and -day, in km.
 const LIGHT_TICKS = [
   ['second', 1],
@@ -30,9 +38,7 @@ const LIGHT_TICKS = [
   ['day', 86_400],
 ] as const;
 const VIEWS = ['distance', 'light'] as const;
-const HISTORY_START = 1965;
-const HISTORY_PLAY_MS = 12_000;
- // matches the ladder-beam animation in widgets.css
+const GLOBE: Partial<Record<string, GlobeKind>> = { Moon: 'moon', Mars: 'mars', Asteroids: 'asteroids' };
 
 const clamp = (value: number, min: number, max: number) => Math.min(Math.max(value, min), max);
 
@@ -46,49 +52,14 @@ const clamp = (value: number, min: number, max: number) => Math.min(Math.max(val
  * point, then a card shows the real radio travel time. The pulse always takes
  * PULSE_MS because the scale is logarithmic; the card says so.
  */
-export function DistanceLadder({ items, selectedId }: Props) {
+export function LadderMap({ items, stamps, year, today, selectedId, machineId, pulse, onSend }: Props) {
   const { language, t } = useI18n();
-  const reduceMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
   const box = useRef<HTMLDivElement>(null);
-  const card = useRef<HTMLDivElement>(null);
   const points = useRef(new Map<string, SVGGElement>());
-  const timer = useRef<number>();
   const [width, setWidth] = useState(328);
   const [focusId, setFocusId] = useState<string>();
-  const [sent, setSent] = useState<{ id: string; n: number }>();
-  const [shownId, setShownId] = useState<string>();
   const [previewId, setPreviewId] = useState<string>();
   const [view, setView] = useState<(typeof VIEWS)[number]>('distance');
-  // Time machine: the year shown. Starts at today, so every machine shows until the reader moves it.
-  const [today] = useState(() => toYear(new Date().toISOString().slice(0, 10)));
-  const [year, setYear] = useState(today);
-  const [playing, setPlaying] = useState(false);
-
-  useEffect(() => {
-    if (!playing) return;
-    let frame = 0;
-    let previous = performance.now();
-    const step = (now: number) => {
-      const dy = ((now - previous) / HISTORY_PLAY_MS) * (today - HISTORY_START);
-      previous = now;
-      setYear((y) => {
-        const next = Math.min(today, y + dy);
-        if (next >= today) setPlaying(false);
-        return next;
-      });
-      frame = requestAnimationFrame(step);
-    };
-    frame = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(frame);
-  }, [playing, today]);
-
-  const playHistory = () => {
-    if (playing) return setPlaying(false);
-    // Reduced motion: no sweep, go straight to today.
-    if (reduceMotion) return setYear(today);
-    if (year >= today) setYear(HISTORY_START);
-    setPlaying(true);
-  };
 
   useLayoutEffect(() => {
     const element = box.current;
@@ -99,12 +70,6 @@ export function DistanceLadder({ items, selectedId }: Props) {
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
-
-  useEffect(() => () => window.clearTimeout(timer.current), []);
-
-  useEffect(() => {
-    if (shownId) card.current?.scrollIntoView({ block: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
-  }, [shownId, reduceMotion]);
 
   const xOf = (km: number) =>
     PAD + ((clamp(Math.log10(km), MIN_LOG, MAX_LOG) - MIN_LOG) / (MAX_LOG - MIN_LOG)) * (width - 2 * PAD);
@@ -131,19 +96,6 @@ export function DistanceLadder({ items, selectedId }: Props) {
     return { shown: true, travelling: year < end, f: Math.min(1, (year - launch) / (end - launch || 1)) };
   };
   const order = lanes.flatMap((lane) => lane.points).filter(({ item }) => stateOf(item).shown);
-  const left = order.length;
-  const moments = items
-    .flatMap((item) => {
-      const name = getItemName(item.id, language);
-      const rows = getItemText(item.id, language)?.timeline ?? [];
-      return [
-        ...(item.arrivalDate && !rows.some((row) => row.date.startsWith(item.arrivalDate!))
-          ? [{ date: item.arrivalDate, caption: `${name}: ${t('postcard.arrived')}` }]
-          : []),
-        ...rows.map((row) => ({ date: row.date, caption: `${name}: ${row.event}` })),
-      ];
-    })
-    .sort((a, b) => toYear(a.date) - toYear(b.date));
   const height = TOP + lanes.length * LANE;
 
   const compact = new Intl.NumberFormat(language, { notation: 'compact' });
@@ -155,37 +107,13 @@ export function DistanceLadder({ items, selectedId }: Props) {
       ? decades.map((power) => ({ km: 10 ** power, label: `${compact.format(10 ** power)} km` }))
       : LIGHT_TICKS.map(([unit, seconds]) => ({ km: seconds * LIGHT_KM_PER_S, label: t(`ladder.light.${unit}`) }));
 
-  // Same storage the Passport uses. App re-renders the ladder whenever a stamp lands,
-  // so reading on every render keeps the dots current without touching App.
-  // ponytail: no cross-tab sync; add a 'storage' listener if that ever matters.
-  const stored = readStored<unknown>('pfs.stamps', []);
-  const stamps = Array.isArray(stored) ? stored : [];
-
   const about = t('ladder.about');
   const lightTime = (item: Item) => formatLightTime(item.distanceKm, language, about);
   const tabId = focusId ?? order[0]?.item.id;
-  const target = order.find((point) => point.item.id === sent?.id);
-  const shown = items.find((item) => item.id === shownId);
+  const target = order.find((point) => point.item.id === pulse?.id);
   const preview = order.find((point) => point.item.id === previewId);
-  const shownTravelling = !!shown && stateOf(shown).travelling;
   // Anchor the tooltip's near edge in the outer thirds so it never leaves the strip.
   const tipSide = !preview ? '' : preview.x < width / 3 ? 'start' : preview.x > (width * 2) / 3 ? 'end' : 'middle';
-
-  const send = (id: string) => {
-    window.clearTimeout(timer.current);
-    setShownId(undefined);
-    setSent((previous) => ({ id, n: (previous?.n ?? 0) + 1 }));
-    if (reduceMotion) setShownId(id);
-    else timer.current = window.setTimeout(() => setShownId(id), PULSE_MS);
-  };
-
-  const close = () => {
-    window.clearTimeout(timer.current);
-    const id = sent?.id;
-    setSent(undefined);
-    setShownId(undefined);
-    if (id && card.current?.contains(document.activeElement)) points.current.get(id)?.focus();
-  };
 
   const move = (id: string) => {
     setFocusId(id);
@@ -209,23 +137,12 @@ export function DistanceLadder({ items, selectedId }: Props) {
       move(order[next]!.item.id);
     } else if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      send(order[index]!.item.id);
+      onSend(order[index]!.item.id);
     }
   };
 
   return (
-    // Escape closes the card from anywhere inside the ladder, the points included.
-    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
-    <section
-      className="ladder panel"
-      aria-labelledby="ladder-heading"
-      onKeyDown={(event) => {
-        if (event.key !== 'Escape') return;
-        setPreviewId(undefined);
-        if (sent) close();
-      }}
-    >
-      <h2 id="ladder-heading">{t('ladder.heading')}</h2>
+    <div className="ladder">
       <p>{t('ladder.note')}</p>
       <fieldset className="ladder-toggle">
         <legend className="visually-hidden">{t('ladder.view')}</legend>
@@ -242,30 +159,8 @@ export function DistanceLadder({ items, selectedId }: Props) {
           </label>
         ))}
       </fieldset>
-      <div className="ladder-time">
-        <button type="button" className="ladder-play" aria-pressed={playing} onClick={playHistory}>
-          {t(playing ? 'ladder.pauseHistory' : 'ladder.playHistory')}
-        </button>
-        <label>
-          <span className="label">{t('ladder.year', { year: Math.floor(year) })}</span>
-          <input
-            type="range"
-            min={HISTORY_START}
-            max={Math.floor(today)}
-            value={Math.min(Math.floor(year), Math.floor(today))}
-            onChange={(event) => {
-              setPlaying(false);
-              const next = Number(event.target.value);
-              setYear(next >= Math.floor(today) ? today : next);
-            }}
-          />
-        </label>
-        <p className="label ladder-left" aria-live={playing ? 'off' : 'polite'}>
-          {t('ladder.left', { n: left, total: items.length })}
-        </p>
-      </div>
       <div className="ladder-chart" ref={box}>
-        <svg width={width} height={height} role="group" aria-labelledby="ladder-heading" aria-describedby="ladder-keys">
+        <svg width={width} height={height} role="group" aria-labelledby="where-heading" aria-describedby="ladder-keys">
           {ticks.map(({ km, label }, index) => {
             const x = xOf(km);
             const labelWidth = label.length * CHAR;
@@ -280,11 +175,14 @@ export function DistanceLadder({ items, selectedId }: Props) {
             );
           })}
           {lanes.map((lane) => {
-            const labelWidth = lane.label.length * CHAR;
+            const globe = lane.first.place === 'Deep space' ? undefined : GLOBE[lane.first.place];
+            const labelWidth = lane.label.length * CHAR + (globe ? 16 : 0);
+            const labelX = clamp(lane.centre - labelWidth / 2, 0, Math.max(0, width - labelWidth));
             return (
               <g key={lane.first.id}>
                 <line className="ladder-rung" x1={0} x2={width} y1={lane.rung} y2={lane.rung} />
-                <text className="ladder-label" x={clamp(lane.centre - labelWidth / 2, 0, Math.max(0, width - labelWidth))} y={lane.rung - 24}>
+                {globe && <Globe kind={globe} x={labelX + 6} y={lane.rung - 28} r={6} />}
+                <text className="ladder-label" x={labelX + (globe ? 16 : 0)} y={lane.rung - 24}>
                   {lane.label}
                 </text>
                 {lane.points.map(({ item }) => (
@@ -294,7 +192,7 @@ export function DistanceLadder({ items, selectedId }: Props) {
             );
           })}
           {target && (
-            <g key={sent!.n} className="ladder-pulse" aria-hidden="true" style={{ '--to': `${target.x - DOT}px` } as CSSProperties}>
+            <g key={pulse!.n} className="ladder-pulse" aria-hidden="true" style={{ '--to': `${target.x - DOT}px` } as CSSProperties}>
               <line className="ladder-beam" x1={0} x2={target.x - DOT} y1={target.y} y2={target.y} pathLength={1} />
               <circle className="ladder-photon" cx={0} cy={target.y} r={4} />
             </g>
@@ -322,11 +220,13 @@ export function DistanceLadder({ items, selectedId }: Props) {
                   distance: formatDistance(item.distanceKm, language),
                   time: lightTime(item),
                 })}
+                data-id={item.id}
+                data-selected={item.id === machineId}
                 aria-current={item.id === selectedId ? 'true' : undefined}
                 onClick={() => {
                   setFocusId(item.id);
                   setPreviewId(undefined); // a tap fires mouseenter too; the card replaces the tooltip
-                  send(item.id);
+                  onSend(item.id);
                 }}
                 onKeyDown={(event) => onPointKey(event, index)}
                 onFocus={(event) => {
@@ -339,7 +239,15 @@ export function DistanceLadder({ items, selectedId }: Props) {
                 onMouseLeave={() => setPreviewId(undefined)}
               >
                 <circle className="ladder-hit" cx={x} cy={y} r={HIT} />
-                <circle className={travelling ? 'ladder-ring' : 'ladder-dot'} cx={x} cy={y} r={DOT} />
+                <Bubble
+                  id={item.id}
+                  x={x}
+                  y={y}
+                  r={BUBBLE}
+                  photo={getImage(item.imageId)?.file}
+                  ring={travelling ? 'travelling' : item.status}
+                  stamped={stamped}
+                />
               </g>
             );
           })}
@@ -355,75 +263,10 @@ export function DistanceLadder({ items, selectedId }: Props) {
           </p>
         )}
       </div>
-      <ul className="ladder-legend label" aria-hidden="true">
-        <li>
-          <svg width="16" height="16">
-            <circle className="ladder-dot" data-stamped="true" cx="8" cy="8" r="6" />
-          </svg>
-          {t('ladder.legend.stamped')}
-        </li>
-        <li>
-          <svg width="16" height="16">
-            <circle className="ladder-dot" cx="8" cy="8" r="6" />
-          </svg>
-          {t('ladder.legend.open')}
-        </li>
-        <li>
-          <svg width="16" height="16">
-            <circle className="ladder-ring" cx="8" cy="8" r="6" />
-          </svg>
-          {t('ladder.onTheWay')}
-        </li>
-      </ul>
       <p className="ladder-sped label">{t('ladder.sped')}</p>
-      <details className="ladder-moments">
-        <summary>{t('ladder.moments')}</summary>
-        <ol>
-          {moments.map(({ date, caption }) => (
-            <li key={`${date}-${caption}`}>
-              <button
-                type="button"
-                className="link-button"
-                onClick={() => {
-                  setPlaying(false);
-                  setYear(toYear(date));
-                }}
-              >
-                <span className="label">{formatTimelineDate(date, language)}</span> {caption}
-              </button>
-            </li>
-          ))}
-        </ol>
-      </details>
       <p className="visually-hidden" id="ladder-keys">
         {t('ladder.keys')}
       </p>
-      <div className="ladder-result" aria-live="polite" ref={card}>
-        {shown ? (
-          <div className="ladder-card">
-            <Stamp item={shown} size="row" cancelled={stamps.includes(shown.id)} />
-            <div>
-              <h3>{getItemName(shown.id, language)}</h3>
-              <dl>
-                <dt className="label">{t('postcard.distance')}</dt>
-                {/* While travelling, no distance number: the stored one is where it ends up. */}
-                <dd>{shownTravelling ? t('journey.onTheWay') : formatDistance(shown.distanceKm, language)}</dd>
-                <dt className="label">{t('ladder.lightTime')}</dt>
-                <dd>{shownTravelling ? t('journey.depends') : t('ladder.hello', { time: lightTime(shown) })}</dd>
-              </dl>
-              <p className="ladder-actions">
-                <a href={`#${shown.id}`}>{t('ladder.read')}</a>
-                <a href={`#journey-${shown.id}`}>{t('journey.go')}</a>
-                <button type="button" onClick={close}>
-                  {t('ladder.close')}
-                </button>
-              </p>
-            </div>
-          </div>
-        ) : (
-          !sent && <p className="label ladder-note">{t('ladder.pick')}</p>
-        )}
-      </div>
-    </section>
+    </div>
   );
 }

@@ -10,6 +10,8 @@ import { Quiz } from './Quiz';
 import { ReadAloud } from './ReadAloud';
 import { Stamp } from './Stamp';
 import { StatusPill } from './StatusPill';
+import { ArrowLeft, Rocket } from 'lucide-react';
+import { Icon } from './Icon';
 
 type Props = {
   item: Item;
@@ -74,9 +76,11 @@ export function Postcard({ item, earned, onCorrect, onClose, focusOnOpen }: Prop
                 lang={letterLanguage === 'es' ? 'es-US' : 'en-US'}
               />
               <a className="journey-link" href={`#journey-${item.id}`}>
+                <Icon as={Rocket} />
                 {t('journey.go')}
               </a>
               <button type="button" onClick={onClose}>
+                <Icon as={ArrowLeft} />
                 {t('postcard.close')}
               </button>
             </div>

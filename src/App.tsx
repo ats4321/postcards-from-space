@@ -1,13 +1,12 @@
 import { useRef, useState, type MouseEvent } from 'react';
 import { Countdown } from './components/Countdown';
-import { DistanceLadder } from './components/DistanceLadder';
 import { HardwareList } from './components/HardwareList';
-import { History } from './components/History';
 import { Journey } from './components/Journey';
 import { LanguageToggle } from './components/LanguageToggle';
 import { Passport } from './components/Passport';
 import { Postcard } from './components/Postcard';
 import { TeacherStrip } from './components/TeacherStrip';
+import { WhereNow } from './components/WhereNow';
 import { useMediaQuery } from './components/useMediaQuery';
 import { getItem, items } from './content';
 import { useI18n } from './lib/i18n';
@@ -92,8 +91,7 @@ export default function App() {
             {wide && <div className="layout-main">{postcard ?? <p className="empty">{t('postcard.empty')}</p>}</div>}
           </div>
           <Passport items={items} stamps={stamps} justEarned={justEarned} />
-          <History items={items} stamps={stamps} selectedId={selected?.id} />
-          <DistanceLadder items={items} selectedId={selected?.id} />
+          <WhereNow items={items} stamps={stamps} selectedId={selected?.id} />
         </main>
       )}
 

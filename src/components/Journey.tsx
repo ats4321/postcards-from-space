@@ -17,6 +17,8 @@ import { ItemImage } from './ItemImage';
 import { JourneyScene } from './JourneyScene';
 import { ReadAloud } from './ReadAloud';
 import { useMediaQuery } from './useMediaQuery';
+import { ArrowLeft, Pause, Play } from 'lucide-react';
+import { Icon } from './Icon';
 
 const UNITS: Duration['unit'][] = ['day', 'month', 'year'];
 const YEAR_DAYS = 365.25;
@@ -159,6 +161,7 @@ export function Journey({ item }: { item: Item }) {
     <article className="journey" aria-labelledby="journey-title">
       <header className="journey-head">
         <a href={`#${item.id}`} className="journey-back">
+          <Icon as={ArrowLeft} />
           {t('journey.back')}
         </a>
         <p className="label">{t(item.place === 'Moon' ? 'journey.eyebrowMoon' : 'journey.eyebrow')}</p>
@@ -209,6 +212,7 @@ export function Journey({ item }: { item: Item }) {
 
       <div className="journey-controls">
         <button type="button" className="journey-play" aria-pressed={playing} onClick={play}>
+          <Icon as={playing ? Pause : Play} />
           {t(playing ? 'journey.pause' : 'journey.play')}
         </button>
         <label className="journey-range">

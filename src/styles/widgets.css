@@ -213,25 +213,8 @@
   fill: transparent;
 }
 
-.ladder-dot {
-  fill: var(--color-navy);
-  stroke: var(--color-paper);
-  stroke-width: 2;
-}
-
-/* Stamp already in the Passport: filled yellow. */
-[data-stamped='true'] > .ladder-dot,
-.ladder-dot[data-stamped='true'] {
-  fill: var(--color-yellow);
-  stroke: var(--color-navy);
-}
-
 .ladder-point {
   cursor: pointer;
-}
-
-.ladder-point[data-stamped='false']:hover .ladder-dot {
-  fill: var(--color-earth);
 }
 
 /* The postcard open above: a red ring, like a postmark. */
@@ -467,31 +450,6 @@
   fill: none;
   stroke: var(--color-yellow);
   stroke-width: 2;
-}
-
-/* Time machine on the ladder. */
-.ladder-time {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  align-items: center;
-  margin-block: var(--space-2);
-}
-
-.ladder-time label {
-  flex: 1 1 200px;
-}
-
-.ladder-time input {
-  width: 100%;
-  accent-color: var(--color-earth);
-}
-
-.ladder-ring {
-  fill: none;
-  stroke: var(--color-earth);
-  stroke-width: 2;
-  stroke-dasharray: 3 3;
 }
 
 .ladder-moments {

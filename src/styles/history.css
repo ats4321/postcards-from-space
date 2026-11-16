@@ -1,6 +1,62 @@
-/* History timeline: every machine on one time axis. Shares the ladder's look. */
-.history > p:first-of-type {
+/* "Where are they now?": one time control, Map and Timeline views. */
+.where > p:first-of-type,
+.where-view > div > p:first-child {
   max-width: var(--measure);
+}
+
+.where-time {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin-block: var(--space-2);
+}
+
+.where-scrub {
+  flex: 1 1 200px;
+}
+
+.where-scrub input {
+  width: 100%;
+  min-height: var(--space-4);
+  accent-color: var(--color-earth);
+}
+
+.where-readout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: baseline;
+  flex-basis: 100%;
+}
+
+.where-readout p {
+  margin: 0;
+}
+
+.where-switch {
+  margin-bottom: var(--space-2);
+}
+
+.where-body {
+  display: grid;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.where-view {
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .where-body {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: start;
+  }
+
+  .where-body .ladder-moments {
+    margin-top: 0;
+  }
 }
 
 .history-controls {
@@ -36,14 +92,6 @@
   outline-offset: 2px;
 }
 
-.history-readout {
-  margin: var(--space-2) 0;
-}
-
-.history-readout p {
-  margin: 0;
-}
-
 .history-year {
   font-family: var(--font-data);
   font-size: var(--text-2xl);
@@ -52,11 +100,6 @@
 }
 
 /* Two lines tall, so a long caption never shifts the chart while it plays. */
-.history-caption {
-  min-height: calc(2 * var(--leading-body) * 1em);
-  max-width: var(--measure);
-}
-
 .history-chart {
   position: relative;
 }
@@ -170,4 +213,20 @@
   display: flex;
   gap: var(--space-1);
   align-items: center;
+}
+
+/* The machine picked in this section, in either view: a yellow halo (one accent per view). */
+.history-bar[data-selected='true'] .history-hit,
+.ladder-point[data-selected='true'] .ladder-hit {
+  fill: rgb(255 207 63 / 0.15);
+}
+
+.where-card-bubble {
+  flex: none;
+}
+
+/* On the paper card and in the legend's paper-on-navy, the paper ring needs ink to show. */
+.ladder-card [data-ring='working'] > .bubble-ring,
+.ladder-card [data-ring='drifting'] > .bubble-ring {
+  stroke: var(--color-ink);
 }

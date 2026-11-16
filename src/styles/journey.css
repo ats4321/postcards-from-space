@@ -163,3 +163,61 @@
     transition: none;
   }
 }
+
+/* Bubble rings: the journey's red dashed ring, and the status rings used in "Where are they now?". */
+.bubble-ring {
+  fill: none;
+  stroke: var(--color-paper);
+  stroke-width: 2;
+}
+
+[data-ring='journey'] > .bubble-ring {
+  stroke: var(--color-red);
+  stroke-dasharray: 2 2;
+}
+
+[data-ring='resting'] > .bubble-ring {
+  stroke: #8b93a5; /* grey, 6.3:1 on navy */
+  stroke-width: 1;
+}
+
+[data-ring='drifting'] > .bubble-ring {
+  stroke-dasharray: 3 2;
+}
+
+[data-ring='travelling'] > .bubble-ring {
+  stroke: var(--color-yellow);
+}
+
+.bubble-stamp {
+  fill: var(--color-red);
+  stroke: var(--color-stamp);
+  stroke-width: 1.5;
+}
+
+/* Drawn globes: no textures, palette colours only. */
+.globe--earth circle {
+  fill: var(--color-earth);
+  stroke: var(--color-paper);
+  stroke-width: 1;
+}
+
+.globe--moon circle {
+  fill: var(--color-moon);
+}
+
+.globe--moon .globe-crater {
+  fill: var(--color-moon-dark);
+}
+
+.globe--mars circle {
+  fill: var(--color-rust);
+}
+
+.globe--asteroids path {
+  fill: var(--color-moon);
+}
+
+.globe--sun circle {
+  fill: var(--color-yellow);
+}

@@ -1,6 +1,7 @@
 import type { Item, ItemText } from '../content';
 import { asteroidName, deepSpaceAnchors, type Planet } from '../lib/journey';
 import { useI18n } from '../lib/i18n';
+import { Globe } from './Globe';
 
 type Props = {
   item: Item;
@@ -40,27 +41,52 @@ function radiusAt(anchors: Array<[number, number]>, time: number) {
   return anchors[anchors.length - 1]![1];
 }
 
-function Bubble({ id, x, y, photo }: { id: string; x: number; y: number; photo?: string }) {
+export type BubbleRing = 'journey' | 'working' | 'resting' | 'drifting' | 'travelling';
+
+/**
+ * A round "stamp bubble" cropped from a machine's hero photo. The Journey uses the
+ * red dashed ring; "Where are they now?" uses the ring for status and adds a red
+ * stamp badge once the reader has the stamp.
+ */
+export function Bubble({
+  id,
+  x,
+  y,
+  photo,
+  r = BUBBLE,
+  ring = 'journey',
+  stamped = false,
+}: {
+  id: string;
+  x: number;
+  y: number;
+  photo?: string;
+  r?: number;
+  ring?: BubbleRing;
+  stamped?: boolean;
+}) {
+  const clip = `bubble-${ring === 'journey' ? '' : 'w-'}${id}`;
   return (
-    <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)})`} className="journey-bubble">
-      <clipPath id={`bubble-${id}`}>
-        <circle r={BUBBLE} />
+    <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)})`} className="journey-bubble" data-ring={ring}>
+      <clipPath id={clip}>
+        <circle r={r} />
       </clipPath>
-      <circle r={BUBBLE + 2} fill="var(--color-stamp)" />
+      <circle r={r + 2} fill="var(--color-stamp)" />
       {photo ? (
         <image
           href={photo}
-          x={-BUBBLE}
-          y={-BUBBLE}
-          width={BUBBLE * 2}
-          height={BUBBLE * 2}
+          x={-r}
+          y={-r}
+          width={r * 2}
+          height={r * 2}
           preserveAspectRatio="xMidYMid slice"
-          clipPath={`url(#bubble-${id})`}
+          clipPath={`url(#${clip})`}
         />
       ) : (
-        <circle r={BUBBLE - 2} fill="var(--color-earth)" />
+        <circle r={r - 2} fill="var(--color-earth)" />
       )}
-      <circle r={BUBBLE + 2} fill="none" stroke="var(--color-red)" strokeWidth="2" strokeDasharray="2 2" />
+      <circle className="bubble-ring" r={ring === 'journey' ? r + 2 : r + 1} />
+      {stamped && <rect className="bubble-stamp" x={r * 0.4} y={-r - 2} width={10} height={10} rx={1} />}
     </g>
   );
 }
@@ -91,11 +117,11 @@ export function JourneyScene({ item, text, englishText, time, todayMs, photo }: 
           strokeDasharray="2 6"
           strokeLinecap="round"
         />
-        <circle cx="60" cy="130" r="28" fill="var(--color-earth)" />
+        <Globe kind="earth" x={60} y={130} r={28} />
         <text x="60" y="180" textAnchor="middle" {...label}>
           {t('journey.earth')}
         </text>
-        <circle cx="340" cy="130" r="14" fill="var(--color-paper)" />
+        <Globe kind="moon" x={340} y={130} r={14} />
         <text x="340" y="180" textAnchor="middle" {...label}>
           {t('journey.moon')}
         </text>
@@ -125,15 +151,15 @@ export function JourneyScene({ item, text, englishText, time, todayMs, photo }: 
           strokeDasharray="2 6"
           strokeLinecap="round"
         />
-        <circle cx={cx} cy={cy} r="12" fill="var(--color-yellow)" />
+        <Globe kind="sun" x={cx} y={cy} r={12} />
         <text x={cx} y={cy + 28} textAnchor="middle" {...label}>
           {t('journey.sun')}
         </text>
-        <circle cx={cx - r1} cy={cy} r="6" fill="var(--color-earth)" />
+        <Globe kind="earth" x={cx - r1} y={cy} r={6} />
         <text x={cx - r1} y={cy + 22} textAnchor="middle" {...label}>
           {t('journey.earth')}
         </text>
-        <circle cx={cx + r2} cy={cy} r="6" fill={item.place === 'Mars' ? 'var(--color-red)' : 'var(--color-paper)'} />
+        <Globe kind={item.place === 'Mars' ? 'mars' : 'asteroids'} x={cx + r2} y={cy} r={item.place === 'Mars' ? 6 : 10} />
         <text x={cx + r2 - 10} y={cy + 24} textAnchor="end" {...label}>
           {target}
         </text>
@@ -179,8 +205,8 @@ export function JourneyScene({ item, text, englishText, time, todayMs, photo }: 
         strokeDasharray="2 6"
         strokeLinecap="round"
       />
-      <circle r="9" fill="var(--color-yellow)" />
-      <circle cx={EARTH_R * Math.cos(Math.PI)} cy="0" r="4" fill="var(--color-earth)" />
+      <Globe kind="sun" x={0} y={0} r={9} />
+      <Globe kind="earth" x={EARTH_R * Math.cos(Math.PI)} y={0} r={4} />
       <text x={-EARTH_R} y="16" textAnchor="middle" {...label}>
         {t('journey.earth')}
       </text>
