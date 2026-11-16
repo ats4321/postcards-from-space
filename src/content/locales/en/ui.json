@@ -94,5 +94,20 @@
   "laser.early": "You pressed at {yours}. The light came back at {real}, so you were {gap} early.",
   "laser.late": "You pressed at {yours}. The light came back at {real}, so you were {gap} late.",
   "laser.exact": "You pressed at {yours}. The light came back at {real}. Right on time!",
-  "laser.missed": "The light came back after {real}. Fire again and try to catch it."
+  "laser.missed": "The light came back after {real}. Fire again and try to catch it.",
+  "pbd.heading": "Try it: find Earth in my picture",
+  "pbd.intro": "On {date}, I turned my camera back toward home and took a picture. In it, Earth was only about {size} of a pixel. Can you find Earth? Click or tap a spot, or use the arrow keys and press Enter.",
+  "pbd.field": "Drawing of a dark sky, {cols} squares across and {rows} down. Earth is hidden in one square.",
+  "pbd.note": "A drawing of my picture, not the real photo.",
+  "pbd.position": "Column {col}, row {row}.",
+  "pbd.miss": "Not there. Look {dir}.",
+  "pbd.found": "You found Earth! That tiny dot is home.",
+  "pbd.dir.up": "higher",
+  "pbd.dir.down": "lower",
+  "pbd.dir.left": "farther left",
+  "pbd.dir.right": "farther right",
+  "pbd.dir.upLeft": "up and to the left",
+  "pbd.dir.upRight": "up and to the right",
+  "pbd.dir.downLeft": "down and to the left",
+  "pbd.dir.downRight": "down and to the right"
 }

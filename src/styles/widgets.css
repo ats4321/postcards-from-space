@@ -415,3 +415,56 @@
     display: none;
   }
 }
+
+.pbd-field {
+  max-width: 400px;
+  margin-bottom: var(--space-1);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.pbd-field:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.pbd-field svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pbd-sky {
+  fill: var(--color-navy);
+}
+
+.pbd-band {
+  fill: rgb(242 237 228 / 0.1);
+}
+
+.pbd-band-faint {
+  fill: rgb(242 237 228 / 0.05);
+}
+
+.pbd-earth {
+  fill: var(--color-earth);
+}
+
+.pbd-cursor {
+  fill: none;
+  stroke: var(--color-yellow);
+  stroke-width: 2;
+  stroke-dasharray: 4 4;
+  opacity: 0;
+}
+
+.pbd-field:focus-visible .pbd-cursor {
+  opacity: 1;
+}
+
+.pbd-ring {
+  fill: none;
+  stroke: var(--color-yellow);
+  stroke-width: 2;
+}

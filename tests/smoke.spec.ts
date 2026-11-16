@@ -97,3 +97,36 @@ test('experiment: bounce a laser off the Moon at 390px, keyboard and reduced mot
   const { violations } = await new AxeBuilder({ page }).include('.experiment').analyze();
   expect(violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')).toEqual([]);
 });
+
+test('experiment: find Earth in the Pale Blue Dot at 390px, keyboard and Spanish', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.goto('/#voyager-1');
+
+  const experiment = page.locator('section[aria-labelledby="pbd-heading"]');
+  await expect(experiment).toContainText('February 14, 1990');
+  await expect(experiment).toContainText('0.12 of a pixel');
+  const field = experiment.getByRole('application');
+  await field.focus();
+  // A wrong guess gets a direction hint; then walk the cursor to Earth and press Enter.
+  await page.keyboard.press('Enter');
+  await expect(experiment.getByRole('status')).toHaveText('Not there. Look up and to the right.');
+  for (const key of ['ArrowRight', 'ArrowRight', 'ArrowUp']) await page.keyboard.press(key);
+  await page.keyboard.press('Enter');
+  await expect(experiment.getByRole('status')).toHaveText('You found Earth! That tiny dot is home.');
+
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  expect(overflow).toBeLessThanOrEqual(0);
+  const { violations } = await new AxeBuilder({ page }).include('.experiment').analyze();
+  expect(violations.filter((v) => v.impact === 'serious' || v.impact === 'critical')).toEqual([]);
+
+  // A tap far from Earth, in Spanish, gives a Spanish hint.
+  await page.evaluate(() => localStorage.setItem('pfs.language', JSON.stringify('es')));
+  await page.reload();
+  await expect(experiment).toContainText('14 de febrero de 1990');
+  const esField = experiment.getByRole('application');
+  await esField.scrollIntoViewIfNeeded();
+  const box = (await esField.boundingBox())!;
+  await page.mouse.click(box.x + 5, box.y + box.height - 5);
+  await expect(experiment.getByRole('status')).toHaveText('Ahí no. Busca arriba y a la derecha.');
+  await page.screenshot({ path: '.context/pbd-390.png', fullPage: false });
+});

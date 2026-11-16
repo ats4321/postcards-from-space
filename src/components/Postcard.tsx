@@ -4,6 +4,7 @@ import { formatDate, formatDistance } from '../lib/format';
 import { useI18n } from '../lib/i18n';
 import { ItemImage } from './ItemImage';
 import { LaserBounce } from './LaserBounce';
+import { PaleBlueDot } from './PaleBlueDot';
 import { Postmark } from './Postmark';
 import { Quiz } from './Quiz';
 import { ReadAloud } from './ReadAloud';
@@ -166,6 +167,7 @@ export function Postcard({ item, earned, onCorrect, onClose, focusOnOpen }: Prop
         )}
 
         {item.id === 'apollo-11-reflector' && <LaserBounce distanceKm={item.distanceKm} />}
+        {item.id === 'voyager-1' && <PaleBlueDot />}
 
         <Quiz item={item} quiz={text.quiz} earned={earned} onCorrect={onCorrect} />
       </div>

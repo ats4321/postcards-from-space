@@ -67,6 +67,16 @@
         "url": "https://science.nasa.gov/mission/voyager/voyager-1/",
         "title": "NASA Science: Voyager 1 (page updated Nov. 12, 2026)",
         "supports": "Launch September 5, 1977; entered interstellar space in August 2012; first human-made object to venture into interstellar space; status 'Extended Mission'; continues to collect data."
+      },
+      {
+        "url": "https://science.nasa.gov/photojournal/solar-system-portrait-earth-as-pale-blue-dot/",
+        "title": "NASA Photojournal PIA00452: Solar System Portrait – Earth as ‘Pale Blue Dot’",
+        "supports": "Find Earth experiment: the picture was taken on Feb. 14, 1990, by Voyager 1; Earth was a crescent only 0.12 pixel in size."
+      },
+      {
+        "url": "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot/",
+        "title": "Voyager 1’s Pale Blue Dot (NASA Science)",
+        "supports": "Find Earth experiment: the Pale Blue Dot is a photograph of Earth taken on Feb. 14, 1990, by NASA’s Voyager 1 spacecraft."
       }
     ]
   },
